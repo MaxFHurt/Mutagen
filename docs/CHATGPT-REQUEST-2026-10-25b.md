@@ -33,7 +33,14 @@ At the moment a disabled button (CONTINUE with no saved game) is shown by greyin
 - the disabled and pressed state of each home button (clear-glass animation-overlay version, iPad and iPhone sizes);
 - the legal-action indicator states for the octagon actions your handoff listed as pending.
 
-## 4. The next screens
+## 4. Choose Game Mode (built now, waiting on artwork)
+The screen is live in the home screen's frame, using the old mode cards for now. From `02-Game-Mode-Proposed.png`, please send:
+- FULLY GUIDED, FREEPLAY and TABLE TRACKER as canister buttons (assembled and animation-overlay, iPad and iPhone sizes), each with its sub-line as artwork: "Rules-aware play and guidance", "Create, test, and play", "Track life, counters, and your table".
+- The CHOOSE GAME MODE title as a transparent label.
+- BACK as a canister button, matching PROFILE / SETTINGS / HELP.
+- The pipes that link the mode buttons to the side columns, in the same format as item 2.
+
+## 5. The next screens
 Please send the list of remaining screens with their approved masters, in the order the owner wants them built. Then send the asset kit for the first one, in the same layout as this delivery: assembled and animation-overlay versions, iPad and iPhone sizes, a function index and SHA-256s. Every visible control on each master needs a matching asset, so no feature is lost.
 
 Thanks! Please flag anything you can't produce exactly from the masters instead of approximating it.
