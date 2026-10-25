@@ -18,6 +18,8 @@
     .column { width: 90px; }
     .buttons { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 20px; }
     .buttons .mutagen-chamber { width: 200px; }
+    .homes { display: flex; gap: 10px; flex-wrap: wrap; }
+    .homes .mutagen-chamber { width: min(320px, 46vw); }
     .octs { display: flex; gap: 10px; flex-wrap: wrap; }
     .octs .mutagen-chamber { width: min(200px, 30vw); }
   </style>
@@ -44,6 +46,16 @@
     <mutagen-chamber shell="canister">Profile</mutagen-chamber>
     <mutagen-chamber shell="canister">Settings</mutagen-chamber>
     <mutagen-chamber shell="canister">Help</mutagen-chamber>
+  </div>
+  <h1 style="margin-top:24px">Home buttons — supplied artwork over live liquid</h1>
+  <div class="homes">
+    <mutagen-chamber shell="canister" overlay="../buttons-iphone/home/animation-overlay/button-new-game.png">new game</mutagen-chamber>
+    <mutagen-chamber shell="canister" overlay="../buttons-iphone/home/animation-overlay/button-continue.png">continue</mutagen-chamber>
+    <mutagen-chamber shell="canister" overlay="../buttons-iphone/home/animation-overlay/button-deck-mutator.png">deck mutator</mutagen-chamber>
+    <mutagen-chamber shell="canister" overlay="../buttons-iphone/home/animation-overlay/button-profile.png">profile</mutagen-chamber>
+    <mutagen-chamber shell="canister" overlay="../buttons-iphone/home/animation-overlay/button-settings.png">settings</mutagen-chamber>
+    <mutagen-chamber shell="canister" overlay="../buttons-iphone/home/animation-overlay/button-help.png">help</mutagen-chamber>
+    <mutagen-chamber shell="canister" overlay="../buttons-iphone/home/animation-overlay/button-play.png">play</mutagen-chamber>
   </div>
   <h1 style="margin-top:24px">Smart octagon actions — supplied artwork over live liquid</h1>
   <div class="octs">

@@ -1,5 +1,10 @@
 # MUTAGEN — rolling situation report and visual inventory
 
+## CURRENT REVISION 039 — Full button asset delivery stored, 2026-10-25
+
+All 145 files of the ChatGPT asset delivery received (six zips); all 143 files in its SHA256SUMS verified, same checksum list as the earlier metadata. Stored unchanged at their delivered paths: `ui/buttons/` (iPad/high-density, assembled + animation-overlay), `ui/buttons-iphone/`, `ui/labels/`, `ui/components/`, `ui/branding/`. Home buttons (canister) and octagon actions use the animation-overlay files over the approved live liquid; review page shows both. Supplied `ui/components/*-frame.png` differ from the approved `ui/liquid/*-frame.png`; the approved ones stay in use. Open defect: RESOLVE reads "RESOLYE" (all variants). Owner has not yet approved the generated lettering (only PLAY is the master's own).
+
+
 ## CURRENT REVISION 038 — Transparent logo received and verified, 2026-10-25
 
 `ui/branding/logo-mutagen-locked-transparent.png` (1254 × 1254 RGBA, SHA-256 fdaf4e01edb3ca7ae732b952811dbfa60233ea27654f62cacd2bb90cc1a76dec) matches the asset manifest. Verified against `MASTER_LOGO_DO_NOT_REGENERATE.jpeg` (SHA-256 20b2e249…): same canvas, all 1,168,182 opaque pixels identical to the locked original (zero differences); only near-white exterior matte made transparent; hard edge with no white fringe on the dark background. The locked JPEG stays unchanged. This is the logo for the home screen; it is never regenerated.
