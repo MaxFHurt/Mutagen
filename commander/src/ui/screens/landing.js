@@ -19,12 +19,13 @@ function fit([x, y, w, h], aspect) {
   return [x + (w - fw) / 2, y + (h - fh) / 2, fw, fh];
 }
 
-function masterHome(ui, set) {
+function masterHome(ui) {
   const pipe = p => p.liquid
     ? html`<mutagen-chamber class="mh-piece" style="${at(p.rect)}" shell="home-${p.id}" flow="${p.flow}" stream overlay="${ui}piping/home/${p.file}"></mutagen-chamber>`
     : html`<img class="mh-piece" style="${at(p.rect)}" src="${ui}piping/home/${p.file}" alt="">`;
-  const btn = (slot, act, file, name, disabled = false) => html`<button type="button" class="mh-btn mh-slot" style="${at(fit(CONTROLS[slot], 3))}" data-act="${act}" aria-label="${name}" ${disabled ? 'disabled' : ''}>
-    <mutagen-chamber shell="canister" stream overlay="${ui}${set}/home/animation-overlay/button-${file}.png">${name}</mutagen-chamber></button>`;
+  // The master's own buttons, cut from the master (tools/home-buttons/extract.py), in their exact slots over live liquid.
+  const btn = (slot, act, file, name, disabled = false) => html`<button type="button" class="mh-btn mh-slot" style="${at(CONTROLS[slot])}" data-act="${act}" aria-label="${name}" ${disabled ? 'disabled' : ''}>
+    <mutagen-chamber shell="home-button-${slot}" flow="right" stream overlay="${ui}buttons-master/home/animation-overlay/button-${file}.png">${name}</mutagen-chamber></button>`;
   return html`
     <main class="landing mutagen-home mh-master">
       <div class="mh-stage">
@@ -60,10 +61,9 @@ export const landingScreen = {
     const ui = '../ui/', set = Math.min(screen.width, screen.height) >= 700 ? 'buttons' : 'buttons-iphone';
     const btn = (act, file, name, disabled = false) => html`<button type="button" class="mh-btn" data-act="${act}" aria-label="${name}" ${disabled ? 'disabled' : ''}>
       <mutagen-chamber shell="canister" stream overlay="${ui}${set}/home/animation-overlay/button-${file}.png">${name}</mutagen-chamber></button>`;
-    // Preview of the home rebuilt after the approved master (owner, rev 052): ?layout=master. The master's own pipes
-    // and columns at their supplied positions on a stage that keeps the master's shape; the buttons sit in the
-    // master's button slots until buttons made for those sockets are supplied.
-    if (new URLSearchParams(location.search).get('layout') === 'master') setHtml(root, masterHome(ui, set));
+    // The home rebuilt after the approved master (owner, rev 052-053): the master's own pipes, columns and buttons at
+    // their supplied positions on a stage that keeps the master's shape. ?layout=classic shows the previous layout.
+    if (new URLSearchParams(location.search).get('layout') !== 'classic') setHtml(root, masterHome(ui));
     else setHtml(root, html`
       <main class="landing mutagen-home">
         <mutagen-chamber class="mh-column mh-column--left" shell="sight-column" flow="down" stream></mutagen-chamber>
