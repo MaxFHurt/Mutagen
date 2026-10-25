@@ -1,5 +1,16 @@
 # MUTAGEN V3 — Visual Change Roadmap — Revision 007 (2026-10-12)
 
+## CURRENT REVISION 029 — Phase 1 integration, 2026-10-25
+
+Delivered on branch `phase-0-baseline` (PR into `main`; owner merges). State: implemented and tested in a desktop browser at phone/iPad sizes; not device-tested, not deployed.
+- MUT-01: Commander's Deck Builder opens Deck Mutator (`deck/`); Return to MUTAGEN reopens the calling screen, including player setup with its seats. Commander's old Deck Editor and its saved decks are no longer used (owner: Deck Mutator takes all decks and deck building).
+- MUT-02: one profile, each fact stored once. Game side keeps name, avatar, games, achievements, history; Deck Mutator keeps decks, collection, buy lists, tablemates. Each side shows the other's data; one MUTAGEN backup saves and restores both. Player setup lists every Deck Mutator Commander deck with its owner.
+- MUT-03: app-owned names are MUTAGEN and Deck Mutator. Main tier labels only (owner option b): Mutations tab, Budget Mutation / Mid Tier Mutation / Apex Mutation, comparison sheet Your card / Budget / Mid tier / Apex. Sentences, storage keys, backup format keys, card names, rules and bracket labels unchanged. Artwork with old names waits for Phase 2.
+- Combo data ships with the site (`deck/data/combos.json.gz`), refreshed weekly by a workflow PR. Hosting: GitHub Pages from `main`, repo public (owner).
+- Evidence: `tests/mutagen_flow.mjs` 19/19; results and known source issues (incl. Deck UI-B81-02/UI-B146-02 race) in `docs/BASELINE.md`; every edit to the copies in `docs/CHANGES-TO-COPIES.md`.
+Not changed: visual masters, locked assets, MUT-04..MUT-22 requirements.
+
+
 ## CURRENT REVISION 028 — Phase 0 baseline in MaxFHurt/Mutagen, 2026-10-25
 
 Decisions (owner, 2026-10-25): build MUTAGEN in the new repository `MaxFHurt/Mutagen`. Commander base is `rebuild/` (1.0.0-rebuild.29), not the root V0.8 KC app. Copy both apps in unchanged, then integrate (Commander is the shell, Deck Mutator a section of the same site). Function first (merge, routing, unified profile/decks, renaming), visual layer after. Implementation is authorized in Mutagen only. Superseded the same day: CommanderCompanion and Deck-Companion stay editable and may keep being developed; this build only reads them and syncs their updates into `commander/` and `deck/` from the recorded baseline commits (sync log in `docs/BASELINE.md`, edits to the copies in `docs/CHANGES-TO-COPIES.md`).
