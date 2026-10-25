@@ -43,36 +43,43 @@ void main(){
   if (cover < 0.004) { gl_FragColor = vec4(0.0); return; }
   float aspect = uRes.x / uRes.y;
   vec2 q = vec2(st.x * aspect, st.y);                     // square units, 1 = window height
-  // Broad absorption: thicker liquid toward the middle is deeper green; glass edges stay brighter.
+  // Light through the liquid (Beer-Lambert): thicker liquid toward the middle absorbs more, red and blue far more than
+  // green, so the edges glow a bright medium green and the middle deepens to a rich saturated green.
   float thick = smoothstep(0.0, 0.3, depth);
-  vec3 edge = vec3(0.15, 0.55, 0.08), deep = vec3(0.02, 0.25, 0.02);   // measured from the rev 027 shells
-  vec3 col = mix(edge, deep, thick);
-  // Flow: the broad variation drifts with the flow, slowly; two very low octaves, no fine texture.
+  // Flow: the thickness varies broadly and drifts with the flow, slowly; two very low octaves, no fine texture.
   vec2 fp = q * 1.4 - uFlow * uTime;
   float n = noise(fp) * 0.65 + noise(fp * 2.1 + 7.3) * 0.35;
-  col *= 0.9 + 0.2 * n;
-  // Light from above through the glass: a little brighter at the top.
-  col *= 1.0 + 0.14 * (1.0 - st.y) * (1.0 - thick * 0.5);
-  // Bubbles: small air pockets in the liquid, each with a thin lighter rim. Near ones are crisp, deeper ones are
-  // smaller, fainter and out of focus. No highlight dot, no shadow, none stuck to the glass.
+  float path = (0.38 + 1.4 * thick) * (0.88 + 0.24 * n);
+  vec3 col = vec3(0.92, 0.95, 0.82) * exp(-vec3(5.0, 0.6, 6.0) * path);
+  // Light from above scatters inside the liquid: a soft lift toward the top, strongest near the glass.
+  float top = 1.0 - st.y;
+  col += vec3(0.015, 0.07, 0.012) * top * top * (1.0 - 0.5 * thick);
+  // Bubbles: air pockets suspended in the liquid, in a natural mix of sizes (many small, some medium, a few large).
+  // Each has a thin lighter rim and a soft glow on its lower side where light focuses through it. Near ones are crisp,
+  // deeper ones are smaller, fainter and out of focus. No highlight dot, no shadow, none stuck to the glass.
   float minDim = min(uRes.x, uRes.y);
   vec2 px = st * uRes;
-  for (int i = 0; i < 16; i++) {
+  for (int i = 0; i < 18; i++) {
     float fi = float(i);
     float h1 = hash(vec2(fi, 1.7)), h2 = hash(vec2(fi, 9.1)), h3 = hash(vec2(fi, 4.4)), h4 = hash(vec2(fi, 2.9));
     float z = h3;                                          // 0 near the glass .. 1 deep
-    float speed = mix(0.035, 0.012, z) * (0.7 + 0.6 * h4);  // window heights per second, rising
-    float y = 1.08 - fract(h2 + uTime * speed) * 1.16;
-    float x = 0.06 + 0.88 * h1 + 0.01 * sin(uTime * (0.6 + h4) + fi * 2.3);
-    float r = max(1.5, minDim * mix(0.016, 0.006, z) * (0.6 + 0.7 * h4 * h1));
-    vec2 d = (px - vec2(x, y) * uRes) / vec2(r * 0.92, r * 1.06);   // slightly oval
+    float size = pow(h4, 2.2);                             // 0 small .. 1 large, mostly small
+    float speed = mix(0.035, 0.012, z) * (0.75 + 0.45 * size);  // window heights per second; big ones rise a bit faster
+    float y = 1.12 - fract(h2 + uTime * speed) * 1.24;
+    float wob = 0.006 + 0.012 * size;
+    float x = 0.07 + 0.86 * h1 + wob * sin(uTime * (0.5 + h4) + fi * 2.3);
+    float r = max(1.5, minDim * mix(0.012, 0.075, size) * (1.0 - 0.45 * z));
+    float squash = 0.07 * size * sin(uTime * 1.7 + fi);   // larger bubbles flex a little as they rise
+    vec2 d = (px - vec2(x, y) * uRes) / vec2(r * (1.0 + squash), r * (1.0 - squash) * 1.04);
     float dist = length(d);
     float blur = mix(1.2, 3.5, z) / r;                     // edge softness in bubble radii: crisp near, soft deep
     float inside = 1.0 - smoothstep(1.0 - blur, 1.0 + blur, dist);
-    float rim = inside * smoothstep(0.55 - blur, 0.95, dist);
-    float vis = (1.0 - 0.65 * z) * smoothstep(0.03, 0.12, depth);
-    col = mix(col, col * 1.18, inside * 0.6 * vis);                          // less green inside the air
-    col = mix(col, col * 1.75 + vec3(0.06, 0.1, 0.05), rim * 0.75 * vis);    // thin lighter refractive rim
+    float rim = inside * smoothstep(0.62 - blur, 0.96, dist);
+    float focus = inside * smoothstep(0.15, 0.85, d.y) * (1.0 - smoothstep(0.55, 0.95, dist));
+    float vis = (1.0 - 0.6 * z) * smoothstep(0.03, 0.12, depth);
+    col = mix(col, col * 1.2 + vec3(0.005, 0.02, 0.005), inside * 0.6 * vis);  // less green inside the air
+    col = mix(col, col * 1.45 + vec3(0.03, 0.07, 0.025), focus * 0.5 * vis);   // light gathered on the lower side
+    col = mix(col, col * 1.7 + vec3(0.05, 0.1, 0.045), rim * 0.6 * vis);      // thin lighter refractive rim
   }
   // Fixed glass sheen in front of the liquid: one broad, faint diagonal band near the top. Never moves.
   float band = smoothstep(0.30, 0.0, abs((st.y - 0.12) + (st.x - 0.5) * 0.18)) * 0.07;
@@ -219,9 +226,9 @@ class MutagenChamber extends HTMLElement {
     const tc = tmp.getContext('2d'); tc.drawImage(this._maskCrop, 0, 0, w, h);
     const img = tc.getImageData(0, 0, w, h), d = img.data, g = greenLevel();
     for (let i = 0; i < d.length; i += 4) {
-      const cover = d[i] / 255, k = Math.min(1, d[i + 1] / 255 / 0.3), s = k * k * (3 - 2 * k);
-      d[i] = (0.15 + (0.02 - 0.15) * s) * 255 * g * cover; d[i + 1] = (0.55 + (0.25 - 0.55) * s) * 255 * g * cover;
-      d[i + 2] = (0.08 + (0.02 - 0.08) * s) * 255 * g * cover; d[i + 3] = cover * 255;
+      const cover = d[i] / 255, k = Math.min(1, d[i + 1] / 255 / 0.3), s = k * k * (3 - 2 * k), path = 0.38 + 1.4 * s;
+      d[i] = 0.92 * Math.exp(-5 * path) * 255 * g * cover; d[i + 1] = 0.95 * Math.exp(-0.6 * path) * 255 * g * cover;
+      d[i + 2] = 0.82 * Math.exp(-6 * path) * 255 * g * cover; d[i + 3] = cover * 255;
     }
     ctx.putImageData(img, 0, 0);
   }
