@@ -11,7 +11,9 @@ Read this first when picking up the work. Keep it short and current.
   Every edit to the copied apps is in `CHANGES-TO-COPIES.md`.
 - **Going live:** GitHub Pages from `main` (owner, 2026-10-25), repo made public. The root
   `index.html` forwards to `commander/`; `.nojekyll` serves every file as is.
-- **Next:** Phase 2, the visual layer, screen by screen as masters are approved. Deck Mutator's
+- **Phase 2 — visual layer: started** on branch `phase-2-liquid`: live liquid component `ui/liquid/` (review
+  prototype, see revision 030). Waiting for the owner's review before using it on screens.
+- **Then:** the visual layer, screen by screen as masters are approved. Deck Mutator's
   remaining "upgrade" sentences wait until Deck development settles (owner option b).
 
 ## Decisions (owner, 2026-10-25)

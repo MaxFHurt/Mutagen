@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>MUTAGEN liquid review</title>
+  <link rel="stylesheet" href="liquid.css">
+  <style>
+    body { margin: 0; padding: 16px; background: #08060d; color: #c9c3e6; font: 14px system-ui, sans-serif; }
+    h1 { font-size: 18px; letter-spacing: .1em; margin: 0 0 6px; }
+    p { margin: 0 0 12px; max-width: 70ch; color: #9d96bd; }
+    .bar { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+    button { background: #1c1138; color: #e4e1f2; border: 1px solid #3a2a6b; border-radius: 6px; padding: 8px 12px; font: inherit; }
+    button[aria-pressed="true"] { border-color: #b993ff; }
+    .row { display: flex; gap: 24px; align-items: center; flex-wrap: wrap; }
+    .canister { width: min(520px, 100%); }
+    .square { width: min(300px, 44vw); }
+    .column { width: 90px; }
+    .buttons { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 20px; }
+    .buttons .mutagen-chamber { width: 200px; }
+  </style>
+</head>
+<body>
+  <h1>MUTAGEN live liquid — review prototype</h1>
+  <p>Static frames are the supplied rev 027 shells with the glass window cut out; the liquid behind the glass is live. Not an approved master.</p>
+  <div class="bar">
+    <button type="button" data-toggle="motion" aria-pressed="false">Reduced motion</button>
+    <button type="button" data-toggle="green" aria-pressed="false">Reduced green</button>
+  </div>
+  <div class="row">
+    <mutagen-chamber class="column" shell="sight-column" flow="up"></mutagen-chamber>
+    <div>
+      <mutagen-chamber class="canister" shell="canister" flow="right">Play</mutagen-chamber>
+      <div class="row" style="margin-top:16px">
+        <mutagen-chamber class="square" shell="navigation" flow="down"></mutagen-chamber>
+        <mutagen-chamber class="square" shell="smart-octagon" flow="down">Draw</mutagen-chamber>
+      </div>
+    </div>
+    <mutagen-chamber class="column" shell="sight-column" flow="up"></mutagen-chamber>
+  </div>
+  <div class="buttons">
+    <mutagen-chamber shell="canister" flow="right">Profile</mutagen-chamber>
+    <mutagen-chamber shell="canister" flow="right">Settings</mutagen-chamber>
+    <mutagen-chamber shell="canister" flow="right">Help</mutagen-chamber>
+  </div>
+  <script type="module" src="liquid.js"></script>
+  <script>
+    document.addEventListener('click', e => {
+      const b = e.target.closest('[data-toggle]'); if (!b) return;
+      const on = b.getAttribute('aria-pressed') !== 'true'; b.setAttribute('aria-pressed', String(on));
+      document.documentElement.dataset[b.dataset.toggle] = on ? 'reduced' : '';
+    });
+  </script>
+</body>
+</html>
