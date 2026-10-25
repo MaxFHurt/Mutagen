@@ -1,5 +1,10 @@
 # MUTAGEN — rolling situation report and visual inventory
 
+## CURRENT REVISION 034 — Labels come only from supplied artwork, 2026-10-25
+
+Owner: letters must come directly from the master and be made assets; MUTAGEN must not rebuild or remake assets. Code-drawn lettering (revisions 032–033) and the bundled font are removed. `<mutagen-chamber label="…png">` now shows a supplied label image exactly as made, only scaled to fit the glass; the element's text is the accessible name. No finished label assets exist in the handoff (PLAY master is a flattened JPEG on the old liquid; approved landing labels are flattened at ~40 px; the 335-asset kit was never delivered). Requested set and format: `docs/LABEL-ASSET-REQUEST.md` (owner will have ChatGPT make them). Liquid, flow and colour from revision 033 unchanged.
+
+
 ## CURRENT REVISION 033 — Label depth, brighter green, flow through the pipe, 2026-10-25
 
 Owner: lettering better but flat compared with the master; liquid needs a brighter green; these are pipes, so a pipe wider than it is tall should carry the ooze horizontally through it. Changed (PROPOSED): labels are rendered like the PLAY master: deep purple extrusion for thickness, dark purple edge with a fine violet rim around the outside only, brushed-silver face with a bevel lit from the upper left and a darker mid band; accessible text kept in the page. Liquid green brighter (absorption lowered). Flow follows the pipe: wider-than-tall windows flow sideways and carry the bubbles through the pipe (faster along the middle, slower near the glass), tall columns flow up, square chambers hold still liquid with rising bubbles; the smart octagon flows sideways between its left and right ports. Speed kept.
