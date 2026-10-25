@@ -1,5 +1,12 @@
 # MUTAGEN — rolling situation report and visual inventory
 
+## CURRENT REVISION 050 — Game-mode master approved; player setup needs its own master, 2026-10-25
+
+Owner approved `02-Game-Mode-Proposed.png` as the design for Choose Game Mode, with logo v2 and the supplied PROFILE / SETTINGS / HELP buttons in place of the master's own versions. The CHOOSE GAME MODE title stays blank until its artwork is supplied.
+
+Player setup: tried the home frame (full-height sight columns at both sides) and did not ship it. The columns take about 40% of the width, so the title wrapped into the Back button, the deck form became one narrow column with cut-off fields, and Playmat fell off screen. The columns cannot be made narrow without making them short (fixed artwork shape, never stretched). Form-heavy screens need their own approved master, for example with pipes along the top and bottom edges instead of tall side columns. Player setup is unchanged.
+
+
 ## CURRENT REVISION 049 — Choose Game Mode in the MUTAGEN frame, 2026-10-25
 
 Owner: keep going on the next screen with the artwork we have. Choose Game Mode now uses the home screen's frame: live sight columns (same stream: down on the left, up on the right), logo v2 and tagline at the top, the three mode cards in the middle, and a bottom row with BACK, PROFILE, SETTINGS and HELP, laid out after the proposed master `02-Game-Mode-Proposed.png` (not yet owner-approved). PROFILE / SETTINGS / HELP are the supplied clear-glass buttons over the live liquid and do what they do on the home screen. That is new on this screen, matching the master. The three mode cards and BACK stay the existing artwork, unchanged, until MUTAGEN versions are supplied. The old title strip ("Choose Game Mode" with the old crest) is no longer shown; the screen keeps a hidden heading for screen readers until the title artwork arrives. Every mode flow is unchanged (same buttons and modals). Checked centred, with no overflow, at seven iPad and iPhone sizes. Commander UI suites match the baseline (flows 24/24; game 27/28, the failure being the pre-existing favicon 404).
