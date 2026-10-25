@@ -1,0 +1,281 @@
+# MUTAGEN V3 — Visual Change Roadmap — Revision 007 (2026-10-12)
+
+## CURRENT REVISION 027 — Smooth liquid correction, 2026-10-24
+
+User rejected swirled ooze and weird green lines. Applies to every liquid area including buttons, smart control, sight columns, and modal windows. Use smooth translucent viscous medium-green liquid with subtle broad absorption gradients and sparse submerged bubbles. No painted flow streaks, luminous veins, marbling, granular/carbonized texture, mirrored bubble arrangements, or exterior bloom. Steel geometry and printed labels must remain intact. Flow must be actual time-based animation; do not suggest it with decorative lines. Preserve approved boundaries; drips align under their outlet inside a capture area.
+
+Four revised transparent static material assets are provided in MUTAGEN-Liquid-Correction-v2.zip. These replace the rejected material examples, not the source game functionality. Raster edits are visual candidates, not a claim of pixel-identical hardware preservation or completed real-time animation. The earlier 335-asset assembly was interrupted before durable packaging; do not claim it delivered. Rebuild dependent labeled assets from corrected bases before releasing the complete asset kit. Both repositories remain read-only.
+
+
+## CURRENT REVISION 026 — Feature restoration review, 2026-10-23
+
+Repositories remain READ ONLY; no implementation changed. New standalone review images live in mutagen-complete-masters/rework. Originals are retained.
+
+Restored source-based layouts: C13 Table Tracker v3 (four detailed players, editable names, life/tax steppers, status, counters, mana, tracked cards, permanent log, Next Turn/Undo, Table/Judge and editing footer); C11 Free Play v3 (three-column player layout, commander/tax/status, mana and zones, battlefield/lands/hand, opponent summaries, log/stack/undo, coaching, Board/Table, Edit Game, phase track and smart octagon); C10 Guided v2 uses the same preserved layout with role-dependent Challenge.
+
+Supporting review drafts: C02 setup v2; C03 rules v2 with all 14 toggles and life/mulligan/timer; C09 opening hand; C12 oversight; C14 expanded log; C15 populated zone; C17 player details plus distinct counter and status editors; C21 attack and block; C23 target selection; S05-game card editing popup. These are static review proposals, not approved production assets or proof that every conditional state is covered.
+
+Claude requirements:
+- Retain all current handlers, permissions, state-dependent actions and data. Reskin existing components rather than reconstructing functionality from these images.
+- Tracker: preserve room/turn/current-player display, player activation, host-only edit/reset/clear-log; full counter presets, custom counters/statuses, tracked-card selection and counter badges; tax controls must remain separate from life.
+- Free Play/Guided: identity-filtered mana, poison/status values, commander zone/action, role-dependent Host Tools/Challenge/Edit Game, correction state, empty/disabled states and context-sensitive smart action must remain. DRAW is only a sample, never hard-code it in Main 1. Keep coaching above hand cards without overlap.
+- Rules: preserve all actual dropdown choices and 0=off timer semantics; do not use generated sample numbers as defaults.
+- Combat: preserve Stay Home, goad/must-attack, legal blocker options, multiple blockers where allowed, busy/disabled choices and confirmation behavior. Generated one-block example is not a universal one-blocker rule.
+- Targets: preserve choose-one immediate selection vs choose-many confirmation, valid counts, filtering threshold and legality. Generated sample names/stats are not authoritative.
+- Popups: keep game card details distinct from Deck Mutator printing/price/faces/ownership. Restore exact card images and source data, not generated card text.
+- Exact master logo/button reuse, transparent layer extraction, restrained green with containment, real fluid animation, reduced intensity setting, and separate iPhone/iPad layouts still require production assembly.
+- Keep the 025 audit's UNVERIFIED screens unverified until directly matched. Do not approve them on visual resemblance.
+
+Known review defects: sample cards/counts/log entries are illustrative and sometimes inconsistent; C09 land count needs reconciliation; C15 has duplicate Close buttons; C17 player detail is supplementary, not the counter editor; artwork does not yet reproduce the exact approved buttons/logo. Deck-context S05 and remaining source-unmatched screens are not certified. All original assets and audit history retained. See FEATURE-RESTORATION-REVIEW.md and gallery for this revision.
+
+## CURRENT REVISION 025 — Full current-set visual audit
+
+Inspected all 26 current detailed PNGs individually. See MASTER-COMPARISON-AUDIT.md for per-image findings. C10/C11 player views and C13 Tracker are rejected layouts; restore actual supplied app layouts, not decorative battlefield concepts. C02/C03/C09/C12/C14/C15/C17/C21/C23/S05 also require rework or scope restoration. Unmatched source screens remain UNVERIFIED, never passed on catalog alone. Preserve approved S01 material treatment and all originals. Rework begins with C10/C13 source-based proposals; not final assets. Repositories read-only. Audit of all historical drafts and exact unmatched source screens remains pending.
+
+## CURRENT REVISION 024 — Screen-feature preservation gate (October 22, 2026)
+
+User reminder: supplied visual masters are mandatory screen-content references. No features may be removed from any screen. The batch using only landing/popup style references plus summarized catalog entries was stopped. Existing generated pages remain unverified proposals, not completed replacements.
+
+MUT-22 — Before rebuilding each screen, map its exact supplied master to every visible control, information panel, tab, navigation destination and state. Reconcile with read-only application functionality. Preserve all features on their respective screen; do not move them into hidden menus, replace them with decoration, merge away controls or simplify scope without explicit user direction. The summarized 86-screen catalog is an index, not sufficient feature acceptance evidence. Retain source master identity, an itemized comparison and unresolved discrepancies per screen. A missing control fails acceptance even if the new artwork looks polished. In particular, the Fully Guided proposal missing the integrated smart-action octagon requires correction. No production approval or complete coverage claim until these comparisons pass. Both repositories remain strictly read-only.
+
+
+## CURRENT REVISION 023 — Landing material approved; more screens authorized
+
+User explicitly approved the displayed submerged-bubble revision: “Looks good save it and make some more.” Approved static reference: mutagen-approved-masters/01-Landing-Approved.png (source exec-41c3392b-2951-4baf-90a0-9154c7338a99.png). Preserve exact image and carry its liquid/bubble appearance forward. This supersedes the assistant's preceding concern about larger bubbles; do not keep adjusting an approved treatment without direction. Approval is static visual/material approval, not proof of working animation, production assets, integration or device testing. Actual flowing ooze and aligned intermittent drips remain required. Next independent screen proposals: game mode selection, Deck Mutator home, card-details popup. Both repositories remain read-only. Future Claude assembly must keep approved liquid treatment, fixed printed labels/glass/hardware, submerged depth-attenuated bubbles and full chambers, while preserving all app features.
+
+
+## CURRENT REVISION 022 — Bubble depth correction
+
+User says the smoother liquid looks better, but bubbles appear ON the ooze rather than IN it. Retain the improved liquid material and correct only bubble depth. Bubbles must be air pockets suspended within translucent viscous liquid, with depth-dependent attenuation, soft refractive edges, variable focus, small irregular/oval silhouettes and sparse independent placement. Avoid raised green beads, embossed circles, hard highlight dots, drop shadows and surface-adhered droplets. Glass reflections remain fixed in front of liquid and bubbles. Claude must implement bubbles beneath glass/reflection layers, with green absorption increasing with depth and no surface-bead lighting. This is a material correction proposal; actual motion and final approval remain outstanding. Preserve originals and all non-liquid artwork.
+
+
+## CURRENT REVISION 021 — 2026-10-21: Landing liquid rejected
+
+User rejected the ooze appearance in the detailed landing-page attempt. The initial edited plate and its animation are NOT approved masters. Preserve them only as historical drafts. Correct liquid material before propagation: cohesive translucent medium green gel, restrained highlights, subtle depth, sparse small bubbles, no bright ribbon swirls or oversized spheres. Keep full chambers, fixed printed lettering and all existing non-liquid artwork. Preserve the requirement for real-time motion and physically aligned intermittent dripping; a corrected still is only material review, not completed animation. Existing repositories remain read-only. Future Claude implementation must keep fixed glass highlights/metal/text separate from moving liquid and must not fake flow with bright painted streaks. New liquid treatment is proposed until reviewed.
+
+
+## CURRENT REVISION 020 — 2026-10-20: Animated screen assembly drafts
+
+User explicitly authorized all screens with working animation; this supersedes earlier static-first staging for review prototypes, without approving final artwork or repository writes. Delivered working Canvas animation across 86 catalog screen families (35 Commander, 39 Deck Mutator, 12 shared), each with independent HTML preview and two device compositions. Gallery: index.html; register: SCREEN-REGISTER.md; implementation requirements and limitations: CLAUDE-HANDOFF.md. All 172 native render checks change with time and return exactly at the twelve-second seam; verification.json records results. Browser/Safari and physical-device tests remain pending.
+
+Status is ANIMATED ASSEMBLY DRAFT, NOT LOCKED FINAL MASTER. Placeholder card art, generic list-family layouts, final hardware integration, exact source-button typography and integrated smart octagon remain unfinished. Existing originals are preserved. Source art is reused through controlled runtime derivatives; no claim of full pixel-exact final assembly. Both application repositories remain untouched. New code requirements MUT-21: bind shared profile/deck identities, preserve all existing routes and modals, retain Deck Build 144 mutation/Buy List/printing/scroll requirements, implement green-only intensity and reduced-motion preferences, use masked independent liquid fields with fixed lettering, and validate safe-area/device layouts. See full numbered requirements in CLAUDE-HANDOFF.md. Do not treat sample scores, card names or placeholders as engine output.
+
+This checkpoint is in MUTAGEN-Animated-Screen-Assembly-01.zip. ASSET-HASHES.json records actual file hashes. The prior rolling archive remains preserved independently; this is an additive checkpoint, not a repository backup. Further visual refinement is authorized and still outstanding.
+
+
+## CURRENT REVISION 019 — 2026-10-18: Smooth liquid; remove top canisters
+
+Remove both top-border glass canisters/windows; use opaque steel pipe, regular couplings and steel elbows. Preserve physical joint leak. User rejects carbonized-looking ooze: target smooth cohesive viscous gel, slow broad flowing swirls, sparse bubbles, no dense bead clusters or gritty/burned texture. Apply throughout liquid chambers including buttons; retain established green color target and no exterior color bleed. R08-smooth-ooze-steel-top.png is static review proposal, not approved production/animation. Original assets retained; no repository edits.
+
+## CURRENT REVISION 018 — 2026-10-18: Sight-glass proportions and steel finish
+
+User accepts R06 direction and requests wider, nearly full-height sight glasses in each steel column, with slightly darker realistic brushed steel. R07-long-sight-glass-dark-steel.png is new static review proposal. Approximate design targets: window 85% column height / 60% width, intact steel margins and fitted bezels; darker satin metal with fine machining grain and restrained highlights. Retain uniform tubing, regular couplings, opaque steel elbows, source button styling and flow/drip requirements. No implemented animation or repository edits. Preserve prior versions.
+
+## CURRENT REVISION 017 — 2026-10-18: Steel columns and regular fittings
+
+Update MUT-20: side reservoirs are opaque steel columns with small inset ooze sight windows. Reduce border green exposure; keep internal chambers full. Use opaque steel elbows and regular straight couplings joining uniform-diameter pipes. No reducers/tapers or random endpoints; matching flush ports at reservoirs. Retain visible liquid flow at windows and physical joint leaks without exterior green bleed. R06-steel-columns-landing.png is a static unapproved proposal. Exact diameter and supplied button asset reuse still require controlled production assembly. No repository changes or implemented animation.
+
+## CURRENT REVISION 016 — 2026-10-18: MUT-20 flow and drip motion
+
+Use constant-diameter pipes with matching elbows, tees, couplings and ports; no reducers/tapers or unexplained terminations. Vary canister bodies only. User requires visible mutagen travel through the connected network, including buttons, with full chambers and fixed master-style lettering. Leak at actual joint/seal: gather, elongate, detach, fall, impact directly below. Preserve medium green; no exterior color/light bleed.
+
+Claude implementation: clip liquid/bubble motion inside pipes and chambers; use separate explicitly shaped leak masks. Maintain directional continuity through bends and ports and independent bubble phases. Keep lettering still and readable. Validate all connections and pipe diameters before motion assembly. R05-flow-circuit-landing is static only, not implemented animation: header/branch apparent diameters and exact source-button reuse still need correction in controlled assembly. R01–R04 rejected for plumbing; do not propagate them. Repositories remain read only.
+
+## CURRENT REVISION 015 — 2026-10-17: MUT-19 master buttons and physical leaks
+
+QA checkpoint: R01–R04 saved as unapproved composition drafts. Exact source-button reuse is not satisfied; some labels retain unwanted shadow/dark liquid, greens vary, R03 has excessive perimeter canisters. R05–R12 remain pending. Do not use these draft pixels as approved production buttons. Resolve through controlled assembly of source-master derivatives before extending this treatment to remaining pages.
+
+User correction overrides Revision014 no-drip rule: retain physical ooze leaks/drips, remove exterior color bleed/bloom. Use fewer reservoirs of varied shapes/sizes, symmetry allowed, connected plausible plumbing. Fill all reservoirs and buttons with ooze; apply G01B medium spring green throughout.
+
+Exact button source: assets/references/PLAY_BUTTON_MASTER_HORIZONTAL.jpeg. Do not replace its design; user rejected the flat-white PLAY example generated exec-a294b04d-515a-4353-b26e-264d5dd2afed.png. Match original silver/purple lettering as printed on glass with no added shadows, dark backing or empty liquid area. Production must use controlled labeled derivatives of the source asset. Generated page previews are only compositional references and cannot establish pixel-identical source reuse.
+
+Claude: separate leak silhouettes/animation from light containment masks, keep all text readable over filled animated chambers, connect inlet/outlet fittings, validate gravity-aligned drips and varying reservoir sizes, and independently assemble iPhone/iPad views. No implementation here. R-series rebuild authorized, preserve old files and checkpoint each page; proposals await review and exact asset assembly.
+
+## CURRENT REVISION 014 — 2026-10-17: MUT-18 sparse containment
+
+Accepted direction, sample awaiting approval: substantially reduce border green to a few sealed canisters separated by silver/black structure. S01 landing trial uses four outer-frame canisters. Retain G01B green intensity and target unchanged purple, central logo geometry, content and functionality. Preserve all originals and variants. Stop propagation until user reviews S01.
+
+For Claude later: clip liquid, bubbles and glow strictly within glass containment. No drips, splashes, runoff, outward bloom or exterior green spill lighting. This supersedes earlier continuous-green perimeter and drip/splash requirements, including Revision007 animation guidance. Opaque structural connections are allowed. Remove planned drop/splash animation; internal flow/bubbles remain possible. Keep smart-action control structurally integrated and its legal-action illumination contained. Test all animation frames, seams, corners and interactive states at independently designed iPhone/iPad proportions. Do not stretch assets. Preserve printed button-label readability and all app features. No repository edits, production asset approval, animation implementation or device validation performed.
+
+## CURRENT REVISION 013 — 2026-10-17: Approved green midpoint; continue
+
+G01B green treatment explicitly approved. Reference `screens/G01B-landing-green-midpoint.png`, SHA256 b572d7056557df5b578a371cc69cdd571358b3f82c26ba259918977f091f923e. Continue remaining original-page revisions with green-only edits, preserving all original images and non-green properties. Separate image-generation derivatives remain reviewable; no claim of pixel-exact invariance or implementation. Prior dimmed-purple approach is superseded.
+
+
+## CURRENT REVISION 012 — 2026-10-17: Brighter green midpoint sample
+
+G01 was judged too dark. User requested a slightly brighter midpoint with visual pop, still below original fluorescent lime. G01B adjusts green only; all non-green appearance and geometry remain invariants. Save as separate proposal; originals/earlier alternatives retained. Review G01B before propagating intensity to other pages. Not coded, animated or device-tested.
+
+
+## CURRENT REVISION 011 — 2026-10-17: GREEN-ONLY corrections resumed
+
+Latest explicit instruction: darker/deeper green liquid and green decorative accents ONLY. Keep purple, chrome, card artwork, text, layout, controls and overall lighting unchanged. This supersedes LC01 whole-scene dimming. Originals stay untouched. G01–G12 are new independent proposals, mapped to originals01–12; report actual saved paths/hashes below. MUT-17 appearance control must not globally darken the screen. Existing motion, profile persistence and accessibility requirements remain. No code implementation or device validation is implied. All unmade pages remain pending, outside this existing-screen correction batch.
+
+
+## PAUSED — 2026-10-12, 19:17 EDT
+
+User likes the designs but says they are too bright and explicitly requested stopping. Do not generate further variants/screens until resumed. Preserve originals and completed LC01 Landing (unapproved). LC02–LC11 remain pending; do not interpret earlier Settings style approval as final approval of other remakes. No implementation has occurred.
+
+
+## CURRENT REVISION 010 — 2026-10-12: Approved low-contrast reference and non-destructive remake run
+
+User approved screen 12 low-contrast styling and instructed remaking every screen with originals retained. Reference: `screens/12-settings-low-contrast-mode-proposed.png`, SHA256 549bfedb23c2bea427042e5e11df8247a8b726b1c9f70b71199314716b8b1729. Status: APPROVED STYLE REFERENCE; static only, not implementation or device approval. Preserve originals 01–12 and add LC01–LC11 as separate files/entries. Current remakes retain source layout/content and lower liquid glow/purple intensity to match screen12. All unmade screens follow the same approved treatment. Each derivative remains reviewable; do not claim pixel-perfect invariance from generation. MUT-17 global toggle, readable text, independent motion and persistent shared preference requirements remain. Default mode not decided. Record each new path/hash below and save before generating the next.
+
+
+## REQUIRED shared-source protocol (binding across Work and GPT-6 chats)
+**On EVERY accepted change to a visual, direction, UI behavior, animation, master or future Claude requirement: update this roadmap AND `MUTAGEN-Working-Source.md` during the SAME work cycle.** Record date, revision, what changed, what did not, state (proposed/approved/delivered/implemented/tested), dependency and test. Each chat must retrieve newest versions rather than assume chat files auto-sync. Reconcile conflicting revisions and never overwrite newer changes. If source-file overwrite is not approved or succeeds only locally, say "NOT SYNCED" until verified.
+
+**File-evidence requirement:** A roadmap item marked DONE/DELIVERED must include its actual output file *inside the handoff package*, plus SHA256 and file path, not just a claim. An agreed direction, mockup, transparent asset and working animation are separate outcomes. Do not mark as complete if file absent. The attached assets and image bytes are unchanged.
+
+## Visual and interaction lock
+- Exact MUTAGEN logo: `assets/locked/MASTER_LOGO_DO_NOT_REGENERATE.jpeg`, SHA256 20b2e24979e7cbf939333277d72ced6934caf6e82d794e93587bbe90d44d1f73. Absolutely no logo geometry or chrome changes; *only* lime-green liquid within M may be carefully refined, after independent approval.
+- Approved landing layout—logo size/position, wide uninterrupted top pipe, chassis, all button shells, texts, tools and framing—is pixel-locked except the specifically approved fluid changes. Do not add top-corner bottle props, rename buttons, move controls, invent decorations or shift pipe structure.
+- Glass controls fully filled with realistic luminous lime-green ooze behind printed labels, never black hollow sections. No excessively bright liquid swirls, bronzed/purple metal, cloned/mirrored ooze patterns. Engineering may mirror; ooze bubbles, drips, streaks may not.
+- Liquid within smart octagon never changes color. LEDs on the chrome perimeter may signal legal availability. Bubbles rise inside glass. Frame/chrome/text remain still. Bubble timing/position differs per section.
+- Static final landing master must be approved BEFORE animation or splitting production assets. **Animation later belongs to the extracted border/glass/ooze layer**, not whole-page flattened background. The user explicitly requested that this layer decision be recorded in Claude handoff.
+
+## Exact right upper pipe drip physics (Claude acceptance gate)
+1. Pipe spans whole screen from left to right; there are no bottle-shaped structures in upper corners.
+2. A small green droplet grows periodically below the right upper pipe seam; it detaches intermittently, not a constant stream.
+3. It drops vertically directly to the chassis beneath its starting x-position. No offset mirrored/diagonal/sideways impact.
+4. Small proportional splash **exactly under the drip**, then irregular thin ooze runoff DOWN the chassis front following surface geometry and gravity. Natural intervals and pauses.
+5. Separate modest ooze streak at TOP of Help-frame and down HELP button face, avoiding covered lettering. Do not add uncontrolled spills elsewhere.
+6. Realistic liquid appearance, nonuniform green tone and asymmetric rising bubble placement; no bright decorative swirl pattern.
+7. Later animated transparent border layer demonstrates drop timing, impact, runoff and rising bubbles; reduced-motion state; static screenshot alone is not animation test.
+
+## File-linked stage register
+| ID | Item | Status | File IN THIS HANDOFF | Next action |
+|---|---|---|---|---|
+| VIS-001 | Immutable canonical MUTAGEN logo | APPROVED FILE | `assets/locked/MASTER_LOGO_DO_NOT_REGENERATE.jpeg` | Exactly fixed geometry; only liquid inside M potentially editable later |
+| VIS-002 | Landing-page design baseline with wide top pipe | APPROVED BASELINE FILE | `assets/locked/LANDING_PAGE_APPROVED_BASELINE_2026-10-12.png` | Approved design/layout only; drip edit pending |
+| VIS-003 | Latest realistic landing-ooze review | REVIEW FILE—DRIP NOT FINAL | `assets/references/LANDING_PAGE_CURRENT_REVIEW_DRIP_NOT_FINAL.png` | Correct upper-right drip landing position |
+| VIS-004 | Final static landing master with corrected intermittent drip | PENDING | `NONE` | Controlled edit without layout/logo/border changes |
+| VIS-005 | Border/glass ooze bubble/drip/splash/runoff animation | PENDING—AFTER ASSET EXTRACTION | `NONE` | Demonstrate realism; confirm transparent border animation layer |
+| VIS-006 | Horizontal PLAY-style mutagen button reference | STYLE REFERENCE FILE | `assets/references/PLAY_BUTTON_MASTER_HORIZONTAL.jpeg` | Stainless/chrome shells; no black glass centers |
+| VIS-007 | Octagonal green action canister reference | STYLE REFERENCE FILE | `assets/references/OCTAGON_CANISTER_CONTROL_REFERENCE.jpeg` | Green liquid hue fixed; only metal LEDs respond |
+| VIS-008 | Deck Mutator visual direction | REFERENCE FILE | `assets/references/DECK_MUTATOR_VISUAL_REFERENCE.jpeg` | Cross-map existing functionality before finalizing |
+| VIS-009 | Continuous battlefield border inspiration | PARTIAL REFERENCE FILE | `assets/references/BATTLEFIELD_CONTINUOUS_BORDER_REFERENCE.jpeg` | No extra random canisters or non-functional clutter |
+| VIS-010 | Legacy Commander screenshots | FEATURE-AUDIT ONLY FILES | `assets/feature-audit-only/` | Never adopt old styling |
+| VIS-011 | iPhone landscape final layout/layer assets | PENDING | `NONE` | Viewport fill and device verification |
+| VIS-012 | iPad landscape final layout/layer assets | PENDING | `NONE` | Dedicated native layout, not stretched phone |
+| VIS-013 | Complete production asset exports | PENDING | `NONE` | Transparent shells, states, masks, labels and SHA256 |
+| VIS-014 | All-actions feature audit and regression tests | PENDING | `NONE` | Current source, live behavior and old UI controls |
+| VIS-015 | Judge/Table and Deck Mutator fully detailed masters | PENDING | `NONE` | Separate screen review and no feature loss |
+
+## Claimed-complete work rules
+- Whenever an item changes to DONE, attach the final file to THIS package and update `ASSET_MANIFEST.json` with its SHA256, pixel dimensions or other pertinent specs, revision, and approval date. Verify each file exists before issuing handoff.
+- If an image was merely generated but not expressly user-approved, label it "proposed"; if approved as style reference only, label it "approved reference," not complete build.
+- When a change implies coding, append/update the canonical `MUT-01`..`MUT-16` change register in `MUTAGEN-Working-Source.md` and include expected checks, affected code component and whether it is implemented/tested. No modification is permission to write to either GitHub repository.
+
+## Pickup procedure for Work mode
+1. Retrieve latest rolling source, latest visual roadmap and package assets, check revisions/SHAs; if multiple conversations worked since last read, reconcile them before proceeding.
+2. Open the **actual image files** from `assets/locked` and `assets/references`; do not freehand regenerate any locked asset.
+3. Finalize the static landing drip picture with a controlled edit, compare against approved baseline for non-liquid drift, ask for user approval.
+4. After approved static master, extract border, glass/ooze, label and button states as independent assets; THEN develop/test authentic animation on border glass/ooze layer. Record actual animation output file in roadmap.
+5. Audit current game and Deck Mutator features to prevent feature loss. Keep both GitHub repos READ-ONLY until separate authorization.
+6. Save and verify BOTH updated source docs and deliverable files at EVERY accepted design/requirements change. Do not promise automatic cross-chat synchronization.
+
+### Individual-screen checkpoint LC01
+- File: screens/LC01-landing-low-contrast-proposed.png
+- SHA-256: e4b5b52b4a3244947179ee837e5d4118d24f9fcd2c10d6b4b1770410d2a88e80
+- Status: PROPOSED; static only; not user-approved, implemented or device-tested.
+- Review: Low-contrast variant of original01; original preserved. Generated before user pause. NOT approved. Batch PAUSED at user request. Geometry/logo fidelity not pixel-validated; retain canonical originals. Static only.
+
+### Green-only checkpoint G01
+- File: screens/G01-landing-green-only.png
+- SHA256: 674d8c61c8d67d8da45ce74e742d436fdd7dd2482f7a3e40cec643eb04aae805
+- Status: delivered static proposal, not final approved, coded or device tested. Original preserved.
+
+### Green-only checkpoint G01B
+- File: screens/G01B-landing-green-midpoint.png
+- SHA256: b572d7056557df5b578a371cc69cdd571358b3f82c26ba259918977f091f923e
+- Status: delivered static proposal, not final approved, coded or device tested. Original preserved.
+
+### Green-only checkpoint G02
+- File: screens/G02-card-details-green-midpoint.png
+- SHA256: 193711575d31e7dcd4ed5a1f2caf17b2f40bd4c63b30e6d27855823cdaf45e25
+- Status: delivered static proposal, not final approved, coded or device tested. Original preserved.
+
+### Green-only checkpoint G03
+- File: screens/G03-confirmation-green-midpoint.png
+- SHA256: 589e84470df5c813034e134c996aae1b1adaee2403703de8733adc4650a2823e
+- Status: delivered static proposal, not final approved, coded or device tested. Original preserved.
+
+### Green-only checkpoint G04
+- File: screens/G04-deck-mutator-home-green-midpoint.png
+- SHA256: 12389bb2211065959ea3ec44e1a41bc1b73b1a2be0091c229c70872b23208ac1
+- Status: delivered static proposal, not final approved, coded or device tested. Original preserved.
+
+### Green-only checkpoint G05
+- File: screens/G05-creation-menu-green-midpoint.png
+- SHA256: d55986c7ccff7cd1b307a369af4f2c854eb23aa5d7269523a2235603541ba81e
+- Status: delivered static proposal, not final approved, coded or device tested. Original preserved.
+
+### Green-only checkpoint G06
+- File: screens/G06-commander-generation-green-midpoint.png
+- SHA256: a74ec16b0dbefb605c6e4fe383ac36097bce6a4bf5a2b4f5bddcd1109b85241e
+- Status: delivered static proposal, not final approved, coded or device tested. Original preserved.
+
+### Green-only checkpoint G07
+- File: screens/G07-decks-you-can-build-green-midpoint.png
+- SHA256: 629ac6f5831cb121f8e0a321f69acb0a0d6cd58d4135628c24efbe25adcd21ce
+- Status: delivered static proposal, not final approved, coded or device tested. Original preserved.
+
+### Green-only checkpoint G08
+- File: screens/G08-generate-from-cards-green-midpoint.png
+- SHA256: cfd53a33979f973ccf02ef42a5e579599e9001fc2aef1e98ab2a3da23b372739
+- Status: delivered static proposal, not final approved, coded or device tested. Original preserved.
+
+### Green-only checkpoint G09
+- File: screens/G09-precon-catalog-green-midpoint.png
+- SHA256: 213d82ab0fb78156851c13e70763b2465ce72dc958261534d90842a08694b2e1
+- Status: delivered static proposal, not final approved, coded or device tested. Original preserved.
+
+### Visual checkpoint S01
+- File: screens/S01-landing-sparse-containment-proposed.png
+- SHA256: 9b5dc5032d7997096e39ec670abb083a40e5d5498d4cf2089404c0714eef47c5
+- Status: delivered static proposal, not final approved, coded or device tested. Original preserved.
+
+### Visual checkpoint R01
+- File: screens/R01-landing-master-buttons.png
+- SHA256: 3fce21492f7b1db79f29b97894adb994847e1b2b2203763f72dfd2194a0aa817
+- Status: delivered static proposal, not final approved, coded or device tested. Original preserved.
+
+### Visual checkpoint R02
+- File: screens/R02-card-details-master-buttons.png
+- SHA256: 1779d233c2f55303934f689ae55bcfa873d6d31de37fb90ea58fe4c49b5ff206
+- Status: delivered static proposal, not final approved, coded or device tested. Original preserved.
+
+### Visual checkpoint R03
+- File: screens/R03-confirmation-master-buttons.png
+- SHA256: 144fe53e7e22a4448e35274c00a6c84efcf71c9e6944030624d77e9d78730ba6
+- Status: delivered static proposal, not final approved, coded or device tested. Original preserved.
+
+### Visual checkpoint R04
+- File: screens/R04-deck-mutator-home-master-buttons.png
+- SHA256: 54bb8ac4096ef6b747fb6c1fb906514aeca2b92a7ff2b41bc499077927011420
+- Status: delivered static proposal, not final approved, coded or device tested. Original preserved.
+
+### Visual checkpoint R05
+- File: screens/R05-flow-circuit-landing.png
+- SHA256: 6f6d4ee7b8a3cda7027a5ad5d26c38710320f92f243c8085dabad62d4f2514f4
+- Status: delivered static proposal, not final approved, coded or device tested. Original preserved.
+
+### Visual checkpoint R06
+- File: screens/R06-steel-columns-landing.png
+- SHA256: d7e55270eb4f6d80b63119cb58476152469ff368e496c46ce194e74ee89a3104
+- Status: delivered static proposal, not final approved, coded or device tested. Original preserved.
+
+### Visual checkpoint R07
+- File: screens/R07-long-sight-glass-dark-steel.png
+- SHA256: 189c7d90407e73a1de3eea06be2f8ef176a5c650f809908dc4ae52a8fb6ba561
+- Status: delivered static proposal, not final approved, coded or device tested. Original preserved.
+
+### Visual checkpoint R08
+- File: screens/R08-smooth-ooze-steel-top.png
+- SHA256: fde0af2d454e63dc227490f1bf0ec6e90656cbf86359c2c04595c8ab8e573385
+- Status: delivered static proposal, not final approved, coded or device tested. Original preserved.
+
+## Delivered visual proposals
+
+02-Game-Mode-Proposed.png, 03-Deck-Mutator-Home-Proposed.png and 04-Card-Details-Popup-Proposed.png are separate generated static visual proposals, not yet user-approved. Source is the approved landing. Generated artwork is not proof of pixel-exact button/logo reuse or engineering geometry. Preserve canonical source assets for controlled production assembly. Popup card back is illustrative, not a Sol Ring printing. Price/printing/face fields and detailed information must remain available in final functional popup. Dedicated device layouts, extracted transparent layers, and animation remain pending for these new images. Hashes: IMAGE-HASHES.json. Package: MUTAGEN-Visual-Masters-Set-01.zip.

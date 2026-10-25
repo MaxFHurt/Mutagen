@@ -1,0 +1,1378 @@
+[
+  {
+    "screen": "S01",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "S01",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "C01",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "C01",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "C02",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "C02",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "C03",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "C03",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "C04",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "C04",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "C05",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "C05",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "C06",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "C06",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "C07",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "C07",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "C08",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "C08",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "C09",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "C09",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "C10",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "C10",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "C11",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "C11",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "C12",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "C12",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "C13",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "C13",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "C14",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "C14",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "C15",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "C15",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "C16",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "C16",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "C17",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "C17",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "C18",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "C18",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "C19",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "C19",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "C20",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "C20",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "C21",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "C21",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "C22",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "C22",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "C23",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "C23",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "C24",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "C24",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "C25",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "C25",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "C26",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "C26",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "C27",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "C27",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "C28",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "C28",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "C29",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "C29",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "C30",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "C30",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "C31",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "C31",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "S02",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "S02",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "S03",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "S03",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "S04",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "S04",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "S05",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "S05",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "S06",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "S06",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "S07",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "S07",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "S08",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "S08",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "S09",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "S09",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "S10",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "S10",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D01",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D01",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D02",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D02",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D03",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D03",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D04",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D04",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D05",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D05",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D06",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D06",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D07",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D07",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D08",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D08",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D09",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D09",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D10",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D10",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D11",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D11",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D12",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D12",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D13",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D13",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D14",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D14",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D15",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D15",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D16",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D16",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D17",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D17",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D18",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D18",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D19",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D19",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D20",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D20",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D21",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D21",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D22",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D22",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D23",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D23",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D24",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D24",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D25",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D25",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D26",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D26",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D27",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D27",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D28",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D28",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D29",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D29",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D30",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D30",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D31",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D31",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D32",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D32",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D33",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D33",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D34",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D34",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D35",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D35",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D36",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D36",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D37",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D37",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D38",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D38",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D39",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "D39",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "C32",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "C32",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "C33",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "C33",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "C34",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "C34",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "C35",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "C35",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "S11",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "S11",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "S12",
+    "device": "iphone",
+    "width": 1400,
+    "height": 650,
+    "motionChanges": true,
+    "loopSeam": true
+  },
+  {
+    "screen": "S12",
+    "device": "ipad",
+    "width": 1400,
+    "height": 1000,
+    "motionChanges": true,
+    "loopSeam": true
+  }
+]

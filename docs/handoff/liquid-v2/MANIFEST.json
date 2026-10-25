@@ -1,0 +1,54 @@
+[
+  {
+    "file": "sight-column.png",
+    "size": [
+      724,
+      2172
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "3b0530651f1ed040ac034ddde47e2a40066f7a59d10d6d170fcf69c5848449b3"
+  },
+  {
+    "file": "navigation.png",
+    "size": [
+      1372,
+      1147
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "7823083dc72251ab9badf23af6407708d2563b8ee9560575672d256a79e63971"
+  },
+  {
+    "file": "smart-octagon.png",
+    "size": [
+      1309,
+      1201
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "611d9158b920c841e8e3091ef4237b28beb26e9140135d9b52ada88a410e3fb4"
+  },
+  {
+    "file": "canister.png",
+    "size": [
+      2172,
+      724
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "24b041884bbcee6fd7fadc0f88c88f51172cb4f7a3f7860c20edfc4a946a86d5"
+  }
+]
