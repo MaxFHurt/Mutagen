@@ -1,0 +1,176 @@
+{
+  "source": "piping-source-unpacked/assets/references/DECK_MUTATOR_VISUAL_REFERENCE.jpeg",
+  "source_sha256": "b3f9fc5fe28612d4296341d9f0b74b2d4eb327c349e2c67524364e426386669a",
+  "classification": "Original user-supplied Deck Mutator visual reference; not a newly approved production screen",
+  "canvas": [
+    1536,
+    864
+  ],
+  "piping": [
+    {
+      "id": "left-column",
+      "file": "piping-pieces/left-column.png",
+      "animation_overlay": "animation-overlays/left-column.png",
+      "liquid_mask": "animation-overlays/left-column-liquid-mask.png",
+      "rect": [
+        6,
+        4,
+        80,
+        757
+      ],
+      "ports": [],
+      "mask_note": "Glass mask inferred from visible green pixels; inspect alignment before animation. No hidden channels invented."
+    },
+    {
+      "id": "right-column",
+      "file": "piping-pieces/right-column.png",
+      "animation_overlay": "animation-overlays/right-column.png",
+      "liquid_mask": "animation-overlays/right-column-liquid-mask.png",
+      "rect": [
+        1459,
+        4,
+        71,
+        757
+      ],
+      "ports": [],
+      "mask_note": "Glass mask inferred from visible green pixels; inspect alignment before animation. No hidden channels invented."
+    },
+    {
+      "id": "top-left-connector",
+      "file": "piping-pieces/top-left-connector.png",
+      "animation_overlay": "animation-overlays/top-left-connector.png",
+      "liquid_mask": "animation-overlays/top-left-connector-liquid-mask.png",
+      "rect": [
+        80,
+        9,
+        320,
+        59
+      ],
+      "ports": [],
+      "mask_note": "Glass mask inferred from visible green pixels; inspect alignment before animation. No hidden channels invented."
+    },
+    {
+      "id": "top-right-connector",
+      "file": "piping-pieces/top-right-connector.png",
+      "animation_overlay": "animation-overlays/top-right-connector.png",
+      "liquid_mask": "animation-overlays/top-right-connector-liquid-mask.png",
+      "rect": [
+        1137,
+        11,
+        327,
+        58
+      ],
+      "ports": [],
+      "mask_note": "Glass mask inferred from visible green pixels; inspect alignment before animation. No hidden channels invented."
+    },
+    {
+      "id": "lower-left-elbow",
+      "file": "piping-pieces/lower-left-elbow.png",
+      "animation_overlay": "animation-overlays/lower-left-elbow.png",
+      "liquid_mask": "animation-overlays/lower-left-elbow-liquid-mask.png",
+      "rect": [
+        7,
+        736,
+        97,
+        117
+      ],
+      "ports": [],
+      "mask_note": "Glass mask inferred from visible green pixels; inspect alignment before animation. No hidden channels invented."
+    },
+    {
+      "id": "lower-right-elbow",
+      "file": "piping-pieces/lower-right-elbow.png",
+      "animation_overlay": "animation-overlays/lower-right-elbow.png",
+      "liquid_mask": "animation-overlays/lower-right-elbow-liquid-mask.png",
+      "rect": [
+        1431,
+        738,
+        97,
+        114
+      ],
+      "ports": [],
+      "mask_note": "Glass mask inferred from visible green pixels; inspect alignment before animation. No hidden channels invented."
+    },
+    {
+      "id": "bottom-left-joint",
+      "file": "piping-pieces/bottom-left-joint.png",
+      "animation_overlay": "animation-overlays/bottom-left-joint.png",
+      "liquid_mask": "animation-overlays/bottom-left-joint-liquid-mask.png",
+      "rect": [
+        339,
+        787,
+        80,
+        35
+      ],
+      "ports": [],
+      "mask_note": "Glass mask inferred from visible green pixels; inspect alignment before animation. No hidden channels invented."
+    },
+    {
+      "id": "bottom-right-joint",
+      "file": "piping-pieces/bottom-right-joint.png",
+      "animation_overlay": "animation-overlays/bottom-right-joint.png",
+      "liquid_mask": "animation-overlays/bottom-right-joint-liquid-mask.png",
+      "rect": [
+        1103,
+        787,
+        84,
+        35
+      ],
+      "ports": [],
+      "mask_note": "Glass mask inferred from visible green pixels; inspect alignment before animation. No hidden channels invented."
+    }
+  ],
+  "controls": [
+    {
+      "id": "title-and-header-controls",
+      "rect": [
+        79,
+        0,
+        1385,
+        126
+      ]
+    },
+    {
+      "id": "current-deck-panel",
+      "rect": [
+        67,
+        120,
+        496,
+        663
+      ]
+    },
+    {
+      "id": "card-detail-panel",
+      "rect": [
+        568,
+        128,
+        404,
+        646
+      ]
+    },
+    {
+      "id": "search-and-mutations-panel",
+      "rect": [
+        975,
+        120,
+        497,
+        663
+      ]
+    },
+    {
+      "id": "bottom-navigation",
+      "rect": [
+        75,
+        774,
+        1383,
+        90
+      ]
+    }
+  ],
+  "verification": {
+    "reassembled_changed_pixels": 0,
+    "retained_RGB_changed_pixels": 0,
+    "method": "Original pixel cut-outs only; alpha masks, no redraw or generative reconstruction."
+  },
+  "background_status": "Visible original background only. Transparent holes mark artwork-covered or conservatively excluded areas; not an invented clean plate."
+}

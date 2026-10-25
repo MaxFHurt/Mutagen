@@ -1,0 +1,17 @@
+{
+  "source_sha256": "cc3fd853db478dbf831282a8273028893c19fe71c79de09c6342b8273874ae9a",
+  "source_canvas": [
+    1254,
+    1254
+  ],
+  "coverage_pixels": 355198,
+  "changed_pixels_outside_liquid_mask": 0,
+  "RGB_changed_pixels_anywhere": 0,
+  "liquid_components": 173,
+  "mask_channels": {
+    "red": "binary liquid coverage, 0 or 255",
+    "green": "distance to glass boundary, normalized per connected channel; edge 0, deepest point 255",
+    "blue": "0"
+  },
+  "method": "Deterministic selection of green liquid and glowing slots, connected-component cleanup, enclosed highlights included. Only alpha changed in overlay; no RGB recolouring or image generation. Compare mask to source before live integration."
+}

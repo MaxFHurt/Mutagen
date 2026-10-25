@@ -1,5 +1,14 @@
 # MUTAGEN V3 — Visual Change Roadmap — Revision 007 (2026-10-12)
 
+## CURRENT REVISION 051 — Piping and logo v2 layers received; held for owner decisions, 2026-10-25
+
+ChatGPT delivered `MUTAGEN-Piping-Backgrounds-and-Logo-v2.zip` (136 files). All 134 entries in its SHA256SUMS were verified, and the stored copies were checked again at their new paths. Its copy of `01-Landing-Approved.png` is byte-identical to ours. Stored unchanged: home plumbing from the approved landing master at `ui/piping/home/` (13 pipe assemblies, clear-glass overlays, RG liquid masks, 25 detail slices, a full-canvas piping layer, the visible-background and foreground layers, HOME-LAYOUT.json); battlefield and Deck Mutator reference cuts at `ui/piping/*-reference/` (references only, not approved masters); logo v2 overlay and liquid mask at `ui/branding/`; notes, sources and preview at `handoff/piping-2026-10-25/`.
+
+Logo v2 layers checked independently: no RGB changed anywhere, 0 alpha changes outside the mask, every covered pixel clear in the overlay, and the selection covers all bright green but 1 pixel of 274,082. `<mutagen-chamber>` can now use a shell whose mask lives elsewhere (`shells.json` `mask`) and a per-shell bubble scale (`bubbleScale`); shell `logo-v2` is added. Live preview: `ui/liquid/logo-preview.html`; comparison: `previews/logo-v2-static-vs-live.png`. Not switched on, owner to decide: the mask also took in the logo's glass highlights and glow, so the live logo matches the button ooze but looks flatter and darker than the supplied static logo.
+
+Home plumbing held, owner to decide: the pieces fit the master's own geometry (a fixed 1672 × 941 canvas and the master's wide, short buttons). With the supplied 3:1 buttons in the master's places, every branch pipe stops well short of its button and the bottom joints float (`previews/home-master-piping-with-supplied-buttons.png`). The master's side columns are also a different design from the current sight columns, and a fixed-shape canvas would leave bars on iPad and iPhone. The home screen is unchanged.
+
+
 ## CURRENT REVISION 050 — Game-mode master approved; player setup needs its own master, 2026-10-25
 
 Owner approved `02-Game-Mode-Proposed.png` as the design for Choose Game Mode, with logo v2 and the supplied PROFILE / SETTINGS / HELP buttons in place of the master's own versions. The CHOOSE GAME MODE title stays blank until its artwork is supplied.

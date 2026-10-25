@@ -1,0 +1,211 @@
+{
+  "source": "piping-source-unpacked/assets/references/BATTLEFIELD_CONTINUOUS_BORDER_REFERENCE.jpeg",
+  "source_sha256": "f6b8ceff8f850f2cd419a0a1cb151f3ece8d1e26c0f09922ae8245730c1ba5c3",
+  "classification": "Original user-supplied visual reference; not a newly approved production screen",
+  "canvas": [
+    1536,
+    864
+  ],
+  "piping": [
+    {
+      "id": "top-left-feed",
+      "file": "piping-pieces/top-left-feed.png",
+      "animation_overlay": "animation-overlays/top-left-feed.png",
+      "liquid_mask": "animation-overlays/top-left-feed-liquid-mask.png",
+      "rect": [
+        105,
+        0,
+        503,
+        78
+      ],
+      "ports": [],
+      "mask_note": "Glass mask inferred from visible green pixels; inspect alignment before animation. No hidden channels invented."
+    },
+    {
+      "id": "top-right-feed",
+      "file": "piping-pieces/top-right-feed.png",
+      "animation_overlay": "animation-overlays/top-right-feed.png",
+      "liquid_mask": "animation-overlays/top-right-feed-liquid-mask.png",
+      "rect": [
+        919,
+        0,
+        457,
+        78
+      ],
+      "ports": [],
+      "mask_note": "Glass mask inferred from visible green pixels; inspect alignment before animation. No hidden channels invented."
+    },
+    {
+      "id": "left-column-and-elbows",
+      "file": "piping-pieces/left-column-and-elbows.png",
+      "animation_overlay": "animation-overlays/left-column-and-elbows.png",
+      "liquid_mask": "animation-overlays/left-column-and-elbows-liquid-mask.png",
+      "rect": [
+        0,
+        69,
+        77,
+        632
+      ],
+      "ports": [],
+      "mask_note": "Glass mask inferred from visible green pixels; inspect alignment before animation. No hidden channels invented."
+    },
+    {
+      "id": "right-column-and-elbows",
+      "file": "piping-pieces/right-column-and-elbows.png",
+      "animation_overlay": "animation-overlays/right-column-and-elbows.png",
+      "liquid_mask": "animation-overlays/right-column-and-elbows-liquid-mask.png",
+      "rect": [
+        1472,
+        75,
+        64,
+        613
+      ],
+      "ports": [],
+      "mask_note": "Glass mask inferred from visible green pixels; inspect alignment before animation. No hidden channels invented."
+    },
+    {
+      "id": "lower-left-feed",
+      "file": "piping-pieces/lower-left-feed.png",
+      "animation_overlay": "animation-overlays/lower-left-feed.png",
+      "liquid_mask": "animation-overlays/lower-left-feed-liquid-mask.png",
+      "rect": [
+        0,
+        681,
+        350,
+        41
+      ],
+      "ports": [],
+      "mask_note": "Glass mask inferred from visible green pixels; inspect alignment before animation. No hidden channels invented."
+    },
+    {
+      "id": "lower-right-feed",
+      "file": "piping-pieces/lower-right-feed.png",
+      "animation_overlay": "animation-overlays/lower-right-feed.png",
+      "liquid_mask": "animation-overlays/lower-right-feed-liquid-mask.png",
+      "rect": [
+        1135,
+        670,
+        220,
+        44
+      ],
+      "ports": [],
+      "mask_note": "Glass mask inferred from visible green pixels; inspect alignment before animation. No hidden channels invented."
+    }
+  ],
+  "controls": [
+    {
+      "id": "top-title-and-controls",
+      "rect": [
+        0,
+        0,
+        1536,
+        92
+      ]
+    },
+    {
+      "id": "top-left-player",
+      "rect": [
+        28,
+        78,
+        683,
+        147
+      ]
+    },
+    {
+      "id": "top-right-player",
+      "rect": [
+        826,
+        78,
+        685,
+        147
+      ]
+    },
+    {
+      "id": "left-zone-panels",
+      "rect": [
+        24,
+        228,
+        137,
+        281
+      ]
+    },
+    {
+      "id": "right-zone-panels",
+      "rect": [
+        1387,
+        228,
+        125,
+        281
+      ]
+    },
+    {
+      "id": "upper-left-cards",
+      "rect": [
+        329,
+        221,
+        296,
+        112
+      ]
+    },
+    {
+      "id": "upper-right-cards",
+      "rect": [
+        925,
+        220,
+        301,
+        113
+      ]
+    },
+    {
+      "id": "lower-left-cards",
+      "rect": [
+        242,
+        430,
+        300,
+        114
+      ]
+    },
+    {
+      "id": "lower-right-cards",
+      "rect": [
+        991,
+        431,
+        316,
+        112
+      ]
+    },
+    {
+      "id": "bottom-left-player",
+      "rect": [
+        24,
+        511,
+        689,
+        171
+      ]
+    },
+    {
+      "id": "bottom-right-player",
+      "rect": [
+        826,
+        510,
+        684,
+        172
+      ]
+    },
+    {
+      "id": "bottom-toolbar-and-hand",
+      "rect": [
+        0,
+        635,
+        1536,
+        229
+      ]
+    }
+  ],
+  "verification": {
+    "reassembled_changed_pixels": 0,
+    "retained_RGB_changed_pixels": 0,
+    "method": "Original pixel cut-outs only; alpha masks, no redraw or generative reconstruction."
+  },
+  "background_status": "Visible original background only. Transparent holes mark artwork-covered or conservatively excluded areas; not an invented clean plate."
+}
