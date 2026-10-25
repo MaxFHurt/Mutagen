@@ -1,5 +1,10 @@
 # MUTAGEN — rolling situation report and visual inventory
 
+## CURRENT REVISION 032 — Printed-label lettering fixed, 2026-10-25
+
+Owner: the preview lettering looked terrible; purple outlines crossed through the middle of letters (CSS text-stroke traces the font's overlapping inner contours). Fixed (PROPOSED): labels follow the PLAY button master — heavy squared letters (Russo One, OFL, bundled in `ui/fonts/` for offline use) with a brushed-silver gradient face and a purple edge drawn as a separate copy behind the face, so the edge only shows around the outside of each letter. Letters are sized from the glass window (tall in the glass; long words shrink to fit). No shadow slab. Still not the exact master lettering pixels; exact pre-labelled button derivatives remain a production step.
+
+
 ## CURRENT REVISION 031 — Live liquid tuned after owner review, 2026-10-25
 
 Owner reviewed the live prototype on device: bubbles too small; needs different bubble sizes; speed is good; ooze slightly brighter and richer with a more realistic look. Changed (PROPOSED, still not approved): 18 bubbles per chamber in a natural size mix (mostly small, some medium, a few large up to ~7.5% of the window's short side), larger ones rise slightly faster, wobble and flex a little, each with a thin lighter rim and a soft light-focus glow on its lower side (no hard highlight dot). Liquid colour now follows light absorption through the liquid (Beer-Lambert): brighter medium green at the glass (about RGB 35,193,21), richer deep green in the middle (about 0,84,0), soft scattered light from above; flow drifts the liquid thickness, not painted lines. Speed unchanged. Live at /ui/liquid/demo.html.
