@@ -39,7 +39,7 @@ Read this first when picking up the work. Keep it short and current.
 - Never push to `main` / ship a build without the owner's explicit yes.
 - Do only what was asked; ask when a change goes beyond it.
 - No feature loss (MUT-13, MUT-14, MUT-22). Reskin existing handlers; mockups are not specs.
-- Locked art is used exactly as supplied (`handoff/locked-references/locked/`). Never rebuild or remake assets
+- Locked art is used exactly as supplied (`handoff/locked-references/locked/`). The home logo is now ChatGPT's v2 design (`ui/branding/logo-mutagen-v2.png`, owner decision rev 048); the original locked logo stays unchanged as the record. Never rebuild or remake assets
   (labels, lettering, icons); missing assets are requested, not improvised (owner, 2026-10-25).
 - On every accepted change, update `MUTAGEN-Working-Source.md` and
   `MUTAGEN-Visual-Change-Roadmap.md` in `docs/` (the received rev 027 copies stay in

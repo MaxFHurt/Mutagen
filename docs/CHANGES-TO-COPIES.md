@@ -35,3 +35,4 @@ adds alongside the copies do not need listing.
 | 2026-10-25 | `commander/index.html` | Loads `../ui/liquid/liquid.css` and `../ui/home/home.css` | Phase 2 home screen |
 | 2026-10-25 | `commander/tests/shots.py` | Test URL can be set with `CC_URL` (serve the repo root, use `/commander/index.html`) because the app now uses shared `../ui/` files | Tests reach shared assets |
 | 2026-10-25 | `commander/src/ui/screens/landing.js` | Home chambers join one liquid stream (`stream`); left column flows down, right column up | Phase 2 home ooze circuit (rev 043) |
+| 2026-10-25 | `commander/src/ui/screens/landing.js` | Home logo uses `ui/branding/logo-mutagen-v2.png` (owner adopted the new design) | Phase 2 logo (rev 048) |

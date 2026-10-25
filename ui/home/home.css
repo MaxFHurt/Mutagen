@@ -9,7 +9,8 @@
 .mh-column { width: calc((100dvh - 28px) * 724 / 2172); align-self: center; }   /* full height; shell is 724 × 2172 */
 .mh-center { display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(0, 1fr) auto auto; justify-items: center; align-content: center; min-height: 0; gap: clamp(2px, 1.2vh, 14px); }
 .mh-brand { display: grid; justify-items: center; align-content: end; min-height: 0; gap: clamp(0px, 0.6vh, 8px); }
-.mh-logo { height: clamp(60px, 30vh, 340px); width: auto; max-width: 60vw; object-fit: contain; }
+.mh-logo { height: clamp(65px, 32.3vh, 366px);   /* logo v2 has a wider margin on its canvas: same visible size as before */
+   width: auto; max-width: 60vw; object-fit: contain; }
 .mh-tagline { height: clamp(10px, 4.2vh, 40px); width: auto; max-width: 60vw; object-fit: contain; }
 .mh-primary { display: grid; justify-items: center; gap: clamp(0px, 0.4vh, 6px); }
 .mh-primary .mutagen-chamber { width: min(28vw, 40vh, 440px); }   /* three stacked: about 40% of the height */
