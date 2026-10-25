@@ -32,7 +32,8 @@ varying vec2 uv;
 uniform sampler2D uMask;      // R coverage, G depth (0 edge .. 1 deepest)
 uniform vec2 uRes;            // canvas size in pixels
 uniform float uTime, uSeed, uGreen;
-uniform vec2 uFlow;           // flow direction (window units per second)
+uniform vec2 uFlow;           // flow direction through the pipe, in texture space (y down); (0,0) = still liquid
+const float FLOW = 0.05;      // flow speed, window heights per second
 float hash(vec2 p){ return fract(sin(dot(p, vec2(127.1, 311.7)) + uSeed * 17.13) * 43758.5453); }
 float noise(vec2 p){ vec2 i = floor(p), f = fract(p); f = f * f * (3.0 - 2.0 * f);
   return mix(mix(hash(i), hash(i + vec2(1, 0)), f.x), mix(hash(i + vec2(0, 1)), hash(i + vec2(1, 1)), f.x), f.y); }
@@ -47,10 +48,10 @@ void main(){
   // green, so the edges glow a bright medium green and the middle deepens to a rich saturated green.
   float thick = smoothstep(0.0, 0.3, depth);
   // Flow: the thickness varies broadly and drifts with the flow, slowly; two very low octaves, no fine texture.
-  vec2 fp = q * 1.4 - uFlow * uTime;
+  vec2 fp = q * 1.4 - uFlow * (1.4 * FLOW * uTime);
   float n = noise(fp) * 0.65 + noise(fp * 2.1 + 7.3) * 0.35;
   float path = (0.38 + 1.4 * thick) * (0.88 + 0.24 * n);
-  vec3 col = vec3(0.92, 0.95, 0.82) * exp(-vec3(5.0, 0.6, 6.0) * path);
+  vec3 col = vec3(0.95, 1.0, 0.85) * exp(-vec3(4.6, 0.42, 5.6) * path);
   // Light from above scatters inside the liquid: a soft lift toward the top, strongest near the glass.
   float top = 1.0 - st.y;
   col += vec3(0.015, 0.07, 0.012) * top * top * (1.0 - 0.5 * thick);
@@ -64,10 +65,22 @@ void main(){
     float h1 = hash(vec2(fi, 1.7)), h2 = hash(vec2(fi, 9.1)), h3 = hash(vec2(fi, 4.4)), h4 = hash(vec2(fi, 2.9));
     float z = h3;                                          // 0 near the glass .. 1 deep
     float size = pow(h4, 2.2);                             // 0 small .. 1 large, mostly small
-    float speed = mix(0.035, 0.012, z) * (0.75 + 0.45 * size);  // window heights per second; big ones rise a bit faster
-    float y = 1.12 - fract(h2 + uTime * speed) * 1.24;
-    float wob = 0.006 + 0.012 * size;
-    float x = 0.07 + 0.86 * h1 + wob * sin(uTime * (0.5 + h4) + fi * 2.3);
+    float rise = mix(0.035, 0.012, z) * (0.75 + 0.45 * size);  // buoyancy, window heights per second
+    float x, y;
+    if (abs(uFlow.x) > 0.5) {
+      // Horizontal pipe: bubbles ride the stream through the pipe, fastest along the middle, slower near the glass.
+      float lane = 0.14 + 0.72 * h2;
+      float profile = 0.35 + 1.3 * (1.0 - pow(2.0 * lane - 1.0, 2.0));
+      float along = fract(h1 + uFlow.x * uTime * FLOW * profile * (0.8 + 0.4 * h4) * uRes.y / uRes.x);
+      x = -0.08 + along * 1.16;
+      y = lane - 0.04 * sin(fract(h1 + uTime * rise) * 3.14159) + 0.01 * sin(uTime * (0.5 + h4) + fi * 2.3);
+    } else {
+      // Vertical pipe or still chamber: bubbles rise; an upward flow carries them a little faster.
+      float speed = rise + max(0.0, -uFlow.y) * FLOW * 0.6;
+      y = 1.12 - fract(h2 + uTime * speed) * 1.24;
+      float wob = 0.006 + 0.012 * size;
+      x = 0.07 + 0.86 * h1 + wob * sin(uTime * (0.5 + h4) + fi * 2.3);
+    }
     float r = max(1.5, minDim * mix(0.012, 0.075, size) * (1.0 - 0.45 * z));
     float squash = 0.07 * size * sin(uTime * 1.7 + fi);   // larger bubbles flex a little as they rise
     vec2 d = (px - vec2(x, y) * uRes) / vec2(r * (1.0 + squash), r * (1.0 - squash) * 1.04);
@@ -128,7 +141,10 @@ function maskTexture(r, chamber) {
   return (chamber._tex = tex);
 }
 
-const FLOWS = { up: [0, 0.05], down: [0, -0.05], left: [0.05, 0], right: [-0.05, 0], none: [0, 0] };
+// Flow direction through the pipe (texture space, y down). Without a flow attribute it follows the pipe: a window wider
+// than tall flows sideways, a tall one flows up, a roughly square chamber holds still liquid with rising bubbles.
+const FLOWS = { up: [0, -1], down: [0, 1], left: [-1, 0], right: [1, 0], none: [0, 0] };
+const pipeFlow = (w, h) => (w > h * 1.4 ? FLOWS.right : h > w * 1.4 ? FLOWS.up : FLOWS.none);
 
 // ---------- animation loop shared by every chamber ----------
 const live = new Set();
@@ -153,6 +169,74 @@ const seen = 'IntersectionObserver' in window ? new IntersectionObserver(entries
   wake();
 }) : null;
 
+// ---------- printed label, after the PLAY button master ----------
+// Drawn once per size into a canvas: a deep purple extrusion under the letters, a purple edge with a lighter violet rim
+// around the outside only, and a brushed-silver face with a real bevel lit from the upper left. The text itself stays in
+// the page, invisible, for screen readers. Nothing here moves.
+const fontReady = document.fonts?.load ? document.fonts.load('64px "Russo One"').catch(() => {}) : Promise.resolve();
+function drawLabel(canvas, text, boxW, boxH) {
+  const dpr = Math.min(devicePixelRatio || 1, 2), chars = Math.max(3, text.length);
+  const size = Math.max(11, Math.min(0.58 * boxH, (0.98 * boxW) / chars));
+  const ctx = canvas.getContext('2d', { willReadFrequently: true });
+  const font = `${size * dpr}px "Russo One", system-ui, sans-serif`;
+  ctx.font = font;
+  const spacing = 0.04 * size * dpr, edge = 0.115 * size * dpr, depthPx = 0.055 * size * dpr;
+  const textW = ctx.measureText(text).width + spacing * (text.length - 1);
+  const W = Math.ceil(textW + 2 * edge + 4), H = Math.ceil(size * dpr * 1.05 + 2 * edge + depthPx + 4);
+  canvas.width = W; canvas.height = H;
+  canvas.style.width = `${W / dpr}px`; canvas.style.height = `${H / dpr}px`;
+  const x0 = edge + 2, base = edge + 2 + size * dpr * 0.86;
+  const write = (c, mode) => {   // letter by letter so the spacing matches the master on every browser
+    c.font = font; c.textBaseline = 'alphabetic';
+    let x = x0;
+    for (const ch of text) { mode === 'stroke' ? c.strokeText(ch, x, base) : c.fillText(ch, x, base); x += c.measureText(ch).width + spacing; }
+  };
+  ctx.clearRect(0, 0, W, H);
+  ctx.lineJoin = 'round'; ctx.miterLimit = 2;
+  // Extrusion: the purple edge continues downward a little, giving the letters thickness.
+  ctx.save(); ctx.translate(0, depthPx); ctx.strokeStyle = '#170628'; ctx.fillStyle = '#170628'; ctx.lineWidth = edge * 2; write(ctx, 'stroke'); write(ctx, 'fill'); ctx.restore();
+  // Purple edge, then a lighter violet rim just outside the face.
+  ctx.strokeStyle = '#341264'; ctx.lineWidth = edge * 2; write(ctx, 'stroke');
+  ctx.strokeStyle = '#6c3fbd'; ctx.lineWidth = edge * 0.55; write(ctx, 'stroke');
+  // Face: silver with a bevel. Height comes from a blurred copy of the letters; light from the upper left.
+  const m = document.createElement('canvas'); m.width = W; m.height = H;
+  const mc = m.getContext('2d', { willReadFrequently: true }); mc.fillStyle = '#fff'; write(mc, 'fill');
+  const mask = mc.getImageData(0, 0, W, H).data;
+  const blur = Math.max(1, Math.round(0.07 * size * dpr));
+  const hgt = new Float32Array(W * H), tmp = new Float32Array(W * H);
+  for (let i = 0; i < W * H; i++) hgt[i] = mask[i * 4 + 3] / 255;
+  const boxBlur = (src, dst, n, stride, count, step) => {   // running-sum blur along one axis, edges treated as empty
+    for (let line = 0; line < count; line++) {
+      const o = line * stride;
+      let acc = 0;
+      for (let k = 0; k < Math.min(blur, n); k++) acc += src[o + k * step];
+      for (let k = 0; k < n; k++) {
+        if (k + blur < n) acc += src[o + (k + blur) * step];
+        if (k - blur - 1 >= 0) acc -= src[o + (k - blur - 1) * step];
+        dst[o + k * step] = acc / (2 * blur + 1);
+      }
+    }
+  };
+  for (let pass = 0; pass < 2; pass++) { boxBlur(hgt, tmp, W, W, H, 1); boxBlur(tmp, hgt, H, 1, W, W); }
+  const out = ctx.getImageData(0, 0, W, H), o = out.data;
+  const L = [-0.45, -0.62, 0.64], top = edge + 2, cap = size * dpr * 0.72;
+  for (let y = 1; y < H - 1; y++) for (let x = 1; x < W - 1; x++) {
+    const i = y * W + x, a = mask[i * 4 + 3] / 255;
+    if (!a) continue;
+    const nx = (hgt[i - 1] - hgt[i + 1]) * 4.5, ny = (hgt[i - W] - hgt[i + W]) * 4.5, nl = Math.hypot(nx, ny, 1);
+    const diff = Math.max(0, (nx * L[0] + ny * L[1] + L[2]) / nl);
+    const spec = Math.pow(Math.max(0, (nx * -0.3 + ny * -0.5 + 0.81) / nl), 24);
+    const v = Math.min(1, Math.max(0, (y - top) / cap));            // 0 at the cap line .. 1 at the baseline
+    const grain = (Math.sin(y * 12.9898 + Math.floor(x / 3) * 0.31) * 43758.5453) % 1;   // fine horizontal brushing
+    const metal = 0.93 - 0.36 * Math.exp(-Math.pow((v - 0.56) / 0.12, 2)) + 0.025 * grain; // silver with a darker band
+    const lum = Math.min(1, metal * (0.36 + 0.78 * diff) + 0.7 * spec);
+    const r = lum * 236 + 8, g = lum * 232 + 6, b = lum * 246 + 10;
+    o[i * 4] = o[i * 4] * (1 - a) + r * a; o[i * 4 + 1] = o[i * 4 + 1] * (1 - a) + g * a; o[i * 4 + 2] = o[i * 4 + 2] * (1 - a) + b * a;
+    o[i * 4 + 3] = Math.max(o[i * 4 + 3], a * 255);
+  }
+  ctx.putImageData(out, 0, 0);
+}
+
 let seedCounter = 0;
 class MutagenChamber extends HTMLElement {
   async connectedCallback() {
@@ -164,7 +248,7 @@ class MutagenChamber extends HTMLElement {
     if (!meta) return console.warn(`Liquid: unknown shell "${name}"`);
     const [W, H] = meta.size, [x0, y0, x1, y1] = meta.window, ww = x1 - x0 + 1, wh = y1 - y0 + 1;
     this._seed = Number(this.getAttribute('seed')) || (++seedCounter * 7.31 + Math.random() * 100);
-    this._flow = FLOWS[this.getAttribute('flow') || 'none'] || FLOWS.none;
+    this._flow = FLOWS[this.getAttribute('flow')] || pipeFlow(ww, wh);
     this._still = this._seed % 13;   // reduced motion: a still frame, different per chamber
     const pct = (v, of) => `${(100 * v) / of}%`;
     const label = [...this.childNodes];
@@ -184,11 +268,18 @@ class MutagenChamber extends HTMLElement {
     const face = document.createElement('span');
     face.className = 'mutagen-chamber__text';
     face.append(...label);
-    // The purple edge is drawn from a copy of the text; keep it in step when the label changes (e.g. the smart action).
-    const syncEdge = () => { face.dataset.text = face.textContent.trim(); face.style.setProperty('--chars', Math.max(3, face.dataset.text.length)); };
-    syncEdge();
-    new MutationObserver(syncEdge).observe(face, { childList: true, characterData: true, subtree: true });
-    text.append(face);
+    const art = document.createElement('canvas');
+    art.className = 'mutagen-chamber__art'; art.setAttribute('aria-hidden', 'true');
+    // Redraw the printed letters when the label or the glass size changes (e.g. the smart action's label).
+    let drawn = '';
+    const paint = () => fontReady.then(() => {
+      const t = face.textContent.trim().toUpperCase(), box = text.getBoundingClientRect(), key = `${t}|${Math.round(box.width)}x${Math.round(box.height)}|${devicePixelRatio}`;
+      if (!t || box.width < 4 || key === drawn) { art.hidden = !t; return; }
+      drawn = key; art.hidden = false; drawLabel(art, t, box.width, box.height);
+    });
+    new MutationObserver(paint).observe(face, { childList: true, characterData: true, subtree: true });
+    new ResizeObserver(paint).observe(text);
+    text.append(face, art);
     this.append(canvas, frame, text);
     this._canvas = canvas; this._ctx = canvas.getContext('2d');
     const maskImg = await loadImage(`${name}-mask.png`);
@@ -234,8 +325,8 @@ class MutagenChamber extends HTMLElement {
     const img = tc.getImageData(0, 0, w, h), d = img.data, g = greenLevel();
     for (let i = 0; i < d.length; i += 4) {
       const cover = d[i] / 255, k = Math.min(1, d[i + 1] / 255 / 0.3), s = k * k * (3 - 2 * k), path = 0.38 + 1.4 * s;
-      d[i] = 0.92 * Math.exp(-5 * path) * 255 * g * cover; d[i + 1] = 0.95 * Math.exp(-0.6 * path) * 255 * g * cover;
-      d[i + 2] = 0.82 * Math.exp(-6 * path) * 255 * g * cover; d[i + 3] = cover * 255;
+      d[i] = 0.95 * Math.exp(-4.6 * path) * 255 * g * cover; d[i + 1] = Math.exp(-0.42 * path) * 255 * g * cover;
+      d[i + 2] = 0.85 * Math.exp(-5.6 * path) * 255 * g * cover; d[i + 3] = cover * 255;
     }
     ctx.putImageData(img, 0, 0);
   }

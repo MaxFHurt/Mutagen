@@ -1,5 +1,10 @@
 # MUTAGEN V3 — Visual Change Roadmap — Revision 007 (2026-10-12)
 
+## CURRENT REVISION 033 — Label depth, brighter green, flow through the pipe, 2026-10-25
+
+Owner: lettering better but flat compared with the master; liquid needs a brighter green; these are pipes, so a pipe wider than it is tall should carry the ooze horizontally through it. Changed (PROPOSED): labels are rendered like the PLAY master: deep purple extrusion for thickness, dark purple edge with a fine violet rim around the outside only, brushed-silver face with a bevel lit from the upper left and a darker mid band; accessible text kept in the page. Liquid green brighter (absorption lowered). Flow follows the pipe: wider-than-tall windows flow sideways and carry the bubbles through the pipe (faster along the middle, slower near the glass), tall columns flow up, square chambers hold still liquid with rising bubbles; the smart octagon flows sideways between its left and right ports. Speed kept.
+
+
 ## CURRENT REVISION 032 — Printed-label lettering fixed, 2026-10-25
 
 Owner: the preview lettering looked terrible; purple outlines crossed through the middle of letters (CSS text-stroke traces the font's overlapping inner contours). Fixed (PROPOSED): labels follow the PLAY button master — heavy squared letters (Russo One, OFL, bundled in `ui/fonts/` for offline use) with a brushed-silver gradient face and a purple edge drawn as a separate copy behind the face, so the edge only shows around the outside of each letter. Letters are sized from the glass window (tall in the glass; long words shrink to fit). No shadow slab. Still not the exact master lettering pixels; exact pre-labelled button derivatives remain a production step.
