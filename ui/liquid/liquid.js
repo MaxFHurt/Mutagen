@@ -181,7 +181,14 @@ class MutagenChamber extends HTMLElement {
     const text = document.createElement('span');
     text.className = 'mutagen-chamber__label';
     Object.assign(text.style, { left: pct(x0, W), top: pct(y0, H), width: pct(ww, W), height: pct(wh, H) });
-    text.append(...label);
+    const face = document.createElement('span');
+    face.className = 'mutagen-chamber__text';
+    face.append(...label);
+    // The purple edge is drawn from a copy of the text; keep it in step when the label changes (e.g. the smart action).
+    const syncEdge = () => { face.dataset.text = face.textContent.trim(); face.style.setProperty('--chars', Math.max(3, face.dataset.text.length)); };
+    syncEdge();
+    new MutationObserver(syncEdge).observe(face, { childList: true, characterData: true, subtree: true });
+    text.append(face);
     this.append(canvas, frame, text);
     this._canvas = canvas; this._ctx = canvas.getContext('2d');
     const maskImg = await loadImage(`${name}-mask.png`);
