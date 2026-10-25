@@ -13,8 +13,9 @@
 .mh-tagline { height: clamp(10px, 4.2vh, 40px); width: auto; max-width: 60vw; object-fit: contain; }
 .mh-primary { display: grid; justify-items: center; gap: clamp(0px, 0.4vh, 6px); }
 .mh-primary .mutagen-chamber { width: min(28vw, 40vh, 440px); }   /* three stacked: about 40% of the height */
-.mh-tools { display: flex; justify-content: center; gap: clamp(6px, 2vw, 28px); width: 100%; min-width: 0; }
-.mh-tools .mh-btn { flex: 0 1 min(18vw, 31vh, 300px); min-width: 0; }   /* shrink to fit between the columns so the stack stays centred */
+/* Three equal tracks that never exceed the space between the columns, so the stack stays centred in every browser. */
+.mh-tools { display: grid; grid-template-columns: repeat(3, minmax(0, min(18vw, 31vh, 300px))); justify-content: center; column-gap: clamp(6px, 2vw, 28px); width: 100%; min-width: 0; }
+.mh-tools .mh-btn { width: 100%; min-width: 0; }
 .mh-tools .mutagen-chamber { width: 100%; }
 .mh-btn { display: block; line-height: 0; border-radius: 1.2em; }
 .mh-btn:active:not(:disabled) { filter: brightness(1.25); }

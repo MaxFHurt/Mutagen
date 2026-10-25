@@ -1,5 +1,10 @@
 # MUTAGEN — rolling situation report and visual inventory
 
+## CURRENT REVISION 045 — Bottom row laid out as a grid, 2026-10-25
+
+Owner's iPad photo still showed the stack right of the columns. The photo matched the styles from before revision 042 (version text still on the bottom edge), so Safari had kept the old stylesheet: GitHub Pages lets browsers keep files for 10 minutes. To be safe in every browser engine, the PROFILE / SETTINGS / HELP row no longer relies on flex shrinking: it is three equal grid tracks that can never be wider than the space between the columns. Checked centred, with no overflow, at 11 sizes, including Safari's shorter iPad and iPhone viewports (address bar showing).
+
+
 ## CURRENT REVISION 044 — Stream at the old column speed; version text above the bottom edge, 2026-10-25
 
 Owner: the whole home stream runs at the speed the sight columns had on their own (about 31 px/s on iPad), not the slower button speed. Bubbles in the buttons ride the stream at the same pace. In the down-flowing left column they hover and drift slowly, as bubbles do against a downward current; in the up-flowing right column they rise as before. The version text moved up to clear the background's bright bottom edge; checked at six iPad and iPhone sizes. Owner confirmed the home screen is centred (rev 042) and the RESOLVE fix.
