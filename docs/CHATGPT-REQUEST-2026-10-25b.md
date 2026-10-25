@@ -40,7 +40,17 @@ The screen is live in the home screen's frame, using the old mode cards for now.
 - BACK as a canister button, matching PROFILE / SETTINGS / HELP.
 - The pipes that link the mode buttons to the side columns, in the same format as item 2.
 
-## 5. The next screens
+## 5. Player setup master
+The home frame doesn't fit form screens: tall side columns leave too little width for the player form. Please propose a Player Setup master in the MUTAGEN style that keeps every current control visible:
+- player tabs, + ADD PLAYER and Remove player;
+- player name, the deck box, SAVED DECKS, PRECON CATALOG and PASTE LIST;
+- the commander and partner/background fields, the advice toggle and playmat;
+- the room's remote-player count;
+- the mode note, DECK MUTATOR, CONTINUE / OPEN ROOM, and BACK.
+
+For example, pipes along the top and bottom edges instead of tall side columns. Show it at iPad (1180 × 755) and iPhone (844 × 390) landscape.
+
+## 6. The next screens
 Please send the list of remaining screens with their approved masters, in the order the owner wants them built. Then send the asset kit for the first one, in the same layout as this delivery: assembled and animation-overlay versions, iPad and iPhone sizes, a function index and SHA-256s. Every visible control on each master needs a matching asset, so no feature is lost.
 
 Thanks! Please flag anything you can't produce exactly from the masters instead of approximating it.

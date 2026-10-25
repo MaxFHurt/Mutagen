@@ -11,3 +11,8 @@ Next separate visual proposals: game-mode selection, Deck Mutator home, card-det
 ## Delivered visual proposals
 
 02-Game-Mode-Proposed.png, 03-Deck-Mutator-Home-Proposed.png and 04-Card-Details-Popup-Proposed.png are separate generated static visual proposals, not yet user-approved. Source is the approved landing. Generated artwork is not proof of pixel-exact button/logo reuse or engineering geometry. Preserve canonical source assets for controlled production assembly. Popup card back is illustrative, not a Sol Ring printing. Price/printing/face fields and detailed information must remain available in final functional popup. Dedicated device layouts, extracted transparent layers, and animation remain pending for these new images. Hashes: IMAGE-HASHES.json. Package: MUTAGEN-Visual-Masters-Set-01.zip.
+
+
+## Owner approval 2026-10-25
+
+02-Game-Mode-Proposed.png approved by the owner as the Choose Game Mode design ("Yes i approve"), using logo v2 and the supplied PROFILE / SETTINGS / HELP buttons in place of the master's own versions. The title stays blank until its artwork exists.
