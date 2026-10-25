@@ -21,3 +21,4 @@
 .mh-btn:disabled { opacity: 0.45; filter: grayscale(0.5); }
 .mh-btn:focus-visible { outline: 2px solid #b993ff; outline-offset: 2px; }
 .mutagen-home .landing__foot { grid-column: 1 / -1; text-align: center; padding: 2px 0 0; font-size: 9px; }
+.landing.mutagen-home { padding-bottom: calc(max(6px, 2.8vh) + var(--safe-b, 0px)); }   /* version text sits above the background's bright bottom edge */
