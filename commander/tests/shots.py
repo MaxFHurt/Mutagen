@@ -12,7 +12,9 @@ from playwright.async_api import async_playwright
 PHONE = dict(viewport={'width': 844, 'height': 390}, device_scale_factor=2, is_mobile=True, has_touch=True)
 IPAD = dict(viewport={'width': 1180, 'height': 820}, device_scale_factor=1.5, is_mobile=True, has_touch=True)
 OUT = os.environ.get('SHOTS_DIR', '/home/claude/shots/')
-URL = 'http://127.0.0.1:4180/index.html'
+# MUTAGEN: the app needs the shared ../ui/ files, so serve the repository root and set
+# CC_URL=http://127.0.0.1:4180/commander/index.html (default: the app folder served on its own).
+URL = os.environ.get('CC_URL', 'http://127.0.0.1:4180/index.html')
 NAMES = ['Aaron', 'Lex', 'Charlie', 'Diana', 'Evan', 'Faye']
 
 

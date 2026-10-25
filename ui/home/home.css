@@ -1,0 +1,22 @@
+/* MUTAGEN home screen, after the approved landing master (docs/handoff/approved-masters/01-Landing-Approved.png):
+   sight columns at both sides, logo and tagline at the top centre, three main buttons stacked, three tool buttons below.
+   All artwork is supplied as made; this file only places and sizes it. Landscape iPhone and iPad. */
+.landing.mutagen-home {
+  display: grid; grid-template-columns: auto minmax(0, 1fr) auto; grid-template-rows: minmax(0, 1fr) auto;
+  column-gap: clamp(8px, 2vw, 28px); row-gap: 0; align-items: stretch;
+  padding: calc(6px + var(--safe-t, 0px)) max(10px, var(--safe-r, 0px)) calc(6px + var(--safe-b, 0px)) max(10px, var(--safe-l, 0px));
+}
+.mh-column { width: calc((100dvh - 28px) * 724 / 2172); align-self: center; }   /* full height; shell is 724 × 2172 */
+.mh-center { display: grid; grid-template-rows: minmax(0, 1fr) auto auto; justify-items: center; align-content: center; min-height: 0; gap: clamp(2px, 1.2vh, 14px); }
+.mh-brand { display: grid; justify-items: center; align-content: end; min-height: 0; gap: clamp(0px, 0.6vh, 8px); }
+.mh-logo { height: clamp(60px, 30vh, 340px); width: auto; max-width: 60vw; object-fit: contain; }
+.mh-tagline { height: clamp(10px, 4.2vh, 40px); width: auto; max-width: 60vw; object-fit: contain; }
+.mh-primary { display: grid; justify-items: center; gap: clamp(0px, 0.4vh, 6px); }
+.mh-primary .mutagen-chamber { width: min(28vw, 40vh, 440px); }   /* three stacked: about 40% of the height */
+.mh-tools { display: flex; justify-content: center; gap: clamp(6px, 2vw, 28px); }
+.mh-tools .mutagen-chamber { width: min(18vw, 31vh, 300px); }
+.mh-btn { display: block; line-height: 0; border-radius: 1.2em; }
+.mh-btn:active:not(:disabled) { filter: brightness(1.25); }
+.mh-btn:disabled { opacity: 0.45; filter: grayscale(0.5); }
+.mh-btn:focus-visible { outline: 2px solid #b993ff; outline-offset: 2px; }
+.mutagen-home .landing__foot { grid-column: 1 / -1; text-align: center; padding: 2px 0 0; font-size: 9px; }

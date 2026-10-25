@@ -1,5 +1,12 @@
 # MUTAGEN V3 — Visual Change Roadmap — Revision 007 (2026-10-12)
 
+## CURRENT REVISION 040 — MUTAGEN home screen live; logo liquid rework authorised, 2026-10-25
+
+Home screen built to the approved landing layout with supplied artwork only: transparent logo, tagline label, NEW GAME / CONTINUE / DECK MUTATOR stacked, PROFILE / SETTINGS / HELP below, live sight columns at both sides; buttons are the supplied clear-glass versions over the approved liquid (iPad and other large screens use `ui/buttons/`, phones `ui/buttons-iphone/`). All six buttons keep their existing actions; Continue stays disabled without a saved game. Checked at iPhone (844×390) and iPad (1180×820) landscape. Not yet in place because no artwork exists for them: the steel pipes linking the buttons to the columns and the top pipe/frame from the master. They will not be drawn in code.
+
+Owner decisions: generated lettering conditionally approved, avoiding anything with RESOLVE until ChatGPT corrects "RESOLYE". Owner authorised reworking the locked logo's liquid only to match the approved ooze (the exception allowed by revision 007); steel, letters, glow and geometry stay pixel-identical. Requested from ChatGPT: `logo-mutagen-overlay.png` (liquid transparent), `logo-mutagen-liquid-mask.png`, `logo-mutagen-transparent-v2.png` (static), plus corrected RESOLVE files. Until they arrive the home screen uses the verified transparent original.
+
+
 ## CURRENT REVISION 039 — Full button asset delivery stored, 2026-10-25
 
 All 145 files of the ChatGPT asset delivery received (six zips); all 143 files in its SHA256SUMS verified, same checksum list as the earlier metadata. Stored unchanged at their delivered paths: `ui/buttons/` (iPad/high-density, assembled + animation-overlay), `ui/buttons-iphone/`, `ui/labels/`, `ui/components/`, `ui/branding/`. Home buttons (canister) and octagon actions use the animation-overlay files over the approved live liquid; review page shows both. Supplied `ui/components/*-frame.png` differ from the approved `ui/liquid/*-frame.png`; the approved ones stay in use. Open defect: RESOLVE reads "RESOLYE" (all variants). Owner has not yet approved the generated lettering (only PLAY is the master's own).

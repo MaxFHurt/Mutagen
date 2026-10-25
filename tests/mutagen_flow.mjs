@@ -36,6 +36,17 @@ try {
   await ready();
   await page.evaluate(p => localStorage.setItem('dc.profile', JSON.stringify(p)), MUTATOR);
 
+  // MUTAGEN home screen: supplied buttons over live liquid, logo and tagline, Continue off without a saved game
+  const home = await page.evaluate(() => ({
+    buttons: [...document.querySelectorAll('.mutagen-home .mh-btn')].map(b => b.getAttribute('aria-label')),
+    continueOff: document.querySelector('.mh-btn[data-act="continue"]').disabled,
+    art: [...document.querySelectorAll('.mutagen-home img')].every(i => i.complete && i.naturalWidth > 0),
+    chambers: document.querySelectorAll('.mutagen-home mutagen-chamber').length
+  }));
+  check('home shows the six buttons by name', home.buttons.join() === 'New Game,Continue,Deck Mutator,Profile,Settings,Help', home.buttons.join());
+  check('Continue is off without a saved game', home.continueOff);
+  check('home artwork loads (logo, tagline, buttons, columns)', home.art && home.chambers === 8, JSON.stringify(home));
+
   // Landing → Deck Mutator → back to landing
   await page.click('[data-act="decks"]');
   await page.waitForURL('**/deck/');

@@ -8,6 +8,7 @@ import { openJudge } from '../judge-modal.js';
 import { openSettings } from '../settings-modal.js';
 import { toast } from '../toast.js';
 import { openDeckMutator } from '../../mutagen/bridge.js';
+import '../../../../ui/liquid/liquid.js';   // MUTAGEN live liquid (<mutagen-chamber>)
 
 /** Most recent saved session of either kind, or null. */
 async function latestSave() {
@@ -21,19 +22,32 @@ async function latestSave() {
 
 export const landingScreen = {
   mount(root) {
+    // MUTAGEN home (approved landing layout): logo and tagline, three main buttons, three tool buttons, live sight
+    // columns at the sides. Buttons are the supplied finished artwork with clear glass over the live liquid; iPad and
+    // other large screens use the full-resolution set, phones the half-resolution set.
+    const ui = '../ui/', set = Math.min(screen.width, screen.height) >= 700 ? 'buttons' : 'buttons-iphone';
+    const btn = (act, file, name, disabled = false) => html`<button type="button" class="mh-btn" data-act="${act}" aria-label="${name}" ${disabled ? 'disabled' : ''}>
+      <mutagen-chamber shell="canister" overlay="${ui}${set}/home/animation-overlay/button-${file}.png">${name}</mutagen-chamber></button>`;
     setHtml(root, html`
-      <main class="landing">
-        <div class="landing__brand"><img src="assets/img/landing/logo.png" alt="Commander Companion — Track, Play, Learn"></div>
-        <div class="landing__primary">
-          <button type="button" data-act="start"><img src="assets/img/landing/start.png" alt="Start Game"></button>
-          <button type="button" data-act="continue" disabled><img src="assets/img/landing/continue.png" alt="Continue Game"></button>
+      <main class="landing mutagen-home">
+        <mutagen-chamber class="mh-column mh-column--left" shell="sight-column"></mutagen-chamber>
+        <div class="mh-center">
+          <div class="mh-brand">
+            <img class="mh-logo" src="${ui}branding/logo-mutagen-locked-transparent.png" alt="MUTAGEN">
+            <img class="mh-tagline" src="${ui}labels/label-tagline.png" alt="Mutate The Gathering">
+          </div>
+          <div class="mh-primary">
+            ${btn('start', 'new-game', 'New Game')}
+            ${btn('continue', 'continue', 'Continue', true)}
+            ${btn('decks', 'deck-mutator', 'Deck Mutator')}
+          </div>
+          <nav class="mh-tools" aria-label="Tools">
+            ${btn('profile', 'profile', 'Profile')}
+            ${btn('settings', 'settings', 'Settings')}
+            ${btn('help', 'help', 'Help')}
+          </nav>
         </div>
-        <nav class="landing__tools" aria-label="Tools">
-          <button type="button" data-act="profile"><img src="assets/img/landing/profile.png" alt="Profile"></button>
-          <button type="button" data-act="decks"><img src="assets/img/landing/deck-builder.png" alt="Deck Builder"></button>
-          <button type="button" data-act="settings"><img src="assets/img/landing/settings.png" alt="Settings"></button>
-          <button type="button" data-act="help"><img src="assets/img/landing/help.png" alt="Help"></button>
-        </nav>
+        <mutagen-chamber class="mh-column mh-column--right" shell="sight-column"></mutagen-chamber>
         <div class="landing__foot">MUTAGEN • ${VERSION}</div>
       </main>`);
 

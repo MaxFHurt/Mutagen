@@ -31,3 +31,6 @@ adds alongside the copies do not need listing.
 | 2026-10-25 | `deck/ui/deck.js` | Tier chips on mutation rows, tier choice buttons (deck, generate dialogs) and "Apply All … Mutations" use `MUTATION_LABEL`; sentences unchanged | MUT-03 (b) |
 | 2026-10-25 | `deck/ui/upgrades.js` | Comparison sheet columns: Your card / Budget / Mid tier / Apex | Handoff requirement 8 |
 | 2026-10-25 | `deck/tools/tests/suite/ui-test.mjs` | Apply-all label check expects "Apply All (Budget\|Mid Tier\|Apex) Mutations" | MUT-03 (b) |
+| 2026-10-25 | `commander/src/ui/screens/landing.js` | Home screen markup replaced with the MUTAGEN home (logo, tagline, six supplied buttons over live liquid, sight columns); same `data-act` handlers, Continue still enabled only with a saved game | Phase 2 home screen |
+| 2026-10-25 | `commander/index.html` | Loads `../ui/liquid/liquid.css` and `../ui/home/home.css` | Phase 2 home screen |
+| 2026-10-25 | `commander/tests/shots.py` | Test URL can be set with `CC_URL` (serve the repo root, use `/commander/index.html`) because the app now uses shared `../ui/` files | Tests reach shared assets |
