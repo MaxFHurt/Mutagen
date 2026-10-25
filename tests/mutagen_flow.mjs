@@ -36,6 +36,8 @@ try {
   await ready();
   await page.evaluate(p => localStorage.setItem('dc.profile', JSON.stringify(p)), MUTATOR);
 
+  // Artwork is large; wait for every home image to finish loading before checking it
+  await page.waitForFunction(() => [...document.querySelectorAll('.mutagen-home img')].every(i => i.complete), null, { timeout: 30000 }).catch(() => {});
   // MUTAGEN home screen: supplied buttons over live liquid, logo and tagline, Continue off without a saved game
   const home = await page.evaluate(() => ({
     buttons: [...document.querySelectorAll('.mutagen-home .mh-btn')].map(b => b.getAttribute('aria-label')),
