@@ -1,5 +1,10 @@
 # MUTAGEN — rolling situation report and visual inventory
 
+## CURRENT REVISION 035 — Smart octagon: flow through a wider glass bulb, 2026-10-25
+
+Owner: the octagon's flow is horizontal, but should behave like liquid entering a glass bulb of larger diameter. Changed (PROPOSED): new `flow="bulb"` mode, used by the smart octagon. Ideal flow through a widening (source at the left port, sink at the right): the stream enters fast and narrow at the inlet's height, fans out to fill the bulb, slows across the middle and gathers again into the outlet. The liquid's broad variation is carried along that local flow (two staggered phases, so it never smears). Bubbles ride in quickly, spread along curving paths, drift slowly across the middle (larger ones lifting slightly by buoyancy) and are pulled out the other side. Pipes (canisters, columns) unchanged.
+
+
 ## CURRENT REVISION 034 — Labels come only from supplied artwork, 2026-10-25
 
 Owner: letters must come directly from the master and be made assets; MUTAGEN must not rebuild or remake assets. Code-drawn lettering (revisions 032–033) and the bundled font are removed. `<mutagen-chamber label="…png">` now shows a supplied label image exactly as made, only scaled to fit the glass; the element's text is the accessible name. No finished label assets exist in the handoff (PLAY master is a flattened JPEG on the old liquid; approved landing labels are flattened at ~40 px; the 335-asset kit was never delivered). Requested set and format: `docs/LABEL-ASSET-REQUEST.md` (owner will have ChatGPT make them). Liquid, flow and colour from revision 033 unchanged.

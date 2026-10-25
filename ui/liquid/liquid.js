@@ -35,7 +35,15 @@ uniform sampler2D uMask;      // R coverage, G depth (0 edge .. 1 deepest)
 uniform vec2 uRes;            // canvas size in pixels
 uniform float uTime, uSeed, uGreen;
 uniform vec2 uFlow;           // flow direction through the pipe, in texture space (y down); (0,0) = still liquid
+uniform float uBulb;          // 1 = a wide glass bulb fed by a narrow pipe on the left, drained by one on the right
 const float FLOW = 0.05;      // flow speed, window heights per second
+// Bulb flow: a source at the inlet and a sink at the outlet (ideal flow through a widening). The stream enters fast and
+// narrow, fans out to fill the bulb, slows in the middle and gathers again into the outlet.
+vec2 bulbFlow(vec2 q, float aspect){
+  vec2 a = q - vec2(-0.04, 0.5), b = q - vec2(aspect + 0.04, 0.5);
+  vec2 v = 0.012 * (a / dot(a, a) - b / dot(b, b));
+  float l = length(v); return l > 0.25 ? v * (0.25 / l) : v;
+}
 float hash(vec2 p){ return fract(sin(dot(p, vec2(127.1, 311.7)) + uSeed * 17.13) * 43758.5453); }
 float noise(vec2 p){ vec2 i = floor(p), f = fract(p); f = f * f * (3.0 - 2.0 * f);
   return mix(mix(hash(i), hash(i + vec2(1, 0)), f.x), mix(hash(i + vec2(0, 1)), hash(i + vec2(1, 1)), f.x), f.y); }
@@ -50,8 +58,18 @@ void main(){
   // green, so the edges glow a bright medium green and the middle deepens to a rich saturated green.
   float thick = smoothstep(0.0, 0.3, depth);
   // Flow: the thickness varies broadly and drifts with the flow, slowly; two very low octaves, no fine texture.
-  vec2 fp = q * 1.4 - uFlow * (1.4 * FLOW * uTime);
-  float n = noise(fp) * 0.65 + noise(fp * 2.1 + 7.3) * 0.35;
+  float n;
+  if (uBulb > 0.5) {
+    // Carry the broad variation along the local flow; two staggered phases blended so it never stretches out of shape.
+    vec2 v = bulbFlow(q, aspect) * 1.4;
+    float ph = fract(uTime / 4.0), ph2 = fract(uTime / 4.0 + 0.5);
+    vec2 f1 = q * 1.4 - v * ph * 4.0, f2 = q * 1.4 - v * ph2 * 4.0 + 3.7;
+    float n1 = noise(f1) * 0.65 + noise(f1 * 2.1 + 7.3) * 0.35, n2 = noise(f2) * 0.65 + noise(f2 * 2.1 + 7.3) * 0.35;
+    n = mix(n1, n2, abs(ph - 0.5) * 2.0);
+  } else {
+    vec2 fp = q * 1.4 - uFlow * (1.4 * FLOW * uTime);
+    n = noise(fp) * 0.65 + noise(fp * 2.1 + 7.3) * 0.35;
+  }
   float path = (0.38 + 1.4 * thick) * (0.88 + 0.24 * n);
   vec3 col = vec3(0.95, 1.0, 0.85) * exp(-vec3(4.6, 0.42, 5.6) * path);
   // Light from above scatters inside the liquid: a soft lift toward the top, strongest near the glass.
@@ -69,7 +87,15 @@ void main(){
     float size = pow(h4, 2.2);                             // 0 small .. 1 large, mostly small
     float rise = mix(0.035, 0.012, z) * (0.75 + 0.45 * size);  // buoyancy, window heights per second
     float x, y;
-    if (abs(uFlow.x) > 0.5) {
+    if (uBulb > 0.5) {
+      // Bulb: in fast at the inlet's height, fanned out along curving paths, slow across the middle (rising a little
+      // while slow), then pulled quickly into the outlet.
+      float s = fract(h1 + uTime * 0.035 * (0.8 + 0.4 * h4));
+      float sp = s - 0.82 * sin(6.28318 * s) / 6.28318;        // slow in the middle, fast near the ports
+      float spread = (h2 - 0.5) * 0.9;                          // which path through the bulb
+      x = -0.04 + sp * 1.08;
+      y = 0.5 + spread * sin(3.14159 * sp) - (0.02 + 0.03 * size) * sin(3.14159 * sp);   // big ones lift a little more
+    } else if (abs(uFlow.x) > 0.5) {
       // Horizontal pipe: bubbles ride the stream through the pipe, fastest along the middle, slower near the glass.
       float lane = 0.14 + 0.72 * h2;
       float profile = 0.35 + 1.3 * (1.0 - pow(2.0 * lane - 1.0, 2.0));
@@ -121,7 +147,7 @@ function renderer() {
     gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 1, -1, -1, 1, 1, 1]), gl.STATIC_DRAW);
     const loc = gl.getAttribLocation(prog, 'p'); gl.enableVertexAttribArray(loc); gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
     const u = n => gl.getUniformLocation(prog, n);
-    shared = { canvas, gl, u: { mask: u('uMask'), res: u('uRes'), time: u('uTime'), seed: u('uSeed'), green: u('uGreen'), flow: u('uFlow') } };
+    shared = { canvas, gl, u: { mask: u('uMask'), res: u('uRes'), time: u('uTime'), seed: u('uSeed'), green: u('uGreen'), flow: u('uFlow'), bulb: u('uBulb') } };
   } catch (error) {
     console.warn('Liquid: WebGL unavailable, showing still liquid', error);
     shared = false;
@@ -145,7 +171,8 @@ function maskTexture(r, chamber) {
 
 // Flow direction through the pipe (texture space, y down). Without a flow attribute it follows the pipe: a window wider
 // than tall flows sideways, a tall one flows up, a roughly square chamber holds still liquid with rising bubbles.
-const FLOWS = { up: [0, -1], down: [0, 1], left: [-1, 0], right: [1, 0], none: [0, 0] };
+// flow="bulb" is for a wide glass bulb fed and drained by narrow side pipes (the smart octagon).
+const FLOWS = { up: [0, -1], down: [0, 1], left: [-1, 0], right: [1, 0], none: [0, 0], bulb: [1, 0] };
 const pipeFlow = (w, h) => (w > h * 1.4 ? FLOWS.right : h > w * 1.4 ? FLOWS.up : FLOWS.none);
 
 // ---------- animation loop shared by every chamber ----------
@@ -183,6 +210,7 @@ class MutagenChamber extends HTMLElement {
     const [W, H] = meta.size, [x0, y0, x1, y1] = meta.window, ww = x1 - x0 + 1, wh = y1 - y0 + 1;
     this._seed = Number(this.getAttribute('seed')) || (++seedCounter * 7.31 + Math.random() * 100);
     this._flow = FLOWS[this.getAttribute('flow')] || pipeFlow(ww, wh);
+    this._bulb = this.getAttribute('flow') === 'bulb' ? 1 : 0;   // flow="bulb": a wide glass bulb on a narrow side pipe
     this._still = this._seed % 13;   // reduced motion: a still frame, different per chamber
     const pct = (v, of) => `${(100 * v) / of}%`;
     const label = [...this.childNodes];
@@ -243,7 +271,7 @@ class MutagenChamber extends HTMLElement {
     gl.uniform1i(u.mask, 0);
     gl.uniform2f(u.res, canvas.width, canvas.height);
     gl.uniform1f(u.time, time); gl.uniform1f(u.seed, this._seed % 97); gl.uniform1f(u.green, greenLevel());
-    gl.uniform2f(u.flow, this._flow[0], this._flow[1]);
+    gl.uniform2f(u.flow, this._flow[0], this._flow[1]); gl.uniform1f(u.bulb, this._bulb);
     gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
     this._ctx.clearRect(0, 0, canvas.width, canvas.height);
     this._ctx.drawImage(r.canvas, 0, 0);
