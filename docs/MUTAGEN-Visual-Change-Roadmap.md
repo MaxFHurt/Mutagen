@@ -1,5 +1,12 @@
 # MUTAGEN V3 — Visual Change Roadmap — Revision 007 (2026-10-12)
 
+## CURRENT REVISION 047 — Big bubbles keep rising in the down column, 2026-10-25
+
+Owner: the bubbles look fine, and slowly moving up looks realistic for bigger bubbles. In a downward stream, bubbles now behave by size: small ones are carried down with the ooze, and the bigger ones (about one in five) are buoyant enough to keep rising slowly (about 7 px/s on iPad). The left column still reads as running down overall (about 30 px/s measured). Upward and horizontal flow are unchanged.
+
+Logo received from ChatGPT (owner upload, SHA-256 cc3fd853…) and NOT installed: it is a regenerated logo, not a liquid-only edit of the locked one. The octagon is smaller and moved, and the steel, screws, wear, lettering and glow are redrawn (21 of about 1,030,000 overlapping pixels identical). It also came without the overlay and mask files. The locked logo stays in place. Correction message given to the owner; adopting the new design would need the owner's explicit yes.
+
+
 ## CURRENT REVISION 046 — Left column visibly runs down, 2026-10-25
 
 Owner could not see the ooze running down the left column. The liquid drifted down, but the bubbles, which carry most of the visible motion in a tall column, hovered against the current. In a downward stream, bubbles are now carried down with it, held back a little by their rise. Measured: the left column moves down about 23 px/s and the right column up about 23 px/s (iPad Safari size). Chambers outside a stream are unchanged.

@@ -115,10 +115,10 @@ void main(){
       x = -0.08 + along * 1.16;
       y = lane - 0.04 * sin(fract(h1 + uTime * rise) * 3.14159) + 0.01 * sin(uTime * (0.5 + h4) + fi * 2.3);
     } else {
-      // Vertical pipe or still chamber: bubbles rise; an upward flow carries them a little faster. A downward stream is
-      // stronger than their buoyancy and carries them down with it, held back a little by their rise.
+      // Vertical pipe or still chamber: bubbles rise; an upward flow carries them a little faster. In a downward stream
+      // small bubbles are carried down with it, while the bigger ones are buoyant enough to keep rising slowly.
       float carry = uStream > 0.5 ? STREAM_FLOW * uUnit / uRes.y : FLOW * 0.6;
-      float speed = (uFlow.y > 0.5 ? 0.3 : 1.0) * rise - uFlow.y * carry;
+      float speed = uFlow.y > 0.5 ? mix(0.3 * rise - carry, 0.3 * rise, smoothstep(0.45, 0.8, size)) : rise - uFlow.y * carry;
       y = 1.12 - fract(h2 + uTime * speed) * 1.24;
       float wob = 0.006 + 0.012 * size;
       x = 0.07 + 0.86 * h1 + wob * sin(uTime * (0.5 + h4) + fi * 2.3);
