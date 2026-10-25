@@ -9,15 +9,8 @@
 @font-face { font-family: 'Russo One'; src: url('../fonts/russo-one-latin.woff2') format('woff2'); font-display: swap; }
 .mutagen-chamber__label {
   display: flex; align-items: center; justify-content: center; text-align: center; pointer-events: none; isolation: isolate;
-  container-type: size;   /* letters are sized from the glass window: tall in the glass, long words shrink to fit */
   font: 400 11px / 1 'Russo One', system-ui, sans-serif; letter-spacing: 0.04em; text-transform: uppercase; white-space: nowrap;
 }
-.mutagen-chamber__text {
-  position: relative; color: transparent; font-size: max(11px, min(58cqh, calc(98cqw / var(--chars, 5))));
-  background: linear-gradient(180deg, #fbfaff 0%, #dcd8ea 38%, #a7a2bb 52%, #cfcbdf 70%, #f1effa 100%);
-  -webkit-background-clip: text; background-clip: text;
-}
-.mutagen-chamber__text::before {
-  content: attr(data-text); position: absolute; inset: 0; z-index: -1;
-  color: #4a1d8f; -webkit-text-stroke: 0.16em #4a1d8f;
-}
+/* The letters are drawn into .mutagen-chamber__art (see drawLabel in liquid.js); the text stays for screen readers. */
+.mutagen-chamber__text { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.mutagen-chamber__art { display: block; }

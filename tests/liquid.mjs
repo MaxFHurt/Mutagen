@@ -20,7 +20,7 @@ page.on('pageerror', e => errors.push(String(e)));
 
 // Pixels of every chamber's liquid canvas, plus how much colour sits outside the glass window.
 const sample = () => page.evaluate(() => [...document.querySelectorAll('mutagen-chamber')].map(el => {
-  const c = el.querySelector('canvas'), d = c.getContext('2d').getImageData(0, 0, c.width, c.height).data;
+  const c = el.querySelector('.mutagen-chamber__liquid'), d = c.getContext('2d').getImageData(0, 0, c.width, c.height).data;
   let sum = 0, h = 0;
   for (let i = 0; i < d.length; i += 4) { sum += d[i + 1]; h = (h * 31 + d[i + 1]) >>> 0; }
   return { w: c.width, h: c.height, sum, hash: h };
@@ -37,7 +37,7 @@ try {
   check('liquid moves over time', a.every((x, i) => x.hash !== b[i].hash));
 
   const same = await page.evaluate(() => {
-    const [p, q] = [...document.querySelectorAll('.buttons mutagen-chamber canvas')];
+    const [p, q] = [...document.querySelectorAll('.buttons .mutagen-chamber__liquid')];
     const dp = p.getContext('2d').getImageData(0, 0, p.width, p.height).data, dq = q.getContext('2d').getImageData(0, 0, q.width, q.height).data;
     let diff = 0; for (let i = 0; i < dp.length; i++) diff += Math.abs(dp[i] - dq[i]);
     return diff;
@@ -46,7 +46,7 @@ try {
 
   const outside = await page.evaluate(async () => {
     // Liquid alpha outside the window mask must be zero: compare the canvas against the mask it was clipped to.
-    const el = document.querySelector('mutagen-chamber[shell="smart-octagon"]'), c = el.querySelector('canvas');
+    const el = document.querySelector('mutagen-chamber[shell="smart-octagon"]'), c = el.querySelector('.mutagen-chamber__liquid');
     const d = c.getContext('2d').getImageData(0, 0, c.width, c.height).data;
     const corner = [0, c.width - 1, (c.height - 1) * c.width, c.height * c.width - 1].map(i => d[i * 4 + 3]);
     return Math.max(...corner);
