@@ -73,7 +73,7 @@ export function handleSeatAction(act, el, seat, redraw) {
     return openModal({
       title: 'Saved decks',
       body: decks.length ? html`<div class="option-list">${decks.map((d, i) => html`<button type="button" class="option" data-deck="${i}"><span><strong>${d.name || 'Untitled deck'}</strong><small>${[d.commander1, d.commander2].filter(Boolean).join(' + ') || 'No commander set'}</small></span></button>`)}</div>`
-        : html`<p class="muted">No saved decks yet. Build one in the Deck Builder, pick a precon, or paste a list.</p>`,
+        : html`<p class="muted">No saved decks yet. Build one in Deck Mutator, pick a precon, or paste a list.</p>`,
       onMount(m, { close }) {
         on(m, 'click', '[data-deck]', (e, b) => {
           const d = decks[Number(b.dataset.deck)];

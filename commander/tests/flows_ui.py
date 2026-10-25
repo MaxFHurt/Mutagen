@@ -142,28 +142,25 @@ async def freeplay(browser):
     await page.context.close()
 
 async def deck_editor(browser):
+    # MUTAGEN: decks come from Deck Mutator (../deck/, its "dc.profile" storage); Deck Builder opens it.
     page = await new_page(browser, PHONE)
+    white = FIX['decks']['white']['list'].splitlines()
+    cards = [{'n': l.split(' ', 1)[1], 'q': int(l.split(' ', 1)[0])} for l in white if l.strip() and l.split(' ', 1)[0].isdigit()]
+    mutator = {'decks': [{'id': 'dm-white', 'name': 'Mono White', 'format': 'commander', 'commander': 'Isamaru, Hound of Konda', 'cards': cards}]}
+    await page.evaluate('p => localStorage.setItem("dc.profile", JSON.stringify(p))', mutator)
+    await page.route('**/deck/', lambda route: route.fulfill(status=200, content_type='text/html', body='<title>Deck Mutator</title>'))
     await page.click('[data-act="decks"]')
-    await page.wait_for_selector('.deck-editor')
-    await page.fill('#deckName', 'Mono White')
-    await page.fill('#deckList', FIX['decks']['white']['list'])
-    await page.click('[data-act="pick-cmd"][data-slot="1"]')
-    await page.wait_for_selector('.modal .option')
-    check('commander picker lists the legendary creature', 'Isamaru' in await page.locator('.modal .option-list').text_content())
-    await page.locator('.modal .option').first.click()
-    await page.fill('#cardSearch', 'Serra'); await page.click('[data-act="search"]'); await page.wait_for_selector('[data-act="add-card"]')
-    await page.screenshot(path=f'{OUT}phone-deck-editor.png')
-    await page.click('[data-act="validate"]'); await page.wait_for_selector('.deck-analytics-panel')
-    status = await page.locator('#deckStatus').text_content()
-    check('deck validates as legal', 'Commander legal' in status, status)
-    await page.click('[data-act="save"]'); await page.wait_for_selector('.deck-editor__saved .option')
-    check('deck saved and listed', 'Mono White' in await page.locator('.deck-editor__saved').text_content())
-    await page.screenshot(path=f'{OUT}phone-deck-editor-saved.png')
-    # Saved deck is offered in player setup
-    await page.click('[data-act="back"]'); await page.click('[data-act="start"]'); await page.click('[data-mode="fully-tracked"]'); await page.click('[data-play="local"]')
-    await page.click('[data-seat-act="saved"]'); await page.locator('.modal [data-deck]').first.click()
+    await page.wait_for_url('**/deck/')
+    check('Deck Builder opens Deck Mutator', page.url.endswith('/deck/'))
+    await page.go_back(); await page.wait_for_function('window.__ccReady === true', timeout=15000)
+    page.errors.clear()   # the stand-in Deck Mutator page has no favicon
+    # A Deck Mutator deck is offered in player setup
+    await page.click('[data-act="start"]'); await page.click('[data-mode="fully-tracked"]'); await page.click('[data-play="local"]')
+    await page.click('[data-seat-act="saved"]')
+    check('Deck Mutator deck listed in setup', 'Mono White' in await page.locator('.modal .option-list').text_content())
+    await page.locator('.modal [data-deck]').first.click()
     check('saved deck fills the commander', await page.input_value('[data-field="commander1"]') == 'Isamaru, Hound of Konda')
-    check('no console errors (deck editor)', not page.errors, str(page.errors[:3]))
+    check('no console errors (decks)', not page.errors, str(page.errors[:3]))
     await page.context.close()
 
 async def main():

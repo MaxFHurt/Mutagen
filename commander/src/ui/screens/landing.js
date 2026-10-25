@@ -7,6 +7,7 @@ import { GAME_SAVE_KEY } from '../../game/save-keys.js';
 import { openJudge } from '../judge-modal.js';
 import { openSettings } from '../settings-modal.js';
 import { toast } from '../toast.js';
+import { openDeckMutator } from '../../mutagen/bridge.js';
 
 /** Most recent saved session of either kind, or null. */
 async function latestSave() {
@@ -48,7 +49,7 @@ export const landingScreen = {
         case 'start': return go('mode-select');
         case 'continue': return resume ? go(resume.screen, { resume: true }) : toast('No saved game yet.');
         case 'profile': return go('profile');
-        case 'decks': return go('deck-editor');
+        case 'decks': return openDeckMutator({ screen: 'landing' });
         case 'settings': return openSettings();
         case 'help': return openJudge();
       }

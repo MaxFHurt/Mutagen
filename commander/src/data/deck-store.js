@@ -1,4 +1,5 @@
 import { durableGet, durableSet } from './userdata-db.js';
+import { listMutatorDecks } from '../mutagen/bridge.js';
 const KEY = 'ccv07-decks', DURABLE_KEY = 'decks';
 let cache = null;
 function localRead(storage) { try {
@@ -36,8 +37,8 @@ export async function initDeckStore(storage = globalThis.localStorage) {
   localWrite(cache, storage);
   return cache;
 }
-export function listDecks(storage = globalThis.localStorage) { if (cache)
-  return structuredClone(cache); return structuredClone(localRead(storage)); }
+// MUTAGEN: Deck Mutator owns every deck; the decks this store saved before the merge are left on the device unused.
+export function listDecks(storage = globalThis.localStorage) { return listMutatorDecks(storage); }
 export async function saveDeck(deck, storage = globalThis.localStorage) {
   const all = listDecks(storage), i = all.findIndex(d => d.id === deck.id), now = new Date().toISOString(), previous = i >= 0 ? all[i] : null, row = { ...deck, id: deck.id || crypto.randomUUID(), createdAt: deck.createdAt || previous?.createdAt || now, updatedAt: now };
   if (i >= 0)

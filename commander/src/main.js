@@ -18,6 +18,7 @@ import { gameScreen } from './ui/screens/game.js';
 import { lobbyScreen } from './ui/screens/lobby.js';
 import { joinScreen } from './ui/screens/join.js';
 import { deckEditorScreen } from './ui/screens/deck-editor.js';
+import { takeReturn } from './mutagen/bridge.js';
 
 registerScreen('landing', landingScreen);
 registerScreen('mode-select', modeSelectScreen);
@@ -37,7 +38,8 @@ async function start() {
   // Saved data loads in parallel; a failure in one store must not block the app.
   await Promise.allSettled([initDeckStore(), initProfileStore(), initPlaymats()]);
   try { screen.orientation?.lock?.('landscape')?.catch?.(() => {}); } catch { /* not supported */ }
-  if (shouldResumeAfterUpdate()) go('game', { resume: true }); else go('landing');
+  const back = takeReturn();
+  if (shouldResumeAfterUpdate()) go('game', { resume: true }); else if (!back || !go(back.screen, back.params)) go('landing');
   window.__ccReady = true;
   window.__ccVersion = VERSION;
   document.getElementById('bootError').hidden = true;
