@@ -7,14 +7,15 @@
   padding: calc(6px + var(--safe-t, 0px)) max(10px, var(--safe-r, 0px)) calc(6px + var(--safe-b, 0px)) max(10px, var(--safe-l, 0px));
 }
 .mh-column { width: calc((100dvh - 28px) * 724 / 2172); align-self: center; }   /* full height; shell is 724 × 2172 */
-.mh-center { display: grid; grid-template-rows: minmax(0, 1fr) auto auto; justify-items: center; align-content: center; min-height: 0; gap: clamp(2px, 1.2vh, 14px); }
+.mh-center { display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(0, 1fr) auto auto; justify-items: center; align-content: center; min-height: 0; gap: clamp(2px, 1.2vh, 14px); }
 .mh-brand { display: grid; justify-items: center; align-content: end; min-height: 0; gap: clamp(0px, 0.6vh, 8px); }
 .mh-logo { height: clamp(60px, 30vh, 340px); width: auto; max-width: 60vw; object-fit: contain; }
 .mh-tagline { height: clamp(10px, 4.2vh, 40px); width: auto; max-width: 60vw; object-fit: contain; }
 .mh-primary { display: grid; justify-items: center; gap: clamp(0px, 0.4vh, 6px); }
 .mh-primary .mutagen-chamber { width: min(28vw, 40vh, 440px); }   /* three stacked: about 40% of the height */
-.mh-tools { display: flex; justify-content: center; gap: clamp(6px, 2vw, 28px); }
-.mh-tools .mutagen-chamber { width: min(18vw, 31vh, 300px); }
+.mh-tools { display: flex; justify-content: center; gap: clamp(6px, 2vw, 28px); width: 100%; min-width: 0; }
+.mh-tools .mh-btn { flex: 0 1 min(18vw, 31vh, 300px); min-width: 0; }   /* shrink to fit between the columns so the stack stays centred */
+.mh-tools .mutagen-chamber { width: 100%; }
 .mh-btn { display: block; line-height: 0; border-radius: 1.2em; }
 .mh-btn:active:not(:disabled) { filter: brightness(1.25); }
 .mh-btn:disabled { opacity: 0.45; filter: grayscale(0.5); }
