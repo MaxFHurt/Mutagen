@@ -4,10 +4,15 @@ Read this first when picking up the work. Keep it short and current.
 
 ## Where things stand (2026-10-25)
 
-- **Phase 0 — baseline: done** on branch `phase-0-baseline`. Both apps copied in unchanged,
-  tests run, handoff subset committed. Details: `BASELINE.md`.
-- **Phase 1 — integrate: not started.** Waiting for the owner's go-ahead.
-- Nothing is deployed. `main` holds only the initial README.
+- **Phase 0 — baseline: done.** Details: `BASELINE.md`.
+- **Phase 1 — integrate: done** on branch `phase-0-baseline`, PR into `main` for the owner to merge.
+  Deck Builder opens Deck Mutator with return to the caller; one profile across both sides; app
+  names renamed; Deck Mutator's main tier labels are Mutations; combo data ships with the site.
+  Every edit to the copied apps is in `CHANGES-TO-COPIES.md`.
+- **Going live:** GitHub Pages from `main` (owner, 2026-10-25), repo made public. The root
+  `index.html` forwards to `commander/`; `.nojekyll` serves every file as is.
+- **Next:** Phase 2, the visual layer, screen by screen as masters are approved. Deck Mutator's
+  remaining "upgrade" sentences wait until Deck development settles (owner option b).
 
 ## Decisions (owner, 2026-10-25)
 
@@ -36,7 +41,7 @@ Read this first when picking up the work. Keep it short and current.
   `MUTAGEN-Visual-Change-Roadmap.md` in `docs/` (the received rev 027 copies stay in
   `handoff/current/`).
 
-## Phase 1 plan (proposed)
+## Phase 1 plan (done)
 
 1. One shell: Commander's Deck Builder opens Deck Mutator; Return to MUTAGEN keeps the caller
    (including player setup) and unsaved work (MUT-01).
