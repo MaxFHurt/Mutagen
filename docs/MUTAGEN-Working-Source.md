@@ -1,5 +1,10 @@
 # MUTAGEN — rolling situation report and visual inventory
 
+## CURRENT REVISION 030 — Live liquid component, review prototype, 2026-10-25
+
+PROPOSED, not approved. Branch `phase-2-liquid`. `ui/liquid/` adds `<mutagen-chamber>`: the four rev 027 shells split by `tools/liquid/extract.py` into a frame layer (window cut out inside the glass bevel; steel, bolts, bezel and glass rim kept as supplied) and a window mask with depth. Liquid is rendered live behind the fixed glass: smooth medium green calibrated to the shells (edge ~RGB 38,140,20, deep ~5,64,5), broad absorption deepening toward the middle, slow time-based drift of that absorption along a flow direction, 16 sparse air bubbles per chamber suspended in the liquid with thin lighter rims, crisp near and soft/faint deep, rising independently (per-chamber seed, never mirrored). Fixed faint glass sheen. No streaks, veins, grain or exterior glow. One shared WebGL context, up to 30 fps, pauses off screen and when hidden, still frame for reduced motion, `data-green="reduced"` lowers green only, still gradient without WebGL. Review page `ui/liquid/demo.html`; checks `tests/liquid.mjs` 7/7. Originals in `docs/handoff/liquid-v2/` unchanged. Not done: drips/leaks, piping continuity, smart-octagon LED states, final printed-label lettering from the PLAY master, image size optimisation, device testing, use on app screens.
+
+
 ## CURRENT REVISION 029 — Phase 1 integration, 2026-10-25
 
 Delivered on branch `phase-0-baseline` (PR into `main`; owner merges). State: implemented and tested in a desktop browser at phone/iPad sizes; not device-tested, not deployed.
