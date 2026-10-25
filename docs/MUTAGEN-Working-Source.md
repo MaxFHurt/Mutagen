@@ -1,5 +1,26 @@
 # MUTAGEN — rolling situation report and visual inventory
 
+## CURRENT REVISION 036 — Live liquid APPROVED, 2026-10-25
+
+Owner approved the live liquid after reviewing revision 035 on device: "These are perfect!" Status: APPROVED REFERENCE IMPLEMENTATION for the liquid material and motion (colour, bubbles, pipe flow, smart-octagon bulb flow, reduced motion, reduced green). Not yet used on app screens; device performance budget and iPhone/iPad layout validation still pending. Label lettering is NOT part of this approval: labels come only from supplied artwork (`docs/LABEL-ASSET-REQUEST.md`). Live review page: https://maxfhurt.github.io/Mutagen/ui/liquid/demo.html. Approved files (ui/liquid), SHA-256:
+
+```
+    ba946afbda06be8ed8cf0056484a7956c6c563fc93d358c328d2fb9f76dcedcf  liquid.js
+    8a0162a4d6cd3ff2803a416632d7758c2077ea198869fba0f94799b613bea5cd  liquid.css
+    ad49b266c9254182bfd7e0f45bb543f51fc8f4ac1e0930b166522e6b2471cb44  shells.json
+    3bb7766641f9ee7bdd7e41e55a7be7f30439efaaf068866c5f0377b9be2f1288  canister-frame.png
+    41481b261825e39dd4ce64fcbcc7f554917266fa83bd1d68cd7f0562f60a7668  navigation-frame.png
+    26740260e3dd22fe9ce4da3d17af9497943f472c37ac7d30ca7f7b2a79d06a6e  sight-column-frame.png
+    9010838bcdbd206f44b73df6befcaa1f13cf9b697598d4c14be3d5085f529157  smart-octagon-frame.png
+    a4090d8320c3ba99529896ff46a7470da8b416105fcde28fb61ee015851612b5  canister-mask.png
+    3794a9d045e02393aee083f78b4198eb8c9def30c140de885b9d5c4a11d710c3  navigation-mask.png
+    e4fdfdea1be0475929359f7eb67579644c5eda2abcd5fe8c41fb21f3d0160c31  sight-column-mask.png
+    206b2dea1c18e7a6ebbbd3794fd7451eed32a83937581135ee79fbd7b7f82b1a  smart-octagon-mask.png
+```
+
+Change these only with owner direction; screens reuse `<mutagen-chamber>` as approved.
+
+
 ## CURRENT REVISION 035 — Smart octagon: flow through a wider glass bulb, 2026-10-25
 
 Owner: the octagon's flow is horizontal, but should behave like liquid entering a glass bulb of larger diameter. Changed (PROPOSED): new `flow="bulb"` mode, used by the smart octagon. Ideal flow through a widening (source at the left port, sink at the right): the stream enters fast and narrow at the inlet's height, fans out to fill the bulb, slows across the middle and gathers again into the outlet. The liquid's broad variation is carried along that local flow (two staggered phases, so it never smears). Bubbles ride in quickly, spread along curving paths, drift slowly across the middle (larger ones lifting slightly by buoyancy) and are pulled out the other side. Pipes (canisters, columns) unchanged.
