@@ -15,7 +15,14 @@ Read this first when picking up the work. Keep it short and current.
 - Merge: copy both apps in, then integrate. Commander is the shell; Deck Mutator is a section of
   the same site (shared origin, so shared storage).
 - Order: function first, then the visual layer, screen by screen as masters are approved.
-- CommanderCompanion and Deck-Companion are frozen and stay unmodified.
+- CommanderCompanion and Deck-Companion stay editable and may keep being developed (owner,
+  2026-10-25; supersedes "frozen"). This build only reads them and never writes to them.
+- Keep Mutagen easy to sync: add new files rather than editing the copied apps, keep edits to
+  copied files small and listed in `CHANGES-TO-COPIES.md`, and record every sync in
+  `BASELINE.md`. Sync = diff the source from its last synced commit and apply it to
+  `commander/` (from `rebuild/`) or `deck/`.
+- Engine/logic work fits best in the source repos; layout/visual work there gets harder to sync
+  once Mutagen is reskinned.
 - Work in bounded chunks; stop and report at each agreed stopping point.
 
 ## Rules carried from the source handoffs

@@ -1,8 +1,8 @@
 # MUTAGEN — Phase 0 baseline
 
 Recorded 2026-10-25. This is the starting point before any integration work. Both apps are
-copied into this repository **unchanged**; the source repositories are frozen and were not
-modified.
+copied into this repository **unchanged**; the source repositories were not modified. They
+remain editable; this build only reads them.
 
 ## Sources
 
@@ -86,3 +86,12 @@ matches the inventory); 269 of its 272 files were salvaged and verified against 
 `ASSET-HASHES.json`. Lost: `png/ipad/D39.png`, `S03.png`, `C22.png` (preview renders only).
 
 `docs/handoff/` holds the working subset; see its `README.md`.
+
+## Sync log
+
+Last synced source commits. Bring later changes in by diffing from these.
+
+| Date | App | Source commit | Notes |
+|---|---|---|---|
+| 2026-10-25 | Commander (`rebuild/` → `commander/`) | `f9dfe396` | Initial copy |
+| 2026-10-25 | Deck (`/` → `deck/`) | `fdf21b78` | Initial copy |
