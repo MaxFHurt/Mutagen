@@ -1,5 +1,10 @@
 # MUTAGEN — rolling situation report and visual inventory
 
+## CURRENT REVISION 042 — Home screen centred, 2026-10-25
+
+Owner reported (iPad photo) the home screen shifted right. Cause: the three tool buttons were wider than the space between the sight columns, which pushed the centre stack about 50 px right. They now shrink to fit, so the logo, tagline and all buttons sit on the screen centre. Checked at 1180×820, 1194×834, 1366×1024, 1024×768, 844×390, 932×430 and 667×375: centred within 1 px, no overflow.
+
+
 ## CURRENT REVISION 041 — RESOLVE typo fixed at source, 2026-10-25
 
 ChatGPT delivered corrected RESOLVE artwork (5 files: label, iPad and iPhone assembled and animation-overlay buttons). All five match their SHA-256 and replace the "RESOLYE" files at the same paths. Verified against the previous files: the only changed pixels are inside the stated letter areas, with the same pixel counts and bounds as the delivery's PATCH-VERIFICATION; size, shell, liquid and the other letters are untouched. The word now reads RESOLVE. Records: `handoff/assets-2026-10-25/resolve-fix/`. The RESOLVE hold in revision 040 is lifted; generated lettering stays conditionally approved. Still awaited from ChatGPT: the reworked logo liquid files and the home-screen pipe/frame artwork.
