@@ -109,7 +109,7 @@ matches the inventory); 269 of its 272 files were salvaged and verified against 
 
 ## Sync log
 
-Last synced source commits. Bring later changes in by diffing from these.
+Last synced source commits. Bring later changes in by diffing from these. For Deck, use `tools/sync/sync-deck.sh`, which re-applies `docs/sync/deck-mutagen.patch` (procedure: `sync/DECK-SYNC-PLAN.md`).
 
 | Date | App | Source commit | Notes |
 |---|---|---|---|
