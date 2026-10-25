@@ -1,0 +1,902 @@
+[
+  {
+    "function": "new-game",
+    "screen": "home",
+    "variant": "assembled",
+    "path": "ui/buttons/home/assembled/button-new-game.png",
+    "width": 2172,
+    "height": 724,
+    "device": "ipad-or-high-density"
+  },
+  {
+    "function": "new-game",
+    "screen": "home",
+    "variant": "animation-overlay",
+    "path": "ui/buttons/home/animation-overlay/button-new-game.png",
+    "width": 2172,
+    "height": 724,
+    "device": "ipad-or-high-density"
+  },
+  {
+    "function": "continue",
+    "screen": "home",
+    "variant": "assembled",
+    "path": "ui/buttons/home/assembled/button-continue.png",
+    "width": 2172,
+    "height": 724,
+    "device": "ipad-or-high-density"
+  },
+  {
+    "function": "continue",
+    "screen": "home",
+    "variant": "animation-overlay",
+    "path": "ui/buttons/home/animation-overlay/button-continue.png",
+    "width": 2172,
+    "height": 724,
+    "device": "ipad-or-high-density"
+  },
+  {
+    "function": "deck-mutator",
+    "screen": "home",
+    "variant": "assembled",
+    "path": "ui/buttons/home/assembled/button-deck-mutator.png",
+    "width": 2172,
+    "height": 724,
+    "device": "ipad-or-high-density"
+  },
+  {
+    "function": "deck-mutator",
+    "screen": "home",
+    "variant": "animation-overlay",
+    "path": "ui/buttons/home/animation-overlay/button-deck-mutator.png",
+    "width": 2172,
+    "height": 724,
+    "device": "ipad-or-high-density"
+  },
+  {
+    "function": "profile",
+    "screen": "home",
+    "variant": "assembled",
+    "path": "ui/buttons/home/assembled/button-profile.png",
+    "width": 2172,
+    "height": 724,
+    "device": "ipad-or-high-density"
+  },
+  {
+    "function": "profile",
+    "screen": "home",
+    "variant": "animation-overlay",
+    "path": "ui/buttons/home/animation-overlay/button-profile.png",
+    "width": 2172,
+    "height": 724,
+    "device": "ipad-or-high-density"
+  },
+  {
+    "function": "settings",
+    "screen": "home",
+    "variant": "assembled",
+    "path": "ui/buttons/home/assembled/button-settings.png",
+    "width": 2172,
+    "height": 724,
+    "device": "ipad-or-high-density"
+  },
+  {
+    "function": "settings",
+    "screen": "home",
+    "variant": "animation-overlay",
+    "path": "ui/buttons/home/animation-overlay/button-settings.png",
+    "width": 2172,
+    "height": 724,
+    "device": "ipad-or-high-density"
+  },
+  {
+    "function": "help",
+    "screen": "home",
+    "variant": "assembled",
+    "path": "ui/buttons/home/assembled/button-help.png",
+    "width": 2172,
+    "height": 724,
+    "device": "ipad-or-high-density"
+  },
+  {
+    "function": "help",
+    "screen": "home",
+    "variant": "animation-overlay",
+    "path": "ui/buttons/home/animation-overlay/button-help.png",
+    "width": 2172,
+    "height": 724,
+    "device": "ipad-or-high-density"
+  },
+  {
+    "function": "play",
+    "screen": "home",
+    "variant": "assembled",
+    "path": "ui/buttons/home/assembled/button-play.png",
+    "width": 2172,
+    "height": 724,
+    "device": "ipad-or-high-density"
+  },
+  {
+    "function": "play",
+    "screen": "home",
+    "variant": "animation-overlay",
+    "path": "ui/buttons/home/animation-overlay/button-play.png",
+    "width": 2172,
+    "height": 724,
+    "device": "ipad-or-high-density"
+  },
+  {
+    "function": "attack",
+    "screen": "game-actions",
+    "variant": "assembled",
+    "path": "ui/buttons/game-actions/assembled/button-attack.png",
+    "width": 1309,
+    "height": 1201,
+    "device": "ipad-or-high-density"
+  },
+  {
+    "function": "attack",
+    "screen": "game-actions",
+    "variant": "animation-overlay",
+    "path": "ui/buttons/game-actions/animation-overlay/button-attack.png",
+    "width": 1309,
+    "height": 1201,
+    "device": "ipad-or-high-density"
+  },
+  {
+    "function": "block",
+    "screen": "game-actions",
+    "variant": "assembled",
+    "path": "ui/buttons/game-actions/assembled/button-block.png",
+    "width": 1309,
+    "height": 1201,
+    "device": "ipad-or-high-density"
+  },
+  {
+    "function": "block",
+    "screen": "game-actions",
+    "variant": "animation-overlay",
+    "path": "ui/buttons/game-actions/animation-overlay/button-block.png",
+    "width": 1309,
+    "height": 1201,
+    "device": "ipad-or-high-density"
+  },
+  {
+    "function": "cast-spell",
+    "screen": "game-actions",
+    "variant": "assembled",
+    "path": "ui/buttons/game-actions/assembled/button-cast-spell.png",
+    "width": 1309,
+    "height": 1201,
+    "device": "ipad-or-high-density"
+  },
+  {
+    "function": "cast-spell",
+    "screen": "game-actions",
+    "variant": "animation-overlay",
+    "path": "ui/buttons/game-actions/animation-overlay/button-cast-spell.png",
+    "width": 1309,
+    "height": 1201,
+    "device": "ipad-or-high-density"
+  },
+  {
+    "function": "choose",
+    "screen": "game-actions",
+    "variant": "assembled",
+    "path": "ui/buttons/game-actions/assembled/button-choose.png",
+    "width": 1309,
+    "height": 1201,
+    "device": "ipad-or-high-density"
+  },
+  {
+    "function": "choose",
+    "screen": "game-actions",
+    "variant": "animation-overlay",
+    "path": "ui/buttons/game-actions/animation-overlay/button-choose.png",
+    "width": 1309,
+    "height": 1201,
+    "device": "ipad-or-high-density"
+  },
+  {
+    "function": "discard",
+    "screen": "game-actions",
+    "variant": "assembled",
+    "path": "ui/buttons/game-actions/assembled/button-discard.png",
+    "width": 1309,
+    "height": 1201,
+    "device": "ipad-or-high-density"
+  },
+  {
+    "function": "discard",
+    "screen": "game-actions",
+    "variant": "animation-overlay",
+    "path": "ui/buttons/game-actions/animation-overlay/button-discard.png",
+    "width": 1309,
+    "height": 1201,
+    "device": "ipad-or-high-density"
+  },
+  {
+    "function": "end-turn",
+    "screen": "game-actions",
+    "variant": "assembled",
+    "path": "ui/buttons/game-actions/assembled/button-end-turn.png",
+    "width": 1309,
+    "height": 1201,
+    "device": "ipad-or-high-density"
+  },
+  {
+    "function": "end-turn",
+    "screen": "game-actions",
+    "variant": "animation-overlay",
+    "path": "ui/buttons/game-actions/animation-overlay/button-end-turn.png",
+    "width": 1309,
+    "height": 1201,
+    "device": "ipad-or-high-density"
+  },
+  {
+    "function": "next-phase",
+    "screen": "game-actions",
+    "variant": "assembled",
+    "path": "ui/buttons/game-actions/assembled/button-next-phase.png",
+    "width": 1309,
+    "height": 1201,
+    "device": "ipad-or-high-density"
+  },
+  {
+    "function": "next-phase",
+    "screen": "game-actions",
+    "variant": "animation-overlay",
+    "path": "ui/buttons/game-actions/animation-overlay/button-next-phase.png",
+    "width": 1309,
+    "height": 1201,
+    "device": "ipad-or-high-density"
+  },
+  {
+    "function": "pass",
+    "screen": "game-actions",
+    "variant": "assembled",
+    "path": "ui/buttons/game-actions/assembled/button-pass.png",
+    "width": 1309,
+    "height": 1201,
+    "device": "ipad-or-high-density"
+  },
+  {
+    "function": "pass",
+    "screen": "game-actions",
+    "variant": "animation-overlay",
+    "path": "ui/buttons/game-actions/animation-overlay/button-pass.png",
+    "width": 1309,
+    "height": 1201,
+    "device": "ipad-or-high-density"
+  },
+  {
+    "function": "play-land",
+    "screen": "game-actions",
+    "variant": "assembled",
+    "path": "ui/buttons/game-actions/assembled/button-play-land.png",
+    "width": 1309,
+    "height": 1201,
+    "device": "ipad-or-high-density"
+  },
+  {
+    "function": "play-land",
+    "screen": "game-actions",
+    "variant": "animation-overlay",
+    "path": "ui/buttons/game-actions/animation-overlay/button-play-land.png",
+    "width": 1309,
+    "height": 1201,
+    "device": "ipad-or-high-density"
+  },
+  {
+    "function": "resolve",
+    "screen": "game-actions",
+    "variant": "assembled",
+    "path": "ui/buttons/game-actions/assembled/button-resolve.png",
+    "width": 1309,
+    "height": 1201,
+    "device": "ipad-or-high-density"
+  },
+  {
+    "function": "resolve",
+    "screen": "game-actions",
+    "variant": "animation-overlay",
+    "path": "ui/buttons/game-actions/animation-overlay/button-resolve.png",
+    "width": 1309,
+    "height": 1201,
+    "device": "ipad-or-high-density"
+  },
+  {
+    "function": "to-combat",
+    "screen": "game-actions",
+    "variant": "assembled",
+    "path": "ui/buttons/game-actions/assembled/button-to-combat.png",
+    "width": 1309,
+    "height": 1201,
+    "device": "ipad-or-high-density"
+  },
+  {
+    "function": "to-combat",
+    "screen": "game-actions",
+    "variant": "animation-overlay",
+    "path": "ui/buttons/game-actions/animation-overlay/button-to-combat.png",
+    "width": 1309,
+    "height": 1201,
+    "device": "ipad-or-high-density"
+  },
+  {
+    "function": "vote",
+    "screen": "game-actions",
+    "variant": "assembled",
+    "path": "ui/buttons/game-actions/assembled/button-vote.png",
+    "width": 1309,
+    "height": 1201,
+    "device": "ipad-or-high-density"
+  },
+  {
+    "function": "vote",
+    "screen": "game-actions",
+    "variant": "animation-overlay",
+    "path": "ui/buttons/game-actions/animation-overlay/button-vote.png",
+    "width": 1309,
+    "height": 1201,
+    "device": "ipad-or-high-density"
+  },
+  {
+    "function": "dna",
+    "screen": "navigation",
+    "variant": "assembled",
+    "path": "ui/buttons/navigation/assembled/button-dna.png",
+    "width": 1372,
+    "height": 1147,
+    "device": "ipad-or-high-density"
+  },
+  {
+    "function": "dna",
+    "screen": "navigation",
+    "variant": "animation-overlay",
+    "path": "ui/buttons/navigation/animation-overlay/button-dna.png",
+    "width": 1372,
+    "height": 1147,
+    "device": "ipad-or-high-density"
+  },
+  {
+    "function": "play",
+    "screen": "navigation",
+    "variant": "assembled",
+    "path": "ui/buttons/navigation/assembled/button-play.png",
+    "width": 1372,
+    "height": 1147,
+    "device": "ipad-or-high-density"
+  },
+  {
+    "function": "play",
+    "screen": "navigation",
+    "variant": "animation-overlay",
+    "path": "ui/buttons/navigation/animation-overlay/button-play.png",
+    "width": 1372,
+    "height": 1147,
+    "device": "ipad-or-high-density"
+  },
+  {
+    "function": "cards",
+    "screen": "navigation",
+    "variant": "assembled",
+    "path": "ui/buttons/navigation/assembled/button-cards.png",
+    "width": 1372,
+    "height": 1147,
+    "device": "ipad-or-high-density"
+  },
+  {
+    "function": "cards",
+    "screen": "navigation",
+    "variant": "animation-overlay",
+    "path": "ui/buttons/navigation/animation-overlay/button-cards.png",
+    "width": 1372,
+    "height": 1147,
+    "device": "ipad-or-high-density"
+  },
+  {
+    "function": "profile",
+    "screen": "navigation",
+    "variant": "assembled",
+    "path": "ui/buttons/navigation/assembled/button-profile.png",
+    "width": 1372,
+    "height": 1147,
+    "device": "ipad-or-high-density"
+  },
+  {
+    "function": "profile",
+    "screen": "navigation",
+    "variant": "animation-overlay",
+    "path": "ui/buttons/navigation/animation-overlay/button-profile.png",
+    "width": 1372,
+    "height": 1147,
+    "device": "ipad-or-high-density"
+  },
+  {
+    "function": "settings",
+    "screen": "navigation",
+    "variant": "assembled",
+    "path": "ui/buttons/navigation/assembled/button-settings.png",
+    "width": 1372,
+    "height": 1147,
+    "device": "ipad-or-high-density"
+  },
+  {
+    "function": "settings",
+    "screen": "navigation",
+    "variant": "animation-overlay",
+    "path": "ui/buttons/navigation/animation-overlay/button-settings.png",
+    "width": 1372,
+    "height": 1147,
+    "device": "ipad-or-high-density"
+  },
+  {
+    "function": "help",
+    "screen": "navigation",
+    "variant": "assembled",
+    "path": "ui/buttons/navigation/assembled/button-help.png",
+    "width": 1372,
+    "height": 1147,
+    "device": "ipad-or-high-density"
+  },
+  {
+    "function": "help",
+    "screen": "navigation",
+    "variant": "animation-overlay",
+    "path": "ui/buttons/navigation/animation-overlay/button-help.png",
+    "width": 1372,
+    "height": 1147,
+    "device": "ipad-or-high-density"
+  },
+  {
+    "function": "new-game",
+    "screen": "home",
+    "variant": "assembled",
+    "path": "ui/buttons-iphone/home/assembled/button-new-game.png",
+    "width": 1086,
+    "height": 362,
+    "device": "iphone"
+  },
+  {
+    "function": "new-game",
+    "screen": "home",
+    "variant": "animation-overlay",
+    "path": "ui/buttons-iphone/home/animation-overlay/button-new-game.png",
+    "width": 1086,
+    "height": 362,
+    "device": "iphone"
+  },
+  {
+    "function": "continue",
+    "screen": "home",
+    "variant": "assembled",
+    "path": "ui/buttons-iphone/home/assembled/button-continue.png",
+    "width": 1086,
+    "height": 362,
+    "device": "iphone"
+  },
+  {
+    "function": "continue",
+    "screen": "home",
+    "variant": "animation-overlay",
+    "path": "ui/buttons-iphone/home/animation-overlay/button-continue.png",
+    "width": 1086,
+    "height": 362,
+    "device": "iphone"
+  },
+  {
+    "function": "deck-mutator",
+    "screen": "home",
+    "variant": "assembled",
+    "path": "ui/buttons-iphone/home/assembled/button-deck-mutator.png",
+    "width": 1086,
+    "height": 362,
+    "device": "iphone"
+  },
+  {
+    "function": "deck-mutator",
+    "screen": "home",
+    "variant": "animation-overlay",
+    "path": "ui/buttons-iphone/home/animation-overlay/button-deck-mutator.png",
+    "width": 1086,
+    "height": 362,
+    "device": "iphone"
+  },
+  {
+    "function": "profile",
+    "screen": "home",
+    "variant": "assembled",
+    "path": "ui/buttons-iphone/home/assembled/button-profile.png",
+    "width": 1086,
+    "height": 362,
+    "device": "iphone"
+  },
+  {
+    "function": "profile",
+    "screen": "home",
+    "variant": "animation-overlay",
+    "path": "ui/buttons-iphone/home/animation-overlay/button-profile.png",
+    "width": 1086,
+    "height": 362,
+    "device": "iphone"
+  },
+  {
+    "function": "settings",
+    "screen": "home",
+    "variant": "assembled",
+    "path": "ui/buttons-iphone/home/assembled/button-settings.png",
+    "width": 1086,
+    "height": 362,
+    "device": "iphone"
+  },
+  {
+    "function": "settings",
+    "screen": "home",
+    "variant": "animation-overlay",
+    "path": "ui/buttons-iphone/home/animation-overlay/button-settings.png",
+    "width": 1086,
+    "height": 362,
+    "device": "iphone"
+  },
+  {
+    "function": "help",
+    "screen": "home",
+    "variant": "assembled",
+    "path": "ui/buttons-iphone/home/assembled/button-help.png",
+    "width": 1086,
+    "height": 362,
+    "device": "iphone"
+  },
+  {
+    "function": "help",
+    "screen": "home",
+    "variant": "animation-overlay",
+    "path": "ui/buttons-iphone/home/animation-overlay/button-help.png",
+    "width": 1086,
+    "height": 362,
+    "device": "iphone"
+  },
+  {
+    "function": "play",
+    "screen": "home",
+    "variant": "assembled",
+    "path": "ui/buttons-iphone/home/assembled/button-play.png",
+    "width": 1086,
+    "height": 362,
+    "device": "iphone"
+  },
+  {
+    "function": "play",
+    "screen": "home",
+    "variant": "animation-overlay",
+    "path": "ui/buttons-iphone/home/animation-overlay/button-play.png",
+    "width": 1086,
+    "height": 362,
+    "device": "iphone"
+  },
+  {
+    "function": "attack",
+    "screen": "game-actions",
+    "variant": "assembled",
+    "path": "ui/buttons-iphone/game-actions/assembled/button-attack.png",
+    "width": 654,
+    "height": 600,
+    "device": "iphone"
+  },
+  {
+    "function": "attack",
+    "screen": "game-actions",
+    "variant": "animation-overlay",
+    "path": "ui/buttons-iphone/game-actions/animation-overlay/button-attack.png",
+    "width": 654,
+    "height": 600,
+    "device": "iphone"
+  },
+  {
+    "function": "block",
+    "screen": "game-actions",
+    "variant": "assembled",
+    "path": "ui/buttons-iphone/game-actions/assembled/button-block.png",
+    "width": 654,
+    "height": 600,
+    "device": "iphone"
+  },
+  {
+    "function": "block",
+    "screen": "game-actions",
+    "variant": "animation-overlay",
+    "path": "ui/buttons-iphone/game-actions/animation-overlay/button-block.png",
+    "width": 654,
+    "height": 600,
+    "device": "iphone"
+  },
+  {
+    "function": "cast-spell",
+    "screen": "game-actions",
+    "variant": "assembled",
+    "path": "ui/buttons-iphone/game-actions/assembled/button-cast-spell.png",
+    "width": 654,
+    "height": 600,
+    "device": "iphone"
+  },
+  {
+    "function": "cast-spell",
+    "screen": "game-actions",
+    "variant": "animation-overlay",
+    "path": "ui/buttons-iphone/game-actions/animation-overlay/button-cast-spell.png",
+    "width": 654,
+    "height": 600,
+    "device": "iphone"
+  },
+  {
+    "function": "choose",
+    "screen": "game-actions",
+    "variant": "assembled",
+    "path": "ui/buttons-iphone/game-actions/assembled/button-choose.png",
+    "width": 654,
+    "height": 600,
+    "device": "iphone"
+  },
+  {
+    "function": "choose",
+    "screen": "game-actions",
+    "variant": "animation-overlay",
+    "path": "ui/buttons-iphone/game-actions/animation-overlay/button-choose.png",
+    "width": 654,
+    "height": 600,
+    "device": "iphone"
+  },
+  {
+    "function": "discard",
+    "screen": "game-actions",
+    "variant": "assembled",
+    "path": "ui/buttons-iphone/game-actions/assembled/button-discard.png",
+    "width": 654,
+    "height": 600,
+    "device": "iphone"
+  },
+  {
+    "function": "discard",
+    "screen": "game-actions",
+    "variant": "animation-overlay",
+    "path": "ui/buttons-iphone/game-actions/animation-overlay/button-discard.png",
+    "width": 654,
+    "height": 600,
+    "device": "iphone"
+  },
+  {
+    "function": "end-turn",
+    "screen": "game-actions",
+    "variant": "assembled",
+    "path": "ui/buttons-iphone/game-actions/assembled/button-end-turn.png",
+    "width": 654,
+    "height": 600,
+    "device": "iphone"
+  },
+  {
+    "function": "end-turn",
+    "screen": "game-actions",
+    "variant": "animation-overlay",
+    "path": "ui/buttons-iphone/game-actions/animation-overlay/button-end-turn.png",
+    "width": 654,
+    "height": 600,
+    "device": "iphone"
+  },
+  {
+    "function": "next-phase",
+    "screen": "game-actions",
+    "variant": "assembled",
+    "path": "ui/buttons-iphone/game-actions/assembled/button-next-phase.png",
+    "width": 654,
+    "height": 600,
+    "device": "iphone"
+  },
+  {
+    "function": "next-phase",
+    "screen": "game-actions",
+    "variant": "animation-overlay",
+    "path": "ui/buttons-iphone/game-actions/animation-overlay/button-next-phase.png",
+    "width": 654,
+    "height": 600,
+    "device": "iphone"
+  },
+  {
+    "function": "pass",
+    "screen": "game-actions",
+    "variant": "assembled",
+    "path": "ui/buttons-iphone/game-actions/assembled/button-pass.png",
+    "width": 654,
+    "height": 600,
+    "device": "iphone"
+  },
+  {
+    "function": "pass",
+    "screen": "game-actions",
+    "variant": "animation-overlay",
+    "path": "ui/buttons-iphone/game-actions/animation-overlay/button-pass.png",
+    "width": 654,
+    "height": 600,
+    "device": "iphone"
+  },
+  {
+    "function": "play-land",
+    "screen": "game-actions",
+    "variant": "assembled",
+    "path": "ui/buttons-iphone/game-actions/assembled/button-play-land.png",
+    "width": 654,
+    "height": 600,
+    "device": "iphone"
+  },
+  {
+    "function": "play-land",
+    "screen": "game-actions",
+    "variant": "animation-overlay",
+    "path": "ui/buttons-iphone/game-actions/animation-overlay/button-play-land.png",
+    "width": 654,
+    "height": 600,
+    "device": "iphone"
+  },
+  {
+    "function": "resolve",
+    "screen": "game-actions",
+    "variant": "assembled",
+    "path": "ui/buttons-iphone/game-actions/assembled/button-resolve.png",
+    "width": 654,
+    "height": 600,
+    "device": "iphone"
+  },
+  {
+    "function": "resolve",
+    "screen": "game-actions",
+    "variant": "animation-overlay",
+    "path": "ui/buttons-iphone/game-actions/animation-overlay/button-resolve.png",
+    "width": 654,
+    "height": 600,
+    "device": "iphone"
+  },
+  {
+    "function": "to-combat",
+    "screen": "game-actions",
+    "variant": "assembled",
+    "path": "ui/buttons-iphone/game-actions/assembled/button-to-combat.png",
+    "width": 654,
+    "height": 600,
+    "device": "iphone"
+  },
+  {
+    "function": "to-combat",
+    "screen": "game-actions",
+    "variant": "animation-overlay",
+    "path": "ui/buttons-iphone/game-actions/animation-overlay/button-to-combat.png",
+    "width": 654,
+    "height": 600,
+    "device": "iphone"
+  },
+  {
+    "function": "vote",
+    "screen": "game-actions",
+    "variant": "assembled",
+    "path": "ui/buttons-iphone/game-actions/assembled/button-vote.png",
+    "width": 654,
+    "height": 600,
+    "device": "iphone"
+  },
+  {
+    "function": "vote",
+    "screen": "game-actions",
+    "variant": "animation-overlay",
+    "path": "ui/buttons-iphone/game-actions/animation-overlay/button-vote.png",
+    "width": 654,
+    "height": 600,
+    "device": "iphone"
+  },
+  {
+    "function": "dna",
+    "screen": "navigation",
+    "variant": "assembled",
+    "path": "ui/buttons-iphone/navigation/assembled/button-dna.png",
+    "width": 686,
+    "height": 574,
+    "device": "iphone"
+  },
+  {
+    "function": "dna",
+    "screen": "navigation",
+    "variant": "animation-overlay",
+    "path": "ui/buttons-iphone/navigation/animation-overlay/button-dna.png",
+    "width": 686,
+    "height": 574,
+    "device": "iphone"
+  },
+  {
+    "function": "play",
+    "screen": "navigation",
+    "variant": "assembled",
+    "path": "ui/buttons-iphone/navigation/assembled/button-play.png",
+    "width": 686,
+    "height": 574,
+    "device": "iphone"
+  },
+  {
+    "function": "play",
+    "screen": "navigation",
+    "variant": "animation-overlay",
+    "path": "ui/buttons-iphone/navigation/animation-overlay/button-play.png",
+    "width": 686,
+    "height": 574,
+    "device": "iphone"
+  },
+  {
+    "function": "cards",
+    "screen": "navigation",
+    "variant": "assembled",
+    "path": "ui/buttons-iphone/navigation/assembled/button-cards.png",
+    "width": 686,
+    "height": 574,
+    "device": "iphone"
+  },
+  {
+    "function": "cards",
+    "screen": "navigation",
+    "variant": "animation-overlay",
+    "path": "ui/buttons-iphone/navigation/animation-overlay/button-cards.png",
+    "width": 686,
+    "height": 574,
+    "device": "iphone"
+  },
+  {
+    "function": "profile",
+    "screen": "navigation",
+    "variant": "assembled",
+    "path": "ui/buttons-iphone/navigation/assembled/button-profile.png",
+    "width": 686,
+    "height": 574,
+    "device": "iphone"
+  },
+  {
+    "function": "profile",
+    "screen": "navigation",
+    "variant": "animation-overlay",
+    "path": "ui/buttons-iphone/navigation/animation-overlay/button-profile.png",
+    "width": 686,
+    "height": 574,
+    "device": "iphone"
+  },
+  {
+    "function": "settings",
+    "screen": "navigation",
+    "variant": "assembled",
+    "path": "ui/buttons-iphone/navigation/assembled/button-settings.png",
+    "width": 686,
+    "height": 574,
+    "device": "iphone"
+  },
+  {
+    "function": "settings",
+    "screen": "navigation",
+    "variant": "animation-overlay",
+    "path": "ui/buttons-iphone/navigation/animation-overlay/button-settings.png",
+    "width": 686,
+    "height": 574,
+    "device": "iphone"
+  },
+  {
+    "function": "help",
+    "screen": "navigation",
+    "variant": "assembled",
+    "path": "ui/buttons-iphone/navigation/assembled/button-help.png",
+    "width": 686,
+    "height": 574,
+    "device": "iphone"
+  },
+  {
+    "function": "help",
+    "screen": "navigation",
+    "variant": "animation-overlay",
+    "path": "ui/buttons-iphone/navigation/animation-overlay/button-help.png",
+    "width": 686,
+    "height": 574,
+    "device": "iphone"
+  }
+]

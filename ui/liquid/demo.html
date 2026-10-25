@@ -18,6 +18,8 @@
     .column { width: 90px; }
     .buttons { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 20px; }
     .buttons .mutagen-chamber { width: 200px; }
+    .octs { display: flex; gap: 10px; flex-wrap: wrap; }
+    .octs .mutagen-chamber { width: min(200px, 30vw); }
   </style>
 </head>
 <body>
@@ -42,6 +44,21 @@
     <mutagen-chamber shell="canister">Profile</mutagen-chamber>
     <mutagen-chamber shell="canister">Settings</mutagen-chamber>
     <mutagen-chamber shell="canister">Help</mutagen-chamber>
+  </div>
+  <h1 style="margin-top:24px">Smart octagon actions — supplied artwork over live liquid</h1>
+  <div class="octs">
+    <mutagen-chamber shell="smart-octagon" flow="bulb" overlay="../buttons-iphone/game-actions/animation-overlay/button-attack.png">attack</mutagen-chamber>
+    <mutagen-chamber shell="smart-octagon" flow="bulb" overlay="../buttons-iphone/game-actions/animation-overlay/button-block.png">block</mutagen-chamber>
+    <mutagen-chamber shell="smart-octagon" flow="bulb" overlay="../buttons-iphone/game-actions/animation-overlay/button-cast-spell.png">cast spell</mutagen-chamber>
+    <mutagen-chamber shell="smart-octagon" flow="bulb" overlay="../buttons-iphone/game-actions/animation-overlay/button-choose.png">choose</mutagen-chamber>
+    <mutagen-chamber shell="smart-octagon" flow="bulb" overlay="../buttons-iphone/game-actions/animation-overlay/button-discard.png">discard</mutagen-chamber>
+    <mutagen-chamber shell="smart-octagon" flow="bulb" overlay="../buttons-iphone/game-actions/animation-overlay/button-end-turn.png">end turn</mutagen-chamber>
+    <mutagen-chamber shell="smart-octagon" flow="bulb" overlay="../buttons-iphone/game-actions/animation-overlay/button-next-phase.png">next phase</mutagen-chamber>
+    <mutagen-chamber shell="smart-octagon" flow="bulb" overlay="../buttons-iphone/game-actions/animation-overlay/button-pass.png">pass</mutagen-chamber>
+    <mutagen-chamber shell="smart-octagon" flow="bulb" overlay="../buttons-iphone/game-actions/animation-overlay/button-play-land.png">play land</mutagen-chamber>
+    <mutagen-chamber shell="smart-octagon" flow="bulb" overlay="../buttons-iphone/game-actions/animation-overlay/button-resolve.png">resolve</mutagen-chamber>
+    <mutagen-chamber shell="smart-octagon" flow="bulb" overlay="../buttons-iphone/game-actions/animation-overlay/button-to-combat.png">to combat</mutagen-chamber>
+    <mutagen-chamber shell="smart-octagon" flow="bulb" overlay="../buttons-iphone/game-actions/animation-overlay/button-vote.png">vote</mutagen-chamber>
   </div>
   <script type="module" src="liquid.js"></script>
   <script>

@@ -1,4 +1,6 @@
-// MUTAGEN live liquid: <mutagen-chamber shell="canister" label="labels/play.png">Play</mutagen-chamber>
+// MUTAGEN live liquid: <mutagen-chamber shell="smart-octagon" overlay="…/button-attack.png">Attack</mutagen-chamber>
+// overlay = a supplied finished button with clear glass (hardware and lettering), drawn over the live liquid unchanged;
+// label = a supplied lettering image on its own. Neither is ever redrawn here.
 // The label image is supplied artwork, shown unmodified; the element's text is its accessible name.
 //
 // Layers, back to front: the moving liquid (drawn here, clipped to the glass window), the fixed glass sheen (also drawn
@@ -223,7 +225,9 @@ class MutagenChamber extends HTMLElement {
     canvas.setAttribute('aria-hidden', 'true');
     const frame = document.createElement('img');
     frame.className = 'mutagen-chamber__frame'; frame.alt = ''; frame.decoding = 'async';
-    frame.src = new URL(`${name}-frame.png`, BASE).href;
+    // overlay="…png": a supplied finished button with its glass left clear (hardware + lettering), used as the frame as-is.
+    const overlay = this.getAttribute('overlay');
+    frame.src = overlay ? new URL(overlay, document.baseURI).href : new URL(`${name}-frame.png`, BASE).href;
     const text = document.createElement('span');
     text.className = 'mutagen-chamber__label';
     Object.assign(text.style, { left: pct(x0, W), top: pct(y0, H), width: pct(ww, W), height: pct(wh, H) });

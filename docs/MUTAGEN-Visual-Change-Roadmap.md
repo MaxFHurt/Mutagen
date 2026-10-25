@@ -1,5 +1,10 @@
 # MUTAGEN V3 — Visual Change Roadmap — Revision 007 (2026-10-12)
 
+## CURRENT REVISION 037 — First supplied button artwork in use, 2026-10-25
+
+Received from ChatGPT (owner upload): asset handoff, MANIFEST.json, SHA256SUMS, BUTTON-FUNCTION-INDEX and preview for 140 PNGs, plus 12 of the PNG files: the iPhone smart-octagon `animation-overlay` buttons (finished hardware and lettering, glass left clear). All 12 match the manifest SHA-256 and are stored unchanged in `ui/buttons-iphone/game-actions/animation-overlay/`. `<mutagen-chamber overlay="…">` now uses such a file as the frame layer, as supplied, over the approved live liquid; nothing is redrawn. Review page shows all 12 with bulb flow. Known defect in the supplied artwork: the RESOLVE button reads "RESOLYE" (all variants) and needs correcting at source. Still to receive: the other 128 PNGs (iPad sizes, home buttons, navigation, labels, components, transparent logo). The handoff's notes that the liquid is unapproved and octagon flow undecided are superseded by revisions 035–036.
+
+
 ## CURRENT REVISION 036 — Live liquid APPROVED, 2026-10-25
 
 Owner approved the live liquid after reviewing revision 035 on device: "These are perfect!" Status: APPROVED REFERENCE IMPLEMENTATION for the liquid material and motion (colour, bubbles, pipe flow, smart-octagon bulb flow, reduced motion, reduced green). Not yet used on app screens; device performance budget and iPhone/iPad layout validation still pending. Label lettering is NOT part of this approval: labels come only from supplied artwork (`docs/LABEL-ASSET-REQUEST.md`). Live review page: https://maxfhurt.github.io/Mutagen/ui/liquid/demo.html. Approved files (ui/liquid), SHA-256:

@@ -23,7 +23,7 @@ const sample = () => page.evaluate(() => [...document.querySelectorAll('mutagen-
   const c = el.querySelector('.mutagen-chamber__liquid'), d = c.getContext('2d').getImageData(0, 0, c.width, c.height).data;
   let sum = 0, h = 0;
   for (let i = 0; i < d.length; i += 4) { sum += d[i + 1]; h = (h * 31 + d[i + 1]) >>> 0; }
-  return { w: c.width, h: c.height, sum, hash: h };
+  return { w: c.width, h: c.height, sum, hash: h, onScreen: !!el._visible };
 }));
 
 try {
@@ -34,7 +34,8 @@ try {
   await page.waitForTimeout(1200);
   const b = await sample();
   check('every chamber draws liquid', a.every(x => x.sum > 0), JSON.stringify(a.map(x => x.sum)));
-  check('liquid moves over time', a.every((x, i) => x.hash !== b[i].hash));
+  check('liquid moves over time (chambers on screen)', a.every((x, i) => !x.onScreen || x.hash !== b[i].hash));
+  check('chambers off screen pause', a.some(x => !x.onScreen) && a.every((x, i) => x.onScreen || x.hash === b[i].hash));
 
   const same = await page.evaluate(() => {
     const [p, q] = [...document.querySelectorAll('.buttons .mutagen-chamber__liquid')];
