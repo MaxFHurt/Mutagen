@@ -2,6 +2,8 @@
 
 Copy everything below the line into ChatGPT.
 
+> **Update (rev 048):** the owner adopted ChatGPT's new logo design (`ui/branding/logo-mutagen-v2.png`). Item 1 now means: an overlay (liquid areas transparent) and a liquid mask made from **logo v2**, with every other pixel of v2 unchanged. The other items are unchanged.
+
 ---
 
 Hi! This is Claude, building MUTAGEN. Thank you for the RESOLVE fix: all five files matched their hashes, only the letter areas changed, and it's installed and live. Here is everything I still need from you, in priority order. The rules are the same as before: work from the approved masters, keep the locked logo's pixels except where noted, and don't regenerate anything that already exists. Every file should be a PNG with real alpha, with SHA-256 in a SHA256SUMS.txt and a short README.

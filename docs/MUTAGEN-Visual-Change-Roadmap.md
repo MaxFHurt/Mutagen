@@ -1,5 +1,10 @@
 # MUTAGEN V3 — Visual Change Roadmap — Revision 007 (2026-10-12)
 
+## CURRENT REVISION 048 — New logo design adopted, 2026-10-25
+
+Owner decision: use ChatGPT's new logo design. It is stored exactly as supplied at `ui/branding/logo-mutagen-v2.png` (1254 × 1254, SHA-256 cc3fd853db478dbf831282a8273028893c19fe71c79de09c6342b8273874ae9a) and is now the home logo. Its art has a wider margin on the canvas, so the image is shown about 7.7% larger and keeps the same visible size as before. The locked master JPEG and `logo-mutagen-locked-transparent.png` stay in the repo unchanged, as the record of the original. To make the logo's liquid live, ChatGPT still needs to supply an overlay and liquid mask made from v2 (`CHATGPT-REQUEST-2026-10-25b.md`, item 1). Owner confirmed the home screen is centred on iPad and looks good on iPhone.
+
+
 ## CURRENT REVISION 047 — Big bubbles keep rising in the down column, 2026-10-25
 
 Owner: the bubbles look fine, and slowly moving up looks realistic for bigger bubbles. In a downward stream, bubbles now behave by size: small ones are carried down with the ooze, and the bigger ones (about one in five) are buoyant enough to keep rising slowly (about 7 px/s on iPad). The left column still reads as running down overall (about 30 px/s measured). Upward and horizontal flow are unchanged.

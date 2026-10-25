@@ -33,7 +33,7 @@ export const landingScreen = {
         <mutagen-chamber class="mh-column mh-column--left" shell="sight-column" flow="down" stream></mutagen-chamber>
         <div class="mh-center">
           <div class="mh-brand">
-            <img class="mh-logo" src="${ui}branding/logo-mutagen-locked-transparent.png" alt="MUTAGEN">
+            <img class="mh-logo" src="${ui}branding/logo-mutagen-v2.png" alt="MUTAGEN">
             <img class="mh-tagline" src="${ui}labels/label-tagline.png" alt="Mutate The Gathering">
           </div>
           <div class="mh-primary">
