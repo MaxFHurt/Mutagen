@@ -1,0 +1,98 @@
+[
+  {
+    "id": "C02",
+    "file": "rework/C02-feature-restoration-v2.png",
+    "sha256": "e754ea2c63d343c008e5784f456e0bc22871b82e2560584e5fb3e6c287686ccd",
+    "status": "static review proposal"
+  },
+  {
+    "id": "C03",
+    "file": "rework/C03-feature-restoration-v2.png",
+    "sha256": "3020389269595352f0c8e4c35c337b22f6b5b3d63eb3831ffd12fd7774728abc",
+    "status": "static review proposal"
+  },
+  {
+    "id": "C09",
+    "file": "rework/C09-feature-restoration-v1.png",
+    "sha256": "13909a9b5cdc8e9325639af90886009445a479353387c1ebb7466e1ec04c6abf",
+    "status": "static review proposal"
+  },
+  {
+    "id": "C10",
+    "file": "rework/C10-feature-restoration-v2.png",
+    "sha256": "deb66a871b3e57289b4eb554cb1ccd5aa8135d48b04c4a110aa645e467e35559",
+    "status": "static review proposal"
+  },
+  {
+    "id": "C11",
+    "file": "rework/C11-feature-restoration-v3.png",
+    "sha256": "2156c06b240fb23f076aae828d29e3d859ccb63d0655008feaab6c154ff9ed36",
+    "status": "static review proposal"
+  },
+  {
+    "id": "C12",
+    "file": "rework/C12-feature-restoration-v1.png",
+    "sha256": "ccd8bf2280bf83362809046704b0b28670ec5072cc33f747044c037553909bd5",
+    "status": "static review proposal"
+  },
+  {
+    "id": "C13",
+    "file": "rework/C13-feature-restoration-v3.png",
+    "sha256": "a90281181abc4d5c058b04415f3442e825542b2a2529722c88504dacc528a26d",
+    "status": "static review proposal"
+  },
+  {
+    "id": "C14",
+    "file": "rework/C14-feature-restoration-v1.png",
+    "sha256": "9f6fd05ce3a71c196f0a377da6139c492612a9de2efc8fc7e4339d9324769709",
+    "status": "static review proposal"
+  },
+  {
+    "id": "C15",
+    "file": "rework/C15-feature-restoration-v1.png",
+    "sha256": "4c6f4b614790b56afd575757c3d90ad798cedd082949e91ce9c50be84a13f815",
+    "status": "static review proposal"
+  },
+  {
+    "id": "C17-counters",
+    "file": "rework/C17-counters-feature-restoration-v1.png",
+    "sha256": "3a4b6c81d7b118f11b5bd2d4ce898daf25893856f03e61d86fff2048d4504b2f",
+    "status": "static review proposal"
+  },
+  {
+    "id": "C17",
+    "file": "rework/C17-feature-restoration-v1.png",
+    "sha256": "da18757563557ef0acedecc1b130062f54dcaa2b870fcf1badca8ca2ebaf735e",
+    "status": "static review proposal"
+  },
+  {
+    "id": "C17-status",
+    "file": "rework/C17-status-feature-restoration-v2.png",
+    "sha256": "78fb4331e6635f0b3b321db7764b8645cd0a374e8e67bea0b8eb0fcf0bfbfaaa",
+    "status": "static review proposal"
+  },
+  {
+    "id": "C21-block",
+    "file": "rework/C21-block-feature-restoration-v1.png",
+    "sha256": "eeebb70d260a637a2cb3e8569d59ab74d0ff120979b21d757222f9bff92c722c",
+    "status": "static review proposal"
+  },
+  {
+    "id": "C21",
+    "file": "rework/C21-feature-restoration-v1.png",
+    "sha256": "a75b3e065da1013712f6bb476afa7c7ad65b6e4ad71c02530cb567798f2b47f3",
+    "status": "static review proposal"
+  },
+  {
+    "id": "C23",
+    "file": "rework/C23-feature-restoration-v1.png",
+    "sha256": "e52567031fb8ff097bd075dcd992c47ef3338812a941642b68db0c9ec988f328",
+    "status": "static review proposal"
+  },
+  {
+    "id": "S05-game",
+    "file": "rework/S05-game-feature-restoration-v1.png",
+    "sha256": "1bec1c6c6989ea2b914497f52958243ab576b24c3932cd009bc98912d090de55",
+    "status": "static review proposal"
+  }
+]

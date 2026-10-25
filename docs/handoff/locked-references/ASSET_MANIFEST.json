@@ -1,0 +1,47 @@
+[
+  {
+    "file": "assets/feature-audit-only/OLD_COMMANDER_COMPANION_JUDGE_TRACKER_FEATURES_ONLY.jpeg",
+    "sha256": "ccb7aeee9ad321f5475464797ae46fa5393c1689b31076d3b7a68db18f7147d3",
+    "bytes": 533467
+  },
+  {
+    "file": "assets/feature-audit-only/OLD_COMMANDER_COMPANION_PLAYER_VIEW_FEATURES_ONLY.jpeg",
+    "sha256": "09bea93d0db6966bfeb3e688db33e642ee4d8924a18a5544cd04ceffdc61766c",
+    "bytes": 552371
+  },
+  {
+    "file": "assets/locked/LANDING_PAGE_APPROVED_BASELINE_2026-10-12.png",
+    "sha256": "eb6b63aef0a43468d00458c8265029d55a49765b43282c1b0f5dfdd8a0624c7a",
+    "bytes": 2742358
+  },
+  {
+    "file": "assets/locked/MASTER_LOGO_DO_NOT_REGENERATE.jpeg",
+    "sha256": "20b2e24979e7cbf939333277d72ced6934caf6e82d794e93587bbe90d44d1f73",
+    "bytes": 854248
+  },
+  {
+    "file": "assets/references/BATTLEFIELD_CONTINUOUS_BORDER_REFERENCE.jpeg",
+    "sha256": "f6b8ceff8f850f2cd419a0a1cb151f3ece8d1e26c0f09922ae8245730c1ba5c3",
+    "bytes": 775128
+  },
+  {
+    "file": "assets/references/DECK_MUTATOR_VISUAL_REFERENCE.jpeg",
+    "sha256": "b3f9fc5fe28612d4296341d9f0b74b2d4eb327c349e2c67524364e426386669a",
+    "bytes": 793876
+  },
+  {
+    "file": "assets/references/LANDING_PAGE_CURRENT_REVIEW_DRIP_NOT_FINAL.png",
+    "sha256": "3caa92d18bc5cce02d26dfdd01a19f5573a7d6ea8eef9ce8be07fa119367a648",
+    "bytes": 2742010
+  },
+  {
+    "file": "assets/references/OCTAGON_CANISTER_CONTROL_REFERENCE.jpeg",
+    "sha256": "17d7afcc18ce77a5fe2641f07e86ca8edf7928b67abb6eea027e4e036e6afd04",
+    "bytes": 824358
+  },
+  {
+    "file": "assets/references/PLAY_BUTTON_MASTER_HORIZONTAL.jpeg",
+    "sha256": "4faac88fd72dac68d096429a7238ef42ff53349bf6311a966d616b57c9b63f1e",
+    "bytes": 362889
+  }
+]
