@@ -2,6 +2,7 @@ import { loadProfile } from './profile.js';
 import { listDecks } from './deck-store.js';
 import { durableSet } from './userdata-db.js';
 import { listPlaymats } from './playmats.js';
+import { readMutatorProfile, writeMutatorProfile } from '../mutagen/bridge.js';
 const PROFILE_KEY = 'ccv07-profile';
 const DECKS_KEY = 'ccv07-decks';
 const BACKUP_FORMAT = 'commander-companion-profile';
@@ -29,14 +30,15 @@ export function buildProfileBackup() {
     exportedAt: new Date().toISOString(),
     profile,
     decks,
-    playmats: listPlaymats()
+    playmats: listPlaymats(),
+    deckMutator: readMutatorProfile()   // MUTAGEN: Deck Mutator's decks, collection and buy lists ride along
   };
 }
 export async function saveProfileBackupFile() {
   const backup = buildProfileBackup();
   const player = safeName(backup.profile?.account?.displayName || 'Commander-Companion');
   const date = new Date().toISOString().slice(0, 10);
-  const filename = `${player}-CommanderCompanion-${date}.ccsave`;
+  const filename = `${player}-MUTAGEN-${date}.ccsave`;
   const text = JSON.stringify(backup, null, 2);
   const file = new File([text], filename, { type: 'application/json' });
   if (navigator.share && navigator.canShare?.({ files: [file] })) {
@@ -88,5 +90,6 @@ export async function restoreProfileBackupFile(file) {
   }
   if (!localOk && !durableOk)
     throw new Error('The profile could not be restored because this browser is not allowing local storage.');
+  if (backup.deckMutator) writeMutatorProfile(structuredClone(backup.deckMutator));
   return { profile, decks, exportedAt: backup.exportedAt || null };
 }

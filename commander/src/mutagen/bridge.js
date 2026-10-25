@@ -45,6 +45,7 @@ export function toGameDeck(d) {
     commander2: d.partner || '',
     deckList: lines.join('\n'),
     updatedAt: Number.isFinite(new Date(d.updatedAt).getTime()) ? new Date(d.updatedAt).toISOString() : null,
+    owner: d.player || '',
     source: 'deck-mutator'
   };
 }
@@ -54,4 +55,41 @@ export function listMutatorDecks(storage = globalThis.localStorage) {
   const profile = mutatorProfile(storage);
   if (!profile) return [];
   return profile.decks.filter(d => d && d.id && d.format === 'commander' && d.commander).map(toGameDeck);
+}
+
+// ---------- one MUTAGEN profile ----------
+// Each fact is stored once. The game side keeps the player's name, avatar, games, achievements and history
+// (ccv07-profile); Deck Mutator keeps decks, collection, buy lists and tablemates (dc.profile). Each side shows
+// the other's data, and the game side's profile backup saves and restores both.
+
+const DEFAULT_MUTATOR_NAMES = ['', 'me', 'planeswalker'];
+
+/** Deck Mutator's whole saved profile, as stored; null when there is none. */
+export function readMutatorProfile(storage = globalThis.localStorage) {
+  return mutatorProfile(storage);
+}
+
+/** Put back Deck Mutator's saved profile from a MUTAGEN backup. */
+export function writeMutatorProfile(profile, storage = globalThis.localStorage) {
+  if (!profile || !Array.isArray(profile.decks)) return false;
+  try { storage.setItem(MUTATOR_PROFILE_KEY, JSON.stringify(profile)); return true; } catch { return false; }
+}
+
+/** What Deck Mutator holds, for the game side's profile screen. */
+export function mutatorSummary(storage = globalThis.localStorage) {
+  const p = mutatorProfile(storage);
+  const decks = p ? p.decks.filter(d => d && d.id) : [];
+  return {
+    decks: decks.length,
+    commanderDecks: decks.filter(d => d.format === 'commander' && d.commander).length,
+    collection: p?.library && typeof p.library === 'object' ? Object.keys(p.library).length : 0,   // different cards owned
+    buyList: decks.reduce((n, d) => n + (Array.isArray(d.want) ? d.want.length : 0), 0) + (Array.isArray(p?.want) ? p.want.length : 0),
+    tablemates: Array.isArray(p?.players) ? p.players.length : 0
+  };
+}
+
+/** The name Deck Mutator was using before the merge, when it is a real name rather than its default. */
+export function mutatorPlayerName(storage = globalThis.localStorage) {
+  const name = String(mutatorProfile(storage)?.name || '').trim();
+  return DEFAULT_MUTATOR_NAMES.includes(name.toLowerCase()) ? '' : name;
 }

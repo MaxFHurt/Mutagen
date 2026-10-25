@@ -16,8 +16,10 @@ function check(name, ok, detail = '') {
 }
 
 const MUTATOR = {
+  name: 'Aaron', players: ['Lex'], library: { 'Sol Ring': 1, 'Plains': 20 },
   decks: [
     { id: 'dm-1', name: 'Isamaru Rush', format: 'commander', commander: 'Isamaru, Hound of Konda', cards: [{ n: 'Plains', q: 99 }] },
+    { id: 'dm-3', name: 'Lex Elves', format: 'commander', commander: 'Lathril, Blade of the Elves', player: 'Lex', cards: [{ n: 'Forest', q: 99 }] },
     { id: 'dm-2', name: 'Standard Brew', format: 'standard', commander: '', cards: [{ n: 'Plains', q: 60 }] }
   ]
 };
@@ -62,6 +64,7 @@ try {
   const listed = await page.locator('.modal .option-list').textContent();
   check('Deck Mutator Commander deck listed', listed.includes('Isamaru Rush'), listed);
   check('Standard deck not offered for Commander play', !listed.includes('Standard Brew'), listed);
+  check("tablemate's deck listed with its owner", listed.includes('Lex Elves') && listed.includes("Lex's deck"), listed);
   await page.locator('.modal [data-deck]').first().click();
   check('picking it fills the commander', (await page.inputValue('[data-field="commander1"]')) === 'Isamaru, Hound of Konda');
 
@@ -71,6 +74,37 @@ try {
   await page.waitForURL('**/commander/');
   await ready();
   check('direct visit returns to the home screen', await page.locator('.landing').count() === 1);
+
+  // One profile: Deck Mutator's old name is adopted once, then the game side owns it
+  await page.click('[data-act="profile"]');
+  check('game profile adopted the Deck Mutator name', (await page.inputValue('#profileName')) === 'Aaron');
+  const stats = await page.locator('.profile__stats').textContent();
+  check('game profile shows Deck Mutator decks', /3\s*Decks/i.test(stats), stats);
+  await page.fill('#profileName', 'Max');
+  await page.click('[data-act="deck-mutator"]');
+  await page.waitForURL('**/deck/');
+  await page.click('[data-v="profile"]');
+  const name = page.locator('#p-name');
+  await name.waitFor();
+  check('Deck Mutator shows the MUTAGEN name', (await name.inputValue()) === 'Max');
+  check('Deck Mutator name is not edited separately', await name.evaluate(el => el.readOnly));
+  const record = await page.locator('.mutagen-record').textContent();
+  check('Deck Mutator profile shows the game record', record.includes('0 games'), record);
+  await page.click('[data-mutagen="profile"]');
+  await page.waitForURL('**/commander/');
+  await ready();
+  check('Open MUTAGEN profile lands on the game profile', await page.locator('.profile').count() === 1);
+
+  // One backup file holds both sides
+  const backup = await page.evaluate(async () => (await import('./src/data/profile-backup.js')).buildProfileBackup());
+  check('backup includes Deck Mutator data', backup.deckMutator?.decks?.length === 3 && backup.profile?.account?.displayName === 'Max', JSON.stringify([backup.deckMutator?.decks?.map(d => d.name), backup.profile?.account?.displayName]));
+  const restored = await page.evaluate(async b => {
+    b.deckMutator.decks = b.deckMutator.decks.slice(0, 1);
+    const file = new File([JSON.stringify(b)], 'x.ccsave', { type: 'application/json' });
+    await (await import('./src/data/profile-backup.js')).restoreProfileBackupFile(file);
+    return JSON.parse(localStorage.getItem('dc.profile')).decks.length;
+  }, backup);
+  check('restoring the backup restores Deck Mutator data', restored === 1, String(restored));
 
   check('no page errors', !errors.length, JSON.stringify(errors.slice(0, 3)));
 } catch (error) {

@@ -12,4 +12,9 @@ adds alongside the copies do not need listing.
 | 2026-10-25 | `commander/src/ui/screens/player-setup.js` | Footer button "Deck Mutator"; leaving saves the seats so the return restores them | MUT-01 return to player setup |
 | 2026-10-25 | `commander/src/ui/seat-form.js` | Empty saved-decks message says "Build one in Deck Mutator" | Old editor no longer reachable |
 | 2026-10-25 | `commander/tests/flows_ui.py` | `deck_editor` test now checks Deck Builder → Deck Mutator and a Deck Mutator deck in player setup | Old editor no longer reachable |
-| 2026-10-25 | `deck/index.html` | Loads `mutagen-return.js` (adds Return to MUTAGEN) | MUT-01 |
+| 2026-10-25 | `deck/index.html` | Loads `mutagen.js` (Return to MUTAGEN, shared name, game record on the profile page) | MUT-01, MUT-02 |
+| 2026-10-25 | `commander/src/main.js` | On start, adopt Deck Mutator's pre-merge player name once if this side has none | MUT-02 one profile |
+| 2026-10-25 | `commander/src/ui/screens/profile.js` | Stats show Deck Mutator's deck count; footer button "Deck Mutator" | MUT-02 one profile |
+| 2026-10-25 | `commander/styles/app.css` | `.profile__stats` has 4 columns (was 3) | Room for the Decks stat |
+| 2026-10-25 | `commander/src/ui/seat-form.js` | Saved-decks list shows a tablemate's decks as "<name>'s deck" | All decks, owner shown (owner, 2026-10-25) |
+| 2026-10-25 | `commander/src/data/profile-backup.js` | Backup also carries Deck Mutator's profile (`deckMutator`) and restores it; file named `<player>-MUTAGEN-<date>.ccsave` | One backup for the whole profile |
