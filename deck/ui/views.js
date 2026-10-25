@@ -167,7 +167,7 @@ function viewDecks() {
       tb('stats', 'Build stats') +
       tb(
         'up',
-        'Upgrades' +
+        'Mutations' +
           (nUp
             ? ' <em title="' +
               nUp +

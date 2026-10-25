@@ -75,8 +75,9 @@ which is now Mutagen and has no such branch. Build the layout by hand instead:
 
 ## Dependencies on the source repositories (to resolve in Phase 1)
 
-- Deck loads `https://raw.githubusercontent.com/MaxFHurt/Deck-Companion/card-data/combos.json.gz`
-  (`deck/ui/storage.js`). It keeps working while that repo is public.
+- ~~Deck loads combo data from Deck-Companion's `card-data` branch.~~ Resolved 2026-10-25: it ships at
+  `deck/data/combos.json.gz` (snapshot of 2026-10-12, 11,705 combos) and `.github/workflows/combo-data.yml`
+  refreshes it weekly through a pull request.
 - `deck/.github/workflows/card-data.yml` refreshes that branch. It is inert here (workflows only
   run from the repository root `.github/`).
 - Commander's root-level GitHub workflows belong to the old root app and were not copied.

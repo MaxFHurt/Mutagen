@@ -441,8 +441,8 @@ function upPanel(d, A, mode) {
             '"' +
             (ts.n ? '' : ' disabled') +
             '><b>Apply All ' +
-            TIERS[t].label +
-            ' Swaps</b><span>' +
+            MUTATION_LABEL[t] +
+            's</b><span>' +
             (ts.n
               ? ts.n + ' card' + (ts.n === 1 ? '' : 's') + ' · $' + ts.cost.toFixed(0) + ' to buy'
               : 'No worthwhile upgrades') +
@@ -581,7 +581,7 @@ function upPanel(d, A, mode) {
                   '<div class="opt none" data-t="' +
                   t +
                   '"><span class="chip">' +
-                  TIERS[t].label +
+                  MUTATION_LABEL[t] +
                   '</span><p>' +
                   esc((col && col.note) || (L.none && L.none[t]) || 'No ' + TIERS[t].label + ' pick for this slot') +
                   '</p></div>'
@@ -594,7 +594,7 @@ function upPanel(d, A, mode) {
                 '<div class="opt" data-t="' +
                 t +
                 '"><span class="chip gold">' +
-                TIERS[t].label +
+                MUTATION_LABEL[t] +
                 '</span>' +
                 side('in', p.add, p.q) +
                 '<div class="row">' +
@@ -1100,7 +1100,7 @@ async function openUpgradeAsk() {
     '" aria-pressed="' +
     (d.tier === t) +
     '">' +
-    TIERS[t].label +
+    MUTATION_LABEL[t] +
     (t === 'apex' ? ' · any price' : ' · under $' + TIERS[t].cap) +
     '</button>';
   $('#modal').innerHTML =
@@ -1440,7 +1440,7 @@ function themeBuildBox() {
           '" aria-pressed="' +
           ((g.tier || 'apex') === t) +
           '">' +
-          TIERS[t].label +
+          MUTATION_LABEL[t] +
           '</button>'
       )
       .join('') +
@@ -1673,7 +1673,7 @@ function genModeBox(c, st) {
           '" aria-pressed="' +
           (g.tier === t) +
           '">' +
-          TIERS[t].label +
+          MUTATION_LABEL[t] +
           '</button>'
       )
       .join('') +

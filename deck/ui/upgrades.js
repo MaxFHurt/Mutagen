@@ -997,7 +997,8 @@ function sheetHead(d, R, L, i, si, n, sel) {
     ['budget', 'mid', 'apex']
       .map(t => {
         const p = RC[t] && RC[t].p;
-        return slot(t, TIERS[t].label, p ? p.add : '', p ? sc(p) : 'None for this slot', p ? money(find(p.add)) : '');
+        return slot(t, {budget: 'Budget', mid: 'Mid tier', apex: 'Apex'}[t], p ? p.add : '',   // MUTAGEN: Your card / Budget / Mid tier / Apex
+          p ? sc(p) : 'None for this slot', p ? money(find(p.add)) : '');
       })
       .join('') +
     '</div>'

@@ -68,6 +68,16 @@ try {
   await page.locator('.modal [data-deck]').first().click();
   check('picking it fills the commander', (await page.inputValue('[data-field="commander1"]')) === 'Isamaru, Hound of Konda');
 
+  // Deck Mutator's combo data comes from this site (fresh browser: nothing saved yet)
+  {
+    const fresh = await browser.newContext(PHONE), p2 = await fresh.newPage();
+    const combos = p2.waitForResponse(r => r.url().includes('/combos.json.gz'), { timeout: 60000 }).catch(() => null);
+    await p2.goto(`${BASE}/deck/`);
+    const combo = await combos;
+    check('combo data loads from the MUTAGEN site', !!combo && combo.ok() && combo.url().startsWith(`${BASE}/deck/data/`), combo ? combo.url() : 'no request');
+    await fresh.close();
+  }
+
   // Opening Deck Mutator directly, Return lands on the home screen
   await page.goto(`${BASE}/deck/`);
   await page.locator('.mutagen-return').click();

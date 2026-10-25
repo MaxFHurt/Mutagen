@@ -1,0 +1,40 @@
+name: Combo data refresh
+# Rebuilds Deck Mutator's combo list (deck/data/combos.json.gz) from Commander Spellbook once a week and opens a pull
+# request with it. Nothing reaches main until the owner merges the PR.
+# Needs: Settings → Actions → General → "Allow GitHub Actions to create and approve pull requests".
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 9 * * 1'
+permissions:
+  contents: write
+  pull-requests: write
+concurrency:
+  group: combo-data
+  cancel-in-progress: true
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Build combos
+        run: |
+          node --input-type=module -e "
+            import fs from 'node:fs'; import zlib from 'node:zlib';
+            const { buildCombos } = await import('./deck/tools/build-combos.mjs');
+            const c = await buildCombos();
+            if (!c.combos.length) throw new Error('no combos');
+            fs.writeFileSync('deck/data/combos.json.gz', zlib.gzipSync(JSON.stringify(c)));
+            console.log(c.combos.length + ' combos');"
+      - uses: peter-evans/create-pull-request@v6
+        with:
+          branch: combo-data-refresh
+          commit-message: Refresh Deck Mutator combo data
+          title: Refresh Deck Mutator combo data
+          body: Weekly rebuild of `deck/data/combos.json.gz` from Commander Spellbook. Merge to publish it.
+          add-paths: deck/data/combos.json.gz
+          delete-branch: true

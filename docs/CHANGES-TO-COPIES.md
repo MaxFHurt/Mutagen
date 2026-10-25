@@ -25,3 +25,9 @@ adds alongside the copies do not need listing.
 | 2026-10-25 | `deck/ui/deck.js`, `ui/views.js`, `ui/storage.js` | "Deck Companion" in UI sentences and the backup file type becomes Deck Mutator; storage keys (`dc.*`, IndexedDB `deck-companion`) unchanged | MUT-03 |
 | 2026-10-25 | `deck/app.min.js` | Rebuilt with `sh tools/build.sh` from the edited sources (`engine.min.js` unchanged) | Bundles must match sources |
 | 2026-10-25 | `deck/tools/tests/suite/ui-test.mjs` | UI-B116-01 expects the header "DECK MUTATOR" | MUT-03 |
+| 2026-10-25 | `deck/ui/storage.js` | Combo data loads from `data/combos.json.gz` on this site instead of Deck-Companion's `card-data` branch | Owner: move the download; ships in the site, refreshed by `.github/workflows/combo-data.yml` via PR |
+| 2026-10-25 | `deck/ui/base.js` | New `MUTATION_LABEL` (Budget Mutation / Mid Tier Mutation / Apex Mutation) | MUT-03, owner option (b): main labels only |
+| 2026-10-25 | `deck/ui/views.js` | Tab "Upgrades" → "Mutations" | MUT-03 (b) |
+| 2026-10-25 | `deck/ui/deck.js` | Tier chips on mutation rows, tier choice buttons (deck, generate dialogs) and "Apply All … Mutations" use `MUTATION_LABEL`; sentences unchanged | MUT-03 (b) |
+| 2026-10-25 | `deck/ui/upgrades.js` | Comparison sheet columns: Your card / Budget / Mid tier / Apex | Handoff requirement 8 |
+| 2026-10-25 | `deck/tools/tests/suite/ui-test.mjs` | Apply-all label check expects "Apply All (Budget\|Mid Tier\|Apex) Mutations" | MUT-03 (b) |
