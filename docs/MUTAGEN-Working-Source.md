@@ -1,5 +1,10 @@
 # MUTAGEN — rolling situation report and visual inventory
 
+## CURRENT REVISION 046 — Left column visibly runs down, 2026-10-25
+
+Owner could not see the ooze running down the left column. The liquid drifted down, but the bubbles, which carry most of the visible motion in a tall column, hovered against the current. In a downward stream, bubbles are now carried down with it, held back a little by their rise. Measured: the left column moves down about 23 px/s and the right column up about 23 px/s (iPad Safari size). Chambers outside a stream are unchanged.
+
+
 ## CURRENT REVISION 045 — Bottom row laid out as a grid, 2026-10-25
 
 Owner's iPad photo still showed the stack right of the columns. The photo matched the styles from before revision 042 (version text still on the bottom edge), so Safari had kept the old stylesheet: GitHub Pages lets browsers keep files for 10 minutes. To be safe in every browser engine, the PROFILE / SETTINGS / HELP row no longer relies on flex shrinking: it is three equal grid tracks that can never be wider than the space between the columns. Checked centred, with no overflow, at 11 sizes, including Safari's shorter iPad and iPhone viewports (address bar showing).
