@@ -1,5 +1,10 @@
 # MUTAGEN — rolling situation report and visual inventory
 
+## CURRENT REVISION 043 — Home ooze flows as one stream, 2026-10-25
+
+Owner direction: the ooze flows horizontally through the pipes, with continuous motion from pipe to pipe in a believable direction. All eight home chambers now share one stream (`stream` attribute on `<mutagen-chamber>`): the liquid is laid out in page units (one unit ≈ a main button's window height) with one shared seed and speed. Liquid leaving one pipe therefore runs on into the next at the same pace and scale, and pipes in a line (the bottom row) show one unbroken stream. Bubbles stay per chamber. Circuit, as a pumped loop: down the left column, left to right through every button, up the right column, back across the top. The columns now move at the approved button speed. Approved colour, bubbles, octagon bulb flow and every chamber without `stream` are unchanged. Exact joins at corners wait for the plumbing artwork and HOME-LAYOUT.json, requested in `CHATGPT-REQUEST-2026-10-25b.md` together with the logo liquid files, button states and the next screens.
+
+
 ## CURRENT REVISION 042 — Home screen centred, 2026-10-25
 
 Owner reported (iPad photo) the home screen shifted right. Cause: the three tool buttons were wider than the space between the sight columns, which pushed the centre stack about 50 px right. They now shrink to fit, so the logo, tagline and all buttons sit on the screen centre. Checked at 1180×820, 1194×834, 1366×1024, 1024×768, 844×390, 932×430 and 667×375: centred within 1 px, no overflow.

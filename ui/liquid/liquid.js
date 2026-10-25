@@ -38,6 +38,10 @@ uniform vec2 uRes;            // canvas size in pixels
 uniform float uTime, uSeed, uGreen;
 uniform vec2 uFlow;           // flow direction through the pipe, in texture space (y down); (0,0) = still liquid
 uniform float uBulb;          // 1 = a wide glass bulb fed by a narrow pipe on the left, drained by one on the right
+uniform float uStream;        // 1 = part of a stream of pipes: the liquid is laid out on the page, so it runs on from pipe to pipe
+uniform vec2 uPage;           // stream: the window's top-left on the page, in stream units
+uniform float uUnit;          // stream: canvas pixels per stream unit (one unit is about a main button's window height)
+float gSeed;                  // seed for hash(): shared by a stream's liquid, per chamber for its bubbles
 const float FLOW = 0.05;      // flow speed, window heights per second
 // Bulb flow: a source at the inlet and a sink at the outlet (ideal flow through a widening). The stream enters fast and
 // narrow, fans out to fill the bulb, slows in the middle and gathers again into the outlet.
@@ -46,7 +50,7 @@ vec2 bulbFlow(vec2 q, float aspect){
   vec2 v = 0.012 * (a / dot(a, a) - b / dot(b, b));
   float l = length(v); return l > 0.25 ? v * (0.25 / l) : v;
 }
-float hash(vec2 p){ return fract(sin(dot(p, vec2(127.1, 311.7)) + uSeed * 17.13) * 43758.5453); }
+float hash(vec2 p){ return fract(sin(dot(p, vec2(127.1, 311.7)) + gSeed * 17.13) * 43758.5453); }
 float noise(vec2 p){ vec2 i = floor(p), f = fract(p); f = f * f * (3.0 - 2.0 * f);
   return mix(mix(hash(i), hash(i + vec2(1, 0)), f.x), mix(hash(i + vec2(0, 1)), hash(i + vec2(1, 1)), f.x), f.y); }
 void main(){
@@ -69,7 +73,11 @@ void main(){
     float n1 = noise(f1) * 0.65 + noise(f1 * 2.1 + 7.3) * 0.35, n2 = noise(f2) * 0.65 + noise(f2 * 2.1 + 7.3) * 0.35;
     n = mix(n1, n2, abs(ph - 0.5) * 2.0);
   } else {
-    vec2 fp = q * 1.4 - uFlow * (1.4 * FLOW * uTime);
+    // In a stream the liquid is sampled in page units with one shared seed and speed, so what leaves one pipe runs on
+    // into the next at the same pace and scale.
+    gSeed = uStream > 0.5 ? 0.0 : uSeed;
+    vec2 base = uStream > 0.5 ? uPage + st * uRes / uUnit : q;
+    vec2 fp = base * 1.4 - uFlow * (1.4 * FLOW * uTime);
     n = noise(fp) * 0.65 + noise(fp * 2.1 + 7.3) * 0.35;
   }
   float path = (0.38 + 1.4 * thick) * (0.88 + 0.24 * n);
@@ -80,6 +88,7 @@ void main(){
   // Bubbles: air pockets suspended in the liquid, in a natural mix of sizes (many small, some medium, a few large).
   // Each has a thin lighter rim and a soft glow on its lower side where light focuses through it. Near ones are crisp,
   // deeper ones are smaller, fainter and out of focus. No highlight dot, no shadow, none stuck to the glass.
+  gSeed = uSeed;
   float minDim = min(uRes.x, uRes.y);
   vec2 px = st * uRes;
   for (int i = 0; i < 18; i++) {
@@ -101,12 +110,13 @@ void main(){
       // Horizontal pipe: bubbles ride the stream through the pipe, fastest along the middle, slower near the glass.
       float lane = 0.14 + 0.72 * h2;
       float profile = 0.35 + 1.3 * (1.0 - pow(2.0 * lane - 1.0, 2.0));
-      float along = fract(h1 + uFlow.x * uTime * FLOW * profile * (0.8 + 0.4 * h4) * uRes.y / uRes.x);
+      float along = fract(h1 + uFlow.x * uTime * FLOW * profile * (0.8 + 0.4 * h4) * (uStream > 0.5 ? uUnit : uRes.y) / uRes.x);
       x = -0.08 + along * 1.16;
       y = lane - 0.04 * sin(fract(h1 + uTime * rise) * 3.14159) + 0.01 * sin(uTime * (0.5 + h4) + fi * 2.3);
     } else {
-      // Vertical pipe or still chamber: bubbles rise; an upward flow carries them a little faster.
-      float speed = rise + max(0.0, -uFlow.y) * FLOW * 0.6;
+      // Vertical pipe or still chamber: bubbles rise; an upward flow carries them a little faster, a downward one holds
+      // them back a little.
+      float speed = rise - uFlow.y * FLOW * 0.6 * (uStream > 0.5 ? uUnit / uRes.y : 1.0);
       y = 1.12 - fract(h2 + uTime * speed) * 1.24;
       float wob = 0.006 + 0.012 * size;
       x = 0.07 + 0.86 * h1 + wob * sin(uTime * (0.5 + h4) + fi * 2.3);
@@ -149,7 +159,7 @@ function renderer() {
     gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 1, -1, -1, 1, 1, 1]), gl.STATIC_DRAW);
     const loc = gl.getAttribLocation(prog, 'p'); gl.enableVertexAttribArray(loc); gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
     const u = n => gl.getUniformLocation(prog, n);
-    shared = { canvas, gl, u: { mask: u('uMask'), res: u('uRes'), time: u('uTime'), seed: u('uSeed'), green: u('uGreen'), flow: u('uFlow'), bulb: u('uBulb') } };
+    shared = { canvas, gl, u: { mask: u('uMask'), res: u('uRes'), time: u('uTime'), seed: u('uSeed'), green: u('uGreen'), flow: u('uFlow'), bulb: u('uBulb'), stream: u('uStream'), page: u('uPage'), unit: u('uUnit') } };
   } catch (error) {
     console.warn('Liquid: WebGL unavailable, showing still liquid', error);
     shared = false;
@@ -175,6 +185,8 @@ function maskTexture(r, chamber) {
 // than tall flows sideways, a tall one flows up, a roughly square chamber holds still liquid with rising bubbles.
 // flow="bulb" is for a wide glass bulb fed and drained by narrow side pipes (the smart octagon).
 const FLOWS = { up: [0, -1], down: [0, 1], left: [-1, 0], right: [1, 0], none: [0, 0], bulb: [1, 0] };
+// A stream's unit, in CSS pixels: about the window height of a main home button on both iPhone and iPad.
+const STREAM_UNIT = () => 0.075 * Math.min(innerWidth, innerHeight);
 const pipeFlow = (w, h) => (w > h * 1.4 ? FLOWS.right : h > w * 1.4 ? FLOWS.up : FLOWS.none);
 
 // ---------- animation loop shared by every chamber ----------
@@ -213,6 +225,7 @@ class MutagenChamber extends HTMLElement {
     this._seed = Number(this.getAttribute('seed')) || (++seedCounter * 7.31 + Math.random() * 100);
     this._flow = FLOWS[this.getAttribute('flow')] || pipeFlow(ww, wh);
     this._bulb = this.getAttribute('flow') === 'bulb' ? 1 : 0;   // flow="bulb": a wide glass bulb on a narrow side pipe
+    this._stream = this.hasAttribute('stream') ? 1 : 0;          // stream: liquid continues from pipe to pipe (see STREAM_UNIT)
     this._still = this._seed % 13;   // reduced motion: a still frame, different per chamber
     const pct = (v, of) => `${(100 * v) / of}%`;
     const label = [...this.childNodes];
@@ -276,6 +289,12 @@ class MutagenChamber extends HTMLElement {
     gl.uniform2f(u.res, canvas.width, canvas.height);
     gl.uniform1f(u.time, time); gl.uniform1f(u.seed, this._seed % 97); gl.uniform1f(u.green, greenLevel());
     gl.uniform2f(u.flow, this._flow[0], this._flow[1]); gl.uniform1f(u.bulb, this._bulb);
+    gl.uniform1f(u.stream, this._stream);
+    if (this._stream) {
+      const box = canvas.getBoundingClientRect(), unit = STREAM_UNIT();
+      gl.uniform2f(u.page, (box.left + scrollX) / unit, (box.top + scrollY) / unit);
+      gl.uniform1f(u.unit, unit * canvas.width / Math.max(1, box.width));
+    }
     gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
     this._ctx.clearRect(0, 0, canvas.width, canvas.height);
     this._ctx.drawImage(r.canvas, 0, 0);

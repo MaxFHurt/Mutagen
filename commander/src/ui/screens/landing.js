@@ -27,10 +27,10 @@ export const landingScreen = {
     // other large screens use the full-resolution set, phones the half-resolution set.
     const ui = '../ui/', set = Math.min(screen.width, screen.height) >= 700 ? 'buttons' : 'buttons-iphone';
     const btn = (act, file, name, disabled = false) => html`<button type="button" class="mh-btn" data-act="${act}" aria-label="${name}" ${disabled ? 'disabled' : ''}>
-      <mutagen-chamber shell="canister" overlay="${ui}${set}/home/animation-overlay/button-${file}.png">${name}</mutagen-chamber></button>`;
+      <mutagen-chamber shell="canister" stream overlay="${ui}${set}/home/animation-overlay/button-${file}.png">${name}</mutagen-chamber></button>`;
     setHtml(root, html`
       <main class="landing mutagen-home">
-        <mutagen-chamber class="mh-column mh-column--left" shell="sight-column"></mutagen-chamber>
+        <mutagen-chamber class="mh-column mh-column--left" shell="sight-column" flow="down" stream></mutagen-chamber>
         <div class="mh-center">
           <div class="mh-brand">
             <img class="mh-logo" src="${ui}branding/logo-mutagen-locked-transparent.png" alt="MUTAGEN">
@@ -47,7 +47,7 @@ export const landingScreen = {
             ${btn('help', 'help', 'Help')}
           </nav>
         </div>
-        <mutagen-chamber class="mh-column mh-column--right" shell="sight-column"></mutagen-chamber>
+        <mutagen-chamber class="mh-column mh-column--right" shell="sight-column" flow="up" stream></mutagen-chamber>
         <div class="landing__foot">MUTAGEN • ${VERSION}</div>
       </main>`);
 
