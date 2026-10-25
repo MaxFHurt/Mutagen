@@ -1,5 +1,12 @@
 # MUTAGEN V3 — Visual Change Roadmap — Revision 007 (2026-10-12)
 
+## CURRENT REVISION 049 — Choose Game Mode in the MUTAGEN frame, 2026-10-25
+
+Owner: keep going on the next screen with the artwork we have. Choose Game Mode now uses the home screen's frame: live sight columns (same stream: down on the left, up on the right), logo v2 and tagline at the top, the three mode cards in the middle, and a bottom row with BACK, PROFILE, SETTINGS and HELP, laid out after the proposed master `02-Game-Mode-Proposed.png` (not yet owner-approved). PROFILE / SETTINGS / HELP are the supplied clear-glass buttons over the live liquid and do what they do on the home screen. That is new on this screen, matching the master. The three mode cards and BACK stay the existing artwork, unchanged, until MUTAGEN versions are supplied. The old title strip ("Choose Game Mode" with the old crest) is no longer shown; the screen keeps a hidden heading for screen readers until the title artwork arrives. Every mode flow is unchanged (same buttons and modals). Checked centred, with no overflow, at seven iPad and iPhone sizes. Commander UI suites match the baseline (flows 24/24; game 27/28, the failure being the pre-existing favicon 404).
+
+Still needed from ChatGPT for this screen: FULLY GUIDED, FREEPLAY and TABLE TRACKER buttons with their sub-lines (assembled and animation-overlay, iPad and iPhone), the CHOOSE GAME MODE title, and a BACK button in the canister style.
+
+
 ## CURRENT REVISION 048 — New logo design adopted, 2026-10-25
 
 Owner decision: use ChatGPT's new logo design. It is stored exactly as supplied at `ui/branding/logo-mutagen-v2.png` (1254 × 1254, SHA-256 cc3fd853db478dbf831282a8273028893c19fe71c79de09c6342b8273874ae9a) and is now the home logo. Its art has a wider margin on the canvas, so the image is shown about 7.7% larger and keeps the same visible size as before. The locked master JPEG and `logo-mutagen-locked-transparent.png` stay in the repo unchanged, as the record of the original. To make the logo's liquid live, ChatGPT still needs to supply an overlay and liquid mask made from v2 (`CHATGPT-REQUEST-2026-10-25b.md`, item 1). Owner confirmed the home screen is centred on iPad and looks good on iPhone.

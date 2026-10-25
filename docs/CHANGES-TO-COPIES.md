@@ -36,3 +36,5 @@ adds alongside the copies do not need listing.
 | 2026-10-25 | `commander/tests/shots.py` | Test URL can be set with `CC_URL` (serve the repo root, use `/commander/index.html`) because the app now uses shared `../ui/` files | Tests reach shared assets |
 | 2026-10-25 | `commander/src/ui/screens/landing.js` | Home chambers join one liquid stream (`stream`); left column flows down, right column up | Phase 2 home ooze circuit (rev 043) |
 | 2026-10-25 | `commander/src/ui/screens/landing.js` | Home logo uses `ui/branding/logo-mutagen-v2.png` (owner adopted the new design) | Phase 2 logo (rev 048) |
+| 2026-10-25 | `commander/src/ui/screens/mode-select.js` | Choose Game Mode in the MUTAGEN frame (sight columns, logo, mode cards, BACK / PROFILE / SETTINGS / HELP row); the same mode buttons and modals; PROFILE / SETTINGS / HELP added after the master | Phase 2 mode screen (rev 049) |
+| 2026-10-25 | `commander/index.html` | Loads `../ui/mode/mode.css` | Phase 2 mode screen (rev 049) |
