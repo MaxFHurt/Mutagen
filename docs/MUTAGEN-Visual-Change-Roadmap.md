@@ -1,5 +1,12 @@
 # MUTAGEN V3 — Visual Change Roadmap — Revision 007 (2026-10-12)
 
+## CURRENT REVISION 053 — Home is now the master layout, with the master's own buttons, 2026-10-25
+
+Owner: "You can recreate these assets if necessary." No new artwork was drawn: the six master-shape buttons were cut from the approved master itself by `tools/home-buttons/extract.py`, into `ui/buttons-master/home/`. For each there is an assembled version (backdrop removed), a clear-glass animation overlay, and an RG liquid mask (R coverage, G depth) in the same format as ChatGPT's pipes, with hashes in MANIFEST.json and a README. Method: blue/purple backdrop, and near-black within a thin band along the slot edge, connected to the slot edge is removed, keeping a one-pixel dark outline. Liquid is the green-dominant pixels inside the button, including shaded liquid and small dull-green patches. Lettering, icons and bright glints stay in the overlay, so the glass keeps its highlights. Each button is exactly its HOME-LAYOUT.json slot, so it meets the master's branch pipes and bottom joints with no gaps. Buttons are at the master's resolution (1672 × 941), a little soft on large screens.
+
+The home screen is now this layout (the master's pipes, columns and buttons, the live logo and the tagline, on the master-shaped stage), with live liquid in the columns, branches and all six buttons on the shared stream. The previous layout stays available at `commander/?layout=classic`. Same actions; Continue still disabled without a save. Tests: mutagen_flow 24/24 (home checks updated, classic layout checked), liquid 8/8, flows_ui 24/24, game_ui 27/28 (pre-existing favicon 404).
+
+
 ## CURRENT REVISION 052 — Live logo on; home rebuilt after the master (preview), 2026-10-25
 
 Owner decisions: (1) live liquid in the logo; (2) rebuild the home to resemble the approved master.

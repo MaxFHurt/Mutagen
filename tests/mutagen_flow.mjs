@@ -38,7 +38,7 @@ try {
 
   // Artwork is large; wait for every home image to finish loading before checking it
   await page.waitForFunction(() => [...document.querySelectorAll('.mutagen-home img')].every(i => i.complete), null, { timeout: 30000 }).catch(() => {});
-  // MUTAGEN home screen: supplied buttons over live liquid, logo and tagline, Continue off without a saved game
+  // MUTAGEN home after the master: master pipes and buttons over live liquid, live logo, Continue off without a save
   const home = await page.evaluate(() => ({
     buttons: [...document.querySelectorAll('.mutagen-home .mh-btn')].map(b => b.getAttribute('aria-label')),
     continueOff: document.querySelector('.mh-btn[data-act="continue"]').disabled,
@@ -47,20 +47,20 @@ try {
   }));
   check('home shows the six buttons by name', home.buttons.join() === 'New Game,Continue,Deck Mutator,Profile,Settings,Help', home.buttons.join());
   check('Continue is off without a saved game', home.continueOff);
-  check('home artwork loads (live logo, tagline, buttons, columns)', home.art && home.chambers === 9, JSON.stringify(home));
+  check('home artwork loads (live logo, tagline, master buttons, pipes, columns)', home.art && home.chambers === 15, JSON.stringify(home));
 
-  // Preview of the home rebuilt after the approved master (?layout=master): master pipes and columns, same six buttons
-  await page.goto(`${BASE}/commander/?layout=master`);
+  // The previous layout stays available at ?layout=classic: supplied buttons, sight columns, live logo
+  await page.goto(`${BASE}/commander/?layout=classic`);
   await ready();
-  await page.waitForFunction(() => [...document.querySelectorAll('.mh-stage img')].every(i => i.complete), null, { timeout: 30000 }).catch(() => {});
-  const master = await page.evaluate(() => ({
-    buttons: [...document.querySelectorAll('.mh-stage .mh-btn')].map(b => b.getAttribute('aria-label')).join(),
-    chambers: document.querySelectorAll('.mh-stage mutagen-chamber').length,
-    art: [...document.querySelectorAll('.mh-stage img')].every(i => i.complete && i.naturalWidth > 0)
+  await page.waitForFunction(() => [...document.querySelectorAll('.mutagen-home img')].every(i => i.complete), null, { timeout: 30000 }).catch(() => {});
+  const classic = await page.evaluate(() => ({
+    buttons: [...document.querySelectorAll('.mutagen-home .mh-btn')].map(b => b.getAttribute('aria-label')).join(),
+    chambers: document.querySelectorAll('.mutagen-home mutagen-chamber').length,
+    art: [...document.querySelectorAll('.mutagen-home img')].every(i => i.complete && i.naturalWidth > 0)
   }));
-  check('master home preview: six buttons, live pipes, artwork loads', master.buttons === 'New Game,Continue,Deck Mutator,Profile,Settings,Help' && master.chambers === 15 && master.art, JSON.stringify(master));
-  await page.click('.mh-stage [data-act="start"]');
-  check('master home preview: New Game opens Choose Game Mode', await page.waitForSelector('.mode-select', { timeout: 5000 }).then(() => true, () => false));
+  check('classic home: six buttons, live logo and columns, artwork loads', classic.buttons === 'New Game,Continue,Deck Mutator,Profile,Settings,Help' && classic.chambers === 9 && classic.art, JSON.stringify(classic));
+  await page.click('.mutagen-home [data-act="start"]');
+  check('classic home: New Game opens Choose Game Mode', await page.waitForSelector('.mode-select', { timeout: 5000 }).then(() => true, () => false));
   await page.goto(`${BASE}/commander/`);
   await ready();
 

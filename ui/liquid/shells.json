@@ -177,5 +177,89 @@
     ],
     "mask": "../piping/home/animation-overlays/branch-3-right-liquid-mask.png",
     "note": "Home plumbing cut from 01-Landing-Approved.png (ChatGPT, rev 051); overlay and mask used as made."
+  },
+  "home-button-new-game": {
+    "size": [
+      712,
+      127
+    ],
+    "window": [
+      0,
+      0,
+      711,
+      126
+    ],
+    "mask": "../buttons-master/home/liquid-mask/button-new-game.png",
+    "note": "Master-shape home button cut from 01-Landing-Approved.png by tools/home-buttons/extract.py (owner authorised, rev 053)."
+  },
+  "home-button-continue": {
+    "size": [
+      712,
+      125
+    ],
+    "window": [
+      0,
+      0,
+      711,
+      124
+    ],
+    "mask": "../buttons-master/home/liquid-mask/button-continue.png",
+    "note": "Master-shape home button cut from 01-Landing-Approved.png by tools/home-buttons/extract.py (owner authorised, rev 053)."
+  },
+  "home-button-deck-mutator": {
+    "size": [
+      712,
+      124
+    ],
+    "window": [
+      0,
+      0,
+      711,
+      123
+    ],
+    "mask": "../buttons-master/home/liquid-mask/button-deck-mutator.png",
+    "note": "Master-shape home button cut from 01-Landing-Approved.png by tools/home-buttons/extract.py (owner authorised, rev 053)."
+  },
+  "home-button-profile": {
+    "size": [
+      451,
+      120
+    ],
+    "window": [
+      0,
+      0,
+      450,
+      119
+    ],
+    "mask": "../buttons-master/home/liquid-mask/button-profile.png",
+    "note": "Master-shape home button cut from 01-Landing-Approved.png by tools/home-buttons/extract.py (owner authorised, rev 053)."
+  },
+  "home-button-settings": {
+    "size": [
+      389,
+      120
+    ],
+    "window": [
+      0,
+      0,
+      388,
+      119
+    ],
+    "mask": "../buttons-master/home/liquid-mask/button-settings.png",
+    "note": "Master-shape home button cut from 01-Landing-Approved.png by tools/home-buttons/extract.py (owner authorised, rev 053)."
+  },
+  "home-button-help": {
+    "size": [
+      455,
+      120
+    ],
+    "window": [
+      0,
+      0,
+      454,
+      119
+    ],
+    "mask": "../buttons-master/home/liquid-mask/button-help.png",
+    "note": "Master-shape home button cut from 01-Landing-Approved.png by tools/home-buttons/extract.py (owner authorised, rev 053)."
   }
 }

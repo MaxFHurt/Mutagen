@@ -1,0 +1,97 @@
+{
+  "source": "docs/handoff/approved-masters/01-Landing-Approved.png",
+  "source_sha256": "72c975fae3d96f2119b22c8f09b568f284665e81d7655a047ab8c8f95eb272fe",
+  "method": "Cut the six home buttons out of the approved landing master, for live liquid.",
+  "buttons": {
+    "new-game": {
+      "rect": [
+        477,
+        425,
+        712,
+        127
+      ],
+      "button_px": 79640,
+      "liquid_px": 29687,
+      "sha256": {
+        "assembled": "e30384e540e167da4901d17e485220ee0ffc760c8214253c37ee3a6bc6f04ecd",
+        "animation-overlay": "36d2eb10a5a8679e5bd3bb17e5191f4f8a0ec1ff816f418a8694619f9b6d3723",
+        "liquid-mask": "a0c7cca1f871c15cb00715d978c7fd336f0f5d44cbc97e064f39908aca1722df"
+      }
+    },
+    "continue": {
+      "rect": [
+        477,
+        551,
+        712,
+        125
+      ],
+      "button_px": 78327,
+      "liquid_px": 30247,
+      "sha256": {
+        "assembled": "47ec85f09a1c0398cd76de0415eece293b352abd05c5d4b28939ec3531883d29",
+        "animation-overlay": "dfa24ca722129a8203ab949f47fa9ccfc702829243a44e64a6317e135524b247",
+        "liquid-mask": "cac517238a68688dff5cd51059caa2d4a9344c7f18c03a6948f38bc62e94c8e5"
+      }
+    },
+    "deck-mutator": {
+      "rect": [
+        477,
+        675,
+        712,
+        124
+      ],
+      "button_px": 76721,
+      "liquid_px": 27308,
+      "sha256": {
+        "assembled": "a34a8f93f8e1df0e63f0aca03b440be98708022a3d4af471ceea68156d17f0d5",
+        "animation-overlay": "02eea8776abacda02f89b91b1925d5bd872d5d204f4cdd941c0462e3d61ab035",
+        "liquid-mask": "b78536e9651653b80471841d6c50bf20bd63381aeb930fd209c0bab0e6ac377d"
+      }
+    },
+    "profile": {
+      "rect": [
+        145,
+        794,
+        451,
+        120
+      ],
+      "button_px": 47146,
+      "liquid_px": 16991,
+      "sha256": {
+        "assembled": "9e7d051f2faf2645ba79d49c8a5a6fe9948f0c5ad6d29b766346d1659972fdf9",
+        "animation-overlay": "afe3e777a48da2eea4dc158c898a8608fe483105915203abc00818c89f9e2616",
+        "liquid-mask": "6191193a409f8fd32f8f9237c4ab3fa886b7bccf60a45291ad4e9928785a5319"
+      }
+    },
+    "settings": {
+      "rect": [
+        640,
+        794,
+        389,
+        120
+      ],
+      "button_px": 40518,
+      "liquid_px": 13674,
+      "sha256": {
+        "assembled": "681d2c054af4d0a439b6e7c7aea5cbced3582074ad3c11fe84674abb9440a7f5",
+        "animation-overlay": "370190fe8f093e529f54f9fe2cde5011a4cc6e25ec98223e6893bf1b1858c39d",
+        "liquid-mask": "52633c3c1f2b2bf3cc655721e3e83966dd3f4a83dbf4b0408740901db71b0998"
+      }
+    },
+    "help": {
+      "rect": [
+        1071,
+        794,
+        455,
+        120
+      ],
+      "button_px": 47450,
+      "liquid_px": 17958,
+      "sha256": {
+        "assembled": "78136e52d954410b03ebb55e74400e72dd946d72ca533ca78798afa71efd82b2",
+        "animation-overlay": "6da0b6db853c2838dd7c93d0defb00326f114590373153113891efa7f37de08f",
+        "liquid-mask": "c28b7171807eede784de7381331609cb2d32458ead60c761a9c546a83882371c"
+      }
+    }
+  }
+}
