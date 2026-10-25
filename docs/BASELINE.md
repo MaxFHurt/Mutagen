@@ -32,6 +32,18 @@ Not run in Phase 0 (long or need extra setup): Commander `challenge_ui`, `net_ui
 `tracker_test`, `tracker_net_ui`, screenshot suites, `scan_ui` (internet); Deck full UI suite
 (118 tests, ~6–10 min), benchmarks, `accept`, `claims`, `genstrong`.
 
+### Deck full UI suite (126 tests, `check.sh screens live`), 2026-10-25
+
+| Code | Result | Failed |
+|---|---|---|
+| Original Deck-Companion `fdf21b78` | 124/126 | UI-B145-01, UI-B146-02 |
+| Mutagen `deck/` after Phase 1 renames | 124/126 | UI-B145-01, UI-B81-02 (`sameBuild` only) |
+
+UI-B145-01 needs the EDHREC theme pages from `fetchtags.sh`, which was not run. UI-B146-02 failed
+on the original and passed on Mutagen; UI-B81-02's "generating twice gives the same deck" passed
+on the original and failed once on Mutagen, whose engine bundle is byte-identical. Both look
+timing-sensitive; not re-run to confirm.
+
 ### Known issues present in the sources (not introduced here)
 
 1. **Commander `game_ui` "no console errors"** fails on the phone pass: the browser requests
