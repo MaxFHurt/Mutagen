@@ -1,5 +1,10 @@
 # MUTAGEN — rolling situation report and visual inventory
 
+## CURRENT REVISION 038 — Transparent logo received and verified, 2026-10-25
+
+`ui/branding/logo-mutagen-locked-transparent.png` (1254 × 1254 RGBA, SHA-256 fdaf4e01edb3ca7ae732b952811dbfa60233ea27654f62cacd2bb90cc1a76dec) matches the asset manifest. Verified against `MASTER_LOGO_DO_NOT_REGENERATE.jpeg` (SHA-256 20b2e249…): same canvas, all 1,168,182 opaque pixels identical to the locked original (zero differences); only near-white exterior matte made transparent; hard edge with no white fringe on the dark background. The locked JPEG stays unchanged. This is the logo for the home screen; it is never regenerated.
+
+
 ## CURRENT REVISION 037 — First supplied button artwork in use, 2026-10-25
 
 Received from ChatGPT (owner upload): asset handoff, MANIFEST.json, SHA256SUMS, BUTTON-FUNCTION-INDEX and preview for 140 PNGs, plus 12 of the PNG files: the iPhone smart-octagon `animation-overlay` buttons (finished hardware and lettering, glass left clear). All 12 match the manifest SHA-256 and are stored unchanged in `ui/buttons-iphone/game-actions/animation-overlay/`. `<mutagen-chamber overlay="…">` now uses such a file as the frame layer, as supplied, over the approved live liquid; nothing is redrawn. Review page shows all 12 with bulb flow. Known defect in the supplied artwork: the RESOLVE button reads "RESOLYE" (all variants) and needs correcting at source. Still to receive: the other 128 PNGs (iPad sizes, home buttons, navigation, labels, components, transparent logo). The handoff's notes that the liquid is unapproved and octagon flow undecided are superseded by revisions 035–036.
