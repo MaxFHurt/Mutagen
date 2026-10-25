@@ -47,7 +47,22 @@ try {
   }));
   check('home shows the six buttons by name', home.buttons.join() === 'New Game,Continue,Deck Mutator,Profile,Settings,Help', home.buttons.join());
   check('Continue is off without a saved game', home.continueOff);
-  check('home artwork loads (logo, tagline, buttons, columns)', home.art && home.chambers === 8, JSON.stringify(home));
+  check('home artwork loads (live logo, tagline, buttons, columns)', home.art && home.chambers === 9, JSON.stringify(home));
+
+  // Preview of the home rebuilt after the approved master (?layout=master): master pipes and columns, same six buttons
+  await page.goto(`${BASE}/commander/?layout=master`);
+  await ready();
+  await page.waitForFunction(() => [...document.querySelectorAll('.mh-stage img')].every(i => i.complete), null, { timeout: 30000 }).catch(() => {});
+  const master = await page.evaluate(() => ({
+    buttons: [...document.querySelectorAll('.mh-stage .mh-btn')].map(b => b.getAttribute('aria-label')).join(),
+    chambers: document.querySelectorAll('.mh-stage mutagen-chamber').length,
+    art: [...document.querySelectorAll('.mh-stage img')].every(i => i.complete && i.naturalWidth > 0)
+  }));
+  check('master home preview: six buttons, live pipes, artwork loads', master.buttons === 'New Game,Continue,Deck Mutator,Profile,Settings,Help' && master.chambers === 15 && master.art, JSON.stringify(master));
+  await page.click('.mh-stage [data-act="start"]');
+  check('master home preview: New Game opens Choose Game Mode', await page.waitForSelector('.mode-select', { timeout: 5000 }).then(() => true, () => false));
+  await page.goto(`${BASE}/commander/`);
+  await ready();
 
   // Landing → Deck Mutator → back to landing
   await page.click('[data-act="decks"]');

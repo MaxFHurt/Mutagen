@@ -9,7 +9,7 @@
 .mh-column { width: calc((100dvh - 28px) * 724 / 2172); align-self: center; }   /* full height; shell is 724 × 2172 */
 .mh-center { display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(0, 1fr) auto auto; justify-items: center; align-content: center; min-height: 0; gap: clamp(2px, 1.2vh, 14px); }
 .mh-brand { display: grid; justify-items: center; align-content: end; min-height: 0; gap: clamp(0px, 0.6vh, 8px); }
-.mh-logo { height: clamp(65px, 32.3vh, 366px);   /* logo v2 has a wider margin on its canvas: same visible size as before */
+.mh-logo { aspect-ratio: 1; height: clamp(65px, 32.3vh, 366px);   /* logo v2 has a wider margin on its canvas: same visible size as before */
    width: auto; max-width: 60vw; object-fit: contain; }
 .mh-tagline { height: clamp(10px, 4.2vh, 40px); width: auto; max-width: 60vw; object-fit: contain; }
 .mh-primary { display: grid; justify-items: center; gap: clamp(0px, 0.4vh, 6px); }
@@ -24,3 +24,18 @@
 .mh-btn:focus-visible { outline: 2px solid #b993ff; outline-offset: 2px; }
 .mutagen-home .landing__foot { grid-column: 1 / -1; text-align: center; padding: 2px 0 0; font-size: 9px; }
 .landing.mutagen-home { padding-bottom: calc(max(6px, 2.8vh) + var(--safe-b, 0px)); }   /* version text sits above the background's bright bottom edge */
+
+/* Home after the approved master (?layout=master): one stage in the master's 1672 × 941 shape, as large as the screen
+   allows and centred; the background fills any space around it. Every piece is placed in percent of the stage from
+   ui/home/master-layout.js, so nothing is stretched or redrawn. */
+.landing.mutagen-home.mh-master { display: block; padding: 0; }
+.mh-stage {
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  width: min(calc(100vw - var(--safe-l, 0px) - var(--safe-r, 0px)), calc((100dvh - var(--safe-t, 0px) - var(--safe-b, 0px) - 14px) * 1672 / 941));
+  aspect-ratio: 1672 / 941;
+}
+.mh-stage > .mh-piece, .mh-stage > .mh-slot { position: absolute; margin: 0; }
+.mh-stage > .mutagen-chamber { display: block; }
+.mh-stage > .mh-slot.mh-btn .mutagen-chamber { width: 100%; }
+.mh-stage > img.mh-slot, .mh-stage > img.mh-piece { object-fit: contain; }
+.mh-master .landing__foot { position: absolute; left: 0; right: 0; bottom: calc(max(6px, 2.8vh) + var(--safe-b, 0px)); padding: 0; }
