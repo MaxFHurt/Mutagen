@@ -26,7 +26,7 @@ export const modeSelectScreen = {
         <mutagen-chamber class="mh-column mh-column--left" shell="sight-column" flow="down" stream></mutagen-chamber>
         <div class="mm-center">
           <div class="mm-brand">
-            <img class="mm-logo" src="${ui}branding/logo-mutagen-v2.png" alt="MUTAGEN">
+            <mutagen-chamber class="mm-logo" shell="logo-v2" flow="none" overlay="${ui}branding/logo-mutagen-v2-overlay.png">MUTAGEN</mutagen-chamber>
             <img class="mm-tagline" src="${ui}labels/label-tagline.png" alt="Mutate The Gathering">
             <h1 class="visually-hidden">Choose game mode</h1>
           </div>

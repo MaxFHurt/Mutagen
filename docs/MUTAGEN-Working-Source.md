@@ -1,5 +1,14 @@
 # MUTAGEN — rolling situation report and visual inventory
 
+## CURRENT REVISION 052 — Live logo on; home rebuilt after the master (preview), 2026-10-25
+
+Owner decisions: (1) live liquid in the logo; (2) rebuild the home to resemble the approved master.
+
+(1) The home and Choose Game Mode logos are now live `<mutagen-chamber shell="logo-v2">` elements using ChatGPT's overlay and mask as made.
+
+(2) Preview at `commander/?layout=master`; the live home is unchanged until the owner approves. It is a stage in the master's 1672 × 941 shape, as large as the screen allows and centred, with the background filling the rest. On it, at the positions copied from the supplied HOME-LAYOUT.json (`ui/home/master-layout.js`, generated): the master's top header pipe, side columns, six branch pipes, bottom elbows and joints; the live logo; the tagline; and the six buttons. Columns and branches carry live liquid through their supplied overlays and masks, on the shared stream (down the left column, right through the branches, up the right column). The header, elbows and joints are solid steel with no liquid and are shown as made. Buttons are the current supplied ones fitted into the master's button slots without stretching, so the gaps between branch ends and buttons remain until buttons made for the master's sockets are supplied (master-shape NEW GAME / CONTINUE / DECK MUTATOR about 712 × 125, PROFILE / SETTINGS / HELP about 450 × 120, with icons as in the master). Same actions, Continue still disabled without a save. Checked at 1180×755, 1366×1024, 844×390 and 667×375 with no overflow or load errors. Tests: mutagen_flow 24/24 (2 new preview checks), liquid 8/8, flows_ui 24/24, game_ui 27/28 (pre-existing favicon 404).
+
+
 ## CURRENT REVISION 051 — Piping and logo v2 layers received; held for owner decisions, 2026-10-25
 
 ChatGPT delivered `MUTAGEN-Piping-Backgrounds-and-Logo-v2.zip` (136 files). All 134 entries in its SHA256SUMS were verified, and the stored copies were checked again at their new paths. Its copy of `01-Landing-Approved.png` is byte-identical to ours. Stored unchanged: home plumbing from the approved landing master at `ui/piping/home/` (13 pipe assemblies, clear-glass overlays, RG liquid masks, 25 detail slices, a full-canvas piping layer, the visible-background and foreground layers, HOME-LAYOUT.json); battlefield and Deck Mutator reference cuts at `ui/piping/*-reference/` (references only, not approved masters); logo v2 overlay and liquid mask at `ui/branding/`; notes, sources and preview at `handoff/piping-2026-10-25/`.

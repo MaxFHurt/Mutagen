@@ -38,3 +38,5 @@ adds alongside the copies do not need listing.
 | 2026-10-25 | `commander/src/ui/screens/landing.js` | Home logo uses `ui/branding/logo-mutagen-v2.png` (owner adopted the new design) | Phase 2 logo (rev 048) |
 | 2026-10-25 | `commander/src/ui/screens/mode-select.js` | Choose Game Mode in the MUTAGEN frame (sight columns, logo, mode cards, BACK / PROFILE / SETTINGS / HELP row); the same mode buttons and modals; PROFILE / SETTINGS / HELP added after the master | Phase 2 mode screen (rev 049) |
 | 2026-10-25 | `commander/index.html` | Loads `../ui/mode/mode.css` | Phase 2 mode screen (rev 049) |
+| 2026-10-25 | `commander/src/ui/screens/landing.js` | Live logo (`logo-v2` chamber); master-layout home preview behind `?layout=master` (master pipes, columns and slots from `ui/home/master-layout.js`) | Phase 2 home after the master (rev 052) |
+| 2026-10-25 | `commander/src/ui/screens/mode-select.js` | Live logo (`logo-v2` chamber) | Phase 2 logo (rev 052) |

@@ -65,5 +65,117 @@
     "mask": "../branding/logo-mutagen-v2-liquid-mask.png",
     "bubbleScale": 0.4,
     "note": "Adopted logo v2 (owner, rev 048). Mask and clear-liquid overlay supplied by ChatGPT, used as made; the whole canvas is the window."
+  },
+  "home-left-sight-column": {
+    "size": [
+      122,
+      695
+    ],
+    "window": [
+      0,
+      0,
+      121,
+      694
+    ],
+    "mask": "../piping/home/animation-overlays/left-sight-column-liquid-mask.png",
+    "note": "Home plumbing cut from 01-Landing-Approved.png (ChatGPT, rev 051); overlay and mask used as made."
+  },
+  "home-right-sight-column": {
+    "size": [
+      119,
+      693
+    ],
+    "window": [
+      0,
+      0,
+      118,
+      692
+    ],
+    "mask": "../piping/home/animation-overlays/right-sight-column-liquid-mask.png",
+    "note": "Home plumbing cut from 01-Landing-Approved.png (ChatGPT, rev 051); overlay and mask used as made."
+  },
+  "home-branch-1-left": {
+    "size": [
+      344,
+      68
+    ],
+    "window": [
+      0,
+      0,
+      343,
+      67
+    ],
+    "mask": "../piping/home/animation-overlays/branch-1-left-liquid-mask.png",
+    "note": "Home plumbing cut from 01-Landing-Approved.png (ChatGPT, rev 051); overlay and mask used as made."
+  },
+  "home-branch-1-right": {
+    "size": [
+      351,
+      68
+    ],
+    "window": [
+      0,
+      0,
+      350,
+      67
+    ],
+    "mask": "../piping/home/animation-overlays/branch-1-right-liquid-mask.png",
+    "note": "Home plumbing cut from 01-Landing-Approved.png (ChatGPT, rev 051); overlay and mask used as made."
+  },
+  "home-branch-2-left": {
+    "size": [
+      344,
+      67
+    ],
+    "window": [
+      0,
+      0,
+      343,
+      66
+    ],
+    "mask": "../piping/home/animation-overlays/branch-2-left-liquid-mask.png",
+    "note": "Home plumbing cut from 01-Landing-Approved.png (ChatGPT, rev 051); overlay and mask used as made."
+  },
+  "home-branch-2-right": {
+    "size": [
+      351,
+      67
+    ],
+    "window": [
+      0,
+      0,
+      350,
+      66
+    ],
+    "mask": "../piping/home/animation-overlays/branch-2-right-liquid-mask.png",
+    "note": "Home plumbing cut from 01-Landing-Approved.png (ChatGPT, rev 051); overlay and mask used as made."
+  },
+  "home-branch-3-left": {
+    "size": [
+      344,
+      65
+    ],
+    "window": [
+      0,
+      0,
+      343,
+      64
+    ],
+    "mask": "../piping/home/animation-overlays/branch-3-left-liquid-mask.png",
+    "note": "Home plumbing cut from 01-Landing-Approved.png (ChatGPT, rev 051); overlay and mask used as made."
+  },
+  "home-branch-3-right": {
+    "size": [
+      351,
+      65
+    ],
+    "window": [
+      0,
+      0,
+      350,
+      64
+    ],
+    "mask": "../piping/home/animation-overlays/branch-3-right-liquid-mask.png",
+    "note": "Home plumbing cut from 01-Landing-Approved.png (ChatGPT, rev 051); overlay and mask used as made."
   }
 }
