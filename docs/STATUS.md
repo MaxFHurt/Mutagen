@@ -24,6 +24,7 @@ Read this first when picking up the work. Keep it short and current.
 - Engine/logic work fits best in the source repos; layout/visual work there gets harder to sync
   once Mutagen is reskinned.
 - Work in bounded chunks; stop and report at each agreed stopping point.
+- End every reply with a short summary and a restatement of any open questions (owner, 2026-10-25).
 
 ## Rules carried from the source handoffs
 
