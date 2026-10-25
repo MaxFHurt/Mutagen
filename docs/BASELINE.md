@@ -39,10 +39,17 @@ Not run in Phase 0 (long or need extra setup): Commander `challenge_ui`, `net_ui
 | Original Deck-Companion `fdf21b78` | 124/126 | UI-B145-01, UI-B146-02 |
 | Mutagen `deck/` after Phase 1 renames | 124/126 | UI-B145-01, UI-B81-02 (`sameBuild` only) |
 
-UI-B145-01 needs the EDHREC theme pages from `fetchtags.sh`, which was not run. UI-B146-02 failed
-on the original and passed on Mutagen; UI-B81-02's "generating twice gives the same deck" passed
-on the original and failed once on Mutagen, whose engine bundle is byte-identical. Both look
-timing-sensitive; not re-run to confirm.
+UI-B145-01 needs the EDHREC theme pages from `fetchtags.sh`, which was not run (fails on both).
+
+UI-B81-02 / UI-B146-02 are one race present in the source, not a Mutagen regression. They run next
+to each other in group 0, and in every run exactly one of them fails: B146-02 on the original page
+(failed 3/3, B81-02 passed 3/3), B81-02 on Mutagen's page (failed 3/3, B146-02 passed). Isolating:
+Mutagen's code with the original `index.html` behaves exactly like the original, and removing
+`mutagen.js` alone does not change it, so the page-text renames shift timing. B146-02 checks that the
+background whole-card search finishes; B81-02 then generates the same deck twice and expects
+identical cards (`sameBuild`), which fails when that background work is still landing. Worth fixing
+upstream in Deck-Companion (its own chat): make generation independent of in-flight background
+results, or have B81-02 wait for the search to settle. UI-B144-02 failed once and passed on rerun.
 
 ### Known issues present in the sources (not introduced here)
 
