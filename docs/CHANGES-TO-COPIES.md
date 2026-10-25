@@ -18,3 +18,10 @@ adds alongside the copies do not need listing.
 | 2026-10-25 | `commander/styles/app.css` | `.profile__stats` has 4 columns (was 3) | Room for the Decks stat |
 | 2026-10-25 | `commander/src/ui/seat-form.js` | Saved-decks list shows a tablemate's decks as "<name>'s deck" | All decks, owner shown (owner, 2026-10-25) |
 | 2026-10-25 | `commander/src/data/profile-backup.js` | Backup also carries Deck Mutator's profile (`deckMutator`) and restores it; file named `<player>-MUTAGEN-<date>.ccsave` | One backup for the whole profile |
+| 2026-10-25 | `commander/index.html`, `manifest.webmanifest` | Title, home-screen name, boot error and manifest name/description say MUTAGEN | MUT-03 |
+| 2026-10-25 | `commander/src/ui/settings-modal.js`, `ui/screens/landing.js` | Version lines say MUTAGEN | MUT-03 |
+| 2026-10-25 | `commander/src/engine/state.js`, `data/store.js`, `data/playmats.js`, `data/profile-backup.js` | User-facing messages and the default playmat name say MUTAGEN; backup format key `commander-companion-profile` unchanged so old backups still load | MUT-03 |
+| 2026-10-25 | `deck/index.html`, `manifest.json` | Title, home-screen name, header DECK MUTATOR, footer "MUTAGEN is unofficial Fan Content" | MUT-03 |
+| 2026-10-25 | `deck/ui/deck.js`, `ui/views.js`, `ui/storage.js` | "Deck Companion" in UI sentences and the backup file type becomes Deck Mutator; storage keys (`dc.*`, IndexedDB `deck-companion`) unchanged | MUT-03 |
+| 2026-10-25 | `deck/app.min.js` | Rebuilt with `sh tools/build.sh` from the edited sources (`engine.min.js` unchanged) | Bundles must match sources |
+| 2026-10-25 | `deck/tools/tests/suite/ui-test.mjs` | UI-B116-01 expects the header "DECK MUTATOR" | MUT-03 |

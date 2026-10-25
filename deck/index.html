@@ -5,12 +5,12 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="description" content="Magic: The Gathering deck builder for Commander and Standard with aimed upgrade recommendations in three price tiers.">
 <meta name="theme-color" content="#06030d">
-<title>Deck Companion</title>
+<title>Deck Mutator · MUTAGEN</title>
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=1">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png?v=1">
 <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png?v=1">
 <link rel="manifest" href="manifest.json?v=1">
-<meta name="apple-mobile-web-app-title" content="Deck Companion">
+<meta name="apple-mobile-web-app-title" content="Deck Mutator">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap">
 <style>
 /* Layout: gothic command console. Chrome-framed panels over a painted night sky; three working columns (aim, decklist, upgrades). Single dark look by design. */
@@ -432,7 +432,7 @@ a{color:var(--glow)}
 <div class="app">
   <header class="top">
     <nav class="nav" id="nav-l" aria-label="Main"></nav>
-    <button class="brand" data-act="nav" data-v="home" aria-label="Deck Companion home">
+    <button class="brand" data-act="nav" data-v="home" aria-label="Deck Mutator home">
       <svg viewBox="0 0 64 64" aria-hidden="true">
         <defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff"/><stop offset=".5" stop-color="#b993ff"/><stop offset="1" stop-color="#4a2aa8"/></linearGradient></defs>
         <g class="spin"><circle cx="32" cy="32" r="27" fill="none" stroke="url(#g1)" stroke-width="1.5" stroke-dasharray="3 5"/></g>
@@ -440,13 +440,13 @@ a{color:var(--glow)}
         <path d="M32 4 L37 27 L60 32 L37 37 L32 60 L27 37 L4 32 L27 27 Z" fill="url(#g1)"/>
         <path class="pulse" d="M32 16 L35 29 L48 32 L35 35 L32 48 L29 35 L16 32 L29 29 Z" fill="#fff"/>
       </svg>
-      <div><b>DECK</b><span>COMPANION</span></div>
+      <div><b>DECK</b><span>MUTATOR</span></div>
     </button>
     <nav class="nav right" id="nav-r" aria-label="Library and profile"></nav>
   </header>
   <div id="status" class="chip gold" role="status" style="align-self:center;position:sticky;top:calc(6px + env(safe-area-inset-top,0px));z-index:30;box-shadow:0 4px 14px rgba(0,0,0,.6)" hidden></div>
   <main id="main"></main>
-  <footer class="note" style="text-align:center;max-width:90ch;margin:8px auto 0">Deck Companion is unofficial Fan Content permitted under the Fan Content Policy. Not approved or endorsed by Wizards. Portions of the materials used are property of Wizards of the Coast. ©Wizards of the Coast LLC. Card data and images are provided by <a href="https://scryfall.com" target="_blank" rel="noopener">Scryfall</a>; precon lists and commander statistics from EDHREC; combos from <a href="https://commanderspellbook.com" target="_blank" rel="noopener">Commander Spellbook</a>. Version <span id="build-no">0.9</span>.</footer>
+  <footer class="note" style="text-align:center;max-width:90ch;margin:8px auto 0">MUTAGEN is unofficial Fan Content permitted under the Fan Content Policy. Not approved or endorsed by Wizards. Portions of the materials used are property of Wizards of the Coast. ©Wizards of the Coast LLC. Card data and images are provided by <a href="https://scryfall.com" target="_blank" rel="noopener">Scryfall</a>; precon lists and commander statistics from EDHREC; combos from <a href="https://commanderspellbook.com" target="_blank" rel="noopener">Commander Spellbook</a>. Version <span id="build-no">0.9</span>.</footer>
 </div>
 <div id="modal" class="modal" hidden></div>
 <div id="toast" role="status" hidden></div>

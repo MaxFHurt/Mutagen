@@ -34,7 +34,7 @@ export const landingScreen = {
           <button type="button" data-act="settings"><img src="assets/img/landing/settings.png" alt="Settings"></button>
           <button type="button" data-act="help"><img src="assets/img/landing/help.png" alt="Help"></button>
         </nav>
-        <div class="landing__foot">Commander Companion • ${VERSION}</div>
+        <div class="landing__foot">MUTAGEN • ${VERSION}</div>
       </main>`);
 
     let resume = null;

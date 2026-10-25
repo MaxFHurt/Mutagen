@@ -12,9 +12,9 @@ function safeName(value) {
 }
 function validateBackup(raw) {
   if (!raw || typeof raw !== 'object')
-    throw new Error('That file is not a Commander Companion profile backup.');
+    throw new Error('That file is not a MUTAGEN profile backup.');
   if (raw.format !== BACKUP_FORMAT || ![1, 2].includes(Number(raw.backupVersion)))
-    throw new Error('That Commander Companion backup format is not supported by this build.');
+    throw new Error('That backup format is not supported by this build of MUTAGEN.');
   if (!raw.profile || typeof raw.profile !== 'object' || Array.isArray(raw.profile))
     throw new Error('The backup is missing valid profile data.');
   if (!Array.isArray(raw.decks))
@@ -42,7 +42,7 @@ export async function saveProfileBackupFile() {
   const text = JSON.stringify(backup, null, 2);
   const file = new File([text], filename, { type: 'application/json' });
   if (navigator.share && navigator.canShare?.({ files: [file] })) {
-    await navigator.share({ files: [file], title: 'Commander Companion Profile Backup', text: 'Save this Commander Companion profile backup to Files or iCloud Drive.' });
+    await navigator.share({ files: [file], title: 'MUTAGEN Profile Backup', text: 'Save this MUTAGEN profile backup to Files or iCloud Drive.' });
     return filename;
   }
   const url = URL.createObjectURL(file);
@@ -58,7 +58,7 @@ export async function saveProfileBackupFile() {
 }
 export async function restoreProfileBackupFile(file) {
   if (!file)
-    throw new Error('Choose a Commander Companion profile backup file.');
+    throw new Error('Choose a MUTAGEN profile backup file.');
   const text = await file.text();
   let raw;
   try {

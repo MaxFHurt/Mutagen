@@ -1,7 +1,7 @@
 {
-  "name": "Commander Companion",
-  "short_name": "Commander",
-  "description": "Commander tabletop companion for 2–6 players.",
+  "name": "MUTAGEN",
+  "short_name": "MUTAGEN",
+  "description": "MUTAGEN — Mutate The Gathering. Commander play and Deck Mutator for 2–6 players.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",

@@ -30,7 +30,7 @@ export function openSettings() {
           <span class="option__end">${settings.tips ? 'On' : 'Off'}</span>
         </button>
       </div>
-      <p class="muted">Commander Companion ${VERSION} • ${BUILD_DATE}</p>`,
+      <p class="muted">MUTAGEN ${VERSION} • ${BUILD_DATE}</p>`,
     onMount(el, { close }) {
       on(el, 'click', '[data-guidance]', (event, button) => {
         saveSettings({ guidance: button.dataset.guidance });

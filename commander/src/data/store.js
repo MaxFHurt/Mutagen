@@ -28,7 +28,7 @@ export async function saveRecord(key, value) {
   } catch {
     durableOk = false;
   }
-  if (!localOk && !durableOk) throw new Error('This browser is not allowing Commander Companion to save.');
+  if (!localOk && !durableOk) throw new Error('This browser is not allowing MUTAGEN to save.');
   return true;
 }
 

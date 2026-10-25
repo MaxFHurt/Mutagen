@@ -9,7 +9,7 @@ const LOCAL_KEY = 'cc-playmats-v1';
 const MAX_EDGE = 1280;
 const JPEG_QUALITY = 0.8;
 
-export const DEFAULT_MAT = { id: 'default', name: 'Commander Companion', image: 'assets/img/ui/background.webp', dim: 0.2, builtIn: true };
+export const DEFAULT_MAT = { id: 'default', name: 'MUTAGEN', image: 'assets/img/ui/background.webp', dim: 0.2, builtIn: true };
 
 let cache = null;
 
@@ -44,7 +44,7 @@ async function persist() {
   let ok = false;
   try { await durableSet(KEY, cache); ok = true; } catch { /* fall through */ }
   try { localStorage.setItem(LOCAL_KEY, JSON.stringify(cache)); ok = true; } catch { /* images may exceed localStorage; IndexedDB is the main store */ }
-  if (!ok) throw new Error('This browser is not allowing Commander Companion to save playmats.');
+  if (!ok) throw new Error('This browser is not allowing MUTAGEN to save playmats.');
 }
 
 /** Save (or replace) the mat in a slot. */

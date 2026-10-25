@@ -2,7 +2,7 @@ import { createGameState, createPlayerState, createCommanderState } from './sche
 import { configurePhaseGates } from './phase.js';
 export function initializeGame({ players, mode = 'fully-tracked', deviceMode = 'single-device' }) {
   if (players.length < 2 || players.length > 6)
-    throw new Error('Commander Companion supports 2–6 players');
+    throw new Error('MUTAGEN supports 2–6 players');
   const ps = players.map((p, seat) => {
     const s = createPlayerState({ ...p, seat, ...(p.deck ? { deck: p.deck } : {}) });
     s.commanders = (p.commanders || []).map((c, i) => createCommanderState({ ...c, id: c.id || `${s.playerId}:commander:${i + 1}` }));
