@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Logo v2 live liquid</title>
+<link rel="stylesheet" href="liquid.css">
+<style>
+  :root { color-scheme: dark; }
+  body { margin: 0; min-height: 100vh; background: #0b0614; color: #ddd; font: 15px system-ui, sans-serif; display: grid; place-items: center; }
+  main { display: flex; flex-wrap: wrap; gap: 32px; justify-content: center; padding: 16px; }
+  figure { margin: 0; text-align: center; }
+  .logo { width: min(80vw, 380px); height: auto; aspect-ratio: 1; display: block; }
+</style>
+</head>
+<body>
+<main>
+  <figure><img class="logo" src="../branding/logo-mutagen-v2.png" alt="MUTAGEN logo, as supplied"><figcaption>As supplied (static)</figcaption></figure>
+  <figure><mutagen-chamber class="logo" shell="logo-v2" flow="none" overlay="../branding/logo-mutagen-v2-overlay.png">MUTAGEN</mutagen-chamber><figcaption>Live liquid (overlay + mask from ChatGPT)</figcaption></figure>
+</main>
+<script type="module" src="liquid.js"></script>
+</body>
+</html>

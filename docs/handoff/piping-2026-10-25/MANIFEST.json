@@ -1,0 +1,675 @@
+{
+  "files": [
+    {
+      "path": "00-original-sources/01-Landing-Approved.png",
+      "bytes": 2176513,
+      "sha256": "72c975fae3d96f2119b22c8f09b568f284665e81d7655a047ab8c8f95eb272fe"
+    },
+    {
+      "path": "00-original-sources/BATTLEFIELD_CONTINUOUS_BORDER_REFERENCE.jpeg",
+      "bytes": 775128,
+      "sha256": "f6b8ceff8f850f2cd419a0a1cb151f3ece8d1e26c0f09922ae8245730c1ba5c3"
+    },
+    {
+      "path": "00-original-sources/DECK_MUTATOR_VISUAL_REFERENCE.jpeg",
+      "bytes": 793876,
+      "sha256": "b3f9fc5fe28612d4296341d9f0b74b2d4eb327c349e2c67524364e426386669a"
+    },
+    {
+      "path": "01-home-approved/HOME-LAYOUT.json",
+      "bytes": 16485,
+      "sha256": "48afe07f50439a9e2f9eaaebb8c5de87bb26a05590c069e1958e4bc970acc91e"
+    },
+    {
+      "path": "01-home-approved/animation-overlays/bottom-joint-profile-settings-liquid-mask.png",
+      "bytes": 87,
+      "sha256": "34551c7c1bfe04d9855ca0c518a7beab75ec861748b2d4e8cabf61218f608521"
+    },
+    {
+      "path": "01-home-approved/animation-overlays/bottom-joint-profile-settings.png",
+      "bytes": 4822,
+      "sha256": "ba3d06dcfd9011fa1a149718dc7fd59288530f0374fb72eda1972f3d42d9e063"
+    },
+    {
+      "path": "01-home-approved/animation-overlays/bottom-joint-settings-help-liquid-mask.png",
+      "bytes": 88,
+      "sha256": "140c616272711158291159c87248d4ee0611bbe4599abcdf3119676c5c10b173"
+    },
+    {
+      "path": "01-home-approved/animation-overlays/bottom-joint-settings-help.png",
+      "bytes": 4371,
+      "sha256": "e01a0e4ebc0045a868aa54154dfc2bb977dccb5efe1a29aa38f4391270ebaaa2"
+    },
+    {
+      "path": "01-home-approved/animation-overlays/bottom-left-elbow-liquid-mask.png",
+      "bytes": 100,
+      "sha256": "1ede32641785b2c8ba7890cf749c1fc5846419ea5347b4efc1581695b071f54e"
+    },
+    {
+      "path": "01-home-approved/animation-overlays/bottom-left-elbow.png",
+      "bytes": 9626,
+      "sha256": "898bfa7915084b8061ad745a33e17d1c5128542bd8935696f9f08cf84b1c3f23"
+    },
+    {
+      "path": "01-home-approved/animation-overlays/bottom-right-elbow-liquid-mask.png",
+      "bytes": 101,
+      "sha256": "d57ad154412c21a434f6b039d863be1ccb3246ed4fe0f7762e1ad3e5901d3eef"
+    },
+    {
+      "path": "01-home-approved/animation-overlays/bottom-right-elbow.png",
+      "bytes": 9808,
+      "sha256": "5e3c9c78da7e3a754811ae67bb0367cc10e72f7fca75a25b1fd04f9fc2bbfd66"
+    },
+    {
+      "path": "01-home-approved/animation-overlays/branch-1-left-liquid-mask.png",
+      "bytes": 1119,
+      "sha256": "2d6cd4ee6af30dde77586db85e4403758274d77eaa39c3ed5978c0f7205a313d"
+    },
+    {
+      "path": "01-home-approved/animation-overlays/branch-1-left.png",
+      "bytes": 30451,
+      "sha256": "feea4707a1b13fa4d171db920b2f4898203f85c58acd947827fe3539f7e454a9"
+    },
+    {
+      "path": "01-home-approved/animation-overlays/branch-1-right-liquid-mask.png",
+      "bytes": 1125,
+      "sha256": "30cb14924ff6f587452c2ee8d4eab7b94809897bb2954b7546e010858e5400a3"
+    },
+    {
+      "path": "01-home-approved/animation-overlays/branch-1-right.png",
+      "bytes": 31250,
+      "sha256": "6ac74aafba3aa3154a66750ceba9c4afbab2a5ef5de8000112259834b2c51e7c"
+    },
+    {
+      "path": "01-home-approved/animation-overlays/branch-2-left-liquid-mask.png",
+      "bytes": 710,
+      "sha256": "46a5ec2769684bbc6072504aacb84fa78d8e52ab05eb6f373c6fa00d1a65c365"
+    },
+    {
+      "path": "01-home-approved/animation-overlays/branch-2-left.png",
+      "bytes": 29656,
+      "sha256": "cc45887317bde1d8c663336b53b3fee546c9ee303b092c71044d4fbbc60a8403"
+    },
+    {
+      "path": "01-home-approved/animation-overlays/branch-2-right-liquid-mask.png",
+      "bytes": 884,
+      "sha256": "282b778ed310569a7fbff9413f256ec8d79d6eec80bb4a7f15b2a217cd94cb67"
+    },
+    {
+      "path": "01-home-approved/animation-overlays/branch-2-right.png",
+      "bytes": 30291,
+      "sha256": "b96835ec425e83b00d49a4ee05f72508f189d4334686343933a5744849999bb6"
+    },
+    {
+      "path": "01-home-approved/animation-overlays/branch-3-left-liquid-mask.png",
+      "bytes": 944,
+      "sha256": "951819f48b0d2e16520781d052b119c4388dd8b5d9e9f5be637813c774a0acf4"
+    },
+    {
+      "path": "01-home-approved/animation-overlays/branch-3-left.png",
+      "bytes": 28158,
+      "sha256": "6643b79fa2d398cddb6f0413bc25a83098e844b4daf8796ce781d2c1a72235a1"
+    },
+    {
+      "path": "01-home-approved/animation-overlays/branch-3-right-liquid-mask.png",
+      "bytes": 953,
+      "sha256": "433bbc3554bcc3e855d003d6df2b80e0c2695e62abf59a75f3e0854b6ac54a95"
+    },
+    {
+      "path": "01-home-approved/animation-overlays/branch-3-right.png",
+      "bytes": 27933,
+      "sha256": "e00ac314fe3131cf262423b334133c86885ecd7bd82f565472d3b0050204fef0"
+    },
+    {
+      "path": "01-home-approved/animation-overlays/left-sight-column-liquid-mask.png",
+      "bytes": 3696,
+      "sha256": "d558faf6508defd95dc8005e6c67ca1de701596046760516f1047c457866c84a"
+    },
+    {
+      "path": "01-home-approved/animation-overlays/left-sight-column.png",
+      "bytes": 76333,
+      "sha256": "3da06e4275ad64d07cb92bd1c4034124b19b3a7e111676baa63e7e6b8cbf8667"
+    },
+    {
+      "path": "01-home-approved/animation-overlays/right-sight-column-liquid-mask.png",
+      "bytes": 4079,
+      "sha256": "4db55a3694086a4690ab1b7c3d6ebc33c2f2338440178e827da2e5aa35fac241"
+    },
+    {
+      "path": "01-home-approved/animation-overlays/right-sight-column.png",
+      "bytes": 76304,
+      "sha256": "4f6eb2557f1abbea1972ae2cd819ddff5e8f7f5a25c98308beb92cc42c52671c"
+    },
+    {
+      "path": "01-home-approved/animation-overlays/top-header-with-elbows-liquid-mask.png",
+      "bytes": 614,
+      "sha256": "5978d6956942223f1c46cd083fdc0854a7212aad00ce3b17fc240d8a926f7901"
+    },
+    {
+      "path": "01-home-approved/animation-overlays/top-header-with-elbows.png",
+      "bytes": 153770,
+      "sha256": "64aedfb3defb0f699553d6ac16e2f73753a35c7ede1a117898ce21d6138b7ffd"
+    },
+    {
+      "path": "01-home-approved/background-visible-original.png",
+      "bytes": 672569,
+      "sha256": "b58790170855a50b6286a098dcc3135c216d188948799cacbd52da40ce44d49a"
+    },
+    {
+      "path": "01-home-approved/detail-slices/branch-1-left-coupling-1.png",
+      "bytes": 4466,
+      "sha256": "59a7073ee70c10c3190e8faf05a67f05569703b92f513e3289e71efd886f1906"
+    },
+    {
+      "path": "01-home-approved/detail-slices/branch-1-left-coupling-2.png",
+      "bytes": 5541,
+      "sha256": "33dd3b223f07e613cf654d5f893f2c0164a7627f6ab8dbb56dbdceb071d88e22"
+    },
+    {
+      "path": "01-home-approved/detail-slices/branch-1-left-coupling-3.png",
+      "bytes": 5181,
+      "sha256": "ea9d3790e0b4ed86b69f7cdfdd3751ff3d1b078de464a48488ac5ffa877ddc04"
+    },
+    {
+      "path": "01-home-approved/detail-slices/branch-1-right-coupling-1.png",
+      "bytes": 5037,
+      "sha256": "a4d8cba08a959c42a7fc1be7dff728477b6713420eb66cc5b9fe493069507ecd"
+    },
+    {
+      "path": "01-home-approved/detail-slices/branch-1-right-coupling-2.png",
+      "bytes": 5276,
+      "sha256": "ddd54743e4857106693f9394fab34eeb126519b95c2d402d980b3825e1647866"
+    },
+    {
+      "path": "01-home-approved/detail-slices/branch-1-right-coupling-3.png",
+      "bytes": 4302,
+      "sha256": "7b6b712d3af72c7bb07c5616512f0313d1b2645e5aa595281d4be0f87e22924f"
+    },
+    {
+      "path": "01-home-approved/detail-slices/branch-2-left-coupling-1.png",
+      "bytes": 4322,
+      "sha256": "e0270067eddce477c444b642318cc6a3dfdbc6b7e27c139dbc0b48a4dcd96c69"
+    },
+    {
+      "path": "01-home-approved/detail-slices/branch-2-left-coupling-2.png",
+      "bytes": 5353,
+      "sha256": "a8e259405284e315da968f2499e62c9697a4dd1c2f617a5fbaad868db639e142"
+    },
+    {
+      "path": "01-home-approved/detail-slices/branch-2-left-coupling-3.png",
+      "bytes": 5006,
+      "sha256": "4ffed8dd301541d22ec636b20dfc7a1d4ea194f30e6de35137bd1d9b37696fcd"
+    },
+    {
+      "path": "01-home-approved/detail-slices/branch-2-right-coupling-1.png",
+      "bytes": 4896,
+      "sha256": "21285600e815e82a66e5d9abf73ec3d5e5b103dea9512de58e29cd4c05332674"
+    },
+    {
+      "path": "01-home-approved/detail-slices/branch-2-right-coupling-2.png",
+      "bytes": 5177,
+      "sha256": "8b5f7bb7330ac78df816f113b62badacdb977271f50f15153ba71bc38ceca52d"
+    },
+    {
+      "path": "01-home-approved/detail-slices/branch-2-right-coupling-3.png",
+      "bytes": 4299,
+      "sha256": "4d6c5c9d358e0ba3d0924968d39974da96cffbd29b826cbead5c03beac838392"
+    },
+    {
+      "path": "01-home-approved/detail-slices/branch-3-left-coupling-1.png",
+      "bytes": 4246,
+      "sha256": "245fff45ae5e6651c7a26411fc04fdd8c8ca247c4e7bc8416812bf5ba2b068bf"
+    },
+    {
+      "path": "01-home-approved/detail-slices/branch-3-left-coupling-2.png",
+      "bytes": 5249,
+      "sha256": "e6de654bfef4ff28fd0f9b192bd14f83d159618383e6718e71ebf0540bb2f99d"
+    },
+    {
+      "path": "01-home-approved/detail-slices/branch-3-left-coupling-3.png",
+      "bytes": 4815,
+      "sha256": "ac83a0df791c1221b2984319dfcc7b2b5547f29881ea44ea9253794561656285"
+    },
+    {
+      "path": "01-home-approved/detail-slices/branch-3-right-coupling-1.png",
+      "bytes": 4644,
+      "sha256": "408bec751a52698996b747e9b20ca5ab32599cc834e95c0dcbab18e468cc2d22"
+    },
+    {
+      "path": "01-home-approved/detail-slices/branch-3-right-coupling-2.png",
+      "bytes": 4954,
+      "sha256": "7d8eb54418438cb4e5b9448473dc2a8b98075e570e33b7d4641869b0f7035c9b"
+    },
+    {
+      "path": "01-home-approved/detail-slices/branch-3-right-coupling-3.png",
+      "bytes": 4021,
+      "sha256": "7767e884d4bbd35e1ac8d999259b4e4426d47f2899428bb04e3a950680aec817"
+    },
+    {
+      "path": "01-home-approved/detail-slices/top-coupling-01.png",
+      "bytes": 4604,
+      "sha256": "8b1c8bb233fc87f3214fd104659bd1f4d366309335b383f37fca0e4ce3434b9c"
+    },
+    {
+      "path": "01-home-approved/detail-slices/top-coupling-02.png",
+      "bytes": 6122,
+      "sha256": "dd269a96c14054021190052b24157e65cdd181fb779c6381418b9e5e9aa43bba"
+    },
+    {
+      "path": "01-home-approved/detail-slices/top-coupling-03.png",
+      "bytes": 6104,
+      "sha256": "ff9b0ecf41541c1339c3947bc56e3ab6df1b73284f029f52e235356e2a68e3b8"
+    },
+    {
+      "path": "01-home-approved/detail-slices/top-coupling-04.png",
+      "bytes": 6198,
+      "sha256": "7fffb457181c604cb58d53702128179584c46e90e1cbed7bfb26eb668035700f"
+    },
+    {
+      "path": "01-home-approved/detail-slices/top-coupling-05.png",
+      "bytes": 4448,
+      "sha256": "c0d1c437909e6d0ab01414b38bc6faa5c762552ba95f1432d56e21b214791f33"
+    },
+    {
+      "path": "01-home-approved/detail-slices/top-left-elbow.png",
+      "bytes": 14845,
+      "sha256": "097f4639773d51ecd217ea2885ff7cd648fa5a8d5305ed93790ed0c865a68532"
+    },
+    {
+      "path": "01-home-approved/detail-slices/top-right-elbow.png",
+      "bytes": 13813,
+      "sha256": "028d4d33eb32cf88d7fd2365dda7ac7b362500840f248e4507aaced31a753fac"
+    },
+    {
+      "path": "01-home-approved/foreground-original.png",
+      "bytes": 1246384,
+      "sha256": "ab7510dd68e3885d2548110f16efae0c890c36d3ce3ba29cc5b5b730e2e23542"
+    },
+    {
+      "path": "01-home-approved/piping-full-canvas.png",
+      "bytes": 642391,
+      "sha256": "74122874d551b9bf0e7749efe169f040761357c194e0aa850abccf26bdf6ddcb"
+    },
+    {
+      "path": "01-home-approved/piping-pieces/bottom-joint-profile-settings.png",
+      "bytes": 4822,
+      "sha256": "ba3d06dcfd9011fa1a149718dc7fd59288530f0374fb72eda1972f3d42d9e063"
+    },
+    {
+      "path": "01-home-approved/piping-pieces/bottom-joint-settings-help.png",
+      "bytes": 4371,
+      "sha256": "e01a0e4ebc0045a868aa54154dfc2bb977dccb5efe1a29aa38f4391270ebaaa2"
+    },
+    {
+      "path": "01-home-approved/piping-pieces/bottom-left-elbow.png",
+      "bytes": 9626,
+      "sha256": "898bfa7915084b8061ad745a33e17d1c5128542bd8935696f9f08cf84b1c3f23"
+    },
+    {
+      "path": "01-home-approved/piping-pieces/bottom-right-elbow.png",
+      "bytes": 9808,
+      "sha256": "5e3c9c78da7e3a754811ae67bb0367cc10e72f7fca75a25b1fd04f9fc2bbfd66"
+    },
+    {
+      "path": "01-home-approved/piping-pieces/branch-1-left.png",
+      "bytes": 33515,
+      "sha256": "0a372dde8580579422dbee89695f64f9da2c7a17f62de9d690f5e72a67401cff"
+    },
+    {
+      "path": "01-home-approved/piping-pieces/branch-1-right.png",
+      "bytes": 34408,
+      "sha256": "a8f36bc17338eb748ee334997982be937ed1c03a940026314b734b3dc1937e82"
+    },
+    {
+      "path": "01-home-approved/piping-pieces/branch-2-left.png",
+      "bytes": 32787,
+      "sha256": "6bcbec984f78a4ad34696e4f1b41a4dfd3b5d7046ab16f2f22111042b55b8c75"
+    },
+    {
+      "path": "01-home-approved/piping-pieces/branch-2-right.png",
+      "bytes": 33495,
+      "sha256": "c63d4a64917f3a4591e36d477cc8a59d61b4f0bd562d8ec08748f0e8ae31a015"
+    },
+    {
+      "path": "01-home-approved/piping-pieces/branch-3-left.png",
+      "bytes": 31441,
+      "sha256": "60f333e837199c902628609d03d4991cc39c778175df5e670ce9f6393aae1387"
+    },
+    {
+      "path": "01-home-approved/piping-pieces/branch-3-right.png",
+      "bytes": 31297,
+      "sha256": "06e0979831121d9ee6045ae1d4d678943d54986e761230eb880e583aa91367ac"
+    },
+    {
+      "path": "01-home-approved/piping-pieces/left-sight-column.png",
+      "bytes": 111314,
+      "sha256": "2b562bf4659ea3babbe52c085352a8542975100cab4ece22db7299519c646806"
+    },
+    {
+      "path": "01-home-approved/piping-pieces/right-sight-column.png",
+      "bytes": 111225,
+      "sha256": "ddebc7e81982a7e5676ba60b0dd0446a15f70f93964610b64101405d81e1b28a"
+    },
+    {
+      "path": "01-home-approved/piping-pieces/top-header-with-elbows.png",
+      "bytes": 153770,
+      "sha256": "64aedfb3defb0f699553d6ac16e2f73753a35c7ede1a117898ce21d6138b7ffd"
+    },
+    {
+      "path": "01-home-approved/reassembled-verification.png",
+      "bytes": 2149351,
+      "sha256": "ab093b1cccf3c7c35b2f7f11b28ec8cd13a3bf2d4ae65825bc73eb74b81c221e"
+    },
+    {
+      "path": "02-battlefield-source-reference/LAYOUT.json",
+      "bytes": 5020,
+      "sha256": "be90eb4b7fc388e04b93e17d54797b32aff38bfc74759b8ec102d175ecd490ba"
+    },
+    {
+      "path": "02-battlefield-source-reference/animation-overlays/left-column-and-elbows-liquid-mask.png",
+      "bytes": 5091,
+      "sha256": "028b658091b22653db6ca232783cc9598f9e4bd0c4264d7176fa186c5861f7f8"
+    },
+    {
+      "path": "02-battlefield-source-reference/animation-overlays/left-column-and-elbows.png",
+      "bytes": 37443,
+      "sha256": "658c3fefb8a3f0e25ef8dac41f51a48356579ae6fbcd5d8d4ab4a668831f7160"
+    },
+    {
+      "path": "02-battlefield-source-reference/animation-overlays/lower-left-feed-liquid-mask.png",
+      "bytes": 1125,
+      "sha256": "d994c0fd41f61f998290dd9e3abdbe9424ff76b82a888ba224da03988978aad8"
+    },
+    {
+      "path": "02-battlefield-source-reference/animation-overlays/lower-left-feed.png",
+      "bytes": 20589,
+      "sha256": "79a7986284df758bcc4599f8b50e280e167f80c689de4dd254a8bb01765bd401"
+    },
+    {
+      "path": "02-battlefield-source-reference/animation-overlays/lower-right-feed-liquid-mask.png",
+      "bytes": 662,
+      "sha256": "4866887a155fa0dd7a2ac9dbb16cbfbbb7545a55152ee06998d2755c89655d94"
+    },
+    {
+      "path": "02-battlefield-source-reference/animation-overlays/lower-right-feed.png",
+      "bytes": 14416,
+      "sha256": "de09abf209bbeb58503cd528b7d37556cb010b5ee855b6d8af1eee8d6cf4ab6a"
+    },
+    {
+      "path": "02-battlefield-source-reference/animation-overlays/right-column-and-elbows-liquid-mask.png",
+      "bytes": 3914,
+      "sha256": "69d92b8d3fcb2b53b0eced3ef24fce4cf27f941b412efc4c7969ee90b0dd4eca"
+    },
+    {
+      "path": "02-battlefield-source-reference/animation-overlays/right-column-and-elbows.png",
+      "bytes": 35999,
+      "sha256": "3e057a3748f2bd7d918b9bb97ee5606efd5b32b57cd8300f75cb3be203038b8b"
+    },
+    {
+      "path": "02-battlefield-source-reference/animation-overlays/top-left-feed-liquid-mask.png",
+      "bytes": 4097,
+      "sha256": "b759d3f2ee77f4d3e7788e337a642246b381dc3d97201b15444b3b1b3475aeb3"
+    },
+    {
+      "path": "02-battlefield-source-reference/animation-overlays/top-left-feed.png",
+      "bytes": 47805,
+      "sha256": "89ff7e57e1a1b57c37cfb2a8d7a5c8225a9d64d522137b64e8527ca753d6ede2"
+    },
+    {
+      "path": "02-battlefield-source-reference/animation-overlays/top-right-feed-liquid-mask.png",
+      "bytes": 3356,
+      "sha256": "0a488bcefade306e0187deece75050b918cee487e439cb6182d2a281c8d84a4a"
+    },
+    {
+      "path": "02-battlefield-source-reference/animation-overlays/top-right-feed.png",
+      "bytes": 41187,
+      "sha256": "2c4ca7ab5d79e5baa2fd0151028376067ddc90a56f3f54290e6ed13e2103db68"
+    },
+    {
+      "path": "02-battlefield-source-reference/background-visible-original.png",
+      "bytes": 480920,
+      "sha256": "63486393cfe8f71892991432958f78f96d77770af7c0c13404c1dc5fea2c7598"
+    },
+    {
+      "path": "02-battlefield-source-reference/foreground-original.png",
+      "bytes": 2116622,
+      "sha256": "96d7710f52758004a11f919457e8aa079163233585206639821774a9856ce018"
+    },
+    {
+      "path": "02-battlefield-source-reference/piping-full-canvas.png",
+      "bytes": 267980,
+      "sha256": "4f880e30e0fa4b918163804b1ab76a9c846b6b3e79e9eb0eef605b76a6810d41"
+    },
+    {
+      "path": "02-battlefield-source-reference/piping-pieces/left-column-and-elbows.png",
+      "bytes": 54055,
+      "sha256": "51fae2d18be456dc88fd0a881f59e93adaa35e8903342e79dc45d6f53a35e28c"
+    },
+    {
+      "path": "02-battlefield-source-reference/piping-pieces/lower-left-feed.png",
+      "bytes": 24166,
+      "sha256": "9b47f66b79a592f753c39827c87ad6d36568b1270a480d414508f0381edbfb4b"
+    },
+    {
+      "path": "02-battlefield-source-reference/piping-pieces/lower-right-feed.png",
+      "bytes": 15722,
+      "sha256": "b3a9732f5a86b0116bbf07b1f360351e7ed48876992b8bd50322696214de3c31"
+    },
+    {
+      "path": "02-battlefield-source-reference/piping-pieces/right-column-and-elbows.png",
+      "bytes": 49667,
+      "sha256": "0c437f8ce1c2f4fa68c41f74035f992affe28bb371515e54a93ea92249a8a5c3"
+    },
+    {
+      "path": "02-battlefield-source-reference/piping-pieces/top-left-feed.png",
+      "bytes": 60303,
+      "sha256": "1650fbd24ccb8de691dbc4ce9b2e2df3ef939463a143cd6464176372c6f4c3dc"
+    },
+    {
+      "path": "02-battlefield-source-reference/piping-pieces/top-right-feed.png",
+      "bytes": 52203,
+      "sha256": "aadcceb6922cefb90b36cfd83baa1146b3327dad3cf47c6af0c4ead1604c62f0"
+    },
+    {
+      "path": "02-battlefield-source-reference/reassembled-verification.png",
+      "bytes": 2489710,
+      "sha256": "3ba24ca3590490fd42afaa7f7421fbab345185234937aee196f7bde81b2ed2dc"
+    },
+    {
+      "path": "03-deck-mutator-source-reference/LAYOUT.json",
+      "bytes": 5101,
+      "sha256": "806da97df11bba115987f7eda3d10f0fa71b3b95f849a664ce1e383da828d504"
+    },
+    {
+      "path": "03-deck-mutator-source-reference/animation-overlays/bottom-left-joint-liquid-mask.png",
+      "bytes": 918,
+      "sha256": "8036d10ad5b91bd1b33a5ce9549fbaace33c08a6987083975fe086f0bc590fe1"
+    },
+    {
+      "path": "03-deck-mutator-source-reference/animation-overlays/bottom-left-joint.png",
+      "bytes": 3498,
+      "sha256": "c0f1c9f4b5643388af51144a946df0af913eb41d709229eb7c59d37b08a74402"
+    },
+    {
+      "path": "03-deck-mutator-source-reference/animation-overlays/bottom-right-joint-liquid-mask.png",
+      "bytes": 760,
+      "sha256": "61e3f500f6438f0a871f79367e7b970384b907ffbb1a8297cdd4a3121be3355a"
+    },
+    {
+      "path": "03-deck-mutator-source-reference/animation-overlays/bottom-right-joint.png",
+      "bytes": 4378,
+      "sha256": "6584285aaa9c21f3ea320b557cbb678150089c66bde4b78cf18e59297b005303"
+    },
+    {
+      "path": "03-deck-mutator-source-reference/animation-overlays/left-column-liquid-mask.png",
+      "bytes": 10651,
+      "sha256": "f7f4f7ebb59c2db51b6bd08d0a0cafba470530800b554b72520999855232a6bc"
+    },
+    {
+      "path": "03-deck-mutator-source-reference/animation-overlays/left-column.png",
+      "bytes": 63745,
+      "sha256": "9ee3196c5467a91a76dc414e7aaf54f06974ab7aa1f1c8401957a1796ee6a684"
+    },
+    {
+      "path": "03-deck-mutator-source-reference/animation-overlays/lower-left-elbow-liquid-mask.png",
+      "bytes": 1894,
+      "sha256": "b726167e225d8c18d6987bbbd2211738dbde71c2230a7cda6b90d81e1316ed10"
+    },
+    {
+      "path": "03-deck-mutator-source-reference/animation-overlays/lower-left-elbow.png",
+      "bytes": 16557,
+      "sha256": "6ab7f5ce24537c25d81b67f55bb78128846055d1296e6fc96278b16a33c9a2eb"
+    },
+    {
+      "path": "03-deck-mutator-source-reference/animation-overlays/lower-right-elbow-liquid-mask.png",
+      "bytes": 1800,
+      "sha256": "3232b950305ca0b2fd93f5b904262444472d3e370f3da939908ca1f70c937909"
+    },
+    {
+      "path": "03-deck-mutator-source-reference/animation-overlays/lower-right-elbow.png",
+      "bytes": 16127,
+      "sha256": "2365f1cf9ccc6712642178eb5023c16df2964bed00cae18f86645432bc2315d7"
+    },
+    {
+      "path": "03-deck-mutator-source-reference/animation-overlays/right-column-liquid-mask.png",
+      "bytes": 9681,
+      "sha256": "21422dc7897fc7a010666de08a317837230db5e116a4a19544d9fb6c5185a626"
+    },
+    {
+      "path": "03-deck-mutator-source-reference/animation-overlays/right-column.png",
+      "bytes": 58018,
+      "sha256": "435a52fb437176ff33c485b944d0d7caffe6dfd17c77a5172913285fe11c6590"
+    },
+    {
+      "path": "03-deck-mutator-source-reference/animation-overlays/top-left-connector-liquid-mask.png",
+      "bytes": 360,
+      "sha256": "8c77a58c0499add846c009dc4aa9ae46ccef131e8fd5aff7cf288fddd7fc7f9e"
+    },
+    {
+      "path": "03-deck-mutator-source-reference/animation-overlays/top-left-connector.png",
+      "bytes": 31945,
+      "sha256": "ba8e162e944f81a83069b83a667f659bd0d40ec432af4fda25c913e3d9e6fba1"
+    },
+    {
+      "path": "03-deck-mutator-source-reference/animation-overlays/top-right-connector-liquid-mask.png",
+      "bytes": 204,
+      "sha256": "48b8a69e7a804da94a197f5b3cc96c9f19e105756aa82140638df6db2dd53794"
+    },
+    {
+      "path": "03-deck-mutator-source-reference/animation-overlays/top-right-connector.png",
+      "bytes": 28873,
+      "sha256": "0dc7cdfe570236800a14cb9a406625cc1c699b945a91542e8614e19dc5de95ac"
+    },
+    {
+      "path": "03-deck-mutator-source-reference/background-visible-original.png",
+      "bytes": 64217,
+      "sha256": "0d575d0ba3f9c3b33f044fd11a3d6834d0124490bd5f12e350975118340a44dd"
+    },
+    {
+      "path": "03-deck-mutator-source-reference/foreground-original.png",
+      "bytes": 2333602,
+      "sha256": "8be841a7f44b6e9a931a104dc89a5e04aec714f050df0b7d3c11b824876fc05f"
+    },
+    {
+      "path": "03-deck-mutator-source-reference/piping-full-canvas.png",
+      "bytes": 328207,
+      "sha256": "f213e1503b1ac27c47cf0561404135a2d2d634ef3a9e39432b1ea7bdc0a03065"
+    },
+    {
+      "path": "03-deck-mutator-source-reference/piping-pieces/bottom-left-joint.png",
+      "bytes": 6379,
+      "sha256": "7c1c7f5ae253e70c06d3bb97639ef81a4cbcdcbf9bbf5bdd66ae549283282298"
+    },
+    {
+      "path": "03-deck-mutator-source-reference/piping-pieces/bottom-right-joint.png",
+      "bytes": 6645,
+      "sha256": "22fca8abc799ccd79346ad995dd90ac90196a6ea8e2adfa54ec0a506cb1120b0"
+    },
+    {
+      "path": "03-deck-mutator-source-reference/piping-pieces/left-column.png",
+      "bytes": 101184,
+      "sha256": "788be8e19837ec91da14e8ef6c0426140471466497c2f26dc359872cadc19741"
+    },
+    {
+      "path": "03-deck-mutator-source-reference/piping-pieces/lower-left-elbow.png",
+      "bytes": 20670,
+      "sha256": "602cdda83685172ca6dcbd2d24ab2cd813818636789b7f7c9ecb99c9b94a9f78"
+    },
+    {
+      "path": "03-deck-mutator-source-reference/piping-pieces/lower-right-elbow.png",
+      "bytes": 20222,
+      "sha256": "627fae3715358f82e6e12a939ff229ac8dfbe665f3629badc8824618917e102d"
+    },
+    {
+      "path": "03-deck-mutator-source-reference/piping-pieces/right-column.png",
+      "bytes": 97228,
+      "sha256": "1bdf1ffee00e13cdfb7351dd0c0a9c6ecc73e803f16b15c038466af992756fff"
+    },
+    {
+      "path": "03-deck-mutator-source-reference/piping-pieces/top-left-connector.png",
+      "bytes": 32195,
+      "sha256": "5d63428f2b30c71f961e716444363f054abb76cdc36835e570b1dee0e9e793b9"
+    },
+    {
+      "path": "03-deck-mutator-source-reference/piping-pieces/top-right-connector.png",
+      "bytes": 29058,
+      "sha256": "84e0273c38faca0a17c956d515b86eaebf5afb31fd93ab7f35b00c808d297b83"
+    },
+    {
+      "path": "03-deck-mutator-source-reference/reassembled-verification.png",
+      "bytes": 2369123,
+      "sha256": "bd1f9a1df146a0ce870a4785e37796e95cfcd749c21e94e9f6c8038c37cc7508"
+    },
+    {
+      "path": "04-logo-v2/README.md",
+      "bytes": 731,
+      "sha256": "ccbb3b58010596563c95307559a8832c04ee2a58b4efad6ed58372a8690e5cb7"
+    },
+    {
+      "path": "04-logo-v2/VERIFICATION.json",
+      "bytes": 715,
+      "sha256": "eba53cf9a371fccc8782dcf6e3e54da28df52fa0b5e4b94f84e35d71a7f8b429"
+    },
+    {
+      "path": "04-logo-v2/liquid-selection-review.jpg",
+      "bytes": 107775,
+      "sha256": "d116d9d1354c60c6e154a218e850285d50d36fe50be3cbe2520e71fc5a5a890a"
+    },
+    {
+      "path": "04-logo-v2/logo-mutagen-v2-liquid-mask.png",
+      "bytes": 123494,
+      "sha256": "3d8a594d1d33c97c57e63b688ab6b5ad875c1f297bc3face7619ae617b697607"
+    },
+    {
+      "path": "04-logo-v2/logo-mutagen-v2-overlay.png",
+      "bytes": 2186821,
+      "sha256": "d50feaef007293c783add8adb980506abf88989a8cfebe6fe86c2152d5cc76e0"
+    },
+    {
+      "path": "04-logo-v2/logo-mutagen-v2-source.png",
+      "bytes": 3117168,
+      "sha256": "cc3fd853db478dbf831282a8273028893c19fe71c79de09c6342b8273874ae9a"
+    },
+    {
+      "path": "HOME-SOURCE.json",
+      "bytes": 10770,
+      "sha256": "ec22e7b47d6cbcdd33331285b70b6eb1a35f39f1d9246fd504b6ae5425d0c61f"
+    },
+    {
+      "path": "PIPING-PREVIEW.jpg",
+      "bytes": 84410,
+      "sha256": "42a3c4b7f091d2119b3faf64bb2f33328935f58b2bfa36a5573abe4cf09ddcc1"
+    },
+    {
+      "path": "ROLLING-ASSET-STATUS-2026-10-25.md",
+      "bytes": 1017,
+      "sha256": "4ce495f69da255761f23c6afdab85466ea987cef973754866168bd273a869b07"
+    },
+    {
+      "path": "START-HERE.md",
+      "bytes": 4191,
+      "sha256": "bd542a015a19213db1fd28b240afac2bf173bdbedbfa96150eee4e83c3bda0fd"
+    }
+  ],
+  "scope": "Piping source extractions, visible-only backgrounds, v2 logo liquid layers"
+}

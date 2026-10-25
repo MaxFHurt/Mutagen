@@ -1,0 +1,749 @@
+{
+  "source": "mutagen-reference/docs/handoff/approved-masters/01-Landing-Approved.png",
+  "source_sha256": "72c975fae3d96f2119b22c8f09b568f284665e81d7655a047ab8c8f95eb272fe",
+  "classification": "approved master",
+  "canvas": [
+    1672,
+    941
+  ],
+  "piping": [
+    {
+      "id": "top-header-with-elbows",
+      "file": "piping-pieces/top-header-with-elbows.png",
+      "animation_overlay": "animation-overlays/top-header-with-elbows.png",
+      "liquid_mask": "animation-overlays/top-header-with-elbows-liquid-mask.png",
+      "rect": [
+        37,
+        15,
+        1596,
+        115
+      ],
+      "ports": [
+        {
+          "id": "left-column",
+          "center": [
+            69,
+            129
+          ],
+          "width": 64
+        },
+        {
+          "id": "right-column",
+          "center": [
+            1600,
+            129
+          ],
+          "width": 64
+        }
+      ],
+      "mask_note": "Glass mask inferred from visible green pixels; inspect alignment before animation. No hidden channels invented."
+    },
+    {
+      "id": "left-sight-column",
+      "file": "piping-pieces/left-sight-column.png",
+      "animation_overlay": "animation-overlays/left-sight-column.png",
+      "liquid_mask": "animation-overlays/left-sight-column-liquid-mask.png",
+      "rect": [
+        9,
+        128,
+        122,
+        695
+      ],
+      "ports": [
+        {
+          "center": [
+            69,
+            129
+          ],
+          "width": 64
+        },
+        {
+          "center": [
+            69,
+            819
+          ],
+          "width": 64
+        }
+      ],
+      "mask_note": "Glass mask inferred from visible green pixels; inspect alignment before animation. No hidden channels invented."
+    },
+    {
+      "id": "right-sight-column",
+      "file": "piping-pieces/right-sight-column.png",
+      "animation_overlay": "animation-overlays/right-sight-column.png",
+      "liquid_mask": "animation-overlays/right-sight-column-liquid-mask.png",
+      "rect": [
+        1540,
+        129,
+        119,
+        693
+      ],
+      "ports": [
+        {
+          "center": [
+            1600,
+            129
+          ],
+          "width": 64
+        },
+        {
+          "center": [
+            1600,
+            819
+          ],
+          "width": 64
+        }
+      ],
+      "mask_note": "Glass mask inferred from visible green pixels; inspect alignment before animation. No hidden channels invented."
+    },
+    {
+      "id": "branch-1-left",
+      "file": "piping-pieces/branch-1-left.png",
+      "animation_overlay": "animation-overlays/branch-1-left.png",
+      "liquid_mask": "animation-overlays/branch-1-left-liquid-mask.png",
+      "rect": [
+        134,
+        454,
+        344,
+        68
+      ],
+      "ports": [
+        {
+          "center": [
+            134,
+            488
+          ],
+          "width": 54
+        },
+        {
+          "center": [
+            477,
+            488
+          ],
+          "width": 54
+        }
+      ],
+      "mask_note": "Glass mask inferred from visible green pixels; inspect alignment before animation. No hidden channels invented."
+    },
+    {
+      "id": "branch-1-right",
+      "file": "piping-pieces/branch-1-right.png",
+      "animation_overlay": "animation-overlays/branch-1-right.png",
+      "liquid_mask": "animation-overlays/branch-1-right-liquid-mask.png",
+      "rect": [
+        1188,
+        454,
+        351,
+        68
+      ],
+      "ports": [
+        {
+          "center": [
+            1188,
+            488
+          ],
+          "width": 54
+        },
+        {
+          "center": [
+            1538,
+            488
+          ],
+          "width": 54
+        }
+      ],
+      "mask_note": "Glass mask inferred from visible green pixels; inspect alignment before animation. No hidden channels invented."
+    },
+    {
+      "id": "branch-2-left",
+      "file": "piping-pieces/branch-2-left.png",
+      "animation_overlay": "animation-overlays/branch-2-left.png",
+      "liquid_mask": "animation-overlays/branch-2-left-liquid-mask.png",
+      "rect": [
+        134,
+        586,
+        344,
+        67
+      ],
+      "ports": [
+        {
+          "center": [
+            134,
+            619
+          ],
+          "width": 54
+        },
+        {
+          "center": [
+            477,
+            619
+          ],
+          "width": 54
+        }
+      ],
+      "mask_note": "Glass mask inferred from visible green pixels; inspect alignment before animation. No hidden channels invented."
+    },
+    {
+      "id": "branch-2-right",
+      "file": "piping-pieces/branch-2-right.png",
+      "animation_overlay": "animation-overlays/branch-2-right.png",
+      "liquid_mask": "animation-overlays/branch-2-right-liquid-mask.png",
+      "rect": [
+        1188,
+        586,
+        351,
+        67
+      ],
+      "ports": [
+        {
+          "center": [
+            1188,
+            619
+          ],
+          "width": 54
+        },
+        {
+          "center": [
+            1538,
+            619
+          ],
+          "width": 54
+        }
+      ],
+      "mask_note": "Glass mask inferred from visible green pixels; inspect alignment before animation. No hidden channels invented."
+    },
+    {
+      "id": "branch-3-left",
+      "file": "piping-pieces/branch-3-left.png",
+      "animation_overlay": "animation-overlays/branch-3-left.png",
+      "liquid_mask": "animation-overlays/branch-3-left-liquid-mask.png",
+      "rect": [
+        134,
+        717,
+        344,
+        65
+      ],
+      "ports": [
+        {
+          "center": [
+            134,
+            750
+          ],
+          "width": 54
+        },
+        {
+          "center": [
+            477,
+            750
+          ],
+          "width": 54
+        }
+      ],
+      "mask_note": "Glass mask inferred from visible green pixels; inspect alignment before animation. No hidden channels invented."
+    },
+    {
+      "id": "branch-3-right",
+      "file": "piping-pieces/branch-3-right.png",
+      "animation_overlay": "animation-overlays/branch-3-right.png",
+      "liquid_mask": "animation-overlays/branch-3-right-liquid-mask.png",
+      "rect": [
+        1188,
+        717,
+        351,
+        65
+      ],
+      "ports": [
+        {
+          "center": [
+            1188,
+            750
+          ],
+          "width": 54
+        },
+        {
+          "center": [
+            1538,
+            750
+          ],
+          "width": 54
+        }
+      ],
+      "mask_note": "Glass mask inferred from visible green pixels; inspect alignment before animation. No hidden channels invented."
+    },
+    {
+      "id": "bottom-left-elbow",
+      "file": "piping-pieces/bottom-left-elbow.png",
+      "animation_overlay": "animation-overlays/bottom-left-elbow.png",
+      "liquid_mask": "animation-overlays/bottom-left-elbow-liquid-mask.png",
+      "rect": [
+        40,
+        822,
+        106,
+        66
+      ],
+      "ports": [
+        {
+          "center": [
+            70,
+            822
+          ],
+          "width": 62
+        },
+        {
+          "center": [
+            145,
+            858
+          ],
+          "width": 55
+        }
+      ],
+      "mask_note": "Glass mask inferred from visible green pixels; inspect alignment before animation. No hidden channels invented."
+    },
+    {
+      "id": "bottom-joint-profile-settings",
+      "file": "piping-pieces/bottom-joint-profile-settings.png",
+      "animation_overlay": "animation-overlays/bottom-joint-profile-settings.png",
+      "liquid_mask": "animation-overlays/bottom-joint-profile-settings-liquid-mask.png",
+      "rect": [
+        594,
+        830,
+        47,
+        60
+      ],
+      "ports": [
+        {
+          "center": [
+            594,
+            858
+          ],
+          "width": 59
+        },
+        {
+          "center": [
+            640,
+            858
+          ],
+          "width": 59
+        }
+      ],
+      "mask_note": "Glass mask inferred from visible green pixels; inspect alignment before animation. No hidden channels invented."
+    },
+    {
+      "id": "bottom-joint-settings-help",
+      "file": "piping-pieces/bottom-joint-settings-help.png",
+      "animation_overlay": "animation-overlays/bottom-joint-settings-help.png",
+      "liquid_mask": "animation-overlays/bottom-joint-settings-help-liquid-mask.png",
+      "rect": [
+        1027,
+        830,
+        45,
+        59
+      ],
+      "ports": [
+        {
+          "center": [
+            1027,
+            859
+          ],
+          "width": 58
+        },
+        {
+          "center": [
+            1071,
+            859
+          ],
+          "width": 58
+        }
+      ],
+      "mask_note": "Glass mask inferred from visible green pixels; inspect alignment before animation. No hidden channels invented."
+    },
+    {
+      "id": "bottom-right-elbow",
+      "file": "piping-pieces/bottom-right-elbow.png",
+      "animation_overlay": "animation-overlays/bottom-right-elbow.png",
+      "liquid_mask": "animation-overlays/bottom-right-elbow-liquid-mask.png",
+      "rect": [
+        1525,
+        821,
+        104,
+        69
+      ],
+      "ports": [
+        {
+          "center": [
+            1525,
+            860
+          ],
+          "width": 57
+        },
+        {
+          "center": [
+            1600,
+            821
+          ],
+          "width": 54
+        }
+      ],
+      "mask_note": "Glass mask inferred from visible green pixels; inspect alignment before animation. No hidden channels invented."
+    }
+  ],
+  "controls": [
+    {
+      "id": "logo",
+      "rect": [
+        501,
+        103,
+        672,
+        285
+      ]
+    },
+    {
+      "id": "tagline",
+      "rect": [
+        606,
+        380,
+        465,
+        47
+      ]
+    },
+    {
+      "id": "new-game",
+      "rect": [
+        477,
+        425,
+        712,
+        127
+      ]
+    },
+    {
+      "id": "continue",
+      "rect": [
+        477,
+        551,
+        712,
+        125
+      ]
+    },
+    {
+      "id": "deck-mutator",
+      "rect": [
+        477,
+        675,
+        712,
+        124
+      ]
+    },
+    {
+      "id": "profile",
+      "rect": [
+        145,
+        794,
+        451,
+        120
+      ]
+    },
+    {
+      "id": "settings",
+      "rect": [
+        640,
+        794,
+        389,
+        120
+      ]
+    },
+    {
+      "id": "help",
+      "rect": [
+        1071,
+        794,
+        455,
+        120
+      ]
+    }
+  ],
+  "verification": {
+    "reassembled_changed_pixels": 0,
+    "retained_RGB_changed_pixels": 0,
+    "method": "Original pixel cut-outs only; alpha masks, no redraw or generative reconstruction."
+  },
+  "background_status": "Visible original background only. Transparent holes mark artwork-covered or conservatively excluded areas; not an invented clean plate.",
+  "detail_slices": [
+    {
+      "id": "top-left-elbow",
+      "path": "detail-slices/top-left-elbow.png",
+      "rect": [
+        37,
+        21,
+        96,
+        109
+      ],
+      "overlaps_assembly": true
+    },
+    {
+      "id": "top-right-elbow",
+      "path": "detail-slices/top-right-elbow.png",
+      "rect": [
+        1540,
+        21,
+        93,
+        109
+      ],
+      "overlaps_assembly": true
+    },
+    {
+      "id": "top-coupling-01",
+      "path": "detail-slices/top-coupling-01.png",
+      "rect": [
+        132,
+        15,
+        33,
+        79
+      ],
+      "overlaps_assembly": true
+    },
+    {
+      "id": "top-coupling-02",
+      "path": "detail-slices/top-coupling-02.png",
+      "rect": [
+        355,
+        14,
+        39,
+        80
+      ],
+      "overlaps_assembly": true
+    },
+    {
+      "id": "top-coupling-03",
+      "path": "detail-slices/top-coupling-03.png",
+      "rect": [
+        1122,
+        14,
+        38,
+        80
+      ],
+      "overlaps_assembly": true
+    },
+    {
+      "id": "top-coupling-04",
+      "path": "detail-slices/top-coupling-04.png",
+      "rect": [
+        1273,
+        14,
+        40,
+        80
+      ],
+      "overlaps_assembly": true
+    },
+    {
+      "id": "top-coupling-05",
+      "path": "detail-slices/top-coupling-05.png",
+      "rect": [
+        1506,
+        15,
+        35,
+        74
+      ],
+      "overlaps_assembly": true
+    },
+    {
+      "id": "branch-1-left-coupling-1",
+      "path": "detail-slices/branch-1-left-coupling-1.png",
+      "rect": [
+        134,
+        454,
+        34,
+        68
+      ],
+      "overlaps_assembly": true
+    },
+    {
+      "id": "branch-1-left-coupling-2",
+      "path": "detail-slices/branch-1-left-coupling-2.png",
+      "rect": [
+        250,
+        454,
+        39,
+        68
+      ],
+      "overlaps_assembly": true
+    },
+    {
+      "id": "branch-1-left-coupling-3",
+      "path": "detail-slices/branch-1-left-coupling-3.png",
+      "rect": [
+        355,
+        454,
+        36,
+        68
+      ],
+      "overlaps_assembly": true
+    },
+    {
+      "id": "branch-1-right-coupling-1",
+      "path": "detail-slices/branch-1-right-coupling-1.png",
+      "rect": [
+        1280,
+        454,
+        36,
+        68
+      ],
+      "overlaps_assembly": true
+    },
+    {
+      "id": "branch-1-right-coupling-2",
+      "path": "detail-slices/branch-1-right-coupling-2.png",
+      "rect": [
+        1383,
+        454,
+        37,
+        68
+      ],
+      "overlaps_assembly": true
+    },
+    {
+      "id": "branch-1-right-coupling-3",
+      "path": "detail-slices/branch-1-right-coupling-3.png",
+      "rect": [
+        1506,
+        454,
+        33,
+        68
+      ],
+      "overlaps_assembly": true
+    },
+    {
+      "id": "branch-2-left-coupling-1",
+      "path": "detail-slices/branch-2-left-coupling-1.png",
+      "rect": [
+        134,
+        586,
+        34,
+        67
+      ],
+      "overlaps_assembly": true
+    },
+    {
+      "id": "branch-2-left-coupling-2",
+      "path": "detail-slices/branch-2-left-coupling-2.png",
+      "rect": [
+        250,
+        586,
+        39,
+        67
+      ],
+      "overlaps_assembly": true
+    },
+    {
+      "id": "branch-2-left-coupling-3",
+      "path": "detail-slices/branch-2-left-coupling-3.png",
+      "rect": [
+        355,
+        586,
+        36,
+        67
+      ],
+      "overlaps_assembly": true
+    },
+    {
+      "id": "branch-2-right-coupling-1",
+      "path": "detail-slices/branch-2-right-coupling-1.png",
+      "rect": [
+        1280,
+        586,
+        36,
+        67
+      ],
+      "overlaps_assembly": true
+    },
+    {
+      "id": "branch-2-right-coupling-2",
+      "path": "detail-slices/branch-2-right-coupling-2.png",
+      "rect": [
+        1383,
+        586,
+        37,
+        67
+      ],
+      "overlaps_assembly": true
+    },
+    {
+      "id": "branch-2-right-coupling-3",
+      "path": "detail-slices/branch-2-right-coupling-3.png",
+      "rect": [
+        1506,
+        586,
+        33,
+        67
+      ],
+      "overlaps_assembly": true
+    },
+    {
+      "id": "branch-3-left-coupling-1",
+      "path": "detail-slices/branch-3-left-coupling-1.png",
+      "rect": [
+        134,
+        717,
+        34,
+        65
+      ],
+      "overlaps_assembly": true
+    },
+    {
+      "id": "branch-3-left-coupling-2",
+      "path": "detail-slices/branch-3-left-coupling-2.png",
+      "rect": [
+        250,
+        717,
+        39,
+        65
+      ],
+      "overlaps_assembly": true
+    },
+    {
+      "id": "branch-3-left-coupling-3",
+      "path": "detail-slices/branch-3-left-coupling-3.png",
+      "rect": [
+        355,
+        717,
+        36,
+        65
+      ],
+      "overlaps_assembly": true
+    },
+    {
+      "id": "branch-3-right-coupling-1",
+      "path": "detail-slices/branch-3-right-coupling-1.png",
+      "rect": [
+        1280,
+        717,
+        36,
+        65
+      ],
+      "overlaps_assembly": true
+    },
+    {
+      "id": "branch-3-right-coupling-2",
+      "path": "detail-slices/branch-3-right-coupling-2.png",
+      "rect": [
+        1383,
+        717,
+        37,
+        65
+      ],
+      "overlaps_assembly": true
+    },
+    {
+      "id": "branch-3-right-coupling-3",
+      "path": "detail-slices/branch-3-right-coupling-3.png",
+      "rect": [
+        1506,
+        717,
+        33,
+        65
+      ],
+      "overlaps_assembly": true
+    }
+  ],
+  "placement_note": "Use either full-canvas piping OR the 13 main assemblies. Detail slices overlap those assemblies and are optional extraction aids, not additional layers.",
+  "flow": "Current approved runtime direction: down left column, left-to-right through buttons, up right column, return across top to left."
+}

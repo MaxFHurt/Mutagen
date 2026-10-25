@@ -50,5 +50,20 @@
       977
     ],
     "maxDepth": 386.0
+  },
+  "logo-v2": {
+    "size": [
+      1254,
+      1254
+    ],
+    "window": [
+      0,
+      0,
+      1253,
+      1253
+    ],
+    "mask": "../branding/logo-mutagen-v2-liquid-mask.png",
+    "bubbleScale": 0.4,
+    "note": "Adopted logo v2 (owner, rev 048). Mask and clear-liquid overlay supplied by ChatGPT, used as made; the whole canvas is the window."
   }
 }

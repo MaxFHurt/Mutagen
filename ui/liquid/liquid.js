@@ -40,6 +40,7 @@ uniform vec2 uFlow;           // flow direction through the pipe, in texture spa
 uniform float uBulb;          // 1 = a wide glass bulb fed by a narrow pipe on the left, drained by one on the right
 uniform float uStream;        // 1 = part of a stream of pipes: the liquid is laid out on the page, so it runs on from pipe to pipe
 uniform vec2 uPage;           // stream: the window's top-left on the page, in stream units
+uniform float uBubble;        // bubble size scale for the shell (1 = the buttons' approved sizes)
 uniform float uUnit;          // stream: canvas pixels per stream unit (one unit is about a main button's window height)
 float gSeed;                  // seed for hash(): shared by a stream's liquid, per chamber for its bubbles
 const float FLOW = 0.05;      // flow speed, window heights per second
@@ -123,7 +124,7 @@ void main(){
       float wob = 0.006 + 0.012 * size;
       x = 0.07 + 0.86 * h1 + wob * sin(uTime * (0.5 + h4) + fi * 2.3);
     }
-    float r = max(1.5, minDim * mix(0.012, 0.075, size) * (1.0 - 0.45 * z));
+    float r = max(1.5, minDim * uBubble * mix(0.012, 0.075, size) * (1.0 - 0.45 * z));
     float squash = 0.07 * size * sin(uTime * 1.7 + fi);   // larger bubbles flex a little as they rise
     vec2 d = (px - vec2(x, y) * uRes) / vec2(r * (1.0 + squash), r * (1.0 - squash) * 1.04);
     float dist = length(d);
@@ -161,7 +162,7 @@ function renderer() {
     gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 1, -1, -1, 1, 1, 1]), gl.STATIC_DRAW);
     const loc = gl.getAttribLocation(prog, 'p'); gl.enableVertexAttribArray(loc); gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
     const u = n => gl.getUniformLocation(prog, n);
-    shared = { canvas, gl, u: { mask: u('uMask'), res: u('uRes'), time: u('uTime'), seed: u('uSeed'), green: u('uGreen'), flow: u('uFlow'), bulb: u('uBulb'), stream: u('uStream'), page: u('uPage'), unit: u('uUnit') } };
+    shared = { canvas, gl, u: { mask: u('uMask'), res: u('uRes'), time: u('uTime'), seed: u('uSeed'), green: u('uGreen'), flow: u('uFlow'), bulb: u('uBulb'), stream: u('uStream'), page: u('uPage'), unit: u('uUnit'), bubble: u('uBubble') } };
   } catch (error) {
     console.warn('Liquid: WebGL unavailable, showing still liquid', error);
     shared = false;
@@ -227,6 +228,7 @@ class MutagenChamber extends HTMLElement {
     this._seed = Number(this.getAttribute('seed')) || (++seedCounter * 7.31 + Math.random() * 100);
     this._flow = FLOWS[this.getAttribute('flow')] || pipeFlow(ww, wh);
     this._bulb = this.getAttribute('flow') === 'bulb' ? 1 : 0;   // flow="bulb": a wide glass bulb on a narrow side pipe
+    this._bubble = meta.bubbleScale || 1;
     this._stream = this.hasAttribute('stream') ? 1 : 0;          // stream: liquid continues from pipe to pipe (see STREAM_UNIT)
     this._still = this._seed % 13;   // reduced motion: a still frame, different per chamber
     const pct = (v, of) => `${(100 * v) / of}%`;
@@ -260,7 +262,7 @@ class MutagenChamber extends HTMLElement {
     }
     this.append(canvas, frame, text);
     this._canvas = canvas; this._ctx = canvas.getContext('2d');
-    const maskImg = await loadImage(`${name}-mask.png`);
+    const maskImg = await loadImage(meta.mask || `${name}-mask.png`);   // a shell may name a supplied mask elsewhere
     const crop = document.createElement('canvas'); crop.width = ww; crop.height = wh;
     crop.getContext('2d').drawImage(maskImg, x0, y0, ww, wh, 0, 0, ww, wh);
     this._maskCrop = crop;
@@ -291,7 +293,7 @@ class MutagenChamber extends HTMLElement {
     gl.uniform2f(u.res, canvas.width, canvas.height);
     gl.uniform1f(u.time, time); gl.uniform1f(u.seed, this._seed % 97); gl.uniform1f(u.green, greenLevel());
     gl.uniform2f(u.flow, this._flow[0], this._flow[1]); gl.uniform1f(u.bulb, this._bulb);
-    gl.uniform1f(u.stream, this._stream);
+    gl.uniform1f(u.stream, this._stream); gl.uniform1f(u.bubble, this._bubble);
     if (this._stream) {
       const box = canvas.getBoundingClientRect(), unit = STREAM_UNIT();
       gl.uniform2f(u.page, (box.left + scrollX) / unit, (box.top + scrollY) / unit);
