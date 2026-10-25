@@ -43,6 +43,7 @@ uniform vec2 uPage;           // stream: the window's top-left on the page, in s
 uniform float uUnit;          // stream: canvas pixels per stream unit (one unit is about a main button's window height)
 float gSeed;                  // seed for hash(): shared by a stream's liquid, per chamber for its bubbles
 const float FLOW = 0.05;      // flow speed, window heights per second
+const float STREAM_FLOW = 0.5; // stream speed, stream units per second: the speed the sight columns had on their own
 // Bulb flow: a source at the inlet and a sink at the outlet (ideal flow through a widening). The stream enters fast and
 // narrow, fans out to fill the bulb, slows in the middle and gathers again into the outlet.
 vec2 bulbFlow(vec2 q, float aspect){
@@ -77,7 +78,7 @@ void main(){
     // into the next at the same pace and scale.
     gSeed = uStream > 0.5 ? 0.0 : uSeed;
     vec2 base = uStream > 0.5 ? uPage + st * uRes / uUnit : q;
-    vec2 fp = base * 1.4 - uFlow * (1.4 * FLOW * uTime);
+    vec2 fp = base * 1.4 - uFlow * (1.4 * (uStream > 0.5 ? STREAM_FLOW : FLOW) * uTime);
     n = noise(fp) * 0.65 + noise(fp * 2.1 + 7.3) * 0.35;
   }
   float path = (0.38 + 1.4 * thick) * (0.88 + 0.24 * n);
@@ -110,13 +111,13 @@ void main(){
       // Horizontal pipe: bubbles ride the stream through the pipe, fastest along the middle, slower near the glass.
       float lane = 0.14 + 0.72 * h2;
       float profile = 0.35 + 1.3 * (1.0 - pow(2.0 * lane - 1.0, 2.0));
-      float along = fract(h1 + uFlow.x * uTime * FLOW * profile * (0.8 + 0.4 * h4) * (uStream > 0.5 ? uUnit : uRes.y) / uRes.x);
+      float along = fract(h1 + uFlow.x * uTime * FLOW * profile * (0.8 + 0.4 * h4) * (uStream > 0.5 ? STREAM_FLOW / FLOW * uUnit : uRes.y) / uRes.x);
       x = -0.08 + along * 1.16;
       y = lane - 0.04 * sin(fract(h1 + uTime * rise) * 3.14159) + 0.01 * sin(uTime * (0.5 + h4) + fi * 2.3);
     } else {
       // Vertical pipe or still chamber: bubbles rise; an upward flow carries them a little faster, a downward one holds
       // them back a little.
-      float speed = rise - uFlow.y * FLOW * 0.6 * (uStream > 0.5 ? uUnit / uRes.y : 1.0);
+      float speed = rise - uFlow.y * 0.6 * (uStream > 0.5 ? STREAM_FLOW * uUnit / uRes.y : FLOW);
       y = 1.12 - fract(h2 + uTime * speed) * 1.24;
       float wob = 0.006 + 0.012 * size;
       x = 0.07 + 0.86 * h1 + wob * sin(uTime * (0.5 + h4) + fi * 2.3);

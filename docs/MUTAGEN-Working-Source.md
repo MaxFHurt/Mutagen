@@ -1,5 +1,10 @@
 # MUTAGEN — rolling situation report and visual inventory
 
+## CURRENT REVISION 044 — Stream at the old column speed; version text above the bottom edge, 2026-10-25
+
+Owner: the whole home stream runs at the speed the sight columns had on their own (about 31 px/s on iPad), not the slower button speed. Bubbles in the buttons ride the stream at the same pace. In the down-flowing left column they hover and drift slowly, as bubbles do against a downward current; in the up-flowing right column they rise as before. The version text moved up to clear the background's bright bottom edge; checked at six iPad and iPhone sizes. Owner confirmed the home screen is centred (rev 042) and the RESOLVE fix.
+
+
 ## CURRENT REVISION 043 — Home ooze flows as one stream, 2026-10-25
 
 Owner direction: the ooze flows horizontally through the pipes, with continuous motion from pipe to pipe in a believable direction. All eight home chambers now share one stream (`stream` attribute on `<mutagen-chamber>`): the liquid is laid out in page units (one unit ≈ a main button's window height) with one shared seed and speed. Liquid leaving one pipe therefore runs on into the next at the same pace and scale, and pipes in a line (the bottom row) show one unbroken stream. Bubbles stay per chamber. Circuit, as a pumped loop: down the left column, left to right through every button, up the right column, back across the top. The columns now move at the approved button speed. Approved colour, bubbles, octagon bulb flow and every chamber without `stream` are unchanged. Exact joins at corners wait for the plumbing artwork and HOME-LAYOUT.json, requested in `CHATGPT-REQUEST-2026-10-25b.md` together with the logo liquid files, button states and the next screens.
