@@ -1,7 +1,9 @@
-// MUTAGEN live liquid: <mutagen-chamber shell="canister" flow="right">Label</mutagen-chamber>
+// MUTAGEN live liquid: <mutagen-chamber shell="canister" label="labels/play.png">Play</mutagen-chamber>
+// The label image is supplied artwork, shown unmodified; the element's text is its accessible name.
 //
 // Layers, back to front: the moving liquid (drawn here, clipped to the glass window), the fixed glass sheen (also drawn
-// here, but never moves), the supplied steel frame with its window cut out (ui/liquid/<shell>-frame.png), then the label.
+// here, but never moves), the supplied steel frame with its window cut out (ui/liquid/<shell>-frame.png), then the supplied
+// label image.
 // Material (revision 027): smooth translucent medium green, broad absorption that deepens toward the middle, sparse air
 // bubbles suspended IN the liquid with depth-dependent attenuation and soft edges, no streaks, veins, marbling, grain or
 // glow outside the glass. Flow is real time-based motion of the broad absorption, never painted lines.
@@ -169,74 +171,6 @@ const seen = 'IntersectionObserver' in window ? new IntersectionObserver(entries
   wake();
 }) : null;
 
-// ---------- printed label, after the PLAY button master ----------
-// Drawn once per size into a canvas: a deep purple extrusion under the letters, a purple edge with a lighter violet rim
-// around the outside only, and a brushed-silver face with a real bevel lit from the upper left. The text itself stays in
-// the page, invisible, for screen readers. Nothing here moves.
-const fontReady = document.fonts?.load ? document.fonts.load('64px "Russo One"').catch(() => {}) : Promise.resolve();
-function drawLabel(canvas, text, boxW, boxH) {
-  const dpr = Math.min(devicePixelRatio || 1, 2), chars = Math.max(3, text.length);
-  const size = Math.max(11, Math.min(0.58 * boxH, (0.98 * boxW) / chars));
-  const ctx = canvas.getContext('2d', { willReadFrequently: true });
-  const font = `${size * dpr}px "Russo One", system-ui, sans-serif`;
-  ctx.font = font;
-  const spacing = 0.04 * size * dpr, edge = 0.115 * size * dpr, depthPx = 0.055 * size * dpr;
-  const textW = ctx.measureText(text).width + spacing * (text.length - 1);
-  const W = Math.ceil(textW + 2 * edge + 4), H = Math.ceil(size * dpr * 1.05 + 2 * edge + depthPx + 4);
-  canvas.width = W; canvas.height = H;
-  canvas.style.width = `${W / dpr}px`; canvas.style.height = `${H / dpr}px`;
-  const x0 = edge + 2, base = edge + 2 + size * dpr * 0.86;
-  const write = (c, mode) => {   // letter by letter so the spacing matches the master on every browser
-    c.font = font; c.textBaseline = 'alphabetic';
-    let x = x0;
-    for (const ch of text) { mode === 'stroke' ? c.strokeText(ch, x, base) : c.fillText(ch, x, base); x += c.measureText(ch).width + spacing; }
-  };
-  ctx.clearRect(0, 0, W, H);
-  ctx.lineJoin = 'round'; ctx.miterLimit = 2;
-  // Extrusion: the purple edge continues downward a little, giving the letters thickness.
-  ctx.save(); ctx.translate(0, depthPx); ctx.strokeStyle = '#170628'; ctx.fillStyle = '#170628'; ctx.lineWidth = edge * 2; write(ctx, 'stroke'); write(ctx, 'fill'); ctx.restore();
-  // Purple edge, then a lighter violet rim just outside the face.
-  ctx.strokeStyle = '#341264'; ctx.lineWidth = edge * 2; write(ctx, 'stroke');
-  ctx.strokeStyle = '#6c3fbd'; ctx.lineWidth = edge * 0.55; write(ctx, 'stroke');
-  // Face: silver with a bevel. Height comes from a blurred copy of the letters; light from the upper left.
-  const m = document.createElement('canvas'); m.width = W; m.height = H;
-  const mc = m.getContext('2d', { willReadFrequently: true }); mc.fillStyle = '#fff'; write(mc, 'fill');
-  const mask = mc.getImageData(0, 0, W, H).data;
-  const blur = Math.max(1, Math.round(0.07 * size * dpr));
-  const hgt = new Float32Array(W * H), tmp = new Float32Array(W * H);
-  for (let i = 0; i < W * H; i++) hgt[i] = mask[i * 4 + 3] / 255;
-  const boxBlur = (src, dst, n, stride, count, step) => {   // running-sum blur along one axis, edges treated as empty
-    for (let line = 0; line < count; line++) {
-      const o = line * stride;
-      let acc = 0;
-      for (let k = 0; k < Math.min(blur, n); k++) acc += src[o + k * step];
-      for (let k = 0; k < n; k++) {
-        if (k + blur < n) acc += src[o + (k + blur) * step];
-        if (k - blur - 1 >= 0) acc -= src[o + (k - blur - 1) * step];
-        dst[o + k * step] = acc / (2 * blur + 1);
-      }
-    }
-  };
-  for (let pass = 0; pass < 2; pass++) { boxBlur(hgt, tmp, W, W, H, 1); boxBlur(tmp, hgt, H, 1, W, W); }
-  const out = ctx.getImageData(0, 0, W, H), o = out.data;
-  const L = [-0.45, -0.62, 0.64], top = edge + 2, cap = size * dpr * 0.72;
-  for (let y = 1; y < H - 1; y++) for (let x = 1; x < W - 1; x++) {
-    const i = y * W + x, a = mask[i * 4 + 3] / 255;
-    if (!a) continue;
-    const nx = (hgt[i - 1] - hgt[i + 1]) * 4.5, ny = (hgt[i - W] - hgt[i + W]) * 4.5, nl = Math.hypot(nx, ny, 1);
-    const diff = Math.max(0, (nx * L[0] + ny * L[1] + L[2]) / nl);
-    const spec = Math.pow(Math.max(0, (nx * -0.3 + ny * -0.5 + 0.81) / nl), 24);
-    const v = Math.min(1, Math.max(0, (y - top) / cap));            // 0 at the cap line .. 1 at the baseline
-    const grain = (Math.sin(y * 12.9898 + Math.floor(x / 3) * 0.31) * 43758.5453) % 1;   // fine horizontal brushing
-    const metal = 0.93 - 0.36 * Math.exp(-Math.pow((v - 0.56) / 0.12, 2)) + 0.025 * grain; // silver with a darker band
-    const lum = Math.min(1, metal * (0.36 + 0.78 * diff) + 0.7 * spec);
-    const r = lum * 236 + 8, g = lum * 232 + 6, b = lum * 246 + 10;
-    o[i * 4] = o[i * 4] * (1 - a) + r * a; o[i * 4 + 1] = o[i * 4 + 1] * (1 - a) + g * a; o[i * 4 + 2] = o[i * 4 + 2] * (1 - a) + b * a;
-    o[i * 4 + 3] = Math.max(o[i * 4 + 3], a * 255);
-  }
-  ctx.putImageData(out, 0, 0);
-}
-
 let seedCounter = 0;
 class MutagenChamber extends HTMLElement {
   async connectedCallback() {
@@ -265,21 +199,18 @@ class MutagenChamber extends HTMLElement {
     const text = document.createElement('span');
     text.className = 'mutagen-chamber__label';
     Object.assign(text.style, { left: pct(x0, W), top: pct(y0, H), width: pct(ww, W), height: pct(wh, H) });
+    // Labels are supplied artwork (label="path/to/label.png"), shown exactly as made: never redrawn or restyled here.
     const face = document.createElement('span');
     face.className = 'mutagen-chamber__text';
     face.append(...label);
-    const art = document.createElement('canvas');
-    art.className = 'mutagen-chamber__art'; art.setAttribute('aria-hidden', 'true');
-    // Redraw the printed letters when the label or the glass size changes (e.g. the smart action's label).
-    let drawn = '';
-    const paint = () => fontReady.then(() => {
-      const t = face.textContent.trim().toUpperCase(), box = text.getBoundingClientRect(), key = `${t}|${Math.round(box.width)}x${Math.round(box.height)}|${devicePixelRatio}`;
-      if (!t || box.width < 4 || key === drawn) { art.hidden = !t; return; }
-      drawn = key; art.hidden = false; drawLabel(art, t, box.width, box.height);
-    });
-    new MutationObserver(paint).observe(face, { childList: true, characterData: true, subtree: true });
-    new ResizeObserver(paint).observe(text);
-    text.append(face, art);
+    text.append(face);
+    const src = this.getAttribute('label');
+    if (src) {
+      const art = document.createElement('img');
+      art.className = 'mutagen-chamber__art'; art.alt = ''; art.decoding = 'async';
+      art.src = new URL(src, document.baseURI).href;
+      text.append(art);
+    }
     this.append(canvas, frame, text);
     this._canvas = canvas; this._ctx = canvas.getContext('2d');
     const maskImg = await loadImage(`${name}-mask.png`);

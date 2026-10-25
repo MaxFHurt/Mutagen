@@ -3,14 +3,8 @@
 .mutagen-chamber > * { position: absolute; }
 .mutagen-chamber__liquid { pointer-events: none; }
 .mutagen-chamber__frame { inset: 0; width: 100%; height: 100%; pointer-events: none; user-select: none; }
-/* Label printed on the glass, after the PLAY button master: heavy squared letters with a brushed-silver face and a purple
-   edge around the outside only. The edge is a separate copy of the text drawn behind the face, so it can never cross
-   through a letter. Still, readable, no shadow slab. */
-@font-face { font-family: 'Russo One'; src: url('../fonts/russo-one-latin.woff2') format('woff2'); font-display: swap; }
-.mutagen-chamber__label {
-  display: flex; align-items: center; justify-content: center; text-align: center; pointer-events: none; isolation: isolate;
-  font: 400 11px / 1 'Russo One', system-ui, sans-serif; letter-spacing: 0.04em; text-transform: uppercase; white-space: nowrap;
-}
-/* The letters are drawn into .mutagen-chamber__art (see drawLabel in liquid.js); the text stays for screen readers. */
+/* Label: supplied artwork (see the label attribute), shown as made and only scaled to fit the glass. The element's text
+   stays in the page, invisible, as the accessible name. */
+.mutagen-chamber__label { display: flex; align-items: center; justify-content: center; pointer-events: none; }
 .mutagen-chamber__text { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
-.mutagen-chamber__art { display: block; }
+.mutagen-chamber__art { display: block; max-width: 90%; max-height: 62%; width: auto; height: auto; }
