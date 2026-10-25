@@ -1,0 +1,1143 @@
+{
+  "scope": "Requested home, navigation and smart-octagon set; not the entire app asset kit",
+  "assembled_designs": 25,
+  "device_variants": 2,
+  "png_files": 140,
+  "files": [
+    {
+      "path": "BUTTON-FUNCTION-INDEX.json",
+      "bytes": 23544,
+      "sha256": "99777b6c5ca72322f28555fc2f21dcc3f82081b328e6f4eb6d07fa6b88926853"
+    },
+    {
+      "path": "BUTTON-PREVIEW.jpg",
+      "bytes": 412587,
+      "sha256": "55bb681f726c859d23a9a4dfc7667fac85a4fdea7843376461fe99fa713f3948"
+    },
+    {
+      "path": "CLAUDE-ASSET-HANDOFF.md",
+      "bytes": 3864,
+      "sha256": "ce525875f6976b40ab71ad1935b025c051489af4d1ae3f60f16e43572a21f0f5"
+    },
+    {
+      "path": "ui/branding/logo-mutagen-locked-transparent.png",
+      "bytes": 2934365,
+      "sha256": "fdaf4e01edb3ca7ae732b952811dbfa60233ea27654f62cacd2bb90cc1a76dec",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons/game-actions/animation-overlay/button-attack.png",
+      "bytes": 1525812,
+      "sha256": "0ad032f1ca4520494b7d868a2e77959e5528dfa3f013c49600624d198be5ee3d",
+      "width": 1309,
+      "height": 1201,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons/game-actions/animation-overlay/button-block.png",
+      "bytes": 1550704,
+      "sha256": "96a75f4a7feeef7df3acc5fdf6422c778722be2642818661373ca16656e54933",
+      "width": 1309,
+      "height": 1201,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons/game-actions/animation-overlay/button-cast-spell.png",
+      "bytes": 1495585,
+      "sha256": "3770b3880daa79e5f457605108ea2fd311126a689f6682d6f8c00b5595b9d546",
+      "width": 1309,
+      "height": 1201,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons/game-actions/animation-overlay/button-choose.png",
+      "bytes": 1527072,
+      "sha256": "e0ae55e7ad94128cc9371f968fbd50ac50403a5dd56de5c1b25a97cd8c500f63",
+      "width": 1309,
+      "height": 1201,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons/game-actions/animation-overlay/button-discard.png",
+      "bytes": 1534433,
+      "sha256": "055403da95a98bb71fa38b5ee85b367e22b0ce51fba61b804e909b8195d863c7",
+      "width": 1309,
+      "height": 1201,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons/game-actions/animation-overlay/button-end-turn.png",
+      "bytes": 1515440,
+      "sha256": "b4be4d613d58f4578e490208422dbbeb275d2c8722ab498e796c303ab4b170e4",
+      "width": 1309,
+      "height": 1201,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons/game-actions/animation-overlay/button-next-phase.png",
+      "bytes": 1511587,
+      "sha256": "b6645b7c8492cdb030ee454015b471f5c2b79bc075766ea0defe06ca5fb836be",
+      "width": 1309,
+      "height": 1201,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons/game-actions/animation-overlay/button-pass.png",
+      "bytes": 1588798,
+      "sha256": "70e14dc8b7565d27fed0c9a06b9bc8edbe799796b531decf32302e0586b6369c",
+      "width": 1309,
+      "height": 1201,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons/game-actions/animation-overlay/button-play-land.png",
+      "bytes": 1503595,
+      "sha256": "9fde0647e4bf31495a93b6e89b212ce685be32ab391910f03bb824124199262e",
+      "width": 1309,
+      "height": 1201,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons/game-actions/animation-overlay/button-resolve.png",
+      "bytes": 1523780,
+      "sha256": "bc130b907ac9d2176de36154b1dcb86aed1cd2bea93c62649f6f9004b1468743",
+      "width": 1309,
+      "height": 1201,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons/game-actions/animation-overlay/button-to-combat.png",
+      "bytes": 1500016,
+      "sha256": "b135f38e4493ae171bee72c28294427862fe53a7746adb3eaf9a5358f1efd848",
+      "width": 1309,
+      "height": 1201,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons/game-actions/animation-overlay/button-vote.png",
+      "bytes": 1560546,
+      "sha256": "a994c1516ef9e1dccc4c6503b701bcdb384b5f99e85ef6acb1a4e566f63c35f6",
+      "width": 1309,
+      "height": 1201,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons/game-actions/assembled/button-attack.png",
+      "bytes": 1519619,
+      "sha256": "d3af4e9ecd4e1d31cf731d781c671f9f3567b1e87e7990ca50046c6affda0cd5",
+      "width": 1309,
+      "height": 1201,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons/game-actions/assembled/button-block.png",
+      "bytes": 1542117,
+      "sha256": "6f43c07382d7f48f87cb209a7bdeab5c8a37cf81286190f88b075bda91cdefef",
+      "width": 1309,
+      "height": 1201,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons/game-actions/assembled/button-cast-spell.png",
+      "bytes": 1492394,
+      "sha256": "53123a9a7c2a0e016e382d2cfd6780f3286af71b5d93235098bd3b2befe95160",
+      "width": 1309,
+      "height": 1201,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons/game-actions/assembled/button-choose.png",
+      "bytes": 1521928,
+      "sha256": "98a388e8957387c1aa411cf18e8adc60ba62dc03871d9762418b93d3b91e3bbc",
+      "width": 1309,
+      "height": 1201,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons/game-actions/assembled/button-discard.png",
+      "bytes": 1527761,
+      "sha256": "cae2bd810ee8d2d0b80e2e0bd04aaceafbe0228c90650a3a4505dcc1d2bfe1af",
+      "width": 1309,
+      "height": 1201,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons/game-actions/assembled/button-end-turn.png",
+      "bytes": 1510357,
+      "sha256": "146730b6384e102ce6a8c3fd2beb1bbd45e1309b2c2b03b904df91cbbed87ec7",
+      "width": 1309,
+      "height": 1201,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons/game-actions/assembled/button-next-phase.png",
+      "bytes": 1506971,
+      "sha256": "41ce4a841c3743e62f299530b7e85ff8e0f7f718ddf2d4ee55f543bd98428a1c",
+      "width": 1309,
+      "height": 1201,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons/game-actions/assembled/button-pass.png",
+      "bytes": 1577607,
+      "sha256": "8adfa5a6366bf718318bfa38c4ad7d91f9c25ddef8027c2b4ddc3c2959ae19d6",
+      "width": 1309,
+      "height": 1201,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons/game-actions/assembled/button-play-land.png",
+      "bytes": 1499570,
+      "sha256": "843e0fc50d69de3dfdd3e1c1159c515571cdcad8c4771811d7f557984092dea9",
+      "width": 1309,
+      "height": 1201,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons/game-actions/assembled/button-resolve.png",
+      "bytes": 1517807,
+      "sha256": "510bcf36886dc469a726f64622cede9be0185e9c91ccb194c42eb26d1c627ff2",
+      "width": 1309,
+      "height": 1201,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons/game-actions/assembled/button-to-combat.png",
+      "bytes": 1495189,
+      "sha256": "ebdd4380a32fe8da5a5b7af7a3d09cc4672c8c3a3bef57c73e577b47b556721a",
+      "width": 1309,
+      "height": 1201,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons/game-actions/assembled/button-vote.png",
+      "bytes": 1551068,
+      "sha256": "931e02f4705b56fd854f4225d82f3a2251d399eb61e83d6354dc7cabfe7257a7",
+      "width": 1309,
+      "height": 1201,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons/home/animation-overlay/button-continue.png",
+      "bytes": 1951623,
+      "sha256": "194ebe05ed093f413644107043a25646288f0ac9d6add0b9c6db059246395768",
+      "width": 2172,
+      "height": 724,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons/home/animation-overlay/button-deck-mutator.png",
+      "bytes": 1909249,
+      "sha256": "4da6b4416b3056766a8e6816382b93e1dbe9806b1978673fd4a9add225438e37",
+      "width": 2172,
+      "height": 724,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons/home/animation-overlay/button-help.png",
+      "bytes": 1946181,
+      "sha256": "e16e737fc56a6306a7ff0fa6856e846773dd85f7e73b4571ebab73d0ff5cb8f5",
+      "width": 2172,
+      "height": 724,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons/home/animation-overlay/button-new-game.png",
+      "bytes": 1980249,
+      "sha256": "6035d269e5958d8a6077f5a69183c1074c9d8f023b1ce740589c41b49a0550ee",
+      "width": 2172,
+      "height": 724,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons/home/animation-overlay/button-play.png",
+      "bytes": 1889541,
+      "sha256": "0273a3c1baf1e99c9ffb7bc01d623ea744f1e17a20e022df3b70db95873468b0",
+      "width": 2172,
+      "height": 724,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons/home/animation-overlay/button-profile.png",
+      "bytes": 1959819,
+      "sha256": "04ef7d4a13136fcfdf8f48e87898dccc592598da78648032b3dfa4574c738e2c",
+      "width": 2172,
+      "height": 724,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons/home/animation-overlay/button-settings.png",
+      "bytes": 1950242,
+      "sha256": "8380cc760157af728a00894081d974d80f3529e3eb177d762b4f49c603d99e24",
+      "width": 2172,
+      "height": 724,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons/home/assembled/button-continue.png",
+      "bytes": 1932905,
+      "sha256": "83851a860056bb2c1408e393df4abb46bc3ebeee85a332ad383a967360731cc5",
+      "width": 2172,
+      "height": 724,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons/home/assembled/button-deck-mutator.png",
+      "bytes": 1891066,
+      "sha256": "671ac058023e3f863acdecd85790e3d69c1eb2183ba1f64f26e5ce1d8d2dc79c",
+      "width": 2172,
+      "height": 724,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons/home/assembled/button-help.png",
+      "bytes": 1931406,
+      "sha256": "00dc5faa600ce79e2093622169a80b996c6e8c9437b95311869cfb5855366d89",
+      "width": 2172,
+      "height": 724,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons/home/assembled/button-new-game.png",
+      "bytes": 1955336,
+      "sha256": "3116b5f7948cce0340db024b1d82a44b42855c35b7fea31a351ed564e0319fb6",
+      "width": 2172,
+      "height": 724,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons/home/assembled/button-play.png",
+      "bytes": 1875232,
+      "sha256": "5fc8720e1f66603e6b426c032cecd61e8e77f3f66758434d8ca1f63a721953eb",
+      "width": 2172,
+      "height": 724,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons/home/assembled/button-profile.png",
+      "bytes": 1939581,
+      "sha256": "9517fc770096612cf244460eaa0018abb9577a5981f4e03ffff0c3166613b706",
+      "width": 2172,
+      "height": 724,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons/home/assembled/button-settings.png",
+      "bytes": 1929449,
+      "sha256": "40d8dee835a2d612487fe74dfaa3559c78801a1d3c0d0ea98a3c3e1ca5395b4b",
+      "width": 2172,
+      "height": 724,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons/navigation/animation-overlay/button-cards.png",
+      "bytes": 1367325,
+      "sha256": "aac16a3587bfa6ad11742bbbdb33554445b2ff6ba2f279eafc1c79a70421f9c2",
+      "width": 1372,
+      "height": 1147,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons/navigation/animation-overlay/button-dna.png",
+      "bytes": 1315165,
+      "sha256": "2abfd2379d693fdb7183878c5da53846ad7051499fad6ce8cc2b8508f6e77d4c",
+      "width": 1372,
+      "height": 1147,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons/navigation/animation-overlay/button-help.png",
+      "bytes": 1280438,
+      "sha256": "b3ced3343e06e2089c02e34e42986347c9e042e9e6fac54f987dfd624e415846",
+      "width": 1372,
+      "height": 1147,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons/navigation/animation-overlay/button-play.png",
+      "bytes": 1326576,
+      "sha256": "d43ec650599b2c01c151e0ac8b5a43fa5594277ac23d993112a42bc23908be43",
+      "width": 1372,
+      "height": 1147,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons/navigation/animation-overlay/button-profile.png",
+      "bytes": 1361438,
+      "sha256": "bb4fae31f159066af6b2fec69dc6c2e173d82af6556f12f8ec38bddbface9750",
+      "width": 1372,
+      "height": 1147,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons/navigation/animation-overlay/button-settings.png",
+      "bytes": 1364203,
+      "sha256": "f7e4c77619ab63f809e5e3ae2fc5ac649055b43192f3df29ef6e78df3f78b2fe",
+      "width": 1372,
+      "height": 1147,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons/navigation/assembled/button-cards.png",
+      "bytes": 1360229,
+      "sha256": "f66c783df824cccaf240cd5e2c709007bd441408ac7c137311b876c620f90e7d",
+      "width": 1372,
+      "height": 1147,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons/navigation/assembled/button-dna.png",
+      "bytes": 1307260,
+      "sha256": "52e57b39bea08edcc9e54310bda726b2c0e868d226601a1a1447e0544ec0fb50",
+      "width": 1372,
+      "height": 1147,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons/navigation/assembled/button-help.png",
+      "bytes": 1276730,
+      "sha256": "a91025d92a7f60d0798952cebee6826e7f21dbda9d859ff1aad76f1bdcbd1402",
+      "width": 1372,
+      "height": 1147,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons/navigation/assembled/button-play.png",
+      "bytes": 1320648,
+      "sha256": "99d8bfa10b9e17c1099c0ee0c4ba6c24b064dac7207dc9b3749c73f96cab5d4d",
+      "width": 1372,
+      "height": 1147,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons/navigation/assembled/button-profile.png",
+      "bytes": 1354256,
+      "sha256": "ff8b2026ace29def9330ad6443b0407f7553632173bc59c79fe37a45d830b298",
+      "width": 1372,
+      "height": 1147,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons/navigation/assembled/button-settings.png",
+      "bytes": 1350256,
+      "sha256": "e2d4b4bf41581edf8940f65e432faa401b2b88522d77f755415a7b7b6b7d8a13",
+      "width": 1372,
+      "height": 1147,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons-iphone/game-actions/animation-overlay/button-attack.png",
+      "bytes": 307000,
+      "sha256": "eb3bdc0bd0c0adf3ebf153df59e13b6a5ecf50aac3d10f69d0eef8ba2e0554d1",
+      "width": 654,
+      "height": 600,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons-iphone/game-actions/animation-overlay/button-block.png",
+      "bytes": 317870,
+      "sha256": "00334dc012898619621d775c0e5e4f0235b796b644f8cd2d54780b6d40513eaf",
+      "width": 654,
+      "height": 600,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons-iphone/game-actions/animation-overlay/button-cast-spell.png",
+      "bytes": 295613,
+      "sha256": "2673f8bdfc0eeb028b3ca3e0c4e99ba91743cc1ba830d8a6015e5a8ec7e78cef",
+      "width": 654,
+      "height": 600,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons-iphone/game-actions/animation-overlay/button-choose.png",
+      "bytes": 309413,
+      "sha256": "e40fdb7d58bc53d48014da3ecba3feab635c6f246c3c3044bfc4271a728f7607",
+      "width": 654,
+      "height": 600,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons-iphone/game-actions/animation-overlay/button-discard.png",
+      "bytes": 312478,
+      "sha256": "8314365f01f88a653431bd52136c0e09349aa924be6a0b8386fd167ae3b33958",
+      "width": 654,
+      "height": 600,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons-iphone/game-actions/animation-overlay/button-end-turn.png",
+      "bytes": 304936,
+      "sha256": "f586e395155c4f0a76befcbf33cc3a1c886969a09fc06af0ca412d27744d4ed9",
+      "width": 654,
+      "height": 600,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons-iphone/game-actions/animation-overlay/button-next-phase.png",
+      "bytes": 302634,
+      "sha256": "15cab1c19a0a496b341493e311a8bcdde65b70d6e3bb32319daa3e68637a4e9c",
+      "width": 654,
+      "height": 600,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons-iphone/game-actions/animation-overlay/button-pass.png",
+      "bytes": 335264,
+      "sha256": "24e755c2545d32d7b0e7d3e8c7950f144e684cfa1cc45a0ac1e8a3c9acee79ce",
+      "width": 654,
+      "height": 600,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons-iphone/game-actions/animation-overlay/button-play-land.png",
+      "bytes": 298584,
+      "sha256": "8899f0f1bb6c4c2228688d031093d7244aa28546d12bb907d757b108dda80fd9",
+      "width": 654,
+      "height": 600,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons-iphone/game-actions/animation-overlay/button-resolve.png",
+      "bytes": 308192,
+      "sha256": "3286c947244e559184c1600ef08786066dfdb67c76eb5d775affe98d0905cf66",
+      "width": 654,
+      "height": 600,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons-iphone/game-actions/animation-overlay/button-to-combat.png",
+      "bytes": 297899,
+      "sha256": "2b873983c133be573321044c7e499ab1f38cfacbb1eebac31bbd485c56c2a22e",
+      "width": 654,
+      "height": 600,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons-iphone/game-actions/animation-overlay/button-vote.png",
+      "bytes": 322395,
+      "sha256": "73a122489bea0e319ee17bec2e9fafec36af7b4c3c6c669090285f55fba21687",
+      "width": 654,
+      "height": 600,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons-iphone/game-actions/assembled/button-attack.png",
+      "bytes": 428356,
+      "sha256": "c8da653c4a15ffccffa56eccf5968efda35aacac9cd6932bbe1f715084349acc",
+      "width": 654,
+      "height": 600,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons-iphone/game-actions/assembled/button-block.png",
+      "bytes": 433204,
+      "sha256": "5485f85b13ae1f9ed9b4f027543eeb418326ccdfb8bee249eeed9320a6990e25",
+      "width": 654,
+      "height": 600,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons-iphone/game-actions/assembled/button-cast-spell.png",
+      "bytes": 421206,
+      "sha256": "c9e7be03b83cf9d21e3d26c8b11ffb25c0cae37847273696053e4a26e3d68e62",
+      "width": 654,
+      "height": 600,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons-iphone/game-actions/assembled/button-choose.png",
+      "bytes": 428718,
+      "sha256": "eaa4f51a0c7130e2b1f6bf1dd17e796553df7ae152129104f80ffcb451e52ac3",
+      "width": 654,
+      "height": 600,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons-iphone/game-actions/assembled/button-discard.png",
+      "bytes": 430521,
+      "sha256": "36f88cfe8774c4d26f7be53959559511c7debcdf20e6d64a8bc9c28732bbe15b",
+      "width": 654,
+      "height": 600,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons-iphone/game-actions/assembled/button-end-turn.png",
+      "bytes": 425935,
+      "sha256": "3444dd7dde5af897a4f70bea1707dd8427c7b7a34b95de5887009587f0c66714",
+      "width": 654,
+      "height": 600,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons-iphone/game-actions/assembled/button-next-phase.png",
+      "bytes": 424846,
+      "sha256": "ed4962baabf12cabe1f69edb64ecd8f6a573289acd2cf89b513618b64937a266",
+      "width": 654,
+      "height": 600,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons-iphone/game-actions/assembled/button-pass.png",
+      "bytes": 442333,
+      "sha256": "26fd77acc0541e84b115f7aebc86b3844e4601a855fc7e536884792f02b9e4c0",
+      "width": 654,
+      "height": 600,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons-iphone/game-actions/assembled/button-play-land.png",
+      "bytes": 423332,
+      "sha256": "bcc18d47955207287bc25da27de9b5a226f62b512deb7581682c825c9735652b",
+      "width": 654,
+      "height": 600,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons-iphone/game-actions/assembled/button-resolve.png",
+      "bytes": 427952,
+      "sha256": "dbf5d0f1d8855957d1dbe725bf4262917815fb06bf33ad0d81c0cabc93fc59d6",
+      "width": 654,
+      "height": 600,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons-iphone/game-actions/assembled/button-to-combat.png",
+      "bytes": 422258,
+      "sha256": "17ec2d94072dbad489a18e66b9163367df16ce1c8f533207295a3f8e8d55d15c",
+      "width": 654,
+      "height": 600,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons-iphone/game-actions/assembled/button-vote.png",
+      "bytes": 435712,
+      "sha256": "1151284c176d402fd7d2d6728573169af0f6fb7c971c5291f5d19b63f13f219b",
+      "width": 654,
+      "height": 600,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons-iphone/home/animation-overlay/button-continue.png",
+      "bytes": 463875,
+      "sha256": "3cce187d01cc01ef1399786c56aa69047b66e821e58575b306e97d51b60e5b21",
+      "width": 1086,
+      "height": 362,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons-iphone/home/animation-overlay/button-deck-mutator.png",
+      "bytes": 442376,
+      "sha256": "d9427fb8febffed9a49af61ad3e8ec257e8eb6535d5a1b1b15005c19137fa2e9",
+      "width": 1086,
+      "height": 362,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons-iphone/home/animation-overlay/button-help.png",
+      "bytes": 457648,
+      "sha256": "47d7622b42e17816289ef99161473eff40c4c15b32a656376052b646fed4354b",
+      "width": 1086,
+      "height": 362,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons-iphone/home/animation-overlay/button-new-game.png",
+      "bytes": 466224,
+      "sha256": "26e11b5094e1aeaa82763ce44a232c7f9120de58cc598a0ffceed9c5325cf29d",
+      "width": 1086,
+      "height": 362,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons-iphone/home/animation-overlay/button-play.png",
+      "bytes": 441556,
+      "sha256": "e482cecedb8b6fcbafaf4f3f480e67736f31877148c36612e23dc034a2f9296f",
+      "width": 1086,
+      "height": 362,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons-iphone/home/animation-overlay/button-profile.png",
+      "bytes": 470456,
+      "sha256": "9a6e0d310fb717787fdce5585df566fe7c17f3ee0fd609e5562533f1a736dc1e",
+      "width": 1086,
+      "height": 362,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons-iphone/home/animation-overlay/button-settings.png",
+      "bytes": 463201,
+      "sha256": "46909ff5af2f7b684397b96215b986ee9125d26904dfe3e7dfd22ff55943dd3a",
+      "width": 1086,
+      "height": 362,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons-iphone/home/assembled/button-continue.png",
+      "bytes": 552047,
+      "sha256": "5a2ff345c9b32a2c770471f7d3b3309bf120c087fece9b6b52e518c57d74a442",
+      "width": 1086,
+      "height": 362,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons-iphone/home/assembled/button-deck-mutator.png",
+      "bytes": 540435,
+      "sha256": "f03d6561d162f76e9175e838ef6ac4327283e8948c6087154abcf9f25f786a45",
+      "width": 1086,
+      "height": 362,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons-iphone/home/assembled/button-help.png",
+      "bytes": 549980,
+      "sha256": "8a7b84faced02d9496c2e07bb7464c2dca1a1892316e4c5aadf9f20ee7378d71",
+      "width": 1086,
+      "height": 362,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons-iphone/home/assembled/button-new-game.png",
+      "bytes": 555787,
+      "sha256": "67e5d443fd5c253e876748efb2a0e11297a04edf723bd7389cefa83e01d6f366",
+      "width": 1086,
+      "height": 362,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons-iphone/home/assembled/button-play.png",
+      "bytes": 545730,
+      "sha256": "19027195d09ca2eab1f5cb425cbb6775eecc34769c456f72e1bbce24500f1109",
+      "width": 1086,
+      "height": 362,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons-iphone/home/assembled/button-profile.png",
+      "bytes": 554508,
+      "sha256": "cbef190b3afaad6e7a651e65f5044d4d6c43719ec2de96478f168f71708c6dae",
+      "width": 1086,
+      "height": 362,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons-iphone/home/assembled/button-settings.png",
+      "bytes": 551535,
+      "sha256": "ad7892ae20717cc2a7b9835eb2b3a410e546263c1f7b03889cdef449b34f1f51",
+      "width": 1086,
+      "height": 362,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons-iphone/navigation/animation-overlay/button-cards.png",
+      "bytes": 279175,
+      "sha256": "5fb70bfc69f3615309f9098294b7041d3230b195e3670542b6c443037c24e355",
+      "width": 686,
+      "height": 574,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons-iphone/navigation/animation-overlay/button-dna.png",
+      "bytes": 253298,
+      "sha256": "bd668df0bedcf8dd9fa6bf98f5ec899335f9ac807a4c0ac830eb0632465db3a9",
+      "width": 686,
+      "height": 574,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons-iphone/navigation/animation-overlay/button-help.png",
+      "bytes": 241670,
+      "sha256": "c0dd12501fdecb6a8ba9f5a02f258525a09d42f8dcba49e97230f33e5c58c407",
+      "width": 686,
+      "height": 574,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons-iphone/navigation/animation-overlay/button-play.png",
+      "bytes": 259214,
+      "sha256": "a14b2746f93278323753448ca74745f81940f81a8072593c5a33b0c58a840f84",
+      "width": 686,
+      "height": 574,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons-iphone/navigation/animation-overlay/button-profile.png",
+      "bytes": 278868,
+      "sha256": "26f21ec9780e90d3b78267561be3cebb6faf5bad32240f5cd2c6046d1f50a33e",
+      "width": 686,
+      "height": 574,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons-iphone/navigation/animation-overlay/button-settings.png",
+      "bytes": 279313,
+      "sha256": "eeb04b19d356475044ebcff2bf1945f67aa29a6d0e8a1871abcc47a14e184823",
+      "width": 686,
+      "height": 574,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons-iphone/navigation/assembled/button-cards.png",
+      "bytes": 394205,
+      "sha256": "b490a133e32cd6a3d433c3012b6ecde3fafe2fdc53ed363d3591a513af424b56",
+      "width": 686,
+      "height": 574,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons-iphone/navigation/assembled/button-dna.png",
+      "bytes": 377044,
+      "sha256": "3511a2e9d7f554e3c64caee0ddde6ee872151dffcda4d1903594215cf0d628ce",
+      "width": 686,
+      "height": 574,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons-iphone/navigation/assembled/button-help.png",
+      "bytes": 367999,
+      "sha256": "246b817aa90e4a579e2f9f4fb48a66ed960b43adfb6881297cfa4933568535e3",
+      "width": 686,
+      "height": 574,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons-iphone/navigation/assembled/button-play.png",
+      "bytes": 382032,
+      "sha256": "0f2229c68820c2947746ed95e15d65ab0a639dc61a5c26a1e807cd5c961f8a2e",
+      "width": 686,
+      "height": 574,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons-iphone/navigation/assembled/button-profile.png",
+      "bytes": 392585,
+      "sha256": "65574746794a863e68aadf6faf114ddc4ffe67aa200f1e64d3762a9a27479d53",
+      "width": 686,
+      "height": 574,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/buttons-iphone/navigation/assembled/button-settings.png",
+      "bytes": 391977,
+      "sha256": "8caeb7d540b950ca734f5e089c5cb2c8588eeaa15d5817c67a14518a7b89994a",
+      "width": 686,
+      "height": 574,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/components/canister-filled.png",
+      "bytes": 1784180,
+      "sha256": "24b041884bbcee6fd7fadc0f88c88f51172cb4f7a3f7860c20edfc4a946a86d5",
+      "width": 2172,
+      "height": 724,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/components/canister-frame.png",
+      "bytes": 1637698,
+      "sha256": "3bb7766641f9ee7bdd7e41e55a7be7f30439efaaf068866c5f0377b9be2f1288",
+      "width": 2172,
+      "height": 724,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/components/canister-mask.png",
+      "bytes": 48518,
+      "sha256": "a4090d8320c3ba99529896ff46a7470da8b416105fcde28fb61ee015851612b5",
+      "width": 2172,
+      "height": 724,
+      "mode": "RGB"
+    },
+    {
+      "path": "ui/components/navigation-filled.png",
+      "bytes": 1254837,
+      "sha256": "7823083dc72251ab9badf23af6407708d2563b8ee9560575672d256a79e63971",
+      "width": 1372,
+      "height": 1147,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/components/navigation-frame.png",
+      "bytes": 1080184,
+      "sha256": "41481b261825e39dd4ce64fcbcc7f554917266fa83bd1d68cd7f0562f60a7668",
+      "width": 1372,
+      "height": 1147,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/components/navigation-mask.png",
+      "bytes": 17933,
+      "sha256": "3794a9d045e02393aee083f78b4198eb8c9def30c140de885b9d5c4a11d710c3",
+      "width": 1372,
+      "height": 1147,
+      "mode": "RGB"
+    },
+    {
+      "path": "ui/components/sight-column-filled.png",
+      "bytes": 940540,
+      "sha256": "3b0530651f1ed040ac034ddde47e2a40066f7a59d10d6d170fcf69c5848449b3",
+      "width": 724,
+      "height": 2172,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/components/sight-column-frame.png",
+      "bytes": 866605,
+      "sha256": "26740260e3dd22fe9ce4da3d17af9497943f472c37ac7d30ca7f7b2a79d06a6e",
+      "width": 724,
+      "height": 2172,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/components/sight-column-mask.png",
+      "bytes": 17734,
+      "sha256": "e4fdfdea1be0475929359f7eb67579644c5eda2abcd5fe8c41fb21f3d0160c31",
+      "width": 724,
+      "height": 2172,
+      "mode": "RGB"
+    },
+    {
+      "path": "ui/components/smart-octagon-filled.png",
+      "bytes": 1505882,
+      "sha256": "611d9158b920c841e8e3091ef4237b28beb26e9140135d9b52ada88a410e3fb4",
+      "width": 1309,
+      "height": 1201,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/components/smart-octagon-frame.png",
+      "bytes": 1346044,
+      "sha256": "9010838bcdbd206f44b73df6befcaa1f13cf9b697598d4c14be3d5085f529157",
+      "width": 1309,
+      "height": 1201,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/components/smart-octagon-mask.png",
+      "bytes": 24673,
+      "sha256": "206b2dea1c18e7a6ebbbd3794fd7451eed32a83937581135ee79fbd7b7f82b1a",
+      "width": 1309,
+      "height": 1201,
+      "mode": "RGB"
+    },
+    {
+      "path": "ui/labels/icon-cards.png",
+      "bytes": 107208,
+      "sha256": "73fcfea4b22b8c1d1829c9779e81228056b4537adbd55f54e31493065e3662e9",
+      "width": 288,
+      "height": 288,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/labels/icon-dna.png",
+      "bytes": 80797,
+      "sha256": "ab6bb9f709b91b252e46eb7b70e32a2a72dfaf77201821cfa6daaf55bf3d58d3",
+      "width": 288,
+      "height": 288,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/labels/icon-help.png",
+      "bytes": 69737,
+      "sha256": "191bb4747ec99fb1b0d5294f6b7d0650cc96d683d188afd187499532d483626b",
+      "width": 288,
+      "height": 288,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/labels/icon-play.png",
+      "bytes": 87010,
+      "sha256": "4ff8d22f75b481a627960b87cfcbb9d4dda110fde0d74f9a6a2bee3dde902201",
+      "width": 288,
+      "height": 288,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/labels/icon-profile.png",
+      "bytes": 106901,
+      "sha256": "707c8bf7be8ade9916c85f27b51bb604e399918afbdd43897a7b10eddd7b6027",
+      "width": 288,
+      "height": 288,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/labels/icon-settings.png",
+      "bytes": 106730,
+      "sha256": "731e71a90952a1caef6d048b0fd2eec35c898e44c3bee46b5e68ad18f67958c6",
+      "width": 288,
+      "height": 288,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/labels/label-attack.png",
+      "bytes": 603052,
+      "sha256": "a7fb730bf1969f8331afd6f6f2e8b6578f6fe75d7465df7596698f9c395f6b6b",
+      "width": 1370,
+      "height": 288,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/labels/label-block.png",
+      "bytes": 550820,
+      "sha256": "fbdd0ad0140590a9a246becbc8730e80ff5b6a665fefae6e5e8e90c1b7e1ad80",
+      "width": 1169,
+      "height": 288,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/labels/label-cast-spell.png",
+      "bytes": 803760,
+      "sha256": "edf77e47481db39c5dc9725dbd5183a8daa9e6ceef02c4393594fabbcf4f95ff",
+      "width": 1849,
+      "height": 288,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/labels/label-choose.png",
+      "bytes": 693249,
+      "sha256": "ec43f411233722c401e781f8a64510514930dfb359df2dbd3f0b8dccdd0ffb96",
+      "width": 1420,
+      "height": 288,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/labels/label-continue.png",
+      "bytes": 757155,
+      "sha256": "47348f63789460853a683ca2b4d316c33432eb5a8e262512e08ece43257a5828",
+      "width": 1614,
+      "height": 288,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/labels/label-deck-mutator.png",
+      "bytes": 928031,
+      "sha256": "f7b5c12b3b7ca8598eefa3412b00d5e25ecc8ed05581eed409a79b1ad1747db8",
+      "width": 2015,
+      "height": 288,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/labels/label-discard.png",
+      "bytes": 672621,
+      "sha256": "025a45608060767def987f75205d076d24b17245a15afdc24c5ecbb3761713af",
+      "width": 1377,
+      "height": 288,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/labels/label-end-turn.png",
+      "bytes": 697216,
+      "sha256": "72bd04794aa5014710febd89f620860a7fdd2d904bca59e00630f5d47bb675a6",
+      "width": 1528,
+      "height": 288,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/labels/label-help.png",
+      "bytes": 459001,
+      "sha256": "0f1a69882d7664bc8006f3bc43317d9f687a4e80dcfcf30b88e26dbab952f495",
+      "width": 1029,
+      "height": 288,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/labels/label-new-game.png",
+      "bytes": 805292,
+      "sha256": "6d514f522bdcbe441fa65d22268ab935a74eac0f874e68a4c7d1b6cddac3bef9",
+      "width": 1630,
+      "height": 288,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/labels/label-next-phase.png",
+      "bytes": 789445,
+      "sha256": "d80a277282d140991c26311c3cc4f2fccee053ff978baac38109a8b4c2e60a7c",
+      "width": 1697,
+      "height": 288,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/labels/label-pass.png",
+      "bytes": 465605,
+      "sha256": "d4bc2157350608cfd3ff4d79a78c125fad8ff9523ce76c331d2b967484c3e0cb",
+      "width": 943,
+      "height": 288,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/labels/label-play-land.png",
+      "bytes": 760401,
+      "sha256": "ade5e77db140a009f49e552ba04c9185b8ad9dc94f6bb7d0c40cf2512627e83e",
+      "width": 1719,
+      "height": 288,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/labels/label-play-source-cutout.png",
+      "bytes": 229475,
+      "sha256": "8fcf47a440e41823c89c6e7e483c779c9af94bd1c36710a8887004a15c7890be",
+      "width": 569,
+      "height": 162,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/labels/label-play.png",
+      "bytes": 345131,
+      "sha256": "484a68d0fbc95fbc9811fbc8eb1a627b4a3fb19f9afb75b23fb47d8d05dc12cf",
+      "width": 891,
+      "height": 288,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/labels/label-profile.png",
+      "bytes": 661113,
+      "sha256": "9b3c038c10b686576bb9e007c4b88d91ffdcc29870fc5938ecb87e6b23db1009",
+      "width": 1462,
+      "height": 288,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/labels/label-resolve.png",
+      "bytes": 719261,
+      "sha256": "cdc41c3318d23cc7078b68b3fc1348d612169eec1d2cf18c7542556c5f12cc42",
+      "width": 1495,
+      "height": 288,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/labels/label-settings.png",
+      "bytes": 734609,
+      "sha256": "ed606e7775bfd49b290a044f0401aaa651809c397036476963268fda20adc15d",
+      "width": 1603,
+      "height": 288,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/labels/label-tagline.png",
+      "bytes": 842145,
+      "sha256": "df3a46a565766ef8d3b668b81b3233ebc190f4922adc4bcf3a39cd76ee6b9825",
+      "width": 2231,
+      "height": 288,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/labels/label-to-combat.png",
+      "bytes": 788271,
+      "sha256": "5241701ab0a47b7e1a50c8ca2098d2aec4a2aca3f5f2d7174611b5b21e178771",
+      "width": 1784,
+      "height": 288,
+      "mode": "RGBA"
+    },
+    {
+      "path": "ui/labels/label-vote.png",
+      "bytes": 438686,
+      "sha256": "1e604d4b9add3c7374c653d3a952347645c094b916f3454c22f69b890c9b3607",
+      "width": 992,
+      "height": 288,
+      "mode": "RGBA"
+    }
+  ]
+}
