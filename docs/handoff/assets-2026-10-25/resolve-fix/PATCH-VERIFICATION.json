@@ -1,0 +1,77 @@
+[
+  {
+    "path": "ui/labels/label-resolve.png",
+    "sha256": "563c134a722bba3f1a1b053fb8d5e2f60d6bc994705a66fd39ee18ba12a60947",
+    "dimensions": [
+      1495,
+      288
+    ],
+    "changed_pixel_count": 39596,
+    "changed_bbox": [
+      1026,
+      24,
+      1273,
+      263
+    ]
+  },
+  {
+    "path": "ui/buttons/game-actions/assembled/button-resolve.png",
+    "sha256": "9a0320f3ceb5a3d37c04aeb9aa69b0668f223f9fd2a74b5cffb64f27607e8816",
+    "dimensions": [
+      1309,
+      1201
+    ],
+    "changed_pixel_count": 8658,
+    "changed_bbox": [
+      782,
+      534,
+      895,
+      644
+    ]
+  },
+  {
+    "path": "ui/buttons/game-actions/animation-overlay/button-resolve.png",
+    "sha256": "e7f96a60311b022036b7bedb37d7bdfd453f0d5a8edccdf861f28e5b57fba013",
+    "dimensions": [
+      1309,
+      1201
+    ],
+    "changed_pixel_count": 8798,
+    "changed_bbox": [
+      781,
+      534,
+      895,
+      644
+    ]
+  },
+  {
+    "path": "ui/buttons-iphone/game-actions/assembled/button-resolve.png",
+    "sha256": "cae89ddbce4594f5c97bf60541c72ca4578445ab79bfc3973b0b848dcf13e862",
+    "dimensions": [
+      654,
+      600
+    ],
+    "changed_pixel_count": 2544,
+    "changed_bbox": [
+      389,
+      264,
+      449,
+      324
+    ]
+  },
+  {
+    "path": "ui/buttons-iphone/game-actions/animation-overlay/button-resolve.png",
+    "sha256": "20b2954a87e5979c439d9b163a4b6ce5110024ce3bcc0bca874df42a45f1977b",
+    "dimensions": [
+      654,
+      600
+    ],
+    "changed_pixel_count": 2528,
+    "changed_bbox": [
+      389,
+      264,
+      449,
+      324
+    ]
+  }
+]

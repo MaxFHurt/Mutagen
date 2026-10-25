@@ -1,6 +1,6 @@
 # MUTAGEN label and icon assets — request
 
-**Status 2026-10-25: Sets 1 and 2 and the logo delivered** (ChatGPT asset delivery, 145 files, all checksums verified; stored under `ui/buttons`, `ui/buttons-iphone`, `ui/labels`, `ui/components`, `ui/branding`; records in `handoff/assets-2026-10-25/`). Open defect: RESOLVE reads "RESOLYE" in every variant.
+**Status 2026-10-25: Sets 1 and 2 and the logo delivered** (ChatGPT asset delivery, 145 files, all checksums verified; stored under `ui/buttons`, `ui/buttons-iphone`, `ui/labels`, `ui/components`, `ui/branding`; records in `handoff/assets-2026-10-25/`). RESOLVE typo ("RESOLYE") fixed in every variant (rev 041, `handoff/assets-2026-10-25/resolve-fix/`).
 
 MUTAGEN shows button lettering only from supplied artwork; it never redraws or restyles letters
 (owner, 2026-10-25). The handoff contains no finished label assets: `PLAY_BUTTON_MASTER_HORIZONTAL.jpeg`
