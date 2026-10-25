@@ -1,5 +1,10 @@
 # MUTAGEN V3 — Visual Change Roadmap — Revision 007 (2026-10-12)
 
+## CURRENT REVISION 041 — RESOLVE typo fixed at source, 2026-10-25
+
+ChatGPT delivered corrected RESOLVE artwork (5 files: label, iPad and iPhone assembled and animation-overlay buttons). All five match their SHA-256 and replace the "RESOLYE" files at the same paths. Verified against the previous files: the only changed pixels are inside the stated letter areas, with the same pixel counts and bounds as the delivery's PATCH-VERIFICATION; size, shell, liquid and the other letters are untouched. The word now reads RESOLVE. Records: `handoff/assets-2026-10-25/resolve-fix/`. The RESOLVE hold in revision 040 is lifted; generated lettering stays conditionally approved. Still awaited from ChatGPT: the reworked logo liquid files and the home-screen pipe/frame artwork.
+
+
 ## CURRENT REVISION 040 — MUTAGEN home screen live; logo liquid rework authorised, 2026-10-25
 
 Home screen built to the approved landing layout with supplied artwork only: transparent logo, tagline label, NEW GAME / CONTINUE / DECK MUTATOR stacked, PROFILE / SETTINGS / HELP below, live sight columns at both sides; buttons are the supplied clear-glass versions over the approved liquid (iPad and other large screens use `ui/buttons/`, phones `ui/buttons-iphone/`). All six buttons keep their existing actions; Continue stays disabled without a saved game. Checked at iPhone (844×390) and iPad (1180×820) landscape. Not yet in place because no artwork exists for them: the steel pipes linking the buttons to the columns and the top pipe/frame from the master. They will not be drawn in code.

@@ -12,7 +12,7 @@ Read this first when picking up the work. Keep it short and current.
 - **Going live:** GitHub Pages from `main` (owner, 2026-10-25), repo made public. The root
   `index.html` forwards to `commander/`; `.nojekyll` serves every file as is.
 - **Phase 2 — visual layer:** live liquid APPROVED (rev 036); button artwork delivered (rev 039); home screen live
-  (rev 040). Waiting on ChatGPT: corrected RESOLVE files, reworked logo liquid, and pipe/frame artwork for the home
+  (rev 040). RESOLVE typo fixed (rev 041). Waiting on ChatGPT: reworked logo liquid, and pipe/frame artwork for the home
   screen. Labels and artwork are never redrawn in code.
 - **Then:** the visual layer, screen by screen as masters are approved. Deck Mutator's
   remaining "upgrade" sentences wait until Deck development settles (owner option b).
