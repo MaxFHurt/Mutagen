@@ -5,14 +5,14 @@ Read this first when picking up the work. Keep it short and current.
 ## Where things stand (2026-10-25)
 
 - **Phase 0 — baseline: done.** Details: `BASELINE.md`.
-- **Phase 1 — integrate: done** on branch `phase-0-baseline`, PR into `main` for the owner to merge.
+- **Phase 1 — integrate: done**, merged to `main` (PR #1) and live at https://maxfhurt.github.io/Mutagen/.
   Deck Builder opens Deck Mutator with return to the caller; one profile across both sides; app
   names renamed; Deck Mutator's main tier labels are Mutations; combo data ships with the site.
   Every edit to the copied apps is in `CHANGES-TO-COPIES.md`.
 - **Going live:** GitHub Pages from `main` (owner, 2026-10-25), repo made public. The root
   `index.html` forwards to `commander/`; `.nojekyll` serves every file as is.
-- **Phase 2 — visual layer: started** on branch `phase-2-liquid`: live liquid component `ui/liquid/` (review
-  prototype, see revision 030). Waiting for the owner's review before using it on screens.
+- **Phase 2 — visual layer:** live liquid `ui/liquid/` APPROVED (revision 036). Next: the MUTAGEN home screen, waiting
+  on label/icon artwork (`LABEL-ASSET-REQUEST.md`) and a transparent logo. Labels are never redrawn in code.
 - **Then:** the visual layer, screen by screen as masters are approved. Deck Mutator's
   remaining "upgrade" sentences wait until Deck development settles (owner option b).
 
@@ -38,7 +38,8 @@ Read this first when picking up the work. Keep it short and current.
 - Never push to `main` / ship a build without the owner's explicit yes.
 - Do only what was asked; ask when a change goes beyond it.
 - No feature loss (MUT-13, MUT-14, MUT-22). Reskin existing handlers; mockups are not specs.
-- Locked art is used exactly as supplied (`handoff/locked-references/locked/`).
+- Locked art is used exactly as supplied (`handoff/locked-references/locked/`). Never rebuild or remake assets
+  (labels, lettering, icons); missing assets are requested, not improvised (owner, 2026-10-25).
 - On every accepted change, update `MUTAGEN-Working-Source.md` and
   `MUTAGEN-Visual-Change-Roadmap.md` in `docs/` (the received rev 027 copies stay in
   `handoff/current/`).
