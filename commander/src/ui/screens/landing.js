@@ -8,7 +8,8 @@ import { openJudge } from '../judge-modal.js';
 import { openSettings } from '../settings-modal.js';
 import { toast } from '../toast.js';
 import { openDeckMutator } from '../../mutagen/bridge.js';
-import '../../../../ui/liquid/liquid.js';   // MUTAGEN live liquid (<mutagen-chamber>)
+import { kitStage } from '../../mutagen/kit-stage.js';
+import HOME from '../../../../ui/kits/home/layout.js';
 
 /** Most recent saved session of either kind, or null. */
 async function latestSave() {
@@ -22,33 +23,19 @@ async function latestSave() {
 
 export const landingScreen = {
   mount(root) {
-    // MUTAGEN home (approved landing layout): logo and tagline, three main buttons, three tool buttons, live sight
-    // columns at the sides. Buttons are the supplied finished artwork with clear glass over the live liquid; iPad and
-    // other large screens use the full-resolution set, phones the half-resolution set.
-    const ui = '../ui/', set = Math.min(screen.width, screen.height) >= 700 ? 'buttons' : 'buttons-iphone';
-    const btn = (act, file, name, disabled = false) => html`<button type="button" class="mh-btn" data-act="${act}" aria-label="${name}" ${disabled ? 'disabled' : ''}>
-      <mutagen-chamber shell="canister" stream overlay="${ui}${set}/home/animation-overlay/button-${file}.png">${name}</mutagen-chamber></button>`;
+    // MUTAGEN home: the supplied home kit (ui/kits/home/, ChatGPT revision 02, after the approved landing master) with
+    // live liquid in its pipes and buttons and the live logo. Same buttons and actions as before.
     setHtml(root, html`
-      <main class="landing mutagen-home">
-        <mutagen-chamber class="mh-column mh-column--left" shell="sight-column" flow="down" stream></mutagen-chamber>
-        <div class="mh-center">
-          <div class="mh-brand">
-            <mutagen-chamber class="mh-logo" shell="logo-v2" flow="none" overlay="${ui}branding/logo-mutagen-v2-overlay.png">MUTAGEN</mutagen-chamber>
-            <img class="mh-tagline" src="${ui}labels/label-tagline.png" alt="Mutate The Gathering">
-          </div>
-          <div class="mh-primary">
-            ${btn('start', 'new-game', 'New Game')}
-            ${btn('continue', 'continue', 'Continue', true)}
-            ${btn('decks', 'deck-mutator', 'Deck Mutator')}
-          </div>
-          <nav class="mh-tools" aria-label="Tools">
-            ${btn('profile', 'profile', 'Profile')}
-            ${btn('settings', 'settings', 'Settings')}
-            ${btn('help', 'help', 'Help')}
-          </nav>
-        </div>
-        <mutagen-chamber class="mh-column mh-column--right" shell="sight-column" flow="up" stream></mutagen-chamber>
-        <div class="landing__foot">MUTAGEN • ${VERSION}</div>
+      <main class="landing mutagen-home kit-screen">
+        ${kitStage(HOME, 'home', {
+          'new-game': { act: 'start', name: 'New Game' },
+          continue: { act: 'continue', name: 'Continue', disabled: true },
+          'deck-mutator': { act: 'decks', name: 'Deck Mutator' },
+          profile: { act: 'profile', name: 'Profile' },
+          settings: { act: 'settings', name: 'Settings' },
+          help: { act: 'help', name: 'Help' }
+        })}
+        <div class="landing__foot kit-foot">MUTAGEN • ${VERSION}</div>
       </main>`);
 
     let resume = null;
