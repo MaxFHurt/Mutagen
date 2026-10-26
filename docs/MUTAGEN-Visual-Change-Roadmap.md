@@ -1,5 +1,12 @@
 # MUTAGEN V3 — Visual Change Roadmap — Revision 007 (2026-10-12)
 
+## CURRENT REVISION 063 — Lighter home screen, site icon, small-phone tap size, 2026-10-26
+
+- Download: the home screen fetched 29.2 MB of images. Art that is not on screen (still images, pressed and inactive looks) now loads only when shown (`loading="lazy"` in `kit-stage.js`), bringing it to 18.9 MB with nothing visible changed. The rest is mostly the uncompressed background (6.8 MB) and logo glass layer (5.6 MB). Compressing them is image work, so it is requested from ChatGPT (WebP / JPEG). Unused files in the repo cost users nothing (only requested files download), so they stay for now.
+- Site icon: `commander/index.html` links `assets/img/icon-192.png` as the icon, so browsers no longer request a missing `/favicon.ico`. This fixes the long-standing game_ui failure (now 28/28).
+- Every reachable screen (home, Choose Game Mode, Player Setup local and hosting, Join, Table Tracker setup, Profile, Settings, Help) was checked at 1180×755, 1366×1024, 844×390 and 667×375 for page overflow, controls off screen and tiny tap targets. The only issue was the hosting − / + at about 26 px on an iPhone SE, now at least 36 px (`ui/fixes.css`, new, Mutagen-owned).
+
+
 ## CURRENT REVISION 062 — Player Setup proposal approved; full feature inventory for ChatGPT, 2026-10-26
 
 Owner approved ChatGPT's Player Setup proposal, with the corrections recorded in `KIT-CONTRACT.md`: a display deck box, Continue or Open Room one at a time, the player's own playmats, Guided and Free Play titles (`title-guided` / `title-freeplay`, wired in the kit path), up to 6 live tabs with player colours and deck status, and the hosting wording. Owner: "I want all features. If any are missing tell ChatGPT to fix it." `FEATURE-INVENTORY.md` lists every control on every screen, read from the code, as the checklist each design and kit must meet. mutagen_flow 37/37.
