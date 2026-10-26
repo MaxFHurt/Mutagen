@@ -49,3 +49,6 @@ adds alongside the copies do not need listing.
 | 2026-10-26 | `commander/src/ui/settings-modal.js`, `commander/src/main.js` | Still liquid / Softer green settings, applied through `commander/src/mutagen/preferences.js` (new) | MUT-21 (rev 056) |
 | 2026-10-26 | `commander/src/ui/screens/landing.js`, `mode-select.js` | Home and Choose Game Mode use ChatGPT's revision 02 kits through `commander/src/mutagen/kit-stage.js` (new); same buttons, menus and actions | Revision 02 kits (rev 057) |
 | 2026-10-26 | `commander/index.html` | Loads `../ui/kits/kit.css` | Revision 02 kits (rev 057) |
+| 2026-10-26 | `commander/src/ui/screens/player-setup.js` | Uses a player-setup kit when installed (`drawKit`); otherwise unchanged | Kit contract (rev 058) |
+| 2026-10-26 | `commander/index.html` | Loads `../ui/kits/skin.css` (empty until a skin kit is installed) | Skin kit (rev 058) |
+| 2026-10-26 | `deck/mutagen.js` | Links `../ui/kits/skin-deck.css` (empty until a skin kit is installed) | Skin kit (rev 058) |

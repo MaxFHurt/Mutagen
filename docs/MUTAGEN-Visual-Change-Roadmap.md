@@ -1,5 +1,17 @@
 # MUTAGEN V3 — Visual Change Roadmap — Revision 007 (2026-10-12)
 
+## CURRENT REVISION 058 — Every screen wired for its art; the assets are the last thing to wait on, 2026-10-26
+
+Owner: ChatGPT is remaking assets, so make everything that does not need them and leave the assets as the last thing to wait on. No image work. `docs/KIT-CONTRACT.md` is the exact spec ChatGPT delivers to; each screen is already wired to its names.
+
+- Installed-kit lookup: `tools/kits/layout-module.py` now also writes `ui/kits/index.js`, the list of installed kits. Screens ask `kitFor(name)` and keep their current layout until their kit is installed, so installing is: copy the folder, run the tool, test, publish.
+- Kits can hold live content: the new piece type `panel` is a rectangle for the screen's own content (a form, a list, a count). Buttons can carry any data attribute and can be hidden when they do not apply.
+- Player Setup is wired for its kit: 12 named buttons (back, deck-mutator, continue / open-room, add / remove player, remote − / +, saved decks, precon catalog, paste list, view deck) with the same actions and conditions as today, and panels for the player tabs, the live form, the mode note and the remote count. Deck-source buttons drawn by the kit are not repeated inside the form.
+- Skin kit for every other screen and both apps: stretchable frames (button with pressed / disabled, primary, danger, square, panel, modal, option and option-on, tab and tab-on, input, Back) plus SKIN.json slices. The tool turns them into `ui/kits/skin.css` (game side: buttons, steppers, panels, game and tracker zones, pop-ups, option rows, tabs, fields, Back) and `ui/kits/skin-deck.css` (Deck Mutator: `.btn` and its variants, pips, panels, modals, tabs, fields), linked by `commander/index.html` and by Mutagen's `deck/mutagen.js`. Both are empty until a skin is installed. Only frame sources and slices change, never a layout.
+- Tested without making art: a test kit for Player Setup that points at the installed mode-select images (6 new checks: kit buttons by state, panels with live content, no repeated buttons, typing a name, Add player, the Saved decks picker, Back). Also the skin pipeline in a scratch copy with Commander's existing frames as stand-ins: both apps take the frames, sizes unchanged, paths resolve.
+- Tests: mutagen_flow 36/36, liquid 8/8, flows_ui 24/24, game_ui 27/28 (pre-existing favicon 404), Deck quick check 12/12, semantics 49/51 (pre-existing). Deck patch refreshed.
+
+
 ## CURRENT REVISION 057 — ChatGPT revision 02 kits installed: home and Choose Game Mode, 2026-10-26
 
 ChatGPT delivered `MUTAGEN-Revision-02` in four parts (163 files). 160 of the 162 SHA256SUMS entries are stored and verified at their new paths. Two were not installed: `03-proposed-masters/04-Host-Room-Proposed.png` fails its hash and is truncated (needs re-sending), and `01-home/.SOURCE-NATIVE-1672x941.png.eXeefl` is a stray truncated temp copy. Stored unchanged: `ui/kits/home/`, `ui/kits/mode-select/` (background, pipes, buttons with assembled / clear-glass overlay / liquid mask / pressed / disabled, lettering, LAYOUT.json), `ui/kits/branding/` (logo v2 at 2508 × 2508 with overlay and mask). Handoff, sums, build record, previews, sources and the Player Setup proposal are in `handoff/rev02/`.

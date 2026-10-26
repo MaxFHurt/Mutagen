@@ -3,6 +3,7 @@
 // - One profile: the player's name lives in the game side's profile (ccv07-profile) and is shown here read-only;
 //   the profile page also shows the game record. Decks, collection, buy lists and tablemates stay here (dc.profile).
 // - One installed app: works offline through sw.js, and manifest.json installs MUTAGEN, not a separate app.
+// - One look: the MUTAGEN skin kit's frames, when installed (../ui/kits/skin-deck.css).
 (function () {
   var GAME_PROFILE_KEY = 'ccv07-profile', MUTATOR_PROFILE_KEY = 'dc.profile', RETURN_KEY = 'mutagen.return';
 
@@ -23,6 +24,13 @@
     try { sessionStorage.setItem(RETURN_KEY, JSON.stringify({ screen: screen, params: {} })); } catch (e) { /* lands on home */ }
     location.href = '../commander/';
   }
+
+  // The MUTAGEN skin (ui/kits/skin/, generated into skin-deck.css): frames for buttons, panels, tabs and fields. The
+  // sheet is empty until a skin kit is installed, so Deck Mutator looks as it does now until then.
+  var skin = document.createElement('link');
+  skin.rel = 'stylesheet';
+  skin.href = '../ui/kits/skin-deck.css';
+  document.head.appendChild(skin);
 
   var style = document.createElement('style');
   style.textContent =

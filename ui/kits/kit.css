@@ -27,3 +27,14 @@ html[data-motion="reduced"] .kit-still { display: block; }
 .kit-btn:focus-visible { outline: 2px solid #b993ff; outline-offset: -6px; border-radius: 2em; }
 .kit-foot { position: absolute; left: 0; right: 0; bottom: calc(4px + var(--safe-b, 0px)); text-align: center; font-size: 9px; z-index: 1; }
 .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* Panels: the screen's own live content inside a rectangle of the kit, scrolling if it does not fit. Content keeps its
+   own controls and is styled by the skin kit when one is installed (ui/kits/skin/). */
+.kit-panel { overflow: auto; -webkit-overflow-scrolling: touch; container-type: size; }
+/* A control the kit draws as artwork is not shown a second time inside a panel's live content. */
+.kit-stage:has(.kit-btn[data-seat-act="saved"]) .kit-panel [data-seat-act="saved"],
+.kit-stage:has(.kit-btn[data-seat-act="precon"]) .kit-panel [data-seat-act="precon"],
+.kit-stage:has(.kit-btn[data-seat-act="paste"]) .kit-panel [data-seat-act="paste"],
+.kit-stage:has(.kit-btn[data-seat-act="view"]) .kit-panel [data-seat-act="view"] { display: none; }
+.kit-note, .kit-count { margin: 0; height: 100%; display: flex; align-items: center; justify-content: center; text-align: center; font-size: clamp(9px, 1.6cqh + 0.4cqw, 18px); color: var(--muted, #b9a9d8); }
+.kit-count b { font-size: 1.6em; color: #fff; margin-right: 0.4em; }

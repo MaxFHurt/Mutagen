@@ -12,6 +12,7 @@ import { prepareSeats, confirmSeats, chooseRules, buildGame } from '../../app/st
 import { startLocalSession } from '../../app/session.js';
 import { PLAYER_COLORS } from '../../game/setup.js';
 import { openDeckMutator } from '../../mutagen/bridge.js';
+import { kitStage, kitFor } from '../../mutagen/kit-stage.js';
 
 function seatFromDefaults(index, defaults) {
   const seat = emptySeat(defaults.playerNames?.[index] || '');
@@ -36,8 +37,40 @@ export const playerSetupScreen = {
     let active = 0, remote = hosting ? Math.max(1, params.remoteSeats || 1) : 0, busy = false;
     const minLocal = hosting ? 1 : 2;
 
+    // MUTAGEN: with a player-setup kit installed (docs/KIT-CONTRACT.md), the same controls on the kit's artwork.
+    function drawKit(kit, title) {
+      const name = seats[active].name.trim() || `Player ${active + 1}`;
+      const tabs = html`<nav class="setup__tabs">${seats.map((s, i) => html`<button type="button" class="setup__tab ${i === active ? 'is-on' : ''}" data-act="tab" data-seat="${i}" style="--player:${PLAYER_COLORS[i]}">
+          <b>${s.name.trim() || `Player ${i + 1}`}</b><small>${s.deckList && s.commander1 ? `✓ ${s.deckName}` : 'Needs a deck'}</small></button>`)}</nav>`;
+      setHtml(root, html`
+        <main class="page--setup kit-screen" aria-label="Player setup">
+          <h1 class="visually-hidden">Player Setup — ${title}</h1>
+          ${kitStage(kit, 'player-setup', {
+            back: { act: 'back', name: 'Back' },
+            'deck-mutator': { act: 'deck-mutator', name: 'Deck Mutator' },
+            continue: { act: 'start', name: 'Continue', hidden: hosting },
+            'open-room': { act: 'start', name: 'Open room', hidden: !hosting },
+            'add-player': { act: 'add', name: hosting ? 'Add player on this device' : 'Add player', hidden: seats.length + remote >= 6 },
+            'remove-player': { act: 'remove', name: `Remove ${name}`, hidden: seats.length <= minLocal },
+            'remote-minus': { act: 'remote', data: { step: '-1' }, name: 'One fewer player joining from another device', hidden: !hosting },
+            'remote-plus': { act: 'remote', data: { step: '1' }, name: 'One more player joining from another device', hidden: !hosting },
+            'saved-decks': { name: 'Saved decks', data: { 'seat-act': 'saved' } },
+            'precon-catalog': { name: 'Precon catalog', data: { 'seat-act': 'precon' } },
+            'paste-list': { name: 'Paste list', data: { 'seat-act': 'paste' } },
+            'view-deck': { name: 'View deck', data: { 'seat-act': 'view' }, hidden: !seats[active].deckList }
+          }, {
+            tabs,
+            form: seatFormHtml(seats[active], active),
+            note: html`<p class="kit-note">${mode === 'freeplay' ? 'Free Play: any deck is allowed and every rule can be overridden.' : 'Guided Play checks each deck against the Commander rules.'}</p>`,
+            'remote-count': hosting ? html`<p class="kit-count"><b>${remote}</b> joining from other devices</p>` : ''
+          })}
+        </main>`);
+    }
+
     function draw() {
       const title = mode === 'freeplay' ? 'Free Play' : 'Guided Play';
+      const kit = kitFor('player-setup');
+      if (kit) return drawKit(kit, title);
       setHtml(root, html`
         <main class="page page--setup">
           <header class="page__head">

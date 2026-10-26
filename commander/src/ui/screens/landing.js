@@ -8,8 +8,7 @@ import { openJudge } from '../judge-modal.js';
 import { openSettings } from '../settings-modal.js';
 import { toast } from '../toast.js';
 import { openDeckMutator } from '../../mutagen/bridge.js';
-import { kitStage } from '../../mutagen/kit-stage.js';
-import HOME from '../../../../ui/kits/home/layout.js';
+import { kitStage, kitFor } from '../../mutagen/kit-stage.js';
 
 /** Most recent saved session of either kind, or null. */
 async function latestSave() {
@@ -27,7 +26,7 @@ export const landingScreen = {
     // live liquid in its pipes and buttons and the live logo. Same buttons and actions as before.
     setHtml(root, html`
       <main class="landing mutagen-home kit-screen">
-        ${kitStage(HOME, 'home', {
+        ${kitStage(kitFor('home'), 'home', {
           'new-game': { act: 'start', name: 'New Game' },
           continue: { act: 'continue', name: 'Continue', disabled: true },
           'deck-mutator': { act: 'decks', name: 'Deck Mutator' },
