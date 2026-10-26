@@ -1,8 +1,8 @@
 diff --git a/deck/index.html b/deck/index.html
-index 51a7fda73340129629574c7d33c773fd52db0995..417155b8d23cbedfd7a4c2a5549135c744eebce8 100644
+index 51a7fda73340129629574c7d33c773fd52db0995..d29305362de39aa6e5fb1715065823c994585509 100644
 --- a/deck/index.html
 +++ b/deck/index.html
-@@ -5,12 +5,12 @@
+@@ -5,12 +5,13 @@
  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
  <meta name="description" content="Magic: The Gathering deck builder for Commander and Standard with aimed upgrade recommendations in three price tiers.">
  <meta name="theme-color" content="#06030d">
@@ -11,13 +11,15 @@ index 51a7fda73340129629574c7d33c773fd52db0995..417155b8d23cbedfd7a4c2a5549135c7
  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=1">
  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png?v=1">
  <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png?v=1">
- <link rel="manifest" href="manifest.json?v=1">
+-<link rel="manifest" href="manifest.json?v=1">
 -<meta name="apple-mobile-web-app-title" content="Deck Companion">
-+<meta name="apple-mobile-web-app-title" content="Deck Mutator">
++<link rel="manifest" href="manifest.json?v=2">
++<meta name="apple-mobile-web-app-title" content="MUTAGEN">
++<meta name="apple-mobile-web-app-capable" content="yes">
  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap">
  <style>
  /* Layout: gothic command console. Chrome-framed panels over a painted night sky; three working columns (aim, decklist, upgrades). Single dark look by design. */
-@@ -432,7 +432,7 @@ a{color:var(--glow)}
+@@ -432,7 +433,7 @@ a{color:var(--glow)}
  <div class="app">
    <header class="top">
      <nav class="nav" id="nav-l" aria-label="Main"></nav>
@@ -26,7 +28,7 @@ index 51a7fda73340129629574c7d33c773fd52db0995..417155b8d23cbedfd7a4c2a5549135c7
        <svg viewBox="0 0 64 64" aria-hidden="true">
          <defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff"/><stop offset=".5" stop-color="#b993ff"/><stop offset="1" stop-color="#4a2aa8"/></linearGradient></defs>
          <g class="spin"><circle cx="32" cy="32" r="27" fill="none" stroke="url(#g1)" stroke-width="1.5" stroke-dasharray="3 5"/></g>
-@@ -440,16 +440,17 @@ a{color:var(--glow)}
+@@ -440,16 +441,17 @@ a{color:var(--glow)}
          <path d="M32 4 L37 27 L60 32 L37 37 L32 60 L27 37 L4 32 L27 27 Z" fill="url(#g1)"/>
          <path class="pulse" d="M32 16 L35 29 L48 32 L35 35 L32 48 L29 35 L16 32 L29 29 Z" fill="#fff"/>
        </svg>
@@ -47,24 +49,24 @@ index 51a7fda73340129629574c7d33c773fd52db0995..417155b8d23cbedfd7a4c2a5549135c7
  <script>
  // Self-update: browsers hold on to an old copy of this page. Ask the server which build is current (never cached)
 diff --git a/deck/manifest.json b/deck/manifest.json
-index 1d3923324f5d4cc7d8d0f7d8c1fab6d802c4f422..ba64638494ede018024244e862f310a2c904aff0 100644
+index 1d3923324f5d4cc7d8d0f7d8c1fab6d802c4f422..3b9e1104006ea107576bc28c5b45e7aa5813a4c4 100644
 --- a/deck/manifest.json
 +++ b/deck/manifest.json
 @@ -1 +1 @@
 -{"name":"Deck Companion","short_name":"Deck Companion","start_url":"./","scope":"./","display":"browser","background_color":"#06030d","theme_color":"#06030d","icons":[{"src":"icon-192.png","sizes":"192x192","type":"image/png"},{"src":"icon-512.png","sizes":"512x512","type":"image/png"}]}
 \ No newline at end of file
-+{"name":"Deck Mutator · MUTAGEN","short_name":"Deck Mutator","start_url":"./","scope":"./","display":"browser","background_color":"#06030d","theme_color":"#06030d","icons":[{"src":"icon-192.png","sizes":"192x192","type":"image/png"},{"src":"icon-512.png","sizes":"512x512","type":"image/png"}]}
-\ No newline at end of file
++{"name": "MUTAGEN", "short_name": "MUTAGEN", "start_url": "../commander/", "scope": "../", "display": "standalone", "orientation": "landscape", "background_color": "#050407", "theme_color": "#050407", "icons": [{"src": "../commander/assets/img/icon-192.png", "sizes": "192x192", "type": "image/png"}, {"src": "../commander/assets/img/icon-512.png", "sizes": "512x512", "type": "image/png"}]}
 diff --git a/deck/mutagen.js b/deck/mutagen.js
 new file mode 100644
-index 0000000000000000000000000000000000000000..81fede780f9ab5880a32c661b73f83598e1eabb5
+index 0000000000000000000000000000000000000000..96bfed133cb8f424b351cdfa14be79ea7b931bad
 --- /dev/null
 +++ b/deck/mutagen.js
-@@ -0,0 +1,69 @@
+@@ -0,0 +1,75 @@
 +// MUTAGEN: Deck Mutator is part of MUTAGEN. Kept outside the app bundle so the copied Deck Companion code stays as it was.
 +// - Return to MUTAGEN: back to the game side (../commander/), which reopens the screen that opened Deck Mutator.
 +// - One profile: the player's name lives in the game side's profile (ccv07-profile) and is shown here read-only;
 +//   the profile page also shows the game record. Decks, collection, buy lists and tablemates stay here (dc.profile).
++// - One installed app: works offline through sw.js, and manifest.json installs MUTAGEN, not a separate app.
 +(function () {
 +  var GAME_PROFILE_KEY = 'ccv07-profile', MUTATOR_PROFILE_KEY = 'dc.profile', RETURN_KEY = 'mutagen.return';
 +
@@ -129,7 +131,51 @@ index 0000000000000000000000000000000000000000..81fede780f9ab5880a32c661b73f8359
 +    if (t) openGameSide('profile');
 +  });
 +  new MutationObserver(patchProfile).observe(document.body, { childList: true, subtree: true });
++
++  // Offline: Deck Mutator's own files are cached as they load (sw.js), so an installed MUTAGEN opens it offline too.
++  if ('serviceWorker' in navigator && location.protocol !== 'file:') {
++    navigator.serviceWorker.register('sw.js').catch(function (e) { console.warn('Deck Mutator offline cache not registered', e); });
++  }
 +})();
+diff --git a/deck/sw.js b/deck/sw.js
+new file mode 100644
+index 0000000000000000000000000000000000000000..af414cf5c7296fc94155f8584f4bc8d61eb1dd6d
+--- /dev/null
++++ b/deck/sw.js
+@@ -0,0 +1,33 @@
++// MUTAGEN: offline support for Deck Mutator, so an installed MUTAGEN can open it without a connection. Same approach as
++// the game side (../commander/sw.js): every request for this site's files goes to the network with revalidation, and
++// the cache is used only when the device is offline. Card data and images from other sites go straight to the network.
++const CACHE = 'mutagen-deck-v1';
++
++self.addEventListener('install', () => self.skipWaiting());
++
++self.addEventListener('activate', event => {
++  event.waitUntil((async () => {
++    const keys = await caches.keys();
++    await Promise.all(keys.filter(key => key.startsWith('mutagen-deck-') && key !== CACHE).map(key => caches.delete(key)));
++    await self.clients.claim();
++  })());
++});
++
++self.addEventListener('fetch', event => {
++  const request = event.request;
++  if (request.method !== 'GET') return;
++  const url = new URL(request.url);
++  if (url.origin !== self.location.origin) return;
++  event.respondWith((async () => {
++    const cache = await caches.open(CACHE);
++    try {
++      const fresh = await fetch(request, { cache: 'no-cache' });
++      if (fresh.ok) cache.put(request, fresh.clone());
++      return fresh;
++    } catch (error) {
++      const cached = await cache.match(request, { ignoreSearch: true });
++      if (cached) return cached;
++      throw error;
++    }
++  })());
++});
 diff --git a/deck/tools/tests/suite/ui-test.mjs b/deck/tools/tests/suite/ui-test.mjs
 index e911dbaf64560b50806ea1d1af8dfa40f66639f9..d26c2c4f971108c7c8822b8164426a824fe5bf00 100644
 --- a/deck/tools/tests/suite/ui-test.mjs

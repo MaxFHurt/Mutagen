@@ -4,6 +4,7 @@ import { html, on } from './dom.js';
 import { openModal } from './modal.js';
 import { loadSettings, saveSettings } from '../data/store.js';
 import { VERSION, BUILD_DATE } from '../version.js';
+import { applyLiquidPrefs } from '../mutagen/preferences.js';
 
 const GUIDANCE = [
   ['coach', 'Coach', 'Explains each step, highlights what you can play and suggests a next move.'],
@@ -29,6 +30,14 @@ export function openSettings() {
           <span><strong>Learning tips</strong><small>Short explanations of phases and keywords as they come up.</small></span>
           <span class="option__end">${settings.tips ? 'On' : 'Off'}</span>
         </button>
+        <button type="button" class="option ${settings.stillLiquid ? 'is-on' : ''}" data-toggle="stillLiquid">
+          <span><strong>Still liquid</strong><small>The liquid in the glass stops moving. Also follows the device's Reduce Motion setting.</small></span>
+          <span class="option__end">${settings.stillLiquid ? 'On' : 'Off'}</span>
+        </button>
+        <button type="button" class="option ${settings.softGreen ? 'is-on' : ''}" data-toggle="softGreen">
+          <span><strong>Softer green</strong><small>A dimmer, less saturated green. Nothing else changes.</small></span>
+          <span class="option__end">${settings.softGreen ? 'On' : 'Off'}</span>
+        </button>
       </div>
       <p class="muted">MUTAGEN ${VERSION} • ${BUILD_DATE}</p>`,
     onMount(el, { close }) {
@@ -40,6 +49,7 @@ export function openSettings() {
       on(el, 'click', '[data-toggle]', (event, button) => {
         const key = button.dataset.toggle;
         saveSettings({ [key]: !loadSettings()[key] });
+        applyLiquidPrefs();
         close();
         openSettings();
       });
