@@ -14,7 +14,9 @@ The same format as revision 02's home and Choose Game Mode kits:
   - `pieces`: one entry per piece, each with `id`, `type` and `rect` [x, y, width, height] in canvas pixels.
 - Piece types:
   - `pipes`: `files.assembled`. Add `files.overlay` (clear glass) and `files.mask` (R coverage, G depth) if it holds liquid.
-  - `buttons`: `files.assembled`, `files.overlay`, `files.mask`, `files.pressed`, `files.disabled`. The id must be
+  - `buttons`: `files.assembled`, `files.overlay`, `files.mask`, `files.pressed`, `files.disabled`. An inactive
+    button is shown faint with no ooze in its glass (owner), using its clear-glass overlay faded, so the overlay must
+    show the empty glass cleanly. The id must be
     one from the list below, because the app binds each id to a real button with its action and accessible name.
   - `lettering`: `file`, finished text artwork such as titles and sub-lines.
   - `branding`: the logo slot. The app shows the live logo v2 there.
