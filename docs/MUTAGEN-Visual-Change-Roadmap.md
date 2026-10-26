@@ -1,5 +1,10 @@
 # MUTAGEN V3 — Visual Change Roadmap — Revision 007 (2026-10-12)
 
+## CURRENT REVISION 062 — Player Setup proposal approved; full feature inventory for ChatGPT, 2026-10-26
+
+Owner approved ChatGPT's Player Setup proposal, with the corrections recorded in `KIT-CONTRACT.md`: a display deck box, Continue or Open Room one at a time, the player's own playmats, Guided and Free Play titles (`title-guided` / `title-freeplay`, wired in the kit path), up to 6 live tabs with player colours and deck status, and the hosting wording. Owner: "I want all features. If any are missing tell ChatGPT to fix it." `FEATURE-INVENTORY.md` lists every control on every screen, read from the code, as the checklist each design and kit must meet. mutagen_flow 37/37.
+
+
 ## CURRENT REVISION 061 — No bright rims: kit liquid darkens at the glass edge, 2026-10-26
 
 Owner: the light highlighting around the edges of the buttons is bright; why? The cause was in Claude's live liquid, not the art. The approved liquid makes the thinnest liquid, at the edge of its mask, the brightest. ChatGPT's kit masks reach right to the glass rim, where its own still art shows a dark edge, so the live liquid drew a bright lime rim exactly where real glass is darkest, with the kit's semi-transparent highlights adding white on top. Kit chambers now use `edge="dark"`: the liquid darkens toward the rim (up to 62% darker in the outer quarter of the depth), matching the kit's still images. Code only (`ui/liquid/liquid.js` uniform `uEdge`; set for kit pipes, buttons and the logo). Chambers without it are unchanged. Tests: mutagen_flow 37/37, liquid 8/8.
