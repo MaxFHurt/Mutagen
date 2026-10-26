@@ -40,6 +40,7 @@ uniform vec2 uFlow;           // flow direction through the pipe, in texture spa
 uniform float uBulb;          // 1 = a wide glass bulb fed by a narrow pipe on the left, drained by one on the right
 uniform float uStream;        // 1 = part of a stream of pipes: the liquid is laid out on the page, so it runs on from pipe to pipe
 uniform vec2 uPage;           // stream: the window's top-left on the page, in stream units
+uniform float uEdge;          // 1 = darken toward the glass edge, as real glass does (kits: their masks reach the rim)
 uniform float uBubble;        // bubble size scale for the shell (1 = the buttons' approved sizes)
 uniform float uUnit;          // stream: canvas pixels per stream unit (one unit is about a main button's window height)
 float gSeed;                  // seed for hash(): shared by a stream's liquid, per chamber for its bubbles
@@ -84,6 +85,8 @@ void main(){
   }
   float path = (0.38 + 1.4 * thick) * (0.88 + 0.24 * n);
   vec3 col = vec3(0.95, 1.0, 0.85) * exp(-vec3(4.6, 0.42, 5.6) * path);
+  // At the rim the glass bends light away, so the liquid there looks darker, not brighter (kit chambers).
+  col *= mix(1.0 - 0.62 * uEdge, 1.0, smoothstep(0.0, 0.24, depth));
   // Light from above scatters inside the liquid: a soft lift toward the top, strongest near the glass.
   float top = 1.0 - st.y;
   col += vec3(0.015, 0.07, 0.012) * top * top * (1.0 - 0.5 * thick);
@@ -162,7 +165,7 @@ function renderer() {
     gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 1, -1, -1, 1, 1, 1]), gl.STATIC_DRAW);
     const loc = gl.getAttribLocation(prog, 'p'); gl.enableVertexAttribArray(loc); gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
     const u = n => gl.getUniformLocation(prog, n);
-    shared = { canvas, gl, u: { mask: u('uMask'), res: u('uRes'), time: u('uTime'), seed: u('uSeed'), green: u('uGreen'), flow: u('uFlow'), bulb: u('uBulb'), stream: u('uStream'), page: u('uPage'), unit: u('uUnit'), bubble: u('uBubble') } };
+    shared = { canvas, gl, u: { mask: u('uMask'), res: u('uRes'), time: u('uTime'), seed: u('uSeed'), green: u('uGreen'), flow: u('uFlow'), bulb: u('uBulb'), stream: u('uStream'), page: u('uPage'), unit: u('uUnit'), bubble: u('uBubble'), edge: u('uEdge') } };
   } catch (error) {
     console.warn('Liquid: WebGL unavailable, showing still liquid', error);
     shared = false;
@@ -235,6 +238,7 @@ class MutagenChamber extends HTMLElement {
     this._flow = FLOWS[this.getAttribute('flow')] || pipeFlow(ww, wh);
     this._bulb = this.getAttribute('flow') === 'bulb' ? 1 : 0;   // flow="bulb": a wide glass bulb on a narrow side pipe
     this._bubble = meta.bubbleScale || 1;
+    this._edge = this.getAttribute('edge') === 'dark' ? 1 : 0;   // edge="dark": darker liquid at the glass rim
     this._stream = this.hasAttribute('stream') ? 1 : 0;          // stream: liquid continues from pipe to pipe (see STREAM_UNIT)
     this._still = this._seed % 13;   // reduced motion: a still frame, different per chamber
     const pct = (v, of) => `${(100 * v) / of}%`;
@@ -299,7 +303,7 @@ class MutagenChamber extends HTMLElement {
     gl.uniform2f(u.res, canvas.width, canvas.height);
     gl.uniform1f(u.time, time); gl.uniform1f(u.seed, this._seed % 97); gl.uniform1f(u.green, greenLevel());
     gl.uniform2f(u.flow, this._flow[0], this._flow[1]); gl.uniform1f(u.bulb, this._bulb);
-    gl.uniform1f(u.stream, this._stream); gl.uniform1f(u.bubble, this._bubble);
+    gl.uniform1f(u.stream, this._stream); gl.uniform1f(u.bubble, this._bubble); gl.uniform1f(u.edge, this._edge);
     if (this._stream) {
       const box = canvas.getBoundingClientRect(), unit = STREAM_UNIT();
       gl.uniform2f(u.page, (box.left + scrollX) / unit, (box.top + scrollY) / unit);
