@@ -40,6 +40,7 @@ Read this first when picking up the work. Keep it short and current.
 - Never push to `main` / ship a build without the owner's explicit yes.
 - Do only what was asked; ask when a change goes beyond it.
 - No feature loss (MUT-13, MUT-14, MUT-22). Reskin existing handlers; mockups are not specs.
+- Owner, 2026-10-26: the app must look realistic; every image must be high-detail, realistic and high quality. Sources must be at least the device resolution (masters 3344 × 1882 or larger; request in `CHATGPT-REQUEST-2026-10-26-high-res.md`). Claude has no image generator: its recreations are cut from masters, so they are only as detailed as the masters.
 - Owner, rev 053: assets may be recreated where necessary. Prefer cutting them from an approved master (as `tools/home-buttons/extract.py` does) over drawing anything new.
 - Locked art is used exactly as supplied (`handoff/locked-references/locked/`). The home logo is now ChatGPT's v2 design (`ui/branding/logo-mutagen-v2.png`, owner decision rev 048); the original locked logo stays unchanged as the record. Never rebuild or remake assets
   (labels, lettering, icons); missing assets are requested, not improvised (owner, 2026-10-25).
