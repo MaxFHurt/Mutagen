@@ -42,3 +42,4 @@ adds alongside the copies do not need listing.
 | 2026-10-25 | `commander/src/ui/screens/mode-select.js` | Live logo (`logo-v2` chamber) | Phase 2 logo (rev 052) |
 | 2026-10-25 | `commander/src/ui/screens/landing.js` | Home is the master layout with the master-shape buttons (`ui/buttons-master/home/`); previous layout at `?layout=classic` | Phase 2 home after the master (rev 053) |
 | 2026-10-26 | `commander/src/ui/screens/mode-select.js` | Choose Game Mode built from its master (`ui/screens/mode-select/` layers, clear tap buttons with the same `data-mode` / `data-act`); same menus and actions | Phase 2 mode screen after its master (rev 054) |
+| 2026-10-26 | `commander/src/ui/screens/landing.js`, `mode-select.js` | Undo (rev 055): back to the home with the supplied buttons and Choose Game Mode in that frame (rev 049); master-layout home and master-cut mode screen removed; live logo kept | Owner: no image work by Claude |

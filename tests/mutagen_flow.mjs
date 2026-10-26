@@ -38,7 +38,7 @@ try {
 
   // Artwork is large; wait for every home image to finish loading before checking it
   await page.waitForFunction(() => [...document.querySelectorAll('.mutagen-home img')].every(i => i.complete), null, { timeout: 30000 }).catch(() => {});
-  // MUTAGEN home after the master: master pipes and buttons over live liquid, live logo, Continue off without a save
+  // MUTAGEN home screen: supplied buttons over live liquid, logo and tagline, Continue off without a saved game
   const home = await page.evaluate(() => ({
     buttons: [...document.querySelectorAll('.mutagen-home .mh-btn')].map(b => b.getAttribute('aria-label')),
     continueOff: document.querySelector('.mh-btn[data-act="continue"]').disabled,
@@ -47,36 +47,8 @@ try {
   }));
   check('home shows the six buttons by name', home.buttons.join() === 'New Game,Continue,Deck Mutator,Profile,Settings,Help', home.buttons.join());
   check('Continue is off without a saved game', home.continueOff);
-  check('home artwork loads (live logo, tagline, master buttons, pipes, columns)', home.art && home.chambers === 15, JSON.stringify(home));
+  check('home artwork loads (live logo, tagline, buttons, columns)', home.art && home.chambers === 9, JSON.stringify(home));
 
-  // The previous layout stays available at ?layout=classic: supplied buttons, sight columns, live logo
-  await page.goto(`${BASE}/commander/?layout=classic`);
-  await ready();
-  await page.waitForFunction(() => [...document.querySelectorAll('.mutagen-home img')].every(i => i.complete), null, { timeout: 30000 }).catch(() => {});
-  const classic = await page.evaluate(() => ({
-    buttons: [...document.querySelectorAll('.mutagen-home .mh-btn')].map(b => b.getAttribute('aria-label')).join(),
-    chambers: document.querySelectorAll('.mutagen-home mutagen-chamber').length,
-    art: [...document.querySelectorAll('.mutagen-home img')].every(i => i.complete && i.naturalWidth > 0)
-  }));
-  check('classic home: six buttons, live logo and columns, artwork loads', classic.buttons === 'New Game,Continue,Deck Mutator,Profile,Settings,Help' && classic.chambers === 9 && classic.art, JSON.stringify(classic));
-  await page.click('.mutagen-home [data-act="start"]');
-  check('classic home: New Game opens Choose Game Mode', await page.waitForSelector('.mode-select', { timeout: 5000 }).then(() => true, () => false));
-  // Choose Game Mode after its master: master layers with live liquid, seven tap areas, menus and Back still work
-  await page.waitForFunction(() => [...document.querySelectorAll('.mode-select img')].every(i => i.complete), null, { timeout: 30000 }).catch(() => {});
-  const mode = await page.evaluate(() => ({
-    taps: [...document.querySelectorAll('.mode-select .ms-tap')].map(t => t.dataset.mode || t.dataset.act).join(),
-    chambers: document.querySelectorAll('.mode-select mutagen-chamber').length,
-    art: [...document.querySelectorAll('.mode-select img')].every(i => i.complete && i.naturalWidth > 0)
-  }));
-  check('game mode after its master: seven tap areas, live regions, artwork loads', mode.taps === 'fully-tracked,freeplay,table-tracker,back,profile,settings,help' && mode.chambers === 7 && mode.art, JSON.stringify(mode));
-  await page.click('[data-mode="table-tracker"]');
-  check('game mode: Table Tracker opens its menu', await page.waitForSelector('[data-track="local"]', { timeout: 5000 }).then(() => true, () => false));
-  await page.click('.modal [data-modal-back]');
-  await page.waitForSelector('[data-track="local"]', { state: 'detached', timeout: 5000 }).catch(() => {});
-  await page.click('.mode-select [data-act="back"]');
-  check('game mode: Back returns home', await page.waitForSelector('.mutagen-home', { timeout: 5000 }).then(() => true, () => false));
-  await page.goto(`${BASE}/commander/`);
-  await ready();
 
   // Landing → Deck Mutator → back to landing
   await page.click('[data-act="decks"]');

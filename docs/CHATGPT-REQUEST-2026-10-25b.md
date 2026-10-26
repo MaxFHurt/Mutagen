@@ -1,5 +1,7 @@
 # Message for ChatGPT — everything MUTAGEN still needs (2026-10-25)
 
+> **Superseded 2026-10-26** by `CHATGPT-REQUEST-2026-10-26-complete.md`.
+
 Copy everything below the line into ChatGPT.
 
 > **Update (rev 048):** the owner adopted ChatGPT's new logo design (`ui/branding/logo-mutagen-v2.png`). Item 1 now means: an overlay (liquid areas transparent) and a liquid mask made from **logo v2**, with every other pixel of v2 unchanged. The other items are unchanged.
