@@ -211,6 +211,27 @@ try {
   await page.click('.kit-btn[data-kit="back"]');
   check('kit contract: Back returns to Choose Game Mode', await page.waitForSelector('.mode-select', { timeout: 5000 }).then(() => true, () => false));
 
+  // Kit contract for page screens: a tracker-setup kit (test kit pointing at installed images) takes over the header and
+  // footer; its buttons press the screen's real ones and the body sits in its panel.
+  await page.goto(`${BASE}/commander/`);
+  await ready();
+  await page.evaluate(async () => {
+    const kits = (await import('../ui/kits/index.js')).default, src = '../mode-select/buttons/back/';
+    const btn = (id, x, y) => ({ id, type: 'buttons', rect: [x, y, 728, 214], files: { assembled: src + 'assembled.png', overlay: src + 'clear-glass-overlay.png', mask: src + 'liquid-mask.png', pressed: src + 'pressed.png', disabled: src + 'disabled.png' }, liquid: true });
+    kits['tracker-setup'] = { canvas: { width: 3344, height: 1882 }, background: '../mode-select/background-clean.png', pieces: [
+      btn('back', 252, 1612), btn('start', 2376, 1612), { id: 'body', type: 'panel', rect: [252, 200, 2840, 1360] }] };
+  });
+  await page.click('[data-act="start"]'); await page.click('[data-mode="table-tracker"]'); await page.click('[data-track="local"]');
+  await page.waitForSelector('main.page.kit-applied[data-kit="tracker-setup"]');
+  const tk = await page.evaluate(() => ({
+    kitButtons: [...document.querySelectorAll('.kit-page .kit-btn')].map(b => b.dataset.kit + ':' + b.getAttribute('aria-label')).join(','),
+    body: !!document.querySelector('.kit-panel[data-panel="body"] > .page__body .setup-player'),
+    headHidden: getComputedStyle(document.querySelector('.kit-applied > .page__head')).display === 'none'
+  }));
+  check('page kit: tracker setup shows its kit buttons named from the real ones, body in its panel', /back:Back/.test(tk.kitButtons) && /start:Start Tracking/.test(tk.kitButtons) && tk.body && tk.headHidden, JSON.stringify(tk));
+  await page.click('.kit-page .kit-btn[data-kit="start"]');
+  check('page kit: the kit Start button starts tracking', await page.waitForSelector('main.tracker', { timeout: 8000 }).then(() => true, () => false));
+
   check('no page errors', !errors.length, JSON.stringify(errors.slice(0, 3)));
 } catch (error) {
   check('flow ran to the end', false, String(error));

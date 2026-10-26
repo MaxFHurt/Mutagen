@@ -19,7 +19,7 @@ export const trackerJoinScreen = {
       const msg = link?.lastState;
       const seats = msg?.seats || {};
       setHtml(root, html`
-        <main class="page">
+        <main data-kit="tracker-join" class="page">
           <header class="page__head">
             <button class="btn-back" type="button" data-act="back" aria-label="Back"><img src="assets/img/ui/back.png" alt="Back"></button>
             <h1 class="chrome-text">Join a Table</h1>

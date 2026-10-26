@@ -40,3 +40,9 @@ html[data-motion="reduced"] .kit-still { display: block; }
 .kit-stage:has(.kit-btn[data-seat-act="view"]) .kit-panel [data-seat-act="view"] { display: none; }
 .kit-note, .kit-count { margin: 0; height: 100%; display: flex; align-items: center; justify-content: center; text-align: center; font-size: clamp(9px, 1.6cqh + 0.4cqw, 18px); color: var(--muted, #b9a9d8); }
 .kit-count b { font-size: 1.6em; color: #fff; margin-right: 0.4em; }
+
+/* Page screens with a kit: the kit's art replaces the header and footer; the screen's body sits in the "body" panel. */
+.kit-applied > .page__head, .kit-applied > .page__foot { display: none; }
+.kit-applied { padding: 0; background: #05030a; }
+.kit-page { position: absolute; inset: 0; }
+.kit-panel > .page__body { height: 100%; overflow: auto; padding: 0.4rem; }

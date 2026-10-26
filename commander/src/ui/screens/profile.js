@@ -37,7 +37,7 @@ export const profileScreen = {
       const top = topAchievements(profile);
       const mutator = mutatorSummary();
       setHtml(root, html`
-        <main class="page profile">
+        <main data-kit="profile" class="page profile">
           <header class="page__head">
             <button class="btn-back" type="button" data-act="back" aria-label="Back"><img src="assets/img/ui/back.png" alt="Back"></button>
             <h1 class="chrome-text">Player Profile</h1>

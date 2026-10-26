@@ -21,7 +21,7 @@ export const trackerSetupScreen = {
 
     function draw() {
       setHtml(root, html`
-        <main class="page">
+        <main data-kit="tracker-setup" class="page">
           <header class="page__head">
             <button class="btn-back" type="button" data-act="back" aria-label="Back"><img src="assets/img/ui/back.png" alt="Back"></button>
             <h1 class="chrome-text">${play === 'host-device' ? 'Host Table' : play === 'host-player' ? 'Host a Table' : 'Table Tracker'}</h1>

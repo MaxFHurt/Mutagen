@@ -57,6 +57,24 @@ Player setup details:
   - When hosting, Add Player reads "Add player on this device" (the accessible name). The Hosting box shows only when
     hosting.
 
+### Page screens: Lobby, Join, Table Tracker setup and join, Profile
+
+These screens are wired the same way. The kit supplies the background, frame, title lettering and the buttons below,
+plus a `body` panel where the screen's own live content goes (player lists, code entry, forms, stats). An optional
+`foot` panel holds any footer text. Each kit button is named after the action it stands for, and the app makes it
+press the screen's real button, so conditions and disabled states (for example Start until everyone is ready) stay as
+they are. A kit button with no matching action on screen is hidden.
+
+| Kit | Buttons (by action) | Panels |
+|---|---|---|
+| `lobby` | `back`, `start` | `body` (room code, joined players with Kick, rules status / Cancel), optional `foot` |
+| `join` | `back`, `join` | `body` (code entry, Rejoin room, Just watch) |
+| `tracker-setup` | `back`, `start` (Start Tracking / Open Table) | `body` (players with Remove, playmats, + Add player) |
+| `tracker-join` | `back`, `join` | `body` (code entry) |
+| `profile` | `back`, `save`, `history`, `deck-mutator` | `body` (name, avatar, stats, most-played deck, Playmats, Table Defaults, achievements, Deck Mutator summary) |
+
+Controls inside the `body` panel stay live and take the skin kit's frames.
+
 ## 2. The skin kit: `ui/kits/skin/`, for every other screen and both apps
 
 These are stretchable frames for the parts every remaining screen is built from: Lobby, Join, the game, Table Tracker,
