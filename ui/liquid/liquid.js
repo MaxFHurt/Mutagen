@@ -190,6 +190,10 @@ function maskTexture(r, chamber) {
 const FLOWS = { up: [0, -1], down: [0, 1], left: [-1, 0], right: [1, 0], none: [0, 0], bulb: [1, 0] };
 // A stream's unit, in CSS pixels: about the window height of a main home button on both iPhone and iPad.
 const STREAM_UNIT = () => 0.075 * Math.min(innerWidth, innerHeight);
+function ownShell(mask, size, bubbles) {
+  const [w, h] = (size || '').split(/\s+/).map(Number);
+  return w && h ? { size: [w, h], window: [0, 0, w - 1, h - 1], mask: new URL(mask, document.baseURI).href, bubbleScale: Number(bubbles) || 1 } : null;
+}
 const pipeFlow = (w, h) => (w > h * 1.4 ? FLOWS.right : h > w * 1.4 ? FLOWS.up : FLOWS.none);
 
 // ---------- animation loop shared by every chamber ----------
@@ -221,9 +225,11 @@ class MutagenChamber extends HTMLElement {
     if (this._ready) { live.add(this); seen?.observe(this); return wake(); }
     this._ready = true;
     const name = this.getAttribute('shell') || 'canister';
-    const shells = await loadShells();
-    const meta = shells[name];
-    if (!meta) return console.warn(`Liquid: unknown shell "${name}"`);
+    // A chamber cut from a screen master names its own mask and size instead of a shell:
+    // <mutagen-chamber mask="…-mask.png" size="1402 149" overlay="…-overlay.png" bubbles="0.8">.
+    const own = this.getAttribute('mask');
+    const meta = own ? ownShell(own, this.getAttribute('size'), this.getAttribute('bubbles')) : (await loadShells())[name];
+    if (!meta) return console.warn(`Liquid: unknown shell "${name}" (or a mask without a size)`);
     const [W, H] = meta.size, [x0, y0, x1, y1] = meta.window, ww = x1 - x0 + 1, wh = y1 - y0 + 1;
     this._seed = Number(this.getAttribute('seed')) || (++seedCounter * 7.31 + Math.random() * 100);
     this._flow = FLOWS[this.getAttribute('flow')] || pipeFlow(ww, wh);
