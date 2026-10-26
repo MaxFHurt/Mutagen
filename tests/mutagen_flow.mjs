@@ -37,12 +37,12 @@ try {
   await page.evaluate(p => localStorage.setItem('dc.profile', JSON.stringify(p)), MUTATOR);
 
   // Artwork is large; wait for every home image to finish loading before checking it
-  await page.waitForFunction(() => [...document.querySelectorAll('.mutagen-home img')].every(i => i.complete), null, { timeout: 30000 }).catch(() => {});
+  await page.waitForFunction(() => [...document.querySelectorAll('.mutagen-home img')].filter(i => i.checkVisibility()).every(i => i.complete), null, { timeout: 30000 }).catch(() => {});
   // MUTAGEN home screen: supplied buttons over live liquid, logo and tagline, Continue off without a saved game
   const home = await page.evaluate(() => ({
     buttons: [...document.querySelectorAll('.mutagen-home .kit-btn')].map(b => b.getAttribute('aria-label')),
     continueOff: document.querySelector('.kit-btn[data-act="continue"]').disabled,
-    art: [...document.querySelectorAll('.mutagen-home img')].every(i => i.complete && i.naturalWidth > 0),
+    art: [...document.querySelectorAll('.mutagen-home img')].filter(i => i.checkVisibility()).every(i => i.complete && i.naturalWidth > 0),
     chambers: document.querySelectorAll('.mutagen-home mutagen-chamber').length
   }));
   check('home shows the six buttons by name', home.buttons.join() === 'New Game,Continue,Deck Mutator,Profile,Settings,Help', home.buttons.join());
@@ -57,11 +57,11 @@ try {
   // Choose Game Mode kit: seven named buttons over live liquid, menus and Back still work
   await page.click('[data-act="start"]');
   await page.waitForSelector('.mode-select');
-  await page.waitForFunction(() => [...document.querySelectorAll('.mode-select img')].every(i => i.complete), null, { timeout: 30000 }).catch(() => {});
+  await page.waitForFunction(() => [...document.querySelectorAll('.mode-select img')].filter(i => i.checkVisibility()).every(i => i.complete), null, { timeout: 30000 }).catch(() => {});
   const mode = await page.evaluate(() => ({
     buttons: [...document.querySelectorAll('.mode-select .kit-btn')].map(b => b.dataset.mode || b.dataset.act).join(),
     chambers: document.querySelectorAll('.mode-select mutagen-chamber').length,
-    art: [...document.querySelectorAll('.mode-select img')].every(i => i.complete && i.naturalWidth > 0)
+    art: [...document.querySelectorAll('.mode-select img')].filter(i => i.checkVisibility()).every(i => i.complete && i.naturalWidth > 0)
   }));
   check('game mode kit: seven buttons, live liquid, artwork loads', mode.buttons === 'fully-tracked,freeplay,table-tracker,back,profile,settings,help' && mode.chambers === 16 && mode.art, JSON.stringify(mode));
   await page.click('[data-mode="table-tracker"]');
