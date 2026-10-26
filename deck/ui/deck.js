@@ -424,12 +424,15 @@ function upPanel(d, A, mode) {
         ? 'Every pick fits the deck’s theme. A slot with no on-theme upgrade keeps its usual picks.'
         : 'Turn on to pick only on-theme cards (raw power can win otherwise).') +
       '</small></div>';
+    // owner, 25 Oct: the Apply all buttons sit below the upgrade sheets and suggestions; the best decks under $3 and $12 moved to
+    // the Build panel (buildFoot)
+    let tierBlock = '';
     // Version 0.9.3 (owner, 19 Oct): the tiers are one row of three buttons, each applying that tier's swaps (it asks first):
     // "Apply All Budget Swaps" over "4 cards $5".
     {
       const TS = {};
       TIER_KEYS.forEach(t => (TS[t] = tierSum(d, R, t)));
-      h +=
+      tierBlock =
         '<div class="tierbtns" role="group" aria-label="Apply a tier">' +
         TIER_KEYS.map(t => {
           const ts = TS[t];
@@ -441,8 +444,8 @@ function upPanel(d, A, mode) {
             '"' +
             (ts.n ? '' : ' disabled') +
             '><b>Apply All ' +
-            MUTATION_LABEL[t] +
-            's</b><span>' +
+            TIERS[t].label +
+            ' Swaps</b><span>' +
             (ts.n
               ? ts.n + ' card' + (ts.n === 1 ? '' : 's') + ' · $' + ts.cost.toFixed(0) + ' to buy'
               : 'No worthwhile upgrades') +
@@ -469,7 +472,6 @@ function upPanel(d, A, mode) {
         (TS.apex.n && packLine(R, 'apex', TS.apex.n)
           ? '<p class="note tierpack">All Apex swaps together: ' + packLine(R, 'apex', TS.apex.n) + '</p>'
           : '') +
-        ['budget', 'mid'].map(t => capBox(d, t)).join('') +
         '</div>';
     }
     const show = S.pathShow || 12,
@@ -581,7 +583,7 @@ function upPanel(d, A, mode) {
                   '<div class="opt none" data-t="' +
                   t +
                   '"><span class="chip">' +
-                  MUTATION_LABEL[t] +
+                  TIERS[t].label +
                   '</span><p>' +
                   esc((col && col.note) || (L.none && L.none[t]) || 'No ' + TIERS[t].label + ' pick for this slot') +
                   '</p></div>'
@@ -594,7 +596,7 @@ function upPanel(d, A, mode) {
                 '<div class="opt" data-t="' +
                 t +
                 '"><span class="chip gold">' +
-                MUTATION_LABEL[t] +
+                TIERS[t].label +
                 '</span>' +
                 side('in', p.add, p.q) +
                 '<div class="row">' +
@@ -633,6 +635,7 @@ function upPanel(d, A, mode) {
       (sheet ? '</div>' : '');
     if (!sheet && PV.length > show)
       h += '<button class="btn" data-act="path-more">Show ' + Math.min(12, PV.length - show) + ' more</button>';
+    h += tierBlock;
   }
   h += '</div>';
   // the record of upgrades made, each with Undo, sits at the bottom of the list
@@ -648,7 +651,7 @@ function upPanel(d, A, mode) {
   }
   h += outHtml;
   h +=
-    '<div class="grp"><span class="lab">Start the picks over</span><p class="note" style="margin:0">Picks you have been shown keep their place so the list stays steady. Regenerate fetches the latest card and play data and weighs every option again, including newly released cards. Your deck, library and swap history are not touched.</p><div class="row"><button class="btn" data-act="regen">Regenerate picks</button>' +
+    '<div class="grp"><span class="lab">Start the picks over</span><p class="note" style="margin:0">The list is worked out once and kept until something changes. Regenerate fetches the latest card and play data and weighs every option again, including newly released cards. Your deck, library and swap history are not touched.</p><div class="row"><button class="btn" data-act="regen">Regenerate picks</button>' +
     (d.recPrev ? '<button class="btn sm" data-act="regen-undo">Undo last regenerate</button>' : '') +
     '</div></div>';
   return h + '</div>';
@@ -1100,7 +1103,7 @@ async function openUpgradeAsk() {
     '" aria-pressed="' +
     (d.tier === t) +
     '">' +
-    MUTATION_LABEL[t] +
+    TIERS[t].label +
     (t === 'apex' ? ' · any price' : ' · under $' + TIERS[t].cap) +
     '</button>';
   $('#modal').innerHTML =
@@ -1343,7 +1346,7 @@ function themeBuildBox() {
     cols = g.tcol || [],
     tribe = g.ttribe || '';
   let h =
-    '<div class="grp" id="themebuild"><span class="lab">Or start from a theme</span><p class="note" style="margin:0">Pick what the deck should do. Deck Mutator suggests the commanders that build around it best, then designs the deck with that theme first.</p><div class="row" role="group" aria-label="Theme">' +
+    '<div class="grp" id="themebuild"><span class="lab">Or start from a theme</span><p class="note" style="margin:0">Pick what the deck should do. Deck Companion suggests the commanders that build around it best, then designs the deck with that theme first.</p><div class="row" role="group" aria-label="Theme">' +
     themeKeys()
       .map(
         t =>
@@ -1440,7 +1443,7 @@ function themeBuildBox() {
           '" aria-pressed="' +
           ((g.tier || 'apex') === t) +
           '">' +
-          MUTATION_LABEL[t] +
+          TIERS[t].label +
           '</button>'
       )
       .join('') +
@@ -1514,7 +1517,7 @@ function openGenerate() {
     c = find(g.cmd),
     st = detectStrategy(c);
   let h =
-    '<div class="panel" role="dialog" aria-label="Generate from a commander"><div class="ph"><h2>Generate from a commander</h2><button class="ico" data-act="close" aria-label="Close">×</button></div><p class="note" style="margin:0">Pick any legendary creature and how to build it. Deck Mutator builds the full 100 cards straight into a new deck, then offers upgrades from there.</p>' +
+    '<div class="panel" role="dialog" aria-label="Generate from a commander"><div class="ph"><h2>Generate from a commander</h2><button class="ico" data-act="close" aria-label="Close">×</button></div><p class="note" style="margin:0">Pick any legendary creature and how to build it. Deck Companion builds the full 100 cards straight into a new deck, then offers upgrades from there.</p>' +
     '<div class="grp"><label class="lab" for="gen-q">Commander</label><div class="dd"><input type="search" id="gen-q" placeholder="Search commanders" autocomplete="off"><div class="ddl" id="gen-res" hidden></div></div></div>';
   if (c)
     h +=
@@ -1673,7 +1676,7 @@ function genModeBox(c, st) {
           '" aria-pressed="' +
           (g.tier === t) +
           '">' +
-          MUTATION_LABEL[t] +
+          TIERS[t].label +
           '</button>'
       )
       .join('') +
@@ -1823,7 +1826,7 @@ function openSeed() {
   const I = seedInfo(),
     g = S.gen;
   let h =
-    '<div class="panel full" role="dialog" aria-label="Generate from cards"><div class="ph"><h2>Generate from cards</h2><button class="ico" data-act="close" aria-label="Close">×</button></div><p class="note" style="margin:0">Add any number of cards you want in the deck. Deck Mutator works out their colors and what they do, suggests commanders that fit, then designs the strongest build around them, with Mid and Budget stand-ins for each expensive card. Nothing goes into the decklist until you add it.</p>' +
+    '<div class="panel full" role="dialog" aria-label="Generate from cards"><div class="ph"><h2>Generate from cards</h2><button class="ico" data-act="close" aria-label="Close">×</button></div><p class="note" style="margin:0">Add any number of cards you want in the deck. Deck Companion works out their colors and what they do, suggests commanders that fit, then designs the strongest build around them, with Mid and Budget stand-ins for each expensive card. Nothing goes into the decklist until you add it.</p>' +
     '<div class="grp"><label class="lab" for="seed-q">Cards you want to play</label><div class="dd"><input type="search" id="seed-q" placeholder="Search for a card to add" autocomplete="off"><div class="ddl" id="seed-res" hidden></div></div>' +
     (S.seed.paste
       ? '<textarea id="seed-text" placeholder="1 Doubling Season&#10;1 Craterhoof Behemoth"></textarea><div class="row"><button class="btn sm pri" data-act="seed-paste-go">Add these cards</button></div>'

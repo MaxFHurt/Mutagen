@@ -1,6 +1,4 @@
 // ===== Deck Companion UI =====
-// MUTAGEN: the three tiers as named on labels and buttons. TIERS[t].label stays the short name used inside sentences.
-const MUTATION_LABEL = {budget: 'Budget Mutation', mid: 'Mid Tier Mutation', apex: 'Apex Mutation'};
 const $ = s => document.querySelector(s);
 const esc = s =>
   String(s == null ? '' : s).replace(/[&<>"']/g, m => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'})[m]);

@@ -86,7 +86,7 @@ function viewHome() {
     (extra ? '<span class="chip gold">' + extra + '</span>' : '') +
     '</div></button>';
   return (
-    '<section class="hero"><h1>Bring a deck. See every way to make it better.</h1><p class="narrow">A Magic: The Gathering deck builder for Commander and Standard that shows each card’s upgrade path at three budgets.</p><p class="wide">Deck Mutator is MUTAGEN’s deck builder for Magic: The Gathering, made for Commander and Standard. Start a deck or bring your own, tell it what the deck is about, and it lays out each card’s upgrade path at three budgets, without turning your deck into something else.</p></section>' +
+    '<section class="hero"><h1>Bring a deck. See every way to make it better.</h1><p class="narrow">A Magic: The Gathering deck builder for Commander and Standard that shows each card’s upgrade path at three budgets.</p><p class="wide">Deck Companion is a deck builder for Magic: The Gathering, made for Commander and Standard. Start a deck or bring your own, tell it what the deck is about, and it lays out each card’s upgrade path at three budgets, without turning your deck into something else.</p></section>' +
     '<div class="tiles home3">' +
     tile(
       'deck',
@@ -167,7 +167,7 @@ function viewDecks() {
       tb('stats', 'Build stats') +
       tb(
         'up',
-        'Mutations' +
+        'Upgrades' +
           (nUp
             ? ' <em title="' +
               nUp +
@@ -459,10 +459,20 @@ function metaBox(d) {
   );
 }
 // Regenerate upgrades sits at the foot of the Build panel (it rebuilds the suggestions from these settings; the deck's cards stay).
+// The best decks with every new card under $3 and $12 sit here too (owner, 25 Oct: moved from the Upgrades tab).
 function buildFoot(d) {
-  return isAimed(d) && d.cards.length && !(d.plan && d.plan.length)
-    ? '<div class="bfoot"><button class="btn pri" data-act="regen" title="Weigh every upgrade again from these settings; the cards in your deck stay as they are">Regenerate upgrades</button></div>'
-    : '';
+  if (!(isAimed(d) && d.cards.length && !(d.plan && d.plan.length))) return '';
+  let caps = '';
+  if (d.format === 'commander')
+    try {
+      const R = recsFor(d);
+      if (R && !R.pending && (!R.pool || R.poolDone) && R.paths.length) caps = ['budget', 'mid'].map(t => capBox(d, t)).join('');
+    } catch (e) {}
+  return (
+    '<div class="bfoot">' +
+    caps +
+    '<button class="btn pri" data-act="regen" title="Weigh every upgrade again from these settings; the cards in your deck stay as they are">Regenerate upgrades</button></div>'
+  );
 }
 // Customised Build panel sections fold into one-line headers that always show their settings (Build 133); a section that still
 // needs input starts open, and each remembers being opened or closed.
