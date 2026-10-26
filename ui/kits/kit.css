@@ -1,0 +1,29 @@
+/* MUTAGEN screen kits (commander/src/mutagen/kit-stage.js): one stage in the kit's shape, as large as the screen
+   allows and centred, with every supplied piece placed in percent of the stage. Nothing is stretched or redrawn. */
+.kit-screen { position: absolute; inset: 0; background: #05030a; overflow: hidden; }
+.kit-stage {
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  width: min(calc(100vw - var(--safe-l, 0px) - var(--safe-r, 0px)), calc((100dvh - var(--safe-t, 0px) - var(--safe-b, 0px) - 14px) * 3344 / 1882));
+  aspect-ratio: var(--kit-aspect, 3344 / 1882);
+}
+.kit-piece { position: absolute; margin: 0; }
+img.kit-piece { display: block; object-fit: contain; pointer-events: none; user-select: none; }
+.kit-piece > .mutagen-chamber, .kit-piece > img { position: absolute; inset: 0; width: 100%; height: 100%; }
+.kit-piece > img { object-fit: contain; pointer-events: none; user-select: none; }
+
+/* Live liquid normally; the kit's assembled image when the liquid is still. */
+.kit-still { display: none; }
+html[data-motion="reduced"] .kit-live { display: none; }
+html[data-motion="reduced"] .kit-still { display: block; }
+@media (prefers-reduced-motion: reduce) { .kit-live { display: none; } .kit-still { display: block; } }
+
+/* Buttons: real buttons over the art; the kit's pressed and disabled art for those states. */
+.kit-btn { padding: 0; border: 0; background: none; cursor: pointer; -webkit-tap-highlight-color: transparent; line-height: 0; }
+.kit-btn .kit-pressed, .kit-btn .kit-disabled { display: none; }
+.kit-btn:active:not(:disabled) .kit-pressed { display: block; }
+.kit-btn:disabled { cursor: default; }
+.kit-btn:disabled > .kit-live, .kit-btn:disabled > .kit-still { display: none; }
+.kit-btn:disabled .kit-disabled { display: block; }
+.kit-btn:focus-visible { outline: 2px solid #b993ff; outline-offset: -6px; border-radius: 2em; }
+.kit-foot { position: absolute; left: 0; right: 0; bottom: calc(4px + var(--safe-b, 0px)); text-align: center; font-size: 9px; z-index: 1; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }

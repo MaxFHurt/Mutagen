@@ -47,3 +47,5 @@ adds alongside the copies do not need listing.
 | 2026-10-26 | `deck/manifest.json`, `deck/index.html` | Installs as MUTAGEN (start `../commander/`, scope `../`, standalone, MUTAGEN icons); iOS title MUTAGEN; manifest link `?v=2` | One installed app (rev 056) |
 | 2026-10-26 | `deck/sw.js` (new), `deck/mutagen.js` | Offline cache for Deck Mutator, registered from Mutagen's add-on | One installed app (rev 056) |
 | 2026-10-26 | `commander/src/ui/settings-modal.js`, `commander/src/main.js` | Still liquid / Softer green settings, applied through `commander/src/mutagen/preferences.js` (new) | MUT-21 (rev 056) |
+| 2026-10-26 | `commander/src/ui/screens/landing.js`, `mode-select.js` | Home and Choose Game Mode use ChatGPT's revision 02 kits through `commander/src/mutagen/kit-stage.js` (new); same buttons, menus and actions | Revision 02 kits (rev 057) |
+| 2026-10-26 | `commander/index.html` | Loads `../ui/kits/kit.css` | Revision 02 kits (rev 057) |

@@ -1,0 +1,1 @@
+Original adopted v2 RGB artwork enlarged 2x by Lanczos to 2508x2508. This is not native new detail. Overlay reflections are reconstructed from neutral light component, not exact original optical layers. The mask is estimated; no zero-difference claim is made for this reconstruction. Original source retained in previous delivery.

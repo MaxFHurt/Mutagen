@@ -1,5 +1,14 @@
 # MUTAGEN V3 — Visual Change Roadmap — Revision 007 (2026-10-12)
 
+## CURRENT REVISION 057 — ChatGPT revision 02 kits installed: home and Choose Game Mode, 2026-10-26
+
+ChatGPT delivered `MUTAGEN-Revision-02` in four parts (163 files). 160 of the 162 SHA256SUMS entries are stored and verified at their new paths. Two were not installed: `03-proposed-masters/04-Host-Room-Proposed.png` fails its hash and is truncated (needs re-sending), and `01-home/.SOURCE-NATIVE-1672x941.png.eXeefl` is a stray truncated temp copy. Stored unchanged: `ui/kits/home/`, `ui/kits/mode-select/` (background, pipes, buttons with assembled / clear-glass overlay / liquid mask / pressed / disabled, lettering, LAYOUT.json), `ui/kits/branding/` (logo v2 at 2508 × 2508 with overlay and mask). Handoff, sums, build record, previews, sources and the Player Setup proposal are in `handoff/rev02/`.
+
+Placement only, with no image changes. `tools/kits/layout-module.py` turns each LAYOUT.json into `layout.js`, marking pieces whose supplied mask has liquid. `commander/src/mutagen/kit-stage.js` places every piece at its rectangle on a stage in the kit's shape (scaled uniformly, centred). Liquid pieces get live liquid behind their overlay on the shared stream; their assembled image is used when the liquid is still (Still liquid or Reduce Motion), as the handoff asks. Buttons are real buttons with accessible names, showing the kit's pressed art while pressed and its disabled art when disabled (CONTINUE without a save). The logo is live logo v2 from the 2× layers. `<mutagen-chamber>` again takes `mask` / `size` / `bubbles` attributes. The home and Choose Game Mode screens use their kits, with the same buttons, menus and actions.
+
+As ChatGPT states: the 3344 × 1882 art is a 2× enlargement of 1672 × 941 sources, not native detail; cut-outs, reflections, masks, ports and the pressed/disabled states are candidates, not certified. The revised Choose Game Mode rendering is ChatGPT's proposal after the approved master. Checked at 1180×755, 1366×1024, 844×390 and 667×375: no overflow or load errors. Tests: mutagen_flow 30/30 (4 game-mode kit checks), liquid 8/8, flows_ui 24/24, game_ui 27/28 (pre-existing favicon 404).
+
+
 ## CURRENT REVISION 056 — One installed app; Still liquid and Softer green settings, 2026-10-26
 
 Merge work only, with no image changes (owner: "Do any work you can to merge the two apps").

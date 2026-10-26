@@ -3,7 +3,8 @@ import { go } from '../../app/router.js';
 import { openModal } from '../modal.js';
 import { openJudge } from '../judge-modal.js';
 import { openSettings } from '../settings-modal.js';
-import '../../../../ui/liquid/liquid.js';   // MUTAGEN live liquid (<mutagen-chamber>)
+import { kitStage } from '../../mutagen/kit-stage.js';
+import MODE from '../../../../ui/kits/mode-select/layout.js';
 
 function pickRemoteCount(onPick) {
   openModal({
@@ -13,34 +14,22 @@ function pickRemoteCount(onPick) {
   });
 }
 
-// MUTAGEN frame (as the home screen): live sight columns, logo and tagline, the three mode cards, and a bottom row with
-// Back and the supplied PROFILE / SETTINGS / HELP buttons over the live liquid. The mode cards and Back stay the existing
-// artwork until MUTAGEN versions are supplied; nothing is redrawn here.
+// Choose Game Mode: the supplied kit (ui/kits/mode-select/, ChatGPT revision 02, after the approved game-mode master)
+// with live liquid in its pipes and buttons and the live logo. Same buttons, menus and actions as before.
 export const modeSelectScreen = {
   mount(root) {
-    const ui = '../ui/', set = Math.min(screen.width, screen.height) >= 700 ? 'buttons' : 'buttons-iphone';
-    const tool = (act, file, name) => html`<button type="button" class="mh-btn" data-act="${act}" aria-label="${name}">
-      <mutagen-chamber shell="canister" stream overlay="${ui}${set}/home/animation-overlay/button-${file}.png">${name}</mutagen-chamber></button>`;
     setHtml(root, html`
-      <main class="mode-select mutagen-mode" aria-label="Choose game mode">
-        <mutagen-chamber class="mh-column mh-column--left" shell="sight-column" flow="down" stream></mutagen-chamber>
-        <div class="mm-center">
-          <div class="mm-brand">
-            <mutagen-chamber class="mm-logo" shell="logo-v2" flow="none" overlay="${ui}branding/logo-mutagen-v2-overlay.png">MUTAGEN</mutagen-chamber>
-            <img class="mm-tagline" src="${ui}labels/label-tagline.png" alt="Mutate The Gathering">
-            <h1 class="visually-hidden">Choose game mode</h1>
-          </div>
-          <div class="mode-select__choices">
-            <button type="button" data-mode="fully-tracked"><img src="assets/img/mode/guided.png" alt="Fully Guided — Rulebook enforced guided games."></button>
-            <button type="button" data-mode="freeplay"><img src="assets/img/mode/freeplay.png" alt="Free Play — Create, Test, and Play."></button>
-            <button type="button" data-mode="table-tracker"><img src="assets/img/mode/tracker.png" alt="Table Tracker — Shared table tracking."></button>
-          </div>
-          <div class="mm-tools">
-            <button class="btn-back mm-back" type="button" data-act="back" aria-label="Back"><img src="assets/img/ui/back.png" alt="Back"></button>
-            ${tool('profile', 'profile', 'Profile')}${tool('settings', 'settings', 'Settings')}${tool('help', 'help', 'Help')}
-          </div>
-        </div>
-        <mutagen-chamber class="mh-column mh-column--right" shell="sight-column" flow="up" stream></mutagen-chamber>
+      <main class="mode-select kit-screen" aria-label="Choose game mode">
+        <h1 class="visually-hidden">Choose game mode</h1>
+        ${kitStage(MODE, 'mode-select', {
+          'fully-guided': { mode: 'fully-tracked', name: 'Fully Guided: rules-aware play and guidance' },
+          freeplay: { mode: 'freeplay', name: 'Freeplay: create, test, and play' },
+          'table-tracker': { mode: 'table-tracker', name: 'Table Tracker: track life, counters, and your table' },
+          back: { act: 'back', name: 'Back' },
+          profile: { act: 'profile', name: 'Profile' },
+          settings: { act: 'settings', name: 'Settings' },
+          help: { act: 'help', name: 'Help' }
+        })}
       </main>`);
     const offBack = on(root, 'click', '[data-act]', (event, el) => {
       switch (el.dataset.act) {
