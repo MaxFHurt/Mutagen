@@ -1,5 +1,10 @@
 # MUTAGEN — rolling situation report and visual inventory
 
+## CURRENT REVISION 061 — No bright rims: kit liquid darkens at the glass edge, 2026-10-26
+
+Owner: the light highlighting around the edges of the buttons is bright; why? The cause was in Claude's live liquid, not the art. The approved liquid makes the thinnest liquid, at the edge of its mask, the brightest. ChatGPT's kit masks reach right to the glass rim, where its own still art shows a dark edge, so the live liquid drew a bright lime rim exactly where real glass is darkest, with the kit's semi-transparent highlights adding white on top. Kit chambers now use `edge="dark"`: the liquid darkens toward the rim (up to 62% darker in the outer quarter of the depth), matching the kit's still images. Code only (`ui/liquid/liquid.js` uniform `uEdge`; set for kit pipes, buttons and the logo). Chambers without it are unchanged. Tests: mutagen_flow 37/37, liquid 8/8.
+
+
 ## CURRENT REVISION 060 — Inactive button: steel as is, glass empty, lettering faint (from ChatGPT), 2026-10-26
 
 Owner correction to revision 059: "the button should only be missing the ooze and the lettering should be faint, not the entire button". The whole-button fade is removed. A disabled kit button now shows its clear-glass overlay at full strength, so the steel is as normal and the glass is empty; kit buttons also opt out of Commander's app-wide 45% fade for disabled buttons (`button:disabled`), which had been fading it too. Faint lettering needs artwork: in the supplied files the lettering and steel are one image, and separating them would be image work. The contract (`KIT-CONTRACT.md`) now asks ChatGPT for disabled art that is exactly the owner's look; a kit marked `"disabled_empty_glass": true` uses it automatically. Until then the lettering is at full strength. mutagen_flow 37/37.

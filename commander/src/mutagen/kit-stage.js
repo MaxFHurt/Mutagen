@@ -31,7 +31,7 @@ export function kitStage(layout, kit, controls, panels = {}) {
   const { width: W, height: H } = layout.canvas, dir = `${KITS}${kit}/`;
   const at = ([x, y, w, h]) => `left:${(100 * x) / W}%;top:${(100 * y) / H}%;width:${(100 * w) / W}%;height:${(100 * h) / H}%`;
   const live = (p, flow, bubbles) => html`<mutagen-chamber class="kit-live" mask="${dir}${p.files.mask}" size="${p.rect[2]} ${p.rect[3]}"
-      overlay="${dir}${p.files.overlay}" flow="${flow}" stream bubbles="${bubbles}"></mutagen-chamber><img class="kit-still" src="${dir}${p.files.assembled}" alt="">`;
+      overlay="${dir}${p.files.overlay}" flow="${flow}" stream bubbles="${bubbles}" edge="dark"></mutagen-chamber><img class="kit-still" src="${dir}${p.files.assembled}" alt="">`;
   const piece = p => {
     if (p.type === 'buttons') {
       const c = controls[p.id];
@@ -47,7 +47,7 @@ export function kitStage(layout, kit, controls, panels = {}) {
     if (p.type === 'branding') {
       return html`<div class="kit-piece kit-logo" style="${at(p.rect)}">
           <mutagen-chamber class="kit-live" mask="${KITS}branding/logo-mutagen-v2-liquid-mask.png" size="2508 2508"
-            overlay="${KITS}branding/logo-mutagen-v2-overlay.png" flow="none" bubbles="0.4">MUTAGEN</mutagen-chamber>
+            overlay="${KITS}branding/logo-mutagen-v2-overlay.png" flow="none" bubbles="0.4" edge="dark">MUTAGEN</mutagen-chamber>
           <img class="kit-still" src="${KITS}branding/logo-mutagen-v2.png" alt="MUTAGEN"></div>`;
     }
     if (p.type === 'panel') return html`<div class="kit-piece kit-panel" style="${at(p.rect)}" data-panel="${p.id}">${panels[p.id] ?? ''}</div>`;
