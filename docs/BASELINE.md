@@ -115,3 +115,4 @@ Last synced source commits. Bring later changes in by diffing from these. For De
 |---|---|---|---|
 | 2026-10-25 | Commander (`rebuild/` → `commander/`) | `f9dfe396` | Initial copy |
 | 2026-10-25 | Deck (`/` → `deck/`) | `fdf21b78` | Initial copy |
+| 2026-10-26 | Deck (`/` → `deck/`) | `027a41f` (0.9.21, build 166) | Upgrades-layout change (0.9.20) and 0.9.21. `tools/sync/sync-deck.sh`; one conflict (`ui-test.mjs` UI-B132-01: kept upstream's new test with Mutagen's Mutation labels). Full UI suite 125/127 (UI-B145-01, UI-B146-02, as in the source); quick check 12/12; semantics 49/51 |
