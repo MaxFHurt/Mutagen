@@ -20,8 +20,10 @@ import { joinScreen } from './ui/screens/join.js';
 import { deckEditorScreen } from './ui/screens/deck-editor.js';
 import { takeReturn, mutatorPlayerName } from './mutagen/bridge.js';
 import { applyLiquidPrefs } from './mutagen/preferences.js';
+import { watchPageKits } from './mutagen/kit-stage.js';
 
 applyLiquidPrefs();   // MUTAGEN: Still liquid / Softer green, before the first screen draws
+watchPageKits();      // MUTAGEN: page screens use their kits once installed (docs/KIT-CONTRACT.md)
 
 registerScreen('landing', landingScreen);
 registerScreen('mode-select', modeSelectScreen);

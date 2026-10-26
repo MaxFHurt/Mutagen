@@ -1,5 +1,12 @@
 # MUTAGEN — rolling situation report and visual inventory
 
+## CURRENT REVISION 065 — Online play tested; page screens wired for their kits, 2026-10-26
+
+- Multi-device play, tested with the same-browser loopback transport (no outside service): rooms (net_ui) 26/26, Table Tracker hosting and joining (tracker_net_ui) 44/44, challenges (challenge_ui) 13/13, judge and host views on phone and iPad (shots_judge) with no errors.
+- Lobby, Join, Table Tracker setup, Table Tracker join and Profile are wired for their kits (`KIT-CONTRACT.md`, page screens). `applyPageKit` / `watchPageKits` in `kit-stage.js` replace a tagged page's header and footer with its kit and put its own body in the kit's `body` panel. Kit buttons are named by action and press the screen's real buttons, so every condition and disabled state stays. Each screen only gained a `data-kit` tag. Until a kit is installed nothing changes.
+- Tests: mutagen_flow 39/39 (2 new page-kit checks with a test kit pointing at installed images: buttons named from the real ones, body in its panel, the kit Start starts tracking), flows_ui 24/24, net_ui 26/26, tracker_net_ui 44/44, game_ui 28/28.
+
+
 ## CURRENT REVISION 064 — Deck Mutator synced to Deck Companion 0.9.21 (upgrades layout change), 2026-10-26
 
 Owner: the Deck Companion layout change is done. Synced `deck/` from Deck Companion `027a41f` (0.9.21, build 166) with `tools/sync/sync-deck.sh`, read-only. The upstream copy is committed on its own, then Mutagen's changes are re-applied: every one applied cleanly except the expected test conflict. UI-B132-01, the test for the new layout, keeps upstream's new checks with Mutagen's "Apply All … Mutations" labels. What changed upstream (0.9.20): Path to Apex, the level sentence and the plans moved to the Upgrades tab (Mutations in MUTAGEN), and Build Stats is stats only; plus fixes. Bundles rebuilt. Tests: Deck full UI suite 125/127 (UI-B145-01 needs EDHREC theme pages; UI-B146-02 is a known race; both fail in the source too), quick check 12/12, semantics 49/51 (as before), mutagen_flow 37/37. The sync log is in BASELINE and the Deck patch is refreshed against the new upstream.

@@ -28,6 +28,8 @@ Every copied file was compared byte-for-byte against the source commit (`git sho
 | Deck | `check.sh screens,cards quick` → semantics | 49/51 — see known issue 2 |
 | Deck | `tools/build.sh` rebuild of `app.min.js`, `engine.min.js` | byte-identical to committed bundles |
 
+2026-10-26: Commander `net_ui` 26/26, `tracker_net_ui` 44/44, `challenge_ui` 13/13, `shots_judge` no errors (loopback transport).
+
 Not run in Phase 0 (long or need extra setup): Commander `challenge_ui`, `net_ui`,
 `tracker_test`, `tracker_net_ui`, screenshot suites, `scan_ui` (internet); Deck full UI suite
 (118 tests, ~6–10 min), benchmarks, `accept`, `claims`, `genstrong`.

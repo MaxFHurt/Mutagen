@@ -19,7 +19,7 @@ export const lobbyScreen = {
       const joined = state?.players || [];
       const ready = joined.length >= 1 && localSeats.length + joined.length >= 2;
       setHtml(root, html`
-        <main class="page">
+        <main data-kit="lobby" class="page">
           <header class="page__head">
             <button class="btn-back" type="button" data-act="back" aria-label="Back"><img src="assets/img/ui/back.png" alt="Back"></button>
             <h1 class="chrome-text">${hostDevice ? 'Host Device' : 'Host Room'}</h1>

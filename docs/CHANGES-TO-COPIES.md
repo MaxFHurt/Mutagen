@@ -53,3 +53,4 @@ adds alongside the copies do not need listing.
 | 2026-10-26 | `commander/index.html` | Loads `../ui/kits/skin.css` (empty until a skin kit is installed) | Skin kit (rev 058) |
 | 2026-10-26 | `deck/mutagen.js` | Links `../ui/kits/skin-deck.css` (empty until a skin kit is installed) | Skin kit (rev 058) |
 | 2026-10-26 | `commander/index.html` | Site icon link (`assets/img/icon-192.png`); loads `../ui/fixes.css` | Rev 063 |
+| 2026-10-26 | `commander/src/ui/screens/lobby.js`, `join.js`, `tracker-setup.js`, `tracker-join.js`, `profile.js`; `commander/src/main.js` | `data-kit` tag on each page; `watchPageKits()` at start-up | Page kits (rev 065) |

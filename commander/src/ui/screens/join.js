@@ -23,7 +23,7 @@ export const joinScreen = {
     function draw() {
       const lobby = link?.lobby();
       setHtml(root, html`
-        <main class="page page--setup">
+        <main data-kit="join" class="page page--setup">
           <header class="page__head">
             <button class="btn-back" type="button" data-act="back" aria-label="Back"><img src="assets/img/ui/back.png" alt="Back"></button>
             <h1 class="chrome-text">Join a Room</h1>

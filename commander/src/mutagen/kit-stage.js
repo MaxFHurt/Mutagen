@@ -11,7 +11,7 @@
 // - Panels (type "panel") are rectangles where the screen's own live content goes (a form, a list, a count).
 // - Art that is not on screen yet (still images, pressed and inactive looks) loads only when it is shown, to save data.
 // Screens ask kitFor(name) and keep their current layout until that kit is installed (docs/KIT-CONTRACT.md).
-import { html } from '../ui/dom.js';
+import { html, setHtml } from '../ui/dom.js';
 import KITS_INSTALLED from '../../../ui/kits/index.js';
 import '../../../ui/liquid/liquid.js';
 
@@ -60,4 +60,45 @@ export function kitStage(layout, kit, controls, panels = {}) {
       <img class="kit-piece kit-bg" style="${at([0, 0, W, H])}" src="${dir}${layout.background}" alt="">
       ${layout.pieces.map(piece)}
     </div>`;
+}
+
+// ---------- page screens (Lobby, Join, Table Tracker setup and join, Profile) ----------
+// These screens share one shape: a header (Back, title), a body, and a footer of action buttons. When the screen's kit
+// is installed (<main class="page" data-kit="…">), its art replaces the header and footer and the screen's own body
+// goes in the kit's "body" panel. Each kit button is named after the action it stands for (back, start, join, …) and
+// presses the screen's real button, so every condition, disabled state and handler stays exactly as it is.
+export function applyPageKit(main) {
+  const name = main?.dataset?.kit, kit = name && kitFor(name);
+  if (!kit || main.dataset.kitApplied) return;
+  main.dataset.kitApplied = '1';
+  const real = act => main.querySelector(`.page__head [data-act="${act}"], .page__foot [data-act="${act}"]`);
+  const controls = {};
+  for (const p of kit.pieces) {
+    if (p.type !== 'buttons') continue;
+    const b = real(p.id);
+    controls[p.id] = b ? { name: b.getAttribute('aria-label') || b.textContent.trim(), disabled: b.disabled, data: { proxy: p.id } } : { hidden: true };
+  }
+  const stage = document.createElement('div');
+  stage.className = 'kit-page';
+  setHtml(stage, kitStage(kit, name, controls));
+  const title = main.querySelector('.page__head h1');
+  if (title) { title.classList.add('visually-hidden'); stage.prepend(title); }
+  const body = main.querySelector('.page__body'), bodyPanel = stage.querySelector('[data-panel="body"]');
+  if (body && bodyPanel) bodyPanel.append(body);
+  // Anything else in the footer (a note, a status line) goes in a "foot" panel when the kit has one.
+  const foot = main.querySelector('.page__foot'), footPanel = stage.querySelector('[data-panel="foot"]');
+  if (foot && footPanel) for (const n of [...foot.childNodes]) if (!(n instanceof Element && n.matches('[data-act]'))) footPanel.append(n);
+  main.classList.add('kit-screen', 'kit-applied');
+  main.append(stage);
+  main.addEventListener('click', event => {
+    const proxy = event.target instanceof Element && event.target.closest('[data-proxy]');
+    if (proxy) real(proxy.dataset.proxy)?.click();
+  });
+}
+
+/** Watches the app for page screens and applies their kits as they are drawn (once, at start-up). */
+export function watchPageKits(root = document.body) {
+  const scan = () => root.querySelectorAll('main.page[data-kit]:not([data-kit-applied])').forEach(applyPageKit);
+  new MutationObserver(scan).observe(root, { childList: true, subtree: true });
+  scan();
 }
