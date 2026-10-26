@@ -15,8 +15,9 @@ The same format as revision 02's home and Choose Game Mode kits:
 - Piece types:
   - `pipes`: `files.assembled`. Add `files.overlay` (clear glass) and `files.mask` (R coverage, G depth) if it holds liquid.
   - `buttons`: `files.assembled`, `files.overlay`, `files.mask`, `files.pressed`, `files.disabled`. An inactive
-    button is shown faint with no ooze in its glass (owner), using its clear-glass overlay faded, so the overlay must
-    show the empty glass cleanly. The id must be
+    button (owner) keeps its steel exactly as it is, has **no ooze in its glass**, and only its **lettering is faint**:
+    `files.disabled` must be exactly that. Set `"disabled_empty_glass": true` at the top of LAYOUT.json when it is; until
+    then the app shows the clear-glass overlay (empty glass, lettering at full strength). The id must be
     one from the list below, because the app binds each id to a real button with its action and accessible name.
   - `lettering`: `file`, finished text artwork such as titles and sub-lines.
   - `branding`: the logo slot. The app shows the live logo v2 there.

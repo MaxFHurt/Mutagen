@@ -21,11 +21,11 @@ html[data-motion="reduced"] .kit-still { display: block; }
 .kit-btn { padding: 0; border: 0; background: none; cursor: pointer; -webkit-tap-highlight-color: transparent; line-height: 0; }
 .kit-btn .kit-pressed, .kit-btn .kit-empty { display: none; }
 .kit-btn:active:not(:disabled) .kit-pressed { display: block; }
-/* Not active (owner): faint, and no ooze in the glass chamber. The button's clear-glass overlay is the button with its
-   glass empty; shown faded, with no liquid behind it. */
-.kit-btn:disabled { cursor: default; }
+/* Not active (owner): the button as it is, with no ooze in its glass and only the lettering faint. Shown as supplied,
+   at full strength; the faint lettering comes from the kit's disabled art (see kitStage). */
+.kit-btn:disabled { cursor: default; opacity: 1; }   /* not the app-wide faded disabled button */
 .kit-btn:disabled > .kit-live, .kit-btn:disabled > .kit-still { display: none; }
-.kit-btn:disabled .kit-empty { display: block; opacity: 0.58; filter: saturate(0.4); }
+.kit-btn:disabled .kit-empty { display: block; }
 .kit-btn:focus-visible { outline: 2px solid #b993ff; outline-offset: -6px; border-radius: 2em; }
 .kit-foot { position: absolute; left: 0; right: 0; bottom: calc(4px + var(--safe-b, 0px)); text-align: center; font-size: 9px; z-index: 1; }
 .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }

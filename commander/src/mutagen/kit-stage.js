@@ -5,8 +5,8 @@
 //   shared stream (down the left column, right through branches and buttons, up the right column). Their assembled
 //   image is used instead when the liquid is still (Still liquid setting or the device's Reduce Motion).
 // - Solid steel pieces, lettering and the background are their supplied images.
-// - Buttons are real <button> elements with an accessible name; they show the kit's pressed art while pressed. A
-//   disabled button is faint with no ooze in its glass (owner): its clear-glass overlay alone, faded, no liquid.
+// - Buttons are real <button> elements with an accessible name; they show the kit's pressed art while pressed. An
+//   inactive button keeps its steel and loses only the ooze, with faint lettering (owner; see kitStage).
 // - The logo is the adopted logo v2 with live liquid, from ui/kits/branding/.
 // - Panels (type "panel") are rectangles where the screen's own live content goes (a form, a list, a count).
 // Screens ask kitFor(name) and keep their current layout until that kit is installed (docs/KIT-CONTRACT.md).
@@ -37,9 +37,12 @@ export function kitStage(layout, kit, controls, panels = {}) {
       const c = controls[p.id];
       if (!c || c.hidden) return '';
       const data = Object.entries(c.data || {}).map(([k, v]) => html` data-${k}="${v}"`);
+      // Inactive: the button with no ooze in its glass and faint lettering (owner). A kit marked disabled_empty_glass
+      // supplies exactly that as its disabled art; otherwise the clear-glass overlay (empty glass, lettering as is).
+      const off = layout.disabled_empty_glass ? p.files.disabled : p.files.overlay;
       return html`<button type="button" class="kit-piece kit-btn" style="${at(p.rect)}" aria-label="${c.name}" data-kit="${p.id}"
           ${c.act ? html`data-act="${c.act}"` : ''} ${c.mode ? html`data-mode="${c.mode}"` : ''}${data} ${c.disabled ? 'disabled' : ''}>
-          ${live(p, 'right', 0.8)}<img class="kit-pressed" src="${dir}${p.files.pressed}" alt=""><img class="kit-empty" src="${dir}${p.files.overlay}" alt=""></button>`;
+          ${live(p, 'right', 0.8)}<img class="kit-pressed" src="${dir}${p.files.pressed}" alt=""><img class="kit-empty" src="${dir}${off}" alt=""></button>`;
     }
     if (p.type === 'branding') {
       return html`<div class="kit-piece kit-logo" style="${at(p.rect)}">
