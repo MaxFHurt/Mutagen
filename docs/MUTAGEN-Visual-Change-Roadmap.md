@@ -1,5 +1,16 @@
 # MUTAGEN V3 — Visual Change Roadmap — Revision 007 (2026-10-12)
 
+## CURRENT REVISION 056 — One installed app; Still liquid and Softer green settings, 2026-10-26
+
+Merge work only, with no image changes (owner: "Do any work you can to merge the two apps").
+
+- One installed app: MUTAGEN's manifest scope now covers the whole site (`commander/manifest.webmanifest` scope `../`), so Deck Mutator opens inside an installed MUTAGEN instead of leaving it for Safari. Deck Mutator's own `manifest.json` now installs the same MUTAGEN app: name MUTAGEN, starting on the home screen, standalone, MUTAGEN icons. Its iOS title is MUTAGEN.
+- Offline: Deck Mutator had no offline cache. The new `deck/sw.js` is network first and uses its cache only when offline, like the game side, so an installed MUTAGEN opens Deck Mutator without a connection once visited. It is registered from Mutagen's own `deck/mutagen.js`, so the copied Deck code is unchanged.
+- MUT-21: Settings has "Still liquid" (one still frame instead of motion; the device's Reduce Motion setting still applies) and "Softer green" (the green dimmed and desaturated only). They are saved with the device settings and applied at start-up and on change (`commander/src/mutagen/preferences.js`).
+- Checked: decks in player setup and in the profile's Usual table already come from Deck Mutator only, and the old Commander deck editor is unreachable.
+- Tests: mutagen_flow 27/27 (5 new: offline cache, both manifests, the two settings applied, kept and cleared), liquid 8/8, Commander node 149/64/20, flows_ui 24/24, game_ui 27/28 (pre-existing favicon 404), Deck quick check 12/12 and semantics 49/51 (pre-existing). `docs/sync/deck-mutagen.patch` is refreshed with the new Deck changes.
+
+
 ## CURRENT REVISION 055 — Image work by Claude undone; all image work goes to ChatGPT, 2026-10-26
 
 Owner: "No more image work here. Tell chat gpt what you need and undo this mess." Undone: revision 053 (home rebuilt on the master's layout with buttons Claude cut from the master; `ui/buttons-master/`, `tools/home-buttons/`), revision 054 (Choose Game Mode cut from its master; `ui/screens/mode-select/`, `tools/masters/`, the chamber `mask`/`size` attributes), and the master-layout home preview from revision 052 (`ui/home/master-layout.js`, the `home-*` shells, the `?layout=` switch). Back in place: the centred home with the supplied buttons and sight columns (revisions 040–047), and Choose Game Mode in that frame with the supplied buttons (revision 049). Kept: logo v2 with live liquid (owner, revision 052), and every file ChatGPT delivered (revision 051), stored unchanged. Tests match the state before the image work: mutagen_flow 22/22, liquid 8/8, flows_ui 24/24, game_ui 27/28 (pre-existing favicon 404). Revisions 052–054 stay above as history.

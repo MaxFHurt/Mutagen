@@ -55,10 +55,37 @@ try {
   await page.waitForURL('**/deck/');
   const back = page.locator('.mutagen-return');
   check('Deck Mutator shows Return to MUTAGEN', await back.isVisible());
+  // One installed app: Deck Mutator works offline and installs as MUTAGEN, covering the whole site
+  const deckApp = await page.evaluate(async () => {
+    const reg = await Promise.race([navigator.serviceWorker.ready, new Promise(r => setTimeout(() => r(null), 8000))]);
+    const m = await (await fetch(document.querySelector('link[rel="manifest"]').href)).json();
+    return { sw: reg ? new URL(reg.scope).pathname : null, name: m.name, scope: new URL(m.scope, document.querySelector('link[rel="manifest"]').href).pathname, start: new URL(m.start_url, document.querySelector('link[rel="manifest"]').href).pathname };
+  });
+  check('Deck Mutator offline cache registers', /\/deck\/$/.test(deckApp.sw || ''), JSON.stringify(deckApp));
+  check('Deck Mutator installs as MUTAGEN, starting on the home screen', deckApp.name === 'MUTAGEN' && /\/commander\/$/.test(deckApp.start) && !/(commander|deck)\/$/.test(deckApp.scope), JSON.stringify(deckApp));
   await back.click();
   await page.waitForURL('**/commander/');
   await ready();
   check('return reopens the home screen', await page.locator('.landing').count() === 1);
+  const gameApp = await page.evaluate(async () => {
+    const href = document.querySelector('link[rel="manifest"]').href, m = await (await fetch(href)).json();
+    return { name: m.name, scope: new URL(m.scope, href).pathname };
+  });
+  check('MUTAGEN install covers Deck Mutator too', gameApp.name === 'MUTAGEN' && !/(commander|deck)\/$/.test(gameApp.scope), JSON.stringify(gameApp));
+
+  // Settings: Still liquid and Softer green set the liquid's modes, and stay set after a reload
+  await page.click('[data-act="settings"]');
+  await page.click('[data-toggle="stillLiquid"]');
+  await page.click('[data-toggle="softGreen"]');
+  const prefsOn = await page.evaluate(() => [document.documentElement.dataset.motion, document.documentElement.dataset.green].join());
+  await page.reload(); await ready();
+  const prefsKept = await page.evaluate(() => [document.documentElement.dataset.motion, document.documentElement.dataset.green].join());
+  check('Still liquid and Softer green apply and are kept', prefsOn === 'reduced,reduced' && prefsKept === 'reduced,reduced', prefsOn + ' / ' + prefsKept);
+  await page.click('[data-act="settings"]');
+  await page.click('[data-toggle="stillLiquid"]');
+  await page.click('[data-toggle="softGreen"]');
+  check('turning them off restores the moving, full green liquid', await page.evaluate(() => !document.documentElement.dataset.motion && !document.documentElement.dataset.green));
+  await page.click('.modal [data-modal-back]');
 
   // Player setup → Deck Mutator → back to the same setup
   await page.click('[data-act="start"]');

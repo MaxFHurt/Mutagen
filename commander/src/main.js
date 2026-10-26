@@ -19,6 +19,9 @@ import { lobbyScreen } from './ui/screens/lobby.js';
 import { joinScreen } from './ui/screens/join.js';
 import { deckEditorScreen } from './ui/screens/deck-editor.js';
 import { takeReturn, mutatorPlayerName } from './mutagen/bridge.js';
+import { applyLiquidPrefs } from './mutagen/preferences.js';
+
+applyLiquidPrefs();   // MUTAGEN: Still liquid / Softer green, before the first screen draws
 
 registerScreen('landing', landingScreen);
 registerScreen('mode-select', modeSelectScreen);

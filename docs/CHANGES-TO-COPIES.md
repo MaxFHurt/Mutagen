@@ -43,3 +43,7 @@ adds alongside the copies do not need listing.
 | 2026-10-25 | `commander/src/ui/screens/landing.js` | Home is the master layout with the master-shape buttons (`ui/buttons-master/home/`); previous layout at `?layout=classic` | Phase 2 home after the master (rev 053) |
 | 2026-10-26 | `commander/src/ui/screens/mode-select.js` | Choose Game Mode built from its master (`ui/screens/mode-select/` layers, clear tap buttons with the same `data-mode` / `data-act`); same menus and actions | Phase 2 mode screen after its master (rev 054) |
 | 2026-10-26 | `commander/src/ui/screens/landing.js`, `mode-select.js` | Undo (rev 055): back to the home with the supplied buttons and Choose Game Mode in that frame (rev 049); master-layout home and master-cut mode screen removed; live logo kept | Owner: no image work by Claude |
+| 2026-10-26 | `commander/manifest.webmanifest` | Scope `../`: one installed MUTAGEN covers Deck Mutator too | One installed app (rev 056) |
+| 2026-10-26 | `deck/manifest.json`, `deck/index.html` | Installs as MUTAGEN (start `../commander/`, scope `../`, standalone, MUTAGEN icons); iOS title MUTAGEN; manifest link `?v=2` | One installed app (rev 056) |
+| 2026-10-26 | `deck/sw.js` (new), `deck/mutagen.js` | Offline cache for Deck Mutator, registered from Mutagen's add-on | One installed app (rev 056) |
+| 2026-10-26 | `commander/src/ui/settings-modal.js`, `commander/src/main.js` | Still liquid / Softer green settings, applied through `commander/src/mutagen/preferences.js` (new) | MUT-21 (rev 056) |

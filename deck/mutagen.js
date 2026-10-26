@@ -2,6 +2,7 @@
 // - Return to MUTAGEN: back to the game side (../commander/), which reopens the screen that opened Deck Mutator.
 // - One profile: the player's name lives in the game side's profile (ccv07-profile) and is shown here read-only;
 //   the profile page also shows the game record. Decks, collection, buy lists and tablemates stay here (dc.profile).
+// - One installed app: works offline through sw.js, and manifest.json installs MUTAGEN, not a separate app.
 (function () {
   var GAME_PROFILE_KEY = 'ccv07-profile', MUTATOR_PROFILE_KEY = 'dc.profile', RETURN_KEY = 'mutagen.return';
 
@@ -66,4 +67,9 @@
     if (t) openGameSide('profile');
   });
   new MutationObserver(patchProfile).observe(document.body, { childList: true, subtree: true });
+
+  // Offline: Deck Mutator's own files are cached as they load (sw.js), so an installed MUTAGEN opens it offline too.
+  if ('serviceWorker' in navigator && location.protocol !== 'file:') {
+    navigator.serviceWorker.register('sw.js').catch(function (e) { console.warn('Deck Mutator offline cache not registered', e); });
+  }
 })();
