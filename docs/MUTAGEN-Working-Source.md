@@ -1,5 +1,10 @@
 # MUTAGEN — rolling situation report and visual inventory
 
+## CURRENT REVISION 060 — Inactive button: steel as is, glass empty, lettering faint (from ChatGPT), 2026-10-26
+
+Owner correction to revision 059: "the button should only be missing the ooze and the lettering should be faint, not the entire button". The whole-button fade is removed. A disabled kit button now shows its clear-glass overlay at full strength, so the steel is as normal and the glass is empty; kit buttons also opt out of Commander's app-wide 45% fade for disabled buttons (`button:disabled`), which had been fading it too. Faint lettering needs artwork: in the supplied files the lettering and steel are one image, and separating them would be image work. The contract (`KIT-CONTRACT.md`) now asks ChatGPT for disabled art that is exactly the owner's look; a kit marked `"disabled_empty_glass": true` uses it automatically. Until then the lettering is at full strength. mutagen_flow 37/37.
+
+
 ## CURRENT REVISION 059 — Inactive buttons are faint with empty glass, 2026-10-26
 
 Owner: an inactive button "should be faint and have no ooze in its glass chamber". A disabled kit button (CONTINUE with no saved game) now shows only its supplied clear-glass overlay, which is the button with its glass empty, faded (opacity 0.58, desaturated), with no live liquid behind it. ChatGPT's revision 02 disabled art is no longer used, because it still had ooze in the glass. Placement and CSS only. Test: mutagen_flow 37/37 (1 new check).
