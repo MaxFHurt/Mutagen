@@ -53,7 +53,7 @@ results, or have B81-02 wait for the search to settle. UI-B144-02 failed once an
 
 ### Known issues present in the sources (not introduced here)
 
-1. **Commander `game_ui` "no console errors"** fails on the phone pass: the browser requests
+1. **Fixed 2026-10-26 (rev 063).** Was: **Commander `game_ui` "no console errors"** failed on the phone pass: the browser requests
    `/favicon.ico`, which does not exist. The same failure occurs on the original repo.
 2. **Deck semantics 49/51:** `Selvala does not count as your card draw` and `Looting is
    filtering` fail (`← undefined`). The code is identical to the source commit, so this is the

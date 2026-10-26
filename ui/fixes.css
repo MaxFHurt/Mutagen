@@ -1,0 +1,5 @@
+/* MUTAGEN fixes to the game side's look, kept out of the copied Commander styles so syncs stay simple. */
+
+/* Small phones: the − / + for players joining from other devices shrank below a comfortable tap size (about 26 px on
+   an iPhone SE). Keep every small square button at least 36 px. */
+.icon-btn { min-width: 36px; min-height: 36px; }

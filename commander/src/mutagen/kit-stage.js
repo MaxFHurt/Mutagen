@@ -9,6 +9,7 @@
 //   inactive button keeps its steel and loses only the ooze, with faint lettering (owner; see kitStage).
 // - The logo is the adopted logo v2 with live liquid, from ui/kits/branding/.
 // - Panels (type "panel") are rectangles where the screen's own live content goes (a form, a list, a count).
+// - Art that is not on screen yet (still images, pressed and inactive looks) loads only when it is shown, to save data.
 // Screens ask kitFor(name) and keep their current layout until that kit is installed (docs/KIT-CONTRACT.md).
 import { html } from '../ui/dom.js';
 import KITS_INSTALLED from '../../../ui/kits/index.js';
@@ -31,7 +32,7 @@ export function kitStage(layout, kit, controls, panels = {}) {
   const { width: W, height: H } = layout.canvas, dir = `${KITS}${kit}/`;
   const at = ([x, y, w, h]) => `left:${(100 * x) / W}%;top:${(100 * y) / H}%;width:${(100 * w) / W}%;height:${(100 * h) / H}%`;
   const live = (p, flow, bubbles) => html`<mutagen-chamber class="kit-live" mask="${dir}${p.files.mask}" size="${p.rect[2]} ${p.rect[3]}"
-      overlay="${dir}${p.files.overlay}" flow="${flow}" stream bubbles="${bubbles}" edge="dark"></mutagen-chamber><img class="kit-still" src="${dir}${p.files.assembled}" alt="">`;
+      overlay="${dir}${p.files.overlay}" flow="${flow}" stream bubbles="${bubbles}" edge="dark"></mutagen-chamber><img class="kit-still" src="${dir}${p.files.assembled}" alt="" loading="lazy">`;
   const piece = p => {
     if (p.type === 'buttons') {
       const c = controls[p.id];
@@ -42,13 +43,13 @@ export function kitStage(layout, kit, controls, panels = {}) {
       const off = layout.disabled_empty_glass ? p.files.disabled : p.files.overlay;
       return html`<button type="button" class="kit-piece kit-btn" style="${at(p.rect)}" aria-label="${c.name}" data-kit="${p.id}"
           ${c.act ? html`data-act="${c.act}"` : ''} ${c.mode ? html`data-mode="${c.mode}"` : ''}${data} ${c.disabled ? 'disabled' : ''}>
-          ${live(p, 'right', 0.8)}<img class="kit-pressed" src="${dir}${p.files.pressed}" alt=""><img class="kit-empty" src="${dir}${off}" alt=""></button>`;
+          ${live(p, 'right', 0.8)}<img class="kit-pressed" src="${dir}${p.files.pressed}" alt="" loading="lazy"><img class="kit-empty" src="${dir}${off}" alt="" loading="lazy"></button>`;
     }
     if (p.type === 'branding') {
       return html`<div class="kit-piece kit-logo" style="${at(p.rect)}">
           <mutagen-chamber class="kit-live" mask="${KITS}branding/logo-mutagen-v2-liquid-mask.png" size="2508 2508"
             overlay="${KITS}branding/logo-mutagen-v2-overlay.png" flow="none" bubbles="0.4" edge="dark">MUTAGEN</mutagen-chamber>
-          <img class="kit-still" src="${KITS}branding/logo-mutagen-v2.png" alt="MUTAGEN"></div>`;
+          <img class="kit-still" src="${KITS}branding/logo-mutagen-v2.png" alt="MUTAGEN" loading="lazy"></div>`;
     }
     if (p.type === 'panel') return html`<div class="kit-piece kit-panel" style="${at(p.rect)}" data-panel="${p.id}">${panels[p.id] ?? ''}</div>`;
     if (p.type === 'lettering') return controls[p.id]?.hidden ? '' : html`<img class="kit-piece" style="${at(p.rect)}" src="${dir}${p.file}" alt="">`;
