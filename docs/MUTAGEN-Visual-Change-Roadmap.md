@@ -1,5 +1,12 @@
 # MUTAGEN V3 — Visual Change Roadmap — Revision 007 (2026-10-12)
 
+## CURRENT REVISION 059 — Inactive buttons are faint with empty glass, 2026-10-26
+
+Owner: an inactive button "should be faint and have no ooze in its glass chamber". A disabled kit button (CONTINUE with no saved game) now shows only its supplied clear-glass overlay, which is the button with its glass empty, faded (opacity 0.58, desaturated), with no live liquid behind it. ChatGPT's revision 02 disabled art is no longer used, because it still had ooze in the glass. Placement and CSS only. Test: mutagen_flow 37/37 (1 new check).
+
+Owner asked how ChatGPT's Player Setup proposal differs from today's screen. Every current control is present. It changes the layout and look: a pipe frame top and bottom, the title in a glass canister with the logo, player tabs across the top with Add / Remove Player, green glass deck buttons with icons, an Advice switch, a Hosting box with large −/+, the mode note as a strip, and Back / Deck Mutator / Continue / Open Room along the bottom. Cautions: the deck box is drawn as a drop-down, but the app has none (decks come from Saved Decks / Precon Catalog / Paste List); Continue and Open Room never show together; the playmat pictures are illustrations. Approval pending.
+
+
 ## CURRENT REVISION 058 — Every screen wired for its art; the assets are the last thing to wait on, 2026-10-26
 
 Owner: ChatGPT is remaking assets, so make everything that does not need them and leave the assets as the last thing to wait on. No image work. `docs/KIT-CONTRACT.md` is the exact spec ChatGPT delivers to; each screen is already wired to its names.

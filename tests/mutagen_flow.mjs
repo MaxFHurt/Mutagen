@@ -47,6 +47,10 @@ try {
   }));
   check('home shows the six buttons by name', home.buttons.join() === 'New Game,Continue,Deck Mutator,Profile,Settings,Help', home.buttons.join());
   check('Continue is off without a saved game', home.continueOff);
+  check('Continue, when off, is faint with no ooze in its glass', await page.evaluate(() => {
+    const c = document.querySelector('.kit-btn[data-act="continue"]'), shown = [...c.children].filter(e => getComputedStyle(e).display !== 'none');
+    return shown.length === 1 && shown[0].classList.contains('kit-empty') && Number(getComputedStyle(shown[0]).opacity) < 0.7 && !c.querySelector('mutagen-chamber:not([style*="display: none"])')?.checkVisibility?.();
+  }));
   check('home kit loads (background, pipes, buttons, live liquid, live logo)', home.art && home.chambers === 15, JSON.stringify(home));
 
 
