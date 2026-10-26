@@ -46,6 +46,8 @@ export const playerSetupScreen = {
         <main class="page--setup kit-screen" aria-label="Player setup">
           <h1 class="visually-hidden">Player Setup — ${title}</h1>
           ${kitStage(kit, 'player-setup', {
+            'title-guided': { hidden: mode === 'freeplay' },   // lettering: only the title for this mode shows
+            'title-freeplay': { hidden: mode !== 'freeplay' },
             back: { act: 'back', name: 'Back' },
             'deck-mutator': { act: 'deck-mutator', name: 'Deck Mutator' },
             continue: { act: 'start', name: 'Continue', hidden: hosting },

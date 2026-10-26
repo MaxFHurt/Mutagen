@@ -45,6 +45,17 @@ Player setup details:
 - `remote-count` holds the number of players joining from other devices.
 - Deck-source buttons drawn as kit buttons (`saved-decks`, `precon-catalog`, `paste-list`, `view-deck`) are hidden
   inside the form automatically, so they never appear twice.
+- Owner approved ChatGPT's Player Setup proposal (`handoff/rev02/03-Player-Setup-Proposed.png`) on 2026-10-26, with
+  these points:
+  - The deck box is a display box, not a drop-down.
+  - Continue and Open Room show one at a time.
+  - The playmats shown are the player's own (in the live `form` panel), not pictures baked into the art.
+  - Two titles are needed, as lettering pieces `title-guided` ("PLAYER SETUP – GUIDED PLAY") and `title-freeplay`
+    ("PLAYER SETUP – FREE PLAY").
+  - The `tabs` panel must hold up to 6 players. Leave it plain: the app draws each tab live with the player's colour
+    and deck status ("✓ deck name" / "Needs a deck").
+  - When hosting, Add Player reads "Add player on this device" (the accessible name). The Hosting box shows only when
+    hosting.
 
 ## 2. The skin kit: `ui/kits/skin/`, for every other screen and both apps
 

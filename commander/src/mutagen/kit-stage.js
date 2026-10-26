@@ -51,7 +51,7 @@ export function kitStage(layout, kit, controls, panels = {}) {
           <img class="kit-still" src="${KITS}branding/logo-mutagen-v2.png" alt="MUTAGEN"></div>`;
     }
     if (p.type === 'panel') return html`<div class="kit-piece kit-panel" style="${at(p.rect)}" data-panel="${p.id}">${panels[p.id] ?? ''}</div>`;
-    if (p.type === 'lettering') return html`<img class="kit-piece" style="${at(p.rect)}" src="${dir}${p.file}" alt="">`;
+    if (p.type === 'lettering') return controls[p.id]?.hidden ? '' : html`<img class="kit-piece" style="${at(p.rect)}" src="${dir}${p.file}" alt="">`;
     if (p.liquid) return html`<div class="kit-piece" style="${at(p.rect)}">${live(p, FLOW[p.id] || 'right', 1)}</div>`;
     return html`<img class="kit-piece" style="${at(p.rect)}" src="${dir}${p.files.assembled}" alt="">`;
   };
