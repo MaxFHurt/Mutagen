@@ -3,8 +3,7 @@ import { go } from '../../app/router.js';
 import { openModal } from '../modal.js';
 import { openJudge } from '../judge-modal.js';
 import { openSettings } from '../settings-modal.js';
-import { kitStage } from '../../mutagen/kit-stage.js';
-import MODE from '../../../../ui/kits/mode-select/layout.js';
+import { kitStage, kitFor } from '../../mutagen/kit-stage.js';
 
 function pickRemoteCount(onPick) {
   openModal({
@@ -21,7 +20,7 @@ export const modeSelectScreen = {
     setHtml(root, html`
       <main class="mode-select kit-screen" aria-label="Choose game mode">
         <h1 class="visually-hidden">Choose game mode</h1>
-        ${kitStage(MODE, 'mode-select', {
+        ${kitStage(kitFor('mode-select'), 'mode-select', {
           'fully-guided': { mode: 'fully-tracked', name: 'Fully Guided: rules-aware play and guidance' },
           freeplay: { mode: 'freeplay', name: 'Freeplay: create, test, and play' },
           'table-tracker': { mode: 'table-tracker', name: 'Table Tracker: track life, counters, and your table' },

@@ -15,6 +15,7 @@ Read this first when picking up the work. Keep it short and current.
   (rev 040). RESOLVE typo fixed (rev 041); home ooze runs as one stream (rev 043). Waiting on ChatGPT (`CHATGPT-REQUEST-2026-10-25b.md`): reworked logo liquid, and pipe/frame artwork for the home
   screen. Labels and artwork are never redrawn in code.
 - **Deck sync:** the owner is moving features on Deck Companion's deck page (Path to Apex, plans, Apply All, Best deck under). Bring it in with `tools/sync/sync-deck.sh`; what to check is in `sync/DECK-SYNC-PLAN.md`.
+- **Kits:** every screen is wired for its art (`KIT-CONTRACT.md`). Home and Choose Game Mode kits are installed (rev 057); Player Setup and the skin kit for everything else are waiting on ChatGPT. Install: copy into `ui/kits/`, run `tools/kits/layout-module.py`.
 - **Then:** the visual layer, screen by screen as masters are approved. Deck Mutator's
   remaining "upgrade" sentences wait until Deck development settles (owner option b).
 

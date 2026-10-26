@@ -58,15 +58,16 @@ index 1d3923324f5d4cc7d8d0f7d8c1fab6d802c4f422..3b9e1104006ea107576bc28c5b45e7aa
 +{"name": "MUTAGEN", "short_name": "MUTAGEN", "start_url": "../commander/", "scope": "../", "display": "standalone", "orientation": "landscape", "background_color": "#050407", "theme_color": "#050407", "icons": [{"src": "../commander/assets/img/icon-192.png", "sizes": "192x192", "type": "image/png"}, {"src": "../commander/assets/img/icon-512.png", "sizes": "512x512", "type": "image/png"}]}
 diff --git a/deck/mutagen.js b/deck/mutagen.js
 new file mode 100644
-index 0000000000000000000000000000000000000000..96bfed133cb8f424b351cdfa14be79ea7b931bad
+index 0000000000000000000000000000000000000000..266fbf0d09debff30ae7d4d97429d47046642f66
 --- /dev/null
 +++ b/deck/mutagen.js
-@@ -0,0 +1,75 @@
+@@ -0,0 +1,83 @@
 +// MUTAGEN: Deck Mutator is part of MUTAGEN. Kept outside the app bundle so the copied Deck Companion code stays as it was.
 +// - Return to MUTAGEN: back to the game side (../commander/), which reopens the screen that opened Deck Mutator.
 +// - One profile: the player's name lives in the game side's profile (ccv07-profile) and is shown here read-only;
 +//   the profile page also shows the game record. Decks, collection, buy lists and tablemates stay here (dc.profile).
 +// - One installed app: works offline through sw.js, and manifest.json installs MUTAGEN, not a separate app.
++// - One look: the MUTAGEN skin kit's frames, when installed (../ui/kits/skin-deck.css).
 +(function () {
 +  var GAME_PROFILE_KEY = 'ccv07-profile', MUTATOR_PROFILE_KEY = 'dc.profile', RETURN_KEY = 'mutagen.return';
 +
@@ -87,6 +88,13 @@ index 0000000000000000000000000000000000000000..96bfed133cb8f424b351cdfa14be79ea
 +    try { sessionStorage.setItem(RETURN_KEY, JSON.stringify({ screen: screen, params: {} })); } catch (e) { /* lands on home */ }
 +    location.href = '../commander/';
 +  }
++
++  // The MUTAGEN skin (ui/kits/skin/, generated into skin-deck.css): frames for buttons, panels, tabs and fields. The
++  // sheet is empty until a skin kit is installed, so Deck Mutator looks as it does now until then.
++  var skin = document.createElement('link');
++  skin.rel = 'stylesheet';
++  skin.href = '../ui/kits/skin-deck.css';
++  document.head.appendChild(skin);
 +
 +  var style = document.createElement('style');
 +  style.textContent =

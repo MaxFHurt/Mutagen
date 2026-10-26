@@ -174,6 +174,39 @@ try {
   }, backup);
   check('restoring the backup restores Deck Mutator data', restored === 1, String(restored));
 
+  // Kit contract (docs/KIT-CONTRACT.md): a player-setup kit plugs in with the same controls. The test kit only points at
+  // the installed mode-select kit's images, so no artwork is made for it.
+  await page.goto(`${BASE}/commander/`);
+  await ready();
+  await page.evaluate(async () => {
+    const kits = (await import('../ui/kits/index.js')).default, src = '../mode-select/buttons/back/';
+    const btn = (id, x, y) => ({ id, type: 'buttons', rect: [x, y, 728, 214], files: { assembled: src + 'assembled.png', overlay: src + 'clear-glass-overlay.png', mask: src + 'liquid-mask.png', pressed: src + 'pressed.png', disabled: src + 'disabled.png' }, liquid: true });
+    kits['player-setup'] = { canvas: { width: 3344, height: 1882 }, background: '../mode-select/background-clean.png', pieces: [
+      btn('back', 252, 1612), btn('deck-mutator', 1300, 1612), btn('continue', 2376, 1612), btn('open-room', 2376, 1612),
+      btn('add-player', 252, 1300), btn('remove-player', 252, 1080), btn('remote-minus', 252, 860), btn('remote-plus', 1000, 860),
+      btn('saved-decks', 1300, 200), btn('precon-catalog', 2050, 200), btn('paste-list', 1300, 420), btn('view-deck', 2050, 420),
+      { id: 'tabs', type: 'panel', rect: [252, 200, 950, 640] }, { id: 'form', type: 'panel', rect: [1300, 640, 1780, 900] },
+      { id: 'note', type: 'panel', rect: [252, 1540, 2800, 60] }, { id: 'remote-count', type: 'panel', rect: [1750, 860, 600, 200] }] };
+  });
+  await page.click('[data-act="start"]'); await page.click('[data-mode="fully-tracked"]'); await page.click('[data-play="local"]');
+  await page.waitForSelector('.page--setup.kit-screen');
+  const kitSetup = await page.evaluate(() => ({
+    buttons: [...document.querySelectorAll('.page--setup .kit-btn')].map(b => b.dataset.kit).join(),
+    panels: [...document.querySelectorAll('.page--setup .kit-panel')].map(p => p.dataset.panel + ':' + (p.children.length > 0)).join(),
+    formOwnSaved: getComputedStyle(document.querySelector('.kit-panel [data-seat-act="saved"]')).display
+  }));
+  check('kit contract: player setup shows its local controls on the kit', kitSetup.buttons === 'back,deck-mutator,continue,add-player,saved-decks,precon-catalog,paste-list', JSON.stringify(kitSetup));
+  check('kit contract: tabs, form and note go in their panels; the form does not repeat kit buttons', kitSetup.panels.startsWith('tabs:true,form:true,note:true') && kitSetup.formOwnSaved === 'none', JSON.stringify(kitSetup));
+  await page.fill('.kit-panel [data-field="name"]', 'Kit Tester');
+  check('kit contract: typing a name updates the player tab', (await page.textContent('.setup__tab.is-on b')).trim() === 'Kit Tester');
+  await page.click('.kit-btn[data-kit="add-player"]');
+  check('kit contract: Add player adds a seat and shows Remove', await page.evaluate(() => document.querySelectorAll('.setup__tab').length === 3 && !!document.querySelector('.kit-btn[data-kit="remove-player"]')));
+  await page.click('.kit-btn[data-kit="saved-decks"]');
+  check('kit contract: the kit Saved decks button opens the saved-deck picker', await page.waitForSelector('.modal', { timeout: 5000 }).then(() => true, () => false));
+  await page.click('.modal [data-modal-back]');
+  await page.click('.kit-btn[data-kit="back"]');
+  check('kit contract: Back returns to Choose Game Mode', await page.waitForSelector('.mode-select', { timeout: 5000 }).then(() => true, () => false));
+
   check('no page errors', !errors.length, JSON.stringify(errors.slice(0, 3)));
 } catch (error) {
   check('flow ran to the end', false, String(error));
