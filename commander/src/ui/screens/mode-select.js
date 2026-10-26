@@ -4,6 +4,7 @@ import { openModal } from '../modal.js';
 import { openJudge } from '../judge-modal.js';
 import { openSettings } from '../settings-modal.js';
 import '../../../../ui/liquid/liquid.js';   // MUTAGEN live liquid (<mutagen-chamber>)
+import LAYOUT from '../../../../ui/screens/mode-select/layout.js';
 
 function pickRemoteCount(onPick) {
   openModal({
@@ -13,34 +14,29 @@ function pickRemoteCount(onPick) {
   });
 }
 
-// MUTAGEN frame (as the home screen): live sight columns, logo and tagline, the three mode cards, and a bottom row with
-// Back and the supplied PROFILE / SETTINGS / HELP buttons over the live liquid. The mode cards and Back stay the existing
-// artwork until MUTAGEN versions are supplied; nothing is redrawn here.
+// Choose Game Mode after its approved master (owner, 2026-10-25): the master's own frame, columns, mode buttons, title,
+// sub-lines and bottom row, cut from the master into layers (tools/masters/extract-screen.py), with live liquid in the
+// columns and every row, and logo v2 in place of the master's logo. Tap areas sit over the master's buttons.
+const at = ([x, y, w, h]) => `left:${(100 * x) / LAYOUT.canvas[0]}%;top:${(100 * y) / LAYOUT.canvas[1]}%;width:${(100 * w) / LAYOUT.canvas[0]}%;height:${(100 * h) / LAYOUT.canvas[1]}%`;
+
 export const modeSelectScreen = {
   mount(root) {
-    const ui = '../ui/', set = Math.min(screen.width, screen.height) >= 700 ? 'buttons' : 'buttons-iphone';
-    const tool = (act, file, name) => html`<button type="button" class="mh-btn" data-act="${act}" aria-label="${name}">
-      <mutagen-chamber shell="canister" stream overlay="${ui}${set}/home/animation-overlay/button-${file}.png">${name}</mutagen-chamber></button>`;
+    const ui = '../ui/', dir = `${ui}screens/mode-select/`, [W, H] = LAYOUT.canvas;
+    const region = r => html`<mutagen-chamber class="mh-piece" style="${at(r.rect)}" mask="${dir}${r.id}-mask.png" size="${r.rect[2]} ${r.rect[3]}"
+      overlay="${dir}${r.id}-overlay.png" flow="${r.flow}" stream bubbles="0.8"></mutagen-chamber>`;
+    const tap = t => t.mode
+      ? html`<button type="button" class="ms-tap" style="${at(t.rect)}" data-mode="${t.mode}" aria-label="${t.name}"></button>`
+      : html`<button type="button" class="ms-tap" style="${at(t.rect)}" data-act="${t.act}" aria-label="${t.name}"></button>`;
     setHtml(root, html`
-      <main class="mode-select mutagen-mode" aria-label="Choose game mode">
-        <mutagen-chamber class="mh-column mh-column--left" shell="sight-column" flow="down" stream></mutagen-chamber>
-        <div class="mm-center">
-          <div class="mm-brand">
-            <mutagen-chamber class="mm-logo" shell="logo-v2" flow="none" overlay="${ui}branding/logo-mutagen-v2-overlay.png">MUTAGEN</mutagen-chamber>
-            <img class="mm-tagline" src="${ui}labels/label-tagline.png" alt="Mutate The Gathering">
-            <h1 class="visually-hidden">Choose game mode</h1>
-          </div>
-          <div class="mode-select__choices">
-            <button type="button" data-mode="fully-tracked"><img src="assets/img/mode/guided.png" alt="Fully Guided — Rulebook enforced guided games."></button>
-            <button type="button" data-mode="freeplay"><img src="assets/img/mode/freeplay.png" alt="Free Play — Create, Test, and Play."></button>
-            <button type="button" data-mode="table-tracker"><img src="assets/img/mode/tracker.png" alt="Table Tracker — Shared table tracking."></button>
-          </div>
-          <div class="mm-tools">
-            <button class="btn-back mm-back" type="button" data-act="back" aria-label="Back"><img src="assets/img/ui/back.png" alt="Back"></button>
-            ${tool('profile', 'profile', 'Profile')}${tool('settings', 'settings', 'Settings')}${tool('help', 'help', 'Help')}
-          </div>
+      <main class="mode-select mutagen-mode-master" aria-label="Choose game mode">
+        <div class="mh-stage">
+          <img class="mh-piece" style="${at([0, 0, W, H])}" src="${dir}static.png" alt="">
+          ${LAYOUT.regions.map(region)}
+          <mutagen-chamber class="mh-slot" style="${at(LAYOUT.slots.logo)}" shell="logo-v2" flow="none" overlay="${ui}branding/logo-mutagen-v2-overlay.png">MUTAGEN</mutagen-chamber>
+          <img class="mh-slot" style="${at(LAYOUT.slots.tagline)}" src="${ui}labels/label-tagline.png" alt="Mutate The Gathering">
+          <h1 class="visually-hidden">Choose game mode</h1>
+          ${LAYOUT.taps.map(tap)}
         </div>
-        <mutagen-chamber class="mh-column mh-column--right" shell="sight-column" flow="up" stream></mutagen-chamber>
       </main>`);
     const offBack = on(root, 'click', '[data-act]', (event, el) => {
       switch (el.dataset.act) {

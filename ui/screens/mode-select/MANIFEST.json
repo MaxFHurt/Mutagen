@@ -1,0 +1,20 @@
+{
+  "master": "docs/handoff/approved-masters/02-Game-Mode-Proposed.png",
+  "master_sha256": "f7fbb6a479e88e72f740ba3dda5a140f506d25fe7ed7b493bfa24c27cb27c88d",
+  "files": {
+    "col-left-overlay.png": "c3b8805de59f654ef8f0e4a8d62116aa5703aeb54cf94a253d5331df5b2b4a46",
+    "col-left-mask.png": "790dc941cb7403aabe44d35a4c8bfe40c1f1c666b98b7fd12e56fd33096eb009",
+    "col-right-overlay.png": "46bac48bd756eaa7f3816bd4825d97ecef9510308504ecd4716d009823a22628",
+    "col-right-mask.png": "9292aa1403e1fde09aec7ca71e6588bee8cb5ab55d8081f185d378ee5bc72c56",
+    "row-1-overlay.png": "88609ae8a84ffeece2c6dc56d3bc3a043eccfffc66db7fdca86d6ce059a489c1",
+    "row-1-mask.png": "a91bd5fb972b91d2c739fd69a651c66a59d44e17007afbca36bcf36867b4faa8",
+    "row-2-overlay.png": "8d08eb47665819d3bc976d28b2c5d2b408f3f85c9d6241ce50ebeeb0c9d668d7",
+    "row-2-mask.png": "632dc9e07a96ac215028c0814b7b877cbe9579ac1b1874d12e4a998dc19fa30d",
+    "row-3-overlay.png": "91188520297bb55f9d4b3b54b802628e37cad5076376b595f950c1d6ee925299",
+    "row-3-mask.png": "ef8046d5255184669348bd3e9857d041b8be3bad4106e5d438519d5c1275874a",
+    "bottom-overlay.png": "a7d9256b72c84af4e5ea7077790ed48bc8104ca0fa4deea1bc82f75c707db6df",
+    "bottom-mask.png": "05520b6de0b8d2ff7080e179ce031d5763ceb2cbf135ea69539bbee927cf19fd",
+    "static.png": "20d070e88e676f9929efcfdaa76ce7b3e972a6ab6ca9e3e874807fb15e7b5f5d",
+    "layout.js": "ff3d74e1c216963cce532a6c5136981284a79e792cac4f7476a4350239841275"
+  }
+}
