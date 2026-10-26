@@ -1,5 +1,10 @@
 # MUTAGEN V3 — Visual Change Roadmap — Revision 007 (2026-10-12)
 
+## CURRENT REVISION 064 — Deck Mutator synced to Deck Companion 0.9.21 (upgrades layout change), 2026-10-26
+
+Owner: the Deck Companion layout change is done. Synced `deck/` from Deck Companion `027a41f` (0.9.21, build 166) with `tools/sync/sync-deck.sh`, read-only. The upstream copy is committed on its own, then Mutagen's changes are re-applied: every one applied cleanly except the expected test conflict. UI-B132-01, the test for the new layout, keeps upstream's new checks with Mutagen's "Apply All … Mutations" labels. What changed upstream (0.9.20): Path to Apex, the level sentence and the plans moved to the Upgrades tab (Mutations in MUTAGEN), and Build Stats is stats only; plus fixes. Bundles rebuilt. Tests: Deck full UI suite 125/127 (UI-B145-01 needs EDHREC theme pages; UI-B146-02 is a known race; both fail in the source too), quick check 12/12, semantics 49/51 (as before), mutagen_flow 37/37. The sync log is in BASELINE and the Deck patch is refreshed against the new upstream.
+
+
 ## CURRENT REVISION 063 — Lighter home screen, site icon, small-phone tap size, 2026-10-26
 
 - Download: the home screen fetched 29.2 MB of images. Art that is not on screen (still images, pressed and inactive looks) now loads only when shown (`loading="lazy"` in `kit-stage.js`), bringing it to 18.9 MB with nothing visible changed. The rest is mostly the uncompressed background (6.8 MB) and logo glass layer (5.6 MB). Compressing them is image work, so it is requested from ChatGPT (WebP / JPEG). Unused files in the repo cost users nothing (only requested files download), so they stay for now.

@@ -1,5 +1,5 @@
 diff --git a/deck/index.html b/deck/index.html
-index 51a7fda73340129629574c7d33c773fd52db0995..d29305362de39aa6e5fb1715065823c994585509 100644
+index ffa2e664370d1d48ba677cdecd322f08612ef288..0ab4970076953f76d2b910b46febc0a7e69acbca 100644
 --- a/deck/index.html
 +++ b/deck/index.html
 @@ -5,12 +5,13 @@
@@ -185,10 +185,10 @@ index 0000000000000000000000000000000000000000..af414cf5c7296fc94155f8584f4bc8d6
 +  })());
 +});
 diff --git a/deck/tools/tests/suite/ui-test.mjs b/deck/tools/tests/suite/ui-test.mjs
-index e911dbaf64560b50806ea1d1af8dfa40f66639f9..d26c2c4f971108c7c8822b8164426a824fe5bf00 100644
+index 01a27d2c982ec291795e256a4c3288e74cbcf741..6a60f5f709a83fb5d4dd7de1c2125a73e52686e6 100644
 --- a/deck/tools/tests/suite/ui-test.mjs
 +++ b/deck/tools/tests/suite/ui-test.mjs
-@@ -929,7 +929,7 @@ const b116 = {}; { const w = await page.evaluate(() => { const d = S.profile.dec
+@@ -931,7 +931,7 @@ const b116 = {}; { const w = await page.evaluate(() => { const d = S.profile.dec
      b116[k] = await page.evaluate(n => { S.view = 'home'; S.open = false; $('#modal').hidden = true; render(); const c = document.querySelector('.continue');
        return {hero:getComputedStyle(document.querySelector('.hero')).display !== 'none', cont:!!c && getComputedStyle(c).display !== 'none', name:!!c && c.textContent.includes(n), brand:document.querySelector('.brand').innerText.replace(/\s+/g, ' ').trim()}; }, w); }
    await page.setViewportSize({width:1300, height:900}); await page.evaluate(() => { S.view = 'decks'; S.open = true; render(); }); }
@@ -197,15 +197,15 @@ index e911dbaf64560b50806ea1d1af8dfa40f66639f9..d26c2c4f971108c7c8822b8164426a82
  } catch (e) { QUIET = false; T('UI-B116-01', 'threw before finishing', false, String(e && e.message || e).slice(0, 300)); } }
  if (RUN('UI-B117-01')) { try { if (SHARD) await RESET();
  // 67. Build 117: phones. The Continue card sits under the three home tiles, just above Profile, with no extra deck buttons; on a
-@@ -1098,7 +1098,7 @@ if (RUN('UI-B132-01')) { try { if (SHARD) await RESET();
+@@ -1100,7 +1100,7 @@ if (RUN('UI-B132-01')) { try { if (SHARD) await RESET();
  // or How the tiers work (Build stats keeps the level sentence).
  const b132 = await page.evaluate(async () => { const d = S.profile.decks.find(x => /Wakanda/i.test(x.name)); S.deckId = d.id; S.view = 'decks'; S.open = true; S.tab = 'up'; render(); await recsReady(d); render();
    const up = document.querySelector('#upscroll'), bs = [...up.querySelectorAll('.tierbtns [data-act="swap-all"]')], out = {tiers:bs.map(b => b.dataset.v).join(',')};
 -  out.oneRow = new Set(bs.map(b => Math.round(b.getBoundingClientRect().top))).size === 1; out.text = bs.every(b => /^Apply All (Budget|Mid|Apex) Swaps$/i.test(b.querySelector('b').textContent) && /^(\d+ cards? · \$\d+ to buy|No worthwhile upgrades)$/.test(b.querySelector('span').textContent));
 +  out.oneRow = new Set(bs.map(b => Math.round(b.getBoundingClientRect().top))).size === 1; out.text = bs.every(b => /^Apply All (Budget|Mid Tier|Apex) Mutations$/i.test(b.querySelector('b').textContent) && /^(\d+ cards? · \$\d+ to buy|No worthwhile upgrades)$/.test(b.querySelector('span').textContent));
-   const t = up.textContent; out.gone = !/Apex progress|Your deck is at|Upgrade paths|How the tiers work|The strongest card for each slot/i.test(t) && !up.querySelector('.tiertabs');
-   S.tab = 'stats'; render(); out.statsKeeps = /Your deck is at/.test(document.querySelector('#statscroll').textContent); S.tab = 'up'; render(); return out; });
- T('UI-B132-01', 'Tiers are one row of three buttons ("Apply All Budget Swaps" over "N cards · $X to buy", owner 24 Oct); the Upgrades tab drops the Apex progress label, the level sentence, the Upgrade paths label and How the tiers work; Build stats keeps the sentence', b132.tiers === 'budget,mid,apex' && b132.oneRow && b132.text && b132.gone && b132.statsKeeps, JSON.stringify(b132));
+   const t = up.textContent; out.gone = !/Apex progress|Upgrade paths|How the tiers work|The strongest card for each slot/i.test(t) && !up.querySelector('.tiertabs'); out.upSentence = /Your deck is at/.test(t);
+   S.tab = 'stats'; render(); out.statsKeeps = !/Your deck is at/.test(document.querySelector('#statscroll').textContent);   /* 0.9.20 (owner 26 Oct): the sentence and Path to Apex live on Upgrades; Build stats is stats only */ S.tab = 'up'; render(); return out; });
+ T('UI-B132-01', 'Tiers are one row of three buttons ("Apply All Budget Swaps" over "N cards · $X to buy", owner 24 Oct); the Upgrades tab drops the Apex progress label, the Upgrade paths label and How the tiers work and shows the level sentence; Build stats does not (0.9.20)', b132.tiers === 'budget,mid,apex' && b132.oneRow && b132.text && b132.gone && b132.upSentence && b132.statsKeeps, JSON.stringify(b132));
 diff --git a/deck/ui/base.js b/deck/ui/base.js
 index 2a89a22fefab7e4189f82bfbc92e4e8d57369423..d791ef9244451ec01be42c4fc54796f895c0cc58 100644
 --- a/deck/ui/base.js
@@ -218,10 +218,10 @@ index 2a89a22fefab7e4189f82bfbc92e4e8d57369423..d791ef9244451ec01be42c4fc54796f8
  const esc = s =>
    String(s == null ? '' : s).replace(/[&<>"']/g, m => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'})[m]);
 diff --git a/deck/ui/deck.js b/deck/ui/deck.js
-index 484eb19d983a7a73a3e298c4cbc2eac5c165d74b..0df705e025eaa4e766c4feb57dc657ad3ddf8419 100644
+index b24c313177928eab0f3001bb4b5ff786d0eb64c9..8f174619d8a1dcc878ff0b56120684b24a41b995 100644
 --- a/deck/ui/deck.js
 +++ b/deck/ui/deck.js
-@@ -441,8 +441,8 @@ function upPanel(d, A, mode) {
+@@ -444,8 +444,8 @@ function upPanel(d, A, mode) {
              '"' +
              (ts.n ? '' : ' disabled') +
              '><b>Apply All ' +
@@ -232,7 +232,7 @@ index 484eb19d983a7a73a3e298c4cbc2eac5c165d74b..0df705e025eaa4e766c4feb57dc657ad
              (ts.n
                ? ts.n + ' card' + (ts.n === 1 ? '' : 's') + ' · $' + ts.cost.toFixed(0) + ' to buy'
                : 'No worthwhile upgrades') +
-@@ -581,7 +581,7 @@ function upPanel(d, A, mode) {
+@@ -583,7 +583,7 @@ function upPanel(d, A, mode) {
                    '<div class="opt none" data-t="' +
                    t +
                    '"><span class="chip">' +
@@ -241,7 +241,7 @@ index 484eb19d983a7a73a3e298c4cbc2eac5c165d74b..0df705e025eaa4e766c4feb57dc657ad
                    '</span><p>' +
                    esc((col && col.note) || (L.none && L.none[t]) || 'No ' + TIERS[t].label + ' pick for this slot') +
                    '</p></div>'
-@@ -594,7 +594,7 @@ function upPanel(d, A, mode) {
+@@ -596,7 +596,7 @@ function upPanel(d, A, mode) {
                  '<div class="opt" data-t="' +
                  t +
                  '"><span class="chip gold">' +
@@ -250,7 +250,7 @@ index 484eb19d983a7a73a3e298c4cbc2eac5c165d74b..0df705e025eaa4e766c4feb57dc657ad
                  '</span>' +
                  side('in', p.add, p.q) +
                  '<div class="row">' +
-@@ -1100,7 +1100,7 @@ async function openUpgradeAsk() {
+@@ -1103,7 +1103,7 @@ async function openUpgradeAsk() {
      '" aria-pressed="' +
      (d.tier === t) +
      '">' +
@@ -259,7 +259,7 @@ index 484eb19d983a7a73a3e298c4cbc2eac5c165d74b..0df705e025eaa4e766c4feb57dc657ad
      (t === 'apex' ? ' · any price' : ' · under $' + TIERS[t].cap) +
      '</button>';
    $('#modal').innerHTML =
-@@ -1343,7 +1343,7 @@ function themeBuildBox() {
+@@ -1346,7 +1346,7 @@ function themeBuildBox() {
      cols = g.tcol || [],
      tribe = g.ttribe || '';
    let h =
@@ -268,7 +268,7 @@ index 484eb19d983a7a73a3e298c4cbc2eac5c165d74b..0df705e025eaa4e766c4feb57dc657ad
      themeKeys()
        .map(
          t =>
-@@ -1440,7 +1440,7 @@ function themeBuildBox() {
+@@ -1443,7 +1443,7 @@ function themeBuildBox() {
            '" aria-pressed="' +
            ((g.tier || 'apex') === t) +
            '">' +
@@ -277,7 +277,7 @@ index 484eb19d983a7a73a3e298c4cbc2eac5c165d74b..0df705e025eaa4e766c4feb57dc657ad
            '</button>'
        )
        .join('') +
-@@ -1514,7 +1514,7 @@ function openGenerate() {
+@@ -1517,7 +1517,7 @@ function openGenerate() {
      c = find(g.cmd),
      st = detectStrategy(c);
    let h =
@@ -286,7 +286,7 @@ index 484eb19d983a7a73a3e298c4cbc2eac5c165d74b..0df705e025eaa4e766c4feb57dc657ad
      '<div class="grp"><label class="lab" for="gen-q">Commander</label><div class="dd"><input type="search" id="gen-q" placeholder="Search commanders" autocomplete="off"><div class="ddl" id="gen-res" hidden></div></div></div>';
    if (c)
      h +=
-@@ -1673,7 +1673,7 @@ function genModeBox(c, st) {
+@@ -1676,7 +1676,7 @@ function genModeBox(c, st) {
            '" aria-pressed="' +
            (g.tier === t) +
            '">' +
@@ -295,7 +295,7 @@ index 484eb19d983a7a73a3e298c4cbc2eac5c165d74b..0df705e025eaa4e766c4feb57dc657ad
            '</button>'
        )
        .join('') +
-@@ -1823,7 +1823,7 @@ function openSeed() {
+@@ -1826,7 +1826,7 @@ function openSeed() {
    const I = seedInfo(),
      g = S.gen;
    let h =
@@ -342,7 +342,7 @@ index 2feb27d05cd2800b0c0f83a8e54ac761b45d60a0..eb5030163e226a5212044f768bfcde0e
    }
    p.decks = p.decks
 diff --git a/deck/ui/upgrades.js b/deck/ui/upgrades.js
-index a5e210c6a81475257873503c0c39171ebeb2402b..6b2eaeaf6205b0ab4be7cad628eb01d94e7f137f 100644
+index 7535bbdb90a66626cc4bfae352707b0adabd63aa..f49ae21187a054aedc62c34619134d4593f6a90b 100644
 --- a/deck/ui/upgrades.js
 +++ b/deck/ui/upgrades.js
 @@ -997,7 +997,8 @@ function sheetHead(d, R, L, i, si, n, sel) {
@@ -356,7 +356,7 @@ index a5e210c6a81475257873503c0c39171ebeb2402b..6b2eaeaf6205b0ab4be7cad628eb01d9
        .join('') +
      '</div>'
 diff --git a/deck/ui/views.js b/deck/ui/views.js
-index ae25ffa9c6f58b3264798525e0bdf5193e180ead..37d66904c475afb43887c254a0acb7d4aa5818c2 100644
+index 26b86f62628369767a4058981c99e509f9e9c8b7..59e8d78f068004326d0b6a61d51fe1f32a94b50f 100644
 --- a/deck/ui/views.js
 +++ b/deck/ui/views.js
 @@ -86,7 +86,7 @@ function viewHome() {

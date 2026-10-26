@@ -197,10 +197,10 @@ function cardLogHtml() {
     '<p class="note" style="margin:0">This record is part of your profile, so it is also in your backup file. If Safari clears this site’s storage, restoring the backup brings the record back; the card data itself has to be downloaded once more.</p></div>'
   );
 }
-// Combos: Commander Spellbook's list, trimmed by the weekly card-data job (tools/build-combos.mjs) and served from the repo's
-// card-data branch. Saved in this browser and refreshed after a week. Without it, everything works; decks just don't
-// show combos or finishing routes.
-const COMBO_URL = 'https://raw.githubusercontent.com/MaxFHurt/Deck-Companion/card-data/combos.json.gz';
+// Combos: Commander Spellbook's list, trimmed by tools/build-combos.mjs. MUTAGEN ships it with the site (data/), refreshed
+// weekly by the combo-data workflow through a pull request. Saved in this browser and refreshed after a week. Without it,
+// everything works; decks just don't show combos or finishing routes.
+const COMBO_URL = 'data/combos.json.gz';
 let COMBO_RAW = null;
 async function loadCombos(force) {
   try {
@@ -1081,7 +1081,7 @@ async function linkBackup() {
   try {
     backupHandle = await window.showSaveFilePicker({
       suggestedName: 'deck-companion-backup.json',
-      types: [{description: 'Deck Companion backup', accept: {'application/json': ['.json']}}]
+      types: [{description: 'Deck Mutator backup', accept: {'application/json': ['.json']}}]
     });
     try {
       await idb('readwrite', s => s.put(backupHandle, 'backupHandle'));
@@ -1118,7 +1118,7 @@ function readBackup(text) {
     when = j.savedAt || '';
   } catch (e) {}
   if (!p || !Array.isArray(p.decks)) {
-    toast('That is not a Deck Companion backup file.');
+    toast('That is not a Deck Mutator backup file.');
     return;
   }
   p.decks = p.decks
