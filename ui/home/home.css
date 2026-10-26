@@ -24,18 +24,3 @@
 .mh-btn:focus-visible { outline: 2px solid #b993ff; outline-offset: 2px; }
 .mutagen-home .landing__foot { grid-column: 1 / -1; text-align: center; padding: 2px 0 0; font-size: 9px; }
 .landing.mutagen-home { padding-bottom: calc(max(6px, 2.8vh) + var(--safe-b, 0px)); }   /* version text sits above the background's bright bottom edge */
-
-/* Home after the approved master (?layout=master): one stage in the master's 1672 × 941 shape, as large as the screen
-   allows and centred; the background fills any space around it. Every piece is placed in percent of the stage from
-   ui/home/master-layout.js, so nothing is stretched or redrawn. */
-.landing.mutagen-home.mh-master { display: block; padding: 0; }
-.mh-stage {
-  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
-  width: min(calc(100vw - var(--safe-l, 0px) - var(--safe-r, 0px)), calc((100dvh - var(--safe-t, 0px) - var(--safe-b, 0px) - 14px) * 1672 / 941));
-  aspect-ratio: 1672 / 941;
-}
-.mh-stage > .mh-piece, .mh-stage > .mh-slot { position: absolute; margin: 0; }
-.mh-stage > .mutagen-chamber { display: block; }
-.mh-stage > .mh-slot.mh-btn .mutagen-chamber { width: 100%; }
-.mh-stage > img.mh-slot, .mh-stage > img.mh-piece { object-fit: contain; }
-.mh-master .landing__foot { position: absolute; left: 0; right: 0; bottom: calc(max(6px, 2.8vh) + var(--safe-b, 0px)); padding: 0; }

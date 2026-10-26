@@ -1,5 +1,7 @@
 # Message for ChatGPT: high-resolution sources (2026-10-26)
 
+> **Superseded 2026-10-26** by `CHATGPT-REQUEST-2026-10-26-complete.md`.
+
 Copy everything below the line into ChatGPT.
 
 ---
