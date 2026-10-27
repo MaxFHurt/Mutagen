@@ -1,0 +1,166 @@
+{
+  "files": [
+    {
+      "path": "00-branding/logo-mutagen-v2.png",
+      "size": [
+        2508,
+        2508
+      ],
+      "mode": "RGBA",
+      "sha256": "4ba10cb8d5cc68e9e886fde87c7cac0fd8ded787ef4428d23e402b0c5dbbfd1c",
+      "original_sha256": "847053a63b8bb37292b6ee915385487a75bcaebd87b7b23052d68a1b239a0cf1",
+      "complete_decode": true,
+      "original_is_exact_byte_prefix": true,
+      "surviving_filtered_scanline_bytes_match": true,
+      "surviving_filtered_bytes": 18427886,
+      "total_filtered_bytes": 25162764,
+      "file_bytes": 6485862,
+      "surviving_complete_pixel_rows": 1836,
+      "surviving_pixels_exact_match": true,
+      "alpha_range": [
+        0,
+        255
+      ],
+      "classification": "source-derived reconstruction; intact archived original not found"
+    },
+    {
+      "path": "00-branding/logo-mutagen-v2-liquid-mask.png",
+      "size": [
+        2508,
+        2508
+      ],
+      "mode": "RGB",
+      "sha256": "c63125e0ae8c01477a71ce535e545fa93deb47f2f51706a574cb7e96bea07438",
+      "original_sha256": "a879c28723eba041d9ad3264cad650a2f6914d38a3a4fc844c26f27fe2e177d4",
+      "complete_decode": true,
+      "original_is_exact_byte_prefix": true,
+      "surviving_filtered_scanline_bytes_match": true,
+      "surviving_filtered_bytes": 15849423,
+      "total_filtered_bytes": 18872700,
+      "file_bytes": 699110,
+      "surviving_complete_pixel_rows": 2106,
+      "surviving_pixels_exact_match": true,
+      "alpha_range": null,
+      "classification": "source-derived reconstruction; intact archived original not found"
+    },
+    {
+      "path": "01-home/buttons/deck-mutator/disabled.png",
+      "size": [
+        1424,
+        232
+      ],
+      "mode": "RGBA",
+      "sha256": "bbb43987dc8a2850a8d0926601a72fae767829db0b4dc404adcd9e119656fc35",
+      "original_sha256": "9f70da17be170667ed5bd26cf34fe05a136181b7412b12889d5d3319a01357a3",
+      "complete_decode": true,
+      "original_is_exact_byte_prefix": true,
+      "surviving_filtered_scanline_bytes_match": true,
+      "surviving_filtered_bytes": 256753,
+      "total_filtered_bytes": 1321704,
+      "file_bytes": 332932,
+      "surviving_complete_pixel_rows": 45,
+      "surviving_pixels_exact_match": true,
+      "alpha_range": [
+        0,
+        255
+      ],
+      "classification": "source-derived reconstruction; intact archived original not found"
+    },
+    {
+      "path": "01-home/buttons/settings/pressed.png",
+      "size": [
+        780,
+        228
+      ],
+      "mode": "RGBA",
+      "sha256": "045a0c74e744b354cbd40ee7ed2689e8c0457b6e93f51ce83eb402c3c484d59e",
+      "original_sha256": "59c112d8dc9a0691fc1b2c255dba5a7a29ba7433373ed049e9c629bc11211c78",
+      "complete_decode": true,
+      "original_is_exact_byte_prefix": true,
+      "surviving_filtered_scanline_bytes_match": true,
+      "surviving_filtered_bytes": 401206,
+      "total_filtered_bytes": 711588,
+      "file_bytes": 209716,
+      "surviving_complete_pixel_rows": 128,
+      "surviving_pixels_exact_match": true,
+      "alpha_range": [
+        0,
+        255
+      ],
+      "classification": "source-derived reconstruction; intact archived original not found"
+    },
+    {
+      "path": "02-choose-game-mode/buttons/freeplay/assembled.png",
+      "size": [
+        1424,
+        254
+      ],
+      "mode": "RGBA",
+      "sha256": "f617ab814ef0a35aaafa10be67311da0fe1426b836817848bb041795211aa728",
+      "original_sha256": "9caff68144800db7041911bc38d5be8dc02bd0bd0607f014cba8d27e72d3f539",
+      "complete_decode": true,
+      "original_is_exact_byte_prefix": true,
+      "surviving_filtered_scanline_bytes_match": true,
+      "surviving_filtered_bytes": 1291005,
+      "total_filtered_bytes": 1447038,
+      "file_bytes": 441723,
+      "surviving_complete_pixel_rows": 226,
+      "surviving_pixels_exact_match": true,
+      "alpha_range": [
+        0,
+        255
+      ],
+      "classification": "source-derived reconstruction; intact archived original not found"
+    },
+    {
+      "path": "02-choose-game-mode/buttons/settings/pressed.png",
+      "size": [
+        698,
+        214
+      ],
+      "mode": "RGBA",
+      "sha256": "09c4ed041e8fc910bfd4f231ea7cd24f6f416a5ff8606b24852c3a3fba243abb",
+      "original_sha256": "41fd12584e803b3a62d264fe8d847d5c08a1b1528baa6449c8109606dc6e19bf",
+      "complete_decode": true,
+      "original_is_exact_byte_prefix": true,
+      "surviving_filtered_scanline_bytes_match": true,
+      "surviving_filtered_bytes": 227623,
+      "total_filtered_bytes": 597702,
+      "file_bytes": 163221,
+      "surviving_complete_pixel_rows": 81,
+      "surviving_pixels_exact_match": true,
+      "alpha_range": [
+        0,
+        255
+      ],
+      "classification": "source-derived reconstruction; intact archived original not found"
+    }
+  ],
+  "intact_control_files": [
+    {
+      "path": "01-home/buttons/settings/assembled.png",
+      "sha256_match": true,
+      "exact_full_pixel_match": true
+    },
+    {
+      "path": "01-home/buttons/deck-mutator/assembled.png",
+      "sha256_match": true,
+      "exact_full_pixel_match": true
+    },
+    {
+      "path": "02-choose-game-mode/buttons/settings/assembled.png",
+      "sha256_match": true,
+      "exact_full_pixel_match": true
+    },
+    {
+      "path": "02-choose-game-mode/buttons/freeplay/pressed.png",
+      "sha256_match": true,
+      "exact_full_pixel_match": true
+    },
+    {
+      "path": "00-branding/logo-mutagen-v2-overlay.png",
+      "sha256_match": true,
+      "exact_full_pixel_match": true
+    }
+  ]
+}

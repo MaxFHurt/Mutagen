@@ -1,0 +1,8 @@
+No intact archived originals found for these six paths. Source-derived reconstructions are separate and do not establish missing-suffix identity.
+
+00-branding/logo-mutagen-v2.png
+00-branding/logo-mutagen-v2-liquid-mask.png
+01-home/buttons/deck-mutator/disabled.png
+01-home/buttons/settings/pressed.png
+02-choose-game-mode/buttons/freeplay/assembled.png
+02-choose-game-mode/buttons/settings/pressed.png

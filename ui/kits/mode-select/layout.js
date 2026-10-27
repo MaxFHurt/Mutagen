@@ -560,9 +560,6 @@ export default {
           "diameter": 108
         }
       ],
-      "broken": [
-        "assembled"
-      ],
       "liquid": true
     },
     {
@@ -739,9 +736,6 @@ export default {
           "diameter": 108
         }
       ],
-      "broken": [
-        "pressed"
-      ],
       "liquid": true
     },
     {
@@ -869,7 +863,7 @@ export default {
   ],
   "flow": "down left column, left-to-right through branches/buttons, up right column, return across top",
   "port_note": "Visible joint-center estimates. Hidden branch routes through steel are not derived from art; validate runtime trajectories. Bottom buttons in mode screen touch through integral coupling art.",
-  "background": "background-clean.png",
+  "background": "background-clean.webp",
   "differences": [
     "Authorized reconstructed full background; visible texture differs from preview.",
     "Original v2 logo inserted proportionally; differs from generated logo in preview.",

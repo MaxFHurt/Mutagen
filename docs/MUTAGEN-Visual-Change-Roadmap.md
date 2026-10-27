@@ -1,5 +1,15 @@
 # MUTAGEN V3 — Visual Change Roadmap — Revision 007 (2026-10-12)
 
+## CURRENT REVISION 070 — Dark alley backdrop and clean edges (ChatGPT Dark Alley R01), 2026-10-27
+
+Installed ChatGPT's Dark Alley R01 delta. All 163 sums verified, all 155 images decode, every piece matches its LAYOUT rect, and the layouts are identical except for `background` (now `background-clean.webp`). The home and Choose Game Mode kits get the new comic dark-alley background (3344 × 1882 WebP, 591 KB; a 2× enlargement of a 1672 × 941 render, as ChatGPT discloses) and re-cut pieces with the old blue backdrop removed from their edges (141 installed files verified). The shared backdrop for every later screen is at `ui/kits/shared/background-clean.webp`. The code darkening stand-in (rev 068) is removed, so the art shows as supplied. Inactive buttons keep the empty-glass rule (ChatGPT: do not set `disabled_empty_glass`). The home screen now downloads 10.7 MB (was 18.9). Records are in `handoff/dark-alley-r01/`. mutagen_flow 39/39, liquid 8/8.
+
+
+## CURRENT REVISION 069 — Restored revision 02 files installed (4 of 6), 2026-10-27
+
+ChatGPT sent source-derived restorations of the six truncated revision 02 files; no intact originals exist. Verified: all six hashes match, every file fully decodes, and each damaged copy is an exact byte prefix of its restoration. Installed: home settings pressed, mode-select settings pressed, mode-select freeplay assembled (its clipped sub-line is the same as in the overlay already in use, so nothing doubles), and home deck-mutator disabled (stored only; the inactive look stays the empty-glass rule). With these, no kit file is broken. On hold, as ChatGPT also advises: the 2508 logo and mask. The verified 1254 logo stays, and the 2508 mask is not certified. The validation report and evidence are in `handoff/rev02-restoration/`. mutagen_flow 39/39.
+
+
 ## CURRENT REVISION 068 — Backdrop black and very dark purple, 2026-10-27
 
 Owner: turn the blue background black and very dark purple, like "a dark alley in a comic". A display-only recolour of the supplied background in `kit.css` (darkened, shifted from blue to purple, less saturated, more contrast, plus a dark vignette at the edges); the image file is unchanged. It applies to every kit screen. A true comic dark-alley background is new art, requested from ChatGPT, along with removing the blue fringes painted into the edges of the button and pipe cut-outs. mutagen_flow 39/39.

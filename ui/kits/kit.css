@@ -60,9 +60,6 @@ html[data-green="reduced"] .kit-glow { opacity: 0.4; }
 .kit-glow--spill { mix-blend-mode: screen; opacity: 0.42; filter: blur(0.9vmin); transform: none; }
 html[data-green="reduced"] .kit-glow--spill { opacity: 0.18; }
 
-/* Owner: the blue backdrop black and very dark purple ("a dark alley in a comic"). A display-only recolour of the
-   supplied background (the image itself is unchanged) until ChatGPT supplies a dark-alley background. */
-.kit-bg { filter: hue-rotate(28deg) saturate(0.7) brightness(0.42) contrast(1.35); }
-.kit-stage::after { content: ""; position: absolute; inset: 0; pointer-events: none; z-index: 0;
-  background: radial-gradient(ellipse at 50% 42%, transparent 35%, rgba(4, 0, 8, 0.72) 100%); }
+/* Owner: a black and very dark purple comic dark alley. The kit's own background art (ChatGPT, Dark Alley R01) is shown
+   as supplied, with no darkening in code. */
 .kit-stage > .kit-piece:not(.kit-bg) { z-index: 1; }

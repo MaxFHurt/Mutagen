@@ -1,0 +1,1985 @@
+[
+  {
+    "kit": "01-home",
+    "id": "top-header-with-elbows",
+    "state": "assembled",
+    "path": "01-home/pipes/top-header-with-elbows/assembled.png",
+    "size": [
+      3192,
+      230
+    ],
+    "changed_pixels": 43914,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 30840
+  },
+  {
+    "kit": "01-home",
+    "id": "top-header-with-elbows",
+    "state": "overlay",
+    "path": "01-home/pipes/top-header-with-elbows/clear-glass-overlay.png",
+    "size": [
+      3192,
+      230
+    ],
+    "changed_pixels": 43914,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 30840
+  },
+  {
+    "kit": "01-home",
+    "id": "top-header-with-elbows",
+    "state": "mask",
+    "path": "01-home/pipes/top-header-with-elbows/liquid-mask.png",
+    "size": [
+      3192,
+      230
+    ],
+    "changed_pixels": 0,
+    "retained_rgb_exact_outside_documented_rail_patch": false,
+    "rail_patch": null,
+    "removed_alpha_pixels": null
+  },
+  {
+    "kit": "01-home",
+    "id": "left-sight-column",
+    "state": "assembled",
+    "path": "01-home/pipes/left-sight-column/assembled.png",
+    "size": [
+      244,
+      1390
+    ],
+    "changed_pixels": 2958,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 1473
+  },
+  {
+    "kit": "01-home",
+    "id": "left-sight-column",
+    "state": "overlay",
+    "path": "01-home/pipes/left-sight-column/clear-glass-overlay.png",
+    "size": [
+      244,
+      1390
+    ],
+    "changed_pixels": 3338,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 1473
+  },
+  {
+    "kit": "01-home",
+    "id": "left-sight-column",
+    "state": "mask",
+    "path": "01-home/pipes/left-sight-column/liquid-mask.png",
+    "size": [
+      244,
+      1390
+    ],
+    "changed_pixels": 0,
+    "retained_rgb_exact_outside_documented_rail_patch": false,
+    "rail_patch": null,
+    "removed_alpha_pixels": null
+  },
+  {
+    "kit": "01-home",
+    "id": "right-sight-column",
+    "state": "assembled",
+    "path": "01-home/pipes/right-sight-column/assembled.png",
+    "size": [
+      238,
+      1386
+    ],
+    "changed_pixels": 3218,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 2453
+  },
+  {
+    "kit": "01-home",
+    "id": "right-sight-column",
+    "state": "overlay",
+    "path": "01-home/pipes/right-sight-column/clear-glass-overlay.png",
+    "size": [
+      238,
+      1386
+    ],
+    "changed_pixels": 3526,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 2453
+  },
+  {
+    "kit": "01-home",
+    "id": "right-sight-column",
+    "state": "mask",
+    "path": "01-home/pipes/right-sight-column/liquid-mask.png",
+    "size": [
+      238,
+      1386
+    ],
+    "changed_pixels": 0,
+    "retained_rgb_exact_outside_documented_rail_patch": false,
+    "rail_patch": null,
+    "removed_alpha_pixels": null
+  },
+  {
+    "kit": "01-home",
+    "id": "branch-1-left",
+    "state": "assembled",
+    "path": "01-home/pipes/branch-1-left/assembled.png",
+    "size": [
+      688,
+      136
+    ],
+    "changed_pixels": 8524,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 5973
+  },
+  {
+    "kit": "01-home",
+    "id": "branch-1-left",
+    "state": "overlay",
+    "path": "01-home/pipes/branch-1-left/clear-glass-overlay.png",
+    "size": [
+      688,
+      136
+    ],
+    "changed_pixels": 8594,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 6107
+  },
+  {
+    "kit": "01-home",
+    "id": "branch-1-left",
+    "state": "mask",
+    "path": "01-home/pipes/branch-1-left/liquid-mask.png",
+    "size": [
+      688,
+      136
+    ],
+    "changed_pixels": 368,
+    "retained_rgb_exact_outside_documented_rail_patch": false,
+    "rail_patch": null,
+    "removed_alpha_pixels": null
+  },
+  {
+    "kit": "01-home",
+    "id": "branch-1-right",
+    "state": "assembled",
+    "path": "01-home/pipes/branch-1-right/assembled.png",
+    "size": [
+      702,
+      136
+    ],
+    "changed_pixels": 9365,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 6415
+  },
+  {
+    "kit": "01-home",
+    "id": "branch-1-right",
+    "state": "overlay",
+    "path": "01-home/pipes/branch-1-right/clear-glass-overlay.png",
+    "size": [
+      702,
+      136
+    ],
+    "changed_pixels": 9391,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 6519
+  },
+  {
+    "kit": "01-home",
+    "id": "branch-1-right",
+    "state": "mask",
+    "path": "01-home/pipes/branch-1-right/liquid-mask.png",
+    "size": [
+      702,
+      136
+    ],
+    "changed_pixels": 274,
+    "retained_rgb_exact_outside_documented_rail_patch": false,
+    "rail_patch": null,
+    "removed_alpha_pixels": null
+  },
+  {
+    "kit": "01-home",
+    "id": "branch-2-left",
+    "state": "assembled",
+    "path": "01-home/pipes/branch-2-left/assembled.png",
+    "size": [
+      688,
+      134
+    ],
+    "changed_pixels": 7888,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 5152
+  },
+  {
+    "kit": "01-home",
+    "id": "branch-2-left",
+    "state": "overlay",
+    "path": "01-home/pipes/branch-2-left/clear-glass-overlay.png",
+    "size": [
+      688,
+      134
+    ],
+    "changed_pixels": 8034,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 5160
+  },
+  {
+    "kit": "01-home",
+    "id": "branch-2-left",
+    "state": "mask",
+    "path": "01-home/pipes/branch-2-left/liquid-mask.png",
+    "size": [
+      688,
+      134
+    ],
+    "changed_pixels": 163,
+    "retained_rgb_exact_outside_documented_rail_patch": false,
+    "rail_patch": null,
+    "removed_alpha_pixels": null
+  },
+  {
+    "kit": "01-home",
+    "id": "branch-2-right",
+    "state": "assembled",
+    "path": "01-home/pipes/branch-2-right/assembled.png",
+    "size": [
+      702,
+      134
+    ],
+    "changed_pixels": 7743,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 4731
+  },
+  {
+    "kit": "01-home",
+    "id": "branch-2-right",
+    "state": "overlay",
+    "path": "01-home/pipes/branch-2-right/clear-glass-overlay.png",
+    "size": [
+      702,
+      134
+    ],
+    "changed_pixels": 8028,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 4731
+  },
+  {
+    "kit": "01-home",
+    "id": "branch-2-right",
+    "state": "mask",
+    "path": "01-home/pipes/branch-2-right/liquid-mask.png",
+    "size": [
+      702,
+      134
+    ],
+    "changed_pixels": 223,
+    "retained_rgb_exact_outside_documented_rail_patch": false,
+    "rail_patch": null,
+    "removed_alpha_pixels": null
+  },
+  {
+    "kit": "01-home",
+    "id": "branch-3-left",
+    "state": "assembled",
+    "path": "01-home/pipes/branch-3-left/assembled.png",
+    "size": [
+      688,
+      130
+    ],
+    "changed_pixels": 7733,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 4798
+  },
+  {
+    "kit": "01-home",
+    "id": "branch-3-left",
+    "state": "overlay",
+    "path": "01-home/pipes/branch-3-left/clear-glass-overlay.png",
+    "size": [
+      688,
+      130
+    ],
+    "changed_pixels": 8145,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 4798
+  },
+  {
+    "kit": "01-home",
+    "id": "branch-3-left",
+    "state": "mask",
+    "path": "01-home/pipes/branch-3-left/liquid-mask.png",
+    "size": [
+      688,
+      130
+    ],
+    "changed_pixels": 237,
+    "retained_rgb_exact_outside_documented_rail_patch": false,
+    "rail_patch": null,
+    "removed_alpha_pixels": null
+  },
+  {
+    "kit": "01-home",
+    "id": "branch-3-right",
+    "state": "assembled",
+    "path": "01-home/pipes/branch-3-right/assembled.png",
+    "size": [
+      702,
+      130
+    ],
+    "changed_pixels": 8629,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 5448
+  },
+  {
+    "kit": "01-home",
+    "id": "branch-3-right",
+    "state": "overlay",
+    "path": "01-home/pipes/branch-3-right/clear-glass-overlay.png",
+    "size": [
+      702,
+      130
+    ],
+    "changed_pixels": 9031,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 5448
+  },
+  {
+    "kit": "01-home",
+    "id": "branch-3-right",
+    "state": "mask",
+    "path": "01-home/pipes/branch-3-right/liquid-mask.png",
+    "size": [
+      702,
+      130
+    ],
+    "changed_pixels": 100,
+    "retained_rgb_exact_outside_documented_rail_patch": false,
+    "rail_patch": null,
+    "removed_alpha_pixels": null
+  },
+  {
+    "kit": "01-home",
+    "id": "bottom-left-elbow",
+    "state": "assembled",
+    "path": "01-home/pipes/bottom-left-elbow/assembled.png",
+    "size": [
+      212,
+      132
+    ],
+    "changed_pixels": 2868,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 2125
+  },
+  {
+    "kit": "01-home",
+    "id": "bottom-left-elbow",
+    "state": "overlay",
+    "path": "01-home/pipes/bottom-left-elbow/clear-glass-overlay.png",
+    "size": [
+      212,
+      132
+    ],
+    "changed_pixels": 2868,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 2125
+  },
+  {
+    "kit": "01-home",
+    "id": "bottom-left-elbow",
+    "state": "mask",
+    "path": "01-home/pipes/bottom-left-elbow/liquid-mask.png",
+    "size": [
+      212,
+      132
+    ],
+    "changed_pixels": 0,
+    "retained_rgb_exact_outside_documented_rail_patch": false,
+    "rail_patch": null,
+    "removed_alpha_pixels": null
+  },
+  {
+    "kit": "01-home",
+    "id": "bottom-joint-profile-settings",
+    "state": "assembled",
+    "path": "01-home/pipes/bottom-joint-profile-settings/assembled.png",
+    "size": [
+      94,
+      120
+    ],
+    "changed_pixels": 997,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 847
+  },
+  {
+    "kit": "01-home",
+    "id": "bottom-joint-profile-settings",
+    "state": "overlay",
+    "path": "01-home/pipes/bottom-joint-profile-settings/clear-glass-overlay.png",
+    "size": [
+      94,
+      120
+    ],
+    "changed_pixels": 997,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 847
+  },
+  {
+    "kit": "01-home",
+    "id": "bottom-joint-profile-settings",
+    "state": "mask",
+    "path": "01-home/pipes/bottom-joint-profile-settings/liquid-mask.png",
+    "size": [
+      94,
+      120
+    ],
+    "changed_pixels": 0,
+    "retained_rgb_exact_outside_documented_rail_patch": false,
+    "rail_patch": null,
+    "removed_alpha_pixels": null
+  },
+  {
+    "kit": "01-home",
+    "id": "bottom-joint-settings-help",
+    "state": "assembled",
+    "path": "01-home/pipes/bottom-joint-settings-help/assembled.png",
+    "size": [
+      90,
+      118
+    ],
+    "changed_pixels": 587,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 432
+  },
+  {
+    "kit": "01-home",
+    "id": "bottom-joint-settings-help",
+    "state": "overlay",
+    "path": "01-home/pipes/bottom-joint-settings-help/clear-glass-overlay.png",
+    "size": [
+      90,
+      118
+    ],
+    "changed_pixels": 587,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 432
+  },
+  {
+    "kit": "01-home",
+    "id": "bottom-joint-settings-help",
+    "state": "mask",
+    "path": "01-home/pipes/bottom-joint-settings-help/liquid-mask.png",
+    "size": [
+      90,
+      118
+    ],
+    "changed_pixels": 0,
+    "retained_rgb_exact_outside_documented_rail_patch": false,
+    "rail_patch": null,
+    "removed_alpha_pixels": null
+  },
+  {
+    "kit": "01-home",
+    "id": "bottom-right-elbow",
+    "state": "assembled",
+    "path": "01-home/pipes/bottom-right-elbow/assembled.png",
+    "size": [
+      208,
+      138
+    ],
+    "changed_pixels": 2533,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 1681
+  },
+  {
+    "kit": "01-home",
+    "id": "bottom-right-elbow",
+    "state": "overlay",
+    "path": "01-home/pipes/bottom-right-elbow/clear-glass-overlay.png",
+    "size": [
+      208,
+      138
+    ],
+    "changed_pixels": 2533,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 1681
+  },
+  {
+    "kit": "01-home",
+    "id": "bottom-right-elbow",
+    "state": "mask",
+    "path": "01-home/pipes/bottom-right-elbow/liquid-mask.png",
+    "size": [
+      208,
+      138
+    ],
+    "changed_pixels": 0,
+    "retained_rgb_exact_outside_documented_rail_patch": false,
+    "rail_patch": null,
+    "removed_alpha_pixels": null
+  },
+  {
+    "kit": "01-home",
+    "id": "new-game",
+    "state": "assembled",
+    "path": "01-home/buttons/new-game/assembled.png",
+    "size": [
+      1424,
+      234
+    ],
+    "changed_pixels": 39987,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": {
+      "destination": [
+        1056,
+        0,
+        40,
+        29
+      ],
+      "source": [
+        1100,
+        0,
+        40,
+        29
+      ]
+    },
+    "removed_alpha_pixels": 38111
+  },
+  {
+    "kit": "01-home",
+    "id": "new-game",
+    "state": "overlay",
+    "path": "01-home/buttons/new-game/clear-glass-overlay.png",
+    "size": [
+      1424,
+      234
+    ],
+    "changed_pixels": 41650,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": {
+      "destination": [
+        1056,
+        0,
+        40,
+        29
+      ],
+      "source": [
+        1100,
+        0,
+        40,
+        29
+      ]
+    },
+    "removed_alpha_pixels": 38111
+  },
+  {
+    "kit": "01-home",
+    "id": "new-game",
+    "state": "mask",
+    "path": "01-home/buttons/new-game/liquid-mask.png",
+    "size": [
+      1424,
+      234
+    ],
+    "changed_pixels": 575,
+    "retained_rgb_exact_outside_documented_rail_patch": false,
+    "rail_patch": {
+      "destination": [
+        1056,
+        0,
+        40,
+        29
+      ],
+      "source": [
+        1100,
+        0,
+        40,
+        29
+      ]
+    },
+    "removed_alpha_pixels": null
+  },
+  {
+    "kit": "01-home",
+    "id": "new-game",
+    "state": "disabled",
+    "path": "01-home/buttons/new-game/disabled.png",
+    "size": [
+      1424,
+      234
+    ],
+    "changed_pixels": 39956,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": {
+      "destination": [
+        1056,
+        0,
+        40,
+        29
+      ],
+      "source": [
+        1100,
+        0,
+        40,
+        29
+      ]
+    },
+    "removed_alpha_pixels": 38111
+  },
+  {
+    "kit": "01-home",
+    "id": "new-game",
+    "state": "pressed",
+    "path": "01-home/buttons/new-game/pressed.png",
+    "size": [
+      1424,
+      234
+    ],
+    "changed_pixels": 39973,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": {
+      "destination": [
+        1056,
+        0,
+        40,
+        29
+      ],
+      "source": [
+        1100,
+        0,
+        40,
+        29
+      ]
+    },
+    "removed_alpha_pixels": 38111
+  },
+  {
+    "kit": "01-home",
+    "id": "continue",
+    "state": "assembled",
+    "path": "01-home/buttons/continue/assembled.png",
+    "size": [
+      1424,
+      228
+    ],
+    "changed_pixels": 30003,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 28671
+  },
+  {
+    "kit": "01-home",
+    "id": "continue",
+    "state": "overlay",
+    "path": "01-home/buttons/continue/clear-glass-overlay.png",
+    "size": [
+      1424,
+      228
+    ],
+    "changed_pixels": 31742,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 28467
+  },
+  {
+    "kit": "01-home",
+    "id": "continue",
+    "state": "mask",
+    "path": "01-home/buttons/continue/liquid-mask.png",
+    "size": [
+      1424,
+      228
+    ],
+    "changed_pixels": 2369,
+    "retained_rgb_exact_outside_documented_rail_patch": false,
+    "rail_patch": null,
+    "removed_alpha_pixels": null
+  },
+  {
+    "kit": "01-home",
+    "id": "continue",
+    "state": "disabled",
+    "path": "01-home/buttons/continue/disabled.png",
+    "size": [
+      1424,
+      228
+    ],
+    "changed_pixels": 29972,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 28671
+  },
+  {
+    "kit": "01-home",
+    "id": "continue",
+    "state": "pressed",
+    "path": "01-home/buttons/continue/pressed.png",
+    "size": [
+      1424,
+      228
+    ],
+    "changed_pixels": 29994,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 28671
+  },
+  {
+    "kit": "01-home",
+    "id": "deck-mutator",
+    "state": "assembled",
+    "path": "01-home/buttons/deck-mutator/assembled.png",
+    "size": [
+      1424,
+      232
+    ],
+    "changed_pixels": 32478,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 31081
+  },
+  {
+    "kit": "01-home",
+    "id": "deck-mutator",
+    "state": "overlay",
+    "path": "01-home/buttons/deck-mutator/clear-glass-overlay.png",
+    "size": [
+      1424,
+      232
+    ],
+    "changed_pixels": 34240,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 30597
+  },
+  {
+    "kit": "01-home",
+    "id": "deck-mutator",
+    "state": "mask",
+    "path": "01-home/buttons/deck-mutator/liquid-mask.png",
+    "size": [
+      1424,
+      232
+    ],
+    "changed_pixels": 3058,
+    "retained_rgb_exact_outside_documented_rail_patch": false,
+    "rail_patch": null,
+    "removed_alpha_pixels": null
+  },
+  {
+    "kit": "01-home",
+    "id": "deck-mutator",
+    "state": "disabled",
+    "path": "01-home/buttons/deck-mutator/disabled.png",
+    "size": [
+      1424,
+      232
+    ],
+    "changed_pixels": 32451,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 31081
+  },
+  {
+    "kit": "01-home",
+    "id": "deck-mutator",
+    "state": "pressed",
+    "path": "01-home/buttons/deck-mutator/pressed.png",
+    "size": [
+      1424,
+      232
+    ],
+    "changed_pixels": 32466,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 31081
+  },
+  {
+    "kit": "01-home",
+    "id": "profile",
+    "state": "assembled",
+    "path": "01-home/buttons/profile/assembled.png",
+    "size": [
+      904,
+      228
+    ],
+    "changed_pixels": 24157,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 21803
+  },
+  {
+    "kit": "01-home",
+    "id": "profile",
+    "state": "overlay",
+    "path": "01-home/buttons/profile/clear-glass-overlay.png",
+    "size": [
+      904,
+      228
+    ],
+    "changed_pixels": 25060,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 21803
+  },
+  {
+    "kit": "01-home",
+    "id": "profile",
+    "state": "mask",
+    "path": "01-home/buttons/profile/liquid-mask.png",
+    "size": [
+      904,
+      228
+    ],
+    "changed_pixels": 805,
+    "retained_rgb_exact_outside_documented_rail_patch": false,
+    "rail_patch": null,
+    "removed_alpha_pixels": null
+  },
+  {
+    "kit": "01-home",
+    "id": "profile",
+    "state": "disabled",
+    "path": "01-home/buttons/profile/disabled.png",
+    "size": [
+      904,
+      228
+    ],
+    "changed_pixels": 24132,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 21803
+  },
+  {
+    "kit": "01-home",
+    "id": "profile",
+    "state": "pressed",
+    "path": "01-home/buttons/profile/pressed.png",
+    "size": [
+      904,
+      228
+    ],
+    "changed_pixels": 24140,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 21803
+  },
+  {
+    "kit": "01-home",
+    "id": "settings",
+    "state": "assembled",
+    "path": "01-home/buttons/settings/assembled.png",
+    "size": [
+      780,
+      228
+    ],
+    "changed_pixels": 21672,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 19425
+  },
+  {
+    "kit": "01-home",
+    "id": "settings",
+    "state": "overlay",
+    "path": "01-home/buttons/settings/clear-glass-overlay.png",
+    "size": [
+      780,
+      228
+    ],
+    "changed_pixels": 22352,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 19425
+  },
+  {
+    "kit": "01-home",
+    "id": "settings",
+    "state": "mask",
+    "path": "01-home/buttons/settings/liquid-mask.png",
+    "size": [
+      780,
+      228
+    ],
+    "changed_pixels": 857,
+    "retained_rgb_exact_outside_documented_rail_patch": false,
+    "rail_patch": null,
+    "removed_alpha_pixels": null
+  },
+  {
+    "kit": "01-home",
+    "id": "settings",
+    "state": "disabled",
+    "path": "01-home/buttons/settings/disabled.png",
+    "size": [
+      780,
+      228
+    ],
+    "changed_pixels": 21661,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 19425
+  },
+  {
+    "kit": "01-home",
+    "id": "settings",
+    "state": "pressed",
+    "path": "01-home/buttons/settings/pressed.png",
+    "size": [
+      780,
+      228
+    ],
+    "changed_pixels": 21665,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 19425
+  },
+  {
+    "kit": "01-home",
+    "id": "help",
+    "state": "assembled",
+    "path": "01-home/buttons/help/assembled.png",
+    "size": [
+      912,
+      228
+    ],
+    "changed_pixels": 25491,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 23117
+  },
+  {
+    "kit": "01-home",
+    "id": "help",
+    "state": "overlay",
+    "path": "01-home/buttons/help/clear-glass-overlay.png",
+    "size": [
+      912,
+      228
+    ],
+    "changed_pixels": 26375,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 23117
+  },
+  {
+    "kit": "01-home",
+    "id": "help",
+    "state": "mask",
+    "path": "01-home/buttons/help/liquid-mask.png",
+    "size": [
+      912,
+      228
+    ],
+    "changed_pixels": 488,
+    "retained_rgb_exact_outside_documented_rail_patch": false,
+    "rail_patch": null,
+    "removed_alpha_pixels": null
+  },
+  {
+    "kit": "01-home",
+    "id": "help",
+    "state": "disabled",
+    "path": "01-home/buttons/help/disabled.png",
+    "size": [
+      912,
+      228
+    ],
+    "changed_pixels": 25470,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 23117
+  },
+  {
+    "kit": "01-home",
+    "id": "help",
+    "state": "pressed",
+    "path": "01-home/buttons/help/pressed.png",
+    "size": [
+      912,
+      228
+    ],
+    "changed_pixels": 25479,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 23117
+  },
+  {
+    "kit": "02-choose-game-mode",
+    "id": "top-header-with-elbows",
+    "state": "assembled",
+    "path": "02-choose-game-mode/pipes/top-header-with-elbows/assembled.png",
+    "size": [
+      3192,
+      230
+    ],
+    "changed_pixels": 42141,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 29685
+  },
+  {
+    "kit": "02-choose-game-mode",
+    "id": "top-header-with-elbows",
+    "state": "overlay",
+    "path": "02-choose-game-mode/pipes/top-header-with-elbows/clear-glass-overlay.png",
+    "size": [
+      3192,
+      230
+    ],
+    "changed_pixels": 42141,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 29685
+  },
+  {
+    "kit": "02-choose-game-mode",
+    "id": "top-header-with-elbows",
+    "state": "mask",
+    "path": "02-choose-game-mode/pipes/top-header-with-elbows/liquid-mask.png",
+    "size": [
+      3192,
+      230
+    ],
+    "changed_pixels": 0,
+    "retained_rgb_exact_outside_documented_rail_patch": false,
+    "rail_patch": null,
+    "removed_alpha_pixels": null
+  },
+  {
+    "kit": "02-choose-game-mode",
+    "id": "left-sight-column",
+    "state": "assembled",
+    "path": "02-choose-game-mode/pipes/left-sight-column/assembled.png",
+    "size": [
+      244,
+      1390
+    ],
+    "changed_pixels": 3066,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 1483
+  },
+  {
+    "kit": "02-choose-game-mode",
+    "id": "left-sight-column",
+    "state": "overlay",
+    "path": "02-choose-game-mode/pipes/left-sight-column/clear-glass-overlay.png",
+    "size": [
+      244,
+      1390
+    ],
+    "changed_pixels": 3417,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 1483
+  },
+  {
+    "kit": "02-choose-game-mode",
+    "id": "left-sight-column",
+    "state": "mask",
+    "path": "02-choose-game-mode/pipes/left-sight-column/liquid-mask.png",
+    "size": [
+      244,
+      1390
+    ],
+    "changed_pixels": 0,
+    "retained_rgb_exact_outside_documented_rail_patch": false,
+    "rail_patch": null,
+    "removed_alpha_pixels": null
+  },
+  {
+    "kit": "02-choose-game-mode",
+    "id": "right-sight-column",
+    "state": "assembled",
+    "path": "02-choose-game-mode/pipes/right-sight-column/assembled.png",
+    "size": [
+      238,
+      1386
+    ],
+    "changed_pixels": 4000,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 3069
+  },
+  {
+    "kit": "02-choose-game-mode",
+    "id": "right-sight-column",
+    "state": "overlay",
+    "path": "02-choose-game-mode/pipes/right-sight-column/clear-glass-overlay.png",
+    "size": [
+      238,
+      1386
+    ],
+    "changed_pixels": 4592,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 3069
+  },
+  {
+    "kit": "02-choose-game-mode",
+    "id": "right-sight-column",
+    "state": "mask",
+    "path": "02-choose-game-mode/pipes/right-sight-column/liquid-mask.png",
+    "size": [
+      238,
+      1386
+    ],
+    "changed_pixels": 0,
+    "retained_rgb_exact_outside_documented_rail_patch": false,
+    "rail_patch": null,
+    "removed_alpha_pixels": null
+  },
+  {
+    "kit": "02-choose-game-mode",
+    "id": "branch-1-left",
+    "state": "assembled",
+    "path": "02-choose-game-mode/pipes/branch-1-left/assembled.png",
+    "size": [
+      688,
+      136
+    ],
+    "changed_pixels": 10988,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 8619
+  },
+  {
+    "kit": "02-choose-game-mode",
+    "id": "branch-1-left",
+    "state": "overlay",
+    "path": "02-choose-game-mode/pipes/branch-1-left/clear-glass-overlay.png",
+    "size": [
+      688,
+      136
+    ],
+    "changed_pixels": 11386,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 8619
+  },
+  {
+    "kit": "02-choose-game-mode",
+    "id": "branch-1-left",
+    "state": "mask",
+    "path": "02-choose-game-mode/pipes/branch-1-left/liquid-mask.png",
+    "size": [
+      688,
+      136
+    ],
+    "changed_pixels": 339,
+    "retained_rgb_exact_outside_documented_rail_patch": false,
+    "rail_patch": null,
+    "removed_alpha_pixels": null
+  },
+  {
+    "kit": "02-choose-game-mode",
+    "id": "branch-1-right",
+    "state": "assembled",
+    "path": "02-choose-game-mode/pipes/branch-1-right/assembled.png",
+    "size": [
+      702,
+      136
+    ],
+    "changed_pixels": 11108,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 8816
+  },
+  {
+    "kit": "02-choose-game-mode",
+    "id": "branch-1-right",
+    "state": "overlay",
+    "path": "02-choose-game-mode/pipes/branch-1-right/clear-glass-overlay.png",
+    "size": [
+      702,
+      136
+    ],
+    "changed_pixels": 11514,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 8816
+  },
+  {
+    "kit": "02-choose-game-mode",
+    "id": "branch-1-right",
+    "state": "mask",
+    "path": "02-choose-game-mode/pipes/branch-1-right/liquid-mask.png",
+    "size": [
+      702,
+      136
+    ],
+    "changed_pixels": 236,
+    "retained_rgb_exact_outside_documented_rail_patch": false,
+    "rail_patch": null,
+    "removed_alpha_pixels": null
+  },
+  {
+    "kit": "02-choose-game-mode",
+    "id": "branch-2-left",
+    "state": "assembled",
+    "path": "02-choose-game-mode/pipes/branch-2-left/assembled.png",
+    "size": [
+      688,
+      134
+    ],
+    "changed_pixels": 11262,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 8569
+  },
+  {
+    "kit": "02-choose-game-mode",
+    "id": "branch-2-left",
+    "state": "overlay",
+    "path": "02-choose-game-mode/pipes/branch-2-left/clear-glass-overlay.png",
+    "size": [
+      688,
+      134
+    ],
+    "changed_pixels": 11573,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 8569
+  },
+  {
+    "kit": "02-choose-game-mode",
+    "id": "branch-2-left",
+    "state": "mask",
+    "path": "02-choose-game-mode/pipes/branch-2-left/liquid-mask.png",
+    "size": [
+      688,
+      134
+    ],
+    "changed_pixels": 158,
+    "retained_rgb_exact_outside_documented_rail_patch": false,
+    "rail_patch": null,
+    "removed_alpha_pixels": null
+  },
+  {
+    "kit": "02-choose-game-mode",
+    "id": "branch-2-right",
+    "state": "assembled",
+    "path": "02-choose-game-mode/pipes/branch-2-right/assembled.png",
+    "size": [
+      702,
+      134
+    ],
+    "changed_pixels": 12078,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 8996
+  },
+  {
+    "kit": "02-choose-game-mode",
+    "id": "branch-2-right",
+    "state": "overlay",
+    "path": "02-choose-game-mode/pipes/branch-2-right/clear-glass-overlay.png",
+    "size": [
+      702,
+      134
+    ],
+    "changed_pixels": 12379,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 8996
+  },
+  {
+    "kit": "02-choose-game-mode",
+    "id": "branch-2-right",
+    "state": "mask",
+    "path": "02-choose-game-mode/pipes/branch-2-right/liquid-mask.png",
+    "size": [
+      702,
+      134
+    ],
+    "changed_pixels": 146,
+    "retained_rgb_exact_outside_documented_rail_patch": false,
+    "rail_patch": null,
+    "removed_alpha_pixels": null
+  },
+  {
+    "kit": "02-choose-game-mode",
+    "id": "branch-3-left",
+    "state": "assembled",
+    "path": "02-choose-game-mode/pipes/branch-3-left/assembled.png",
+    "size": [
+      688,
+      130
+    ],
+    "changed_pixels": 7419,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 4351
+  },
+  {
+    "kit": "02-choose-game-mode",
+    "id": "branch-3-left",
+    "state": "overlay",
+    "path": "02-choose-game-mode/pipes/branch-3-left/clear-glass-overlay.png",
+    "size": [
+      688,
+      130
+    ],
+    "changed_pixels": 7695,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 4351
+  },
+  {
+    "kit": "02-choose-game-mode",
+    "id": "branch-3-left",
+    "state": "mask",
+    "path": "02-choose-game-mode/pipes/branch-3-left/liquid-mask.png",
+    "size": [
+      688,
+      130
+    ],
+    "changed_pixels": 274,
+    "retained_rgb_exact_outside_documented_rail_patch": false,
+    "rail_patch": null,
+    "removed_alpha_pixels": null
+  },
+  {
+    "kit": "02-choose-game-mode",
+    "id": "branch-3-right",
+    "state": "assembled",
+    "path": "02-choose-game-mode/pipes/branch-3-right/assembled.png",
+    "size": [
+      702,
+      130
+    ],
+    "changed_pixels": 7670,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 4469
+  },
+  {
+    "kit": "02-choose-game-mode",
+    "id": "branch-3-right",
+    "state": "overlay",
+    "path": "02-choose-game-mode/pipes/branch-3-right/clear-glass-overlay.png",
+    "size": [
+      702,
+      130
+    ],
+    "changed_pixels": 7948,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 4469
+  },
+  {
+    "kit": "02-choose-game-mode",
+    "id": "branch-3-right",
+    "state": "mask",
+    "path": "02-choose-game-mode/pipes/branch-3-right/liquid-mask.png",
+    "size": [
+      702,
+      130
+    ],
+    "changed_pixels": 148,
+    "retained_rgb_exact_outside_documented_rail_patch": false,
+    "rail_patch": null,
+    "removed_alpha_pixels": null
+  },
+  {
+    "kit": "02-choose-game-mode",
+    "id": "bottom-left-elbow",
+    "state": "assembled",
+    "path": "02-choose-game-mode/pipes/bottom-left-elbow/assembled.png",
+    "size": [
+      174,
+      132
+    ],
+    "changed_pixels": 3867,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 3093
+  },
+  {
+    "kit": "02-choose-game-mode",
+    "id": "bottom-left-elbow",
+    "state": "overlay",
+    "path": "02-choose-game-mode/pipes/bottom-left-elbow/clear-glass-overlay.png",
+    "size": [
+      174,
+      132
+    ],
+    "changed_pixels": 3867,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 3093
+  },
+  {
+    "kit": "02-choose-game-mode",
+    "id": "bottom-left-elbow",
+    "state": "mask",
+    "path": "02-choose-game-mode/pipes/bottom-left-elbow/liquid-mask.png",
+    "size": [
+      174,
+      132
+    ],
+    "changed_pixels": 0,
+    "retained_rgb_exact_outside_documented_rail_patch": false,
+    "rail_patch": null,
+    "removed_alpha_pixels": null
+  },
+  {
+    "kit": "02-choose-game-mode",
+    "id": "bottom-right-elbow",
+    "state": "assembled",
+    "path": "02-choose-game-mode/pipes/bottom-right-elbow/assembled.png",
+    "size": [
+      174,
+      138
+    ],
+    "changed_pixels": 3875,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 2981
+  },
+  {
+    "kit": "02-choose-game-mode",
+    "id": "bottom-right-elbow",
+    "state": "overlay",
+    "path": "02-choose-game-mode/pipes/bottom-right-elbow/clear-glass-overlay.png",
+    "size": [
+      174,
+      138
+    ],
+    "changed_pixels": 3875,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 2981
+  },
+  {
+    "kit": "02-choose-game-mode",
+    "id": "bottom-right-elbow",
+    "state": "mask",
+    "path": "02-choose-game-mode/pipes/bottom-right-elbow/liquid-mask.png",
+    "size": [
+      174,
+      138
+    ],
+    "changed_pixels": 0,
+    "retained_rgb_exact_outside_documented_rail_patch": false,
+    "rail_patch": null,
+    "removed_alpha_pixels": null
+  },
+  {
+    "kit": "02-choose-game-mode",
+    "id": "fully-guided",
+    "state": "assembled",
+    "path": "02-choose-game-mode/buttons/fully-guided/assembled.png",
+    "size": [
+      1424,
+      254
+    ],
+    "changed_pixels": 63542,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 62151
+  },
+  {
+    "kit": "02-choose-game-mode",
+    "id": "fully-guided",
+    "state": "overlay",
+    "path": "02-choose-game-mode/buttons/fully-guided/clear-glass-overlay.png",
+    "size": [
+      1424,
+      254
+    ],
+    "changed_pixels": 64605,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 62151
+  },
+  {
+    "kit": "02-choose-game-mode",
+    "id": "fully-guided",
+    "state": "mask",
+    "path": "02-choose-game-mode/buttons/fully-guided/liquid-mask.png",
+    "size": [
+      1424,
+      254
+    ],
+    "changed_pixels": 216,
+    "retained_rgb_exact_outside_documented_rail_patch": false,
+    "rail_patch": null,
+    "removed_alpha_pixels": null
+  },
+  {
+    "kit": "02-choose-game-mode",
+    "id": "fully-guided",
+    "state": "disabled",
+    "path": "02-choose-game-mode/buttons/fully-guided/disabled.png",
+    "size": [
+      1424,
+      254
+    ],
+    "changed_pixels": 63515,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 62151
+  },
+  {
+    "kit": "02-choose-game-mode",
+    "id": "fully-guided",
+    "state": "pressed",
+    "path": "02-choose-game-mode/buttons/fully-guided/pressed.png",
+    "size": [
+      1424,
+      254
+    ],
+    "changed_pixels": 63533,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 62151
+  },
+  {
+    "kit": "02-choose-game-mode",
+    "id": "freeplay",
+    "state": "assembled",
+    "path": "02-choose-game-mode/buttons/freeplay/assembled.png",
+    "size": [
+      1424,
+      254
+    ],
+    "changed_pixels": 59252,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 57896
+  },
+  {
+    "kit": "02-choose-game-mode",
+    "id": "freeplay",
+    "state": "overlay",
+    "path": "02-choose-game-mode/buttons/freeplay/clear-glass-overlay.png",
+    "size": [
+      1424,
+      254
+    ],
+    "changed_pixels": 60778,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 57845
+  },
+  {
+    "kit": "02-choose-game-mode",
+    "id": "freeplay",
+    "state": "mask",
+    "path": "02-choose-game-mode/buttons/freeplay/liquid-mask.png",
+    "size": [
+      1424,
+      254
+    ],
+    "changed_pixels": 485,
+    "retained_rgb_exact_outside_documented_rail_patch": false,
+    "rail_patch": null,
+    "removed_alpha_pixels": null
+  },
+  {
+    "kit": "02-choose-game-mode",
+    "id": "freeplay",
+    "state": "disabled",
+    "path": "02-choose-game-mode/buttons/freeplay/disabled.png",
+    "size": [
+      1424,
+      254
+    ],
+    "changed_pixels": 59223,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 57896
+  },
+  {
+    "kit": "02-choose-game-mode",
+    "id": "freeplay",
+    "state": "pressed",
+    "path": "02-choose-game-mode/buttons/freeplay/pressed.png",
+    "size": [
+      1424,
+      254
+    ],
+    "changed_pixels": 59239,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 57896
+  },
+  {
+    "kit": "02-choose-game-mode",
+    "id": "table-tracker",
+    "state": "assembled",
+    "path": "02-choose-game-mode/buttons/table-tracker/assembled.png",
+    "size": [
+      1424,
+      254
+    ],
+    "changed_pixels": 64766,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 63438
+  },
+  {
+    "kit": "02-choose-game-mode",
+    "id": "table-tracker",
+    "state": "overlay",
+    "path": "02-choose-game-mode/buttons/table-tracker/clear-glass-overlay.png",
+    "size": [
+      1424,
+      254
+    ],
+    "changed_pixels": 66330,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 63438
+  },
+  {
+    "kit": "02-choose-game-mode",
+    "id": "table-tracker",
+    "state": "mask",
+    "path": "02-choose-game-mode/buttons/table-tracker/liquid-mask.png",
+    "size": [
+      1424,
+      254
+    ],
+    "changed_pixels": 441,
+    "retained_rgb_exact_outside_documented_rail_patch": false,
+    "rail_patch": null,
+    "removed_alpha_pixels": null
+  },
+  {
+    "kit": "02-choose-game-mode",
+    "id": "table-tracker",
+    "state": "disabled",
+    "path": "02-choose-game-mode/buttons/table-tracker/disabled.png",
+    "size": [
+      1424,
+      254
+    ],
+    "changed_pixels": 64739,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 63438
+  },
+  {
+    "kit": "02-choose-game-mode",
+    "id": "table-tracker",
+    "state": "pressed",
+    "path": "02-choose-game-mode/buttons/table-tracker/pressed.png",
+    "size": [
+      1424,
+      254
+    ],
+    "changed_pixels": 64751,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 63438
+  },
+  {
+    "kit": "02-choose-game-mode",
+    "id": "back",
+    "state": "assembled",
+    "path": "02-choose-game-mode/buttons/back/assembled.png",
+    "size": [
+      728,
+      214
+    ],
+    "changed_pixels": 18731,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 16729
+  },
+  {
+    "kit": "02-choose-game-mode",
+    "id": "back",
+    "state": "overlay",
+    "path": "02-choose-game-mode/buttons/back/clear-glass-overlay.png",
+    "size": [
+      728,
+      214
+    ],
+    "changed_pixels": 19146,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 16729
+  },
+  {
+    "kit": "02-choose-game-mode",
+    "id": "back",
+    "state": "mask",
+    "path": "02-choose-game-mode/buttons/back/liquid-mask.png",
+    "size": [
+      728,
+      214
+    ],
+    "changed_pixels": 180,
+    "retained_rgb_exact_outside_documented_rail_patch": false,
+    "rail_patch": null,
+    "removed_alpha_pixels": null
+  },
+  {
+    "kit": "02-choose-game-mode",
+    "id": "back",
+    "state": "disabled",
+    "path": "02-choose-game-mode/buttons/back/disabled.png",
+    "size": [
+      728,
+      214
+    ],
+    "changed_pixels": 18709,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 16729
+  },
+  {
+    "kit": "02-choose-game-mode",
+    "id": "back",
+    "state": "pressed",
+    "path": "02-choose-game-mode/buttons/back/pressed.png",
+    "size": [
+      728,
+      214
+    ],
+    "changed_pixels": 18724,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 16729
+  },
+  {
+    "kit": "02-choose-game-mode",
+    "id": "profile",
+    "state": "assembled",
+    "path": "02-choose-game-mode/buttons/profile/assembled.png",
+    "size": [
+      704,
+      214
+    ],
+    "changed_pixels": 20396,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 18451
+  },
+  {
+    "kit": "02-choose-game-mode",
+    "id": "profile",
+    "state": "overlay",
+    "path": "02-choose-game-mode/buttons/profile/clear-glass-overlay.png",
+    "size": [
+      704,
+      214
+    ],
+    "changed_pixels": 20931,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 18451
+  },
+  {
+    "kit": "02-choose-game-mode",
+    "id": "profile",
+    "state": "mask",
+    "path": "02-choose-game-mode/buttons/profile/liquid-mask.png",
+    "size": [
+      704,
+      214
+    ],
+    "changed_pixels": 262,
+    "retained_rgb_exact_outside_documented_rail_patch": false,
+    "rail_patch": null,
+    "removed_alpha_pixels": null
+  },
+  {
+    "kit": "02-choose-game-mode",
+    "id": "profile",
+    "state": "disabled",
+    "path": "02-choose-game-mode/buttons/profile/disabled.png",
+    "size": [
+      704,
+      214
+    ],
+    "changed_pixels": 20373,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 18451
+  },
+  {
+    "kit": "02-choose-game-mode",
+    "id": "profile",
+    "state": "pressed",
+    "path": "02-choose-game-mode/buttons/profile/pressed.png",
+    "size": [
+      704,
+      214
+    ],
+    "changed_pixels": 20384,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 18451
+  },
+  {
+    "kit": "02-choose-game-mode",
+    "id": "settings",
+    "state": "assembled",
+    "path": "02-choose-game-mode/buttons/settings/assembled.png",
+    "size": [
+      698,
+      214
+    ],
+    "changed_pixels": 21303,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 19339
+  },
+  {
+    "kit": "02-choose-game-mode",
+    "id": "settings",
+    "state": "overlay",
+    "path": "02-choose-game-mode/buttons/settings/clear-glass-overlay.png",
+    "size": [
+      698,
+      214
+    ],
+    "changed_pixels": 21846,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 19339
+  },
+  {
+    "kit": "02-choose-game-mode",
+    "id": "settings",
+    "state": "mask",
+    "path": "02-choose-game-mode/buttons/settings/liquid-mask.png",
+    "size": [
+      698,
+      214
+    ],
+    "changed_pixels": 305,
+    "retained_rgb_exact_outside_documented_rail_patch": false,
+    "rail_patch": null,
+    "removed_alpha_pixels": null
+  },
+  {
+    "kit": "02-choose-game-mode",
+    "id": "settings",
+    "state": "disabled",
+    "path": "02-choose-game-mode/buttons/settings/disabled.png",
+    "size": [
+      698,
+      214
+    ],
+    "changed_pixels": 21299,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 19339
+  },
+  {
+    "kit": "02-choose-game-mode",
+    "id": "settings",
+    "state": "pressed",
+    "path": "02-choose-game-mode/buttons/settings/pressed.png",
+    "size": [
+      698,
+      214
+    ],
+    "changed_pixels": 21303,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 19339
+  },
+  {
+    "kit": "02-choose-game-mode",
+    "id": "help",
+    "state": "assembled",
+    "path": "02-choose-game-mode/buttons/help/assembled.png",
+    "size": [
+      710,
+      214
+    ],
+    "changed_pixels": 17690,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 15854
+  },
+  {
+    "kit": "02-choose-game-mode",
+    "id": "help",
+    "state": "overlay",
+    "path": "02-choose-game-mode/buttons/help/clear-glass-overlay.png",
+    "size": [
+      710,
+      214
+    ],
+    "changed_pixels": 18096,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 15854
+  },
+  {
+    "kit": "02-choose-game-mode",
+    "id": "help",
+    "state": "mask",
+    "path": "02-choose-game-mode/buttons/help/liquid-mask.png",
+    "size": [
+      710,
+      214
+    ],
+    "changed_pixels": 220,
+    "retained_rgb_exact_outside_documented_rail_patch": false,
+    "rail_patch": null,
+    "removed_alpha_pixels": null
+  },
+  {
+    "kit": "02-choose-game-mode",
+    "id": "help",
+    "state": "disabled",
+    "path": "02-choose-game-mode/buttons/help/disabled.png",
+    "size": [
+      710,
+      214
+    ],
+    "changed_pixels": 17670,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 15854
+  },
+  {
+    "kit": "02-choose-game-mode",
+    "id": "help",
+    "state": "pressed",
+    "path": "02-choose-game-mode/buttons/help/pressed.png",
+    "size": [
+      710,
+      214
+    ],
+    "changed_pixels": 17673,
+    "retained_rgb_exact_outside_documented_rail_patch": true,
+    "rail_patch": null,
+    "removed_alpha_pixels": 15854
+  }
+]
