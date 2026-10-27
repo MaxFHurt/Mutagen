@@ -1,5 +1,10 @@
 # MUTAGEN V3 — Visual Change Roadmap — Revision 007 (2026-10-12)
 
+## CURRENT REVISION 069 — Restored revision 02 files installed (4 of 6), 2026-10-27
+
+ChatGPT sent source-derived restorations of the six truncated revision 02 files; no intact originals exist. Verified: all six hashes match, every file fully decodes, and each damaged copy is an exact byte prefix of its restoration. Installed: home settings pressed, mode-select settings pressed, mode-select freeplay assembled (its clipped sub-line is the same as in the overlay already in use, so nothing doubles), and home deck-mutator disabled (stored only; the inactive look stays the empty-glass rule). With these, no kit file is broken. On hold, as ChatGPT also advises: the 2508 logo and mask. The verified 1254 logo stays, and the 2508 mask is not certified. The validation report and evidence are in `handoff/rev02-restoration/`. mutagen_flow 39/39.
+
+
 ## CURRENT REVISION 068 — Backdrop black and very dark purple, 2026-10-27
 
 Owner: turn the blue background black and very dark purple, like "a dark alley in a comic". A display-only recolour of the supplied background in `kit.css` (darkened, shifted from blue to purple, less saturated, more contrast, plus a dark vignette at the edges); the image file is unchanged. It applies to every kit screen. A true comic dark-alley background is new art, requested from ChatGPT, along with removing the blue fringes painted into the edges of the button and pipe cut-outs. mutagen_flow 39/39.

@@ -1,0 +1,72 @@
+[
+  {
+    "name": "MUTAGEN-Revision-02-Part-4-of-4.zip",
+    "bytes": 20122504,
+    "sha256": "f3e3f912bc701922bb822ed52e02e71ed94a5cd343514cee608023fe0e80c969"
+  },
+  {
+    "name": "MUTAGEN-Logo-v2-Liquid-Layers.zip",
+    "bytes": 5525008,
+    "sha256": "28e8e09b84bad553e00b38112388867f9814648f7ff0afe085f8a4e413aea712"
+  },
+  {
+    "name": "MUTAGEN-Revision-02-Part-3-of-4.zip",
+    "bytes": 28359667,
+    "sha256": "fcb8b2d14028c0da3eb5689a4cffa1cb6c44de7a7f4d836a5ffe06b648c3d917"
+  },
+  {
+    "name": "MUTAGEN-rebuild-sources-part2.zip",
+    "bytes": 14938906,
+    "sha256": "25db0e6fd51a47fd36e573c0ca0bc4cd5a4c7a101f439fb0f79cdf77caff4f28"
+  },
+  {
+    "name": "MUTAGEN-Revision-02-Part-2-of-4.zip",
+    "bytes": 27790409,
+    "sha256": "d8e7412bcbd70580b47cba195faf8aa7db7e40531594e560ebdcb129827d60cc"
+  },
+  {
+    "name": "MUTAGEN-Revision-02-Part-1-of-4.zip",
+    "bytes": 21160052,
+    "sha256": "16052bb4fc53da313fd1e65562909fe8d2f422c248bea2ef0ceac62fdd8baabc"
+  },
+  {
+    "name": "MUTAGEN-Piping-Backgrounds-and-Logo-v2.zip",
+    "bytes": 26736284,
+    "sha256": "2cbd6887027ab389fe1f0a3e173640f5690ebeaccfe13ef8c37a5bae4da826d2"
+  },
+  {
+    "name": "MUTAGEN-handoff-and-review.zip",
+    "bytes": 10182685,
+    "sha256": "7fac374b4797d03bff4b04db547297ab4f28f331b72f38f53d94b6bf1885727e"
+  },
+  {
+    "name": "MUTAGEN-Handoff-and-Assets-Revision-02.zip",
+    "bytes": 97432566,
+    "sha256": "b9885c70be99487defad6a62966eea462b06fd060198c356a7f04becce8f8900"
+  },
+  {
+    "name": "MUTAGEN-rebuild-sources-part3.zip",
+    "bytes": 20285313,
+    "sha256": "b68f361be940e5814ea39d96aad15dd7e09796344688bbd69a1a97cc44dfd62d"
+  },
+  {
+    "name": "MUTAGEN-rebuild-sources-part1.zip",
+    "bytes": 20404011,
+    "sha256": "f1152a4cccfc84b67ce7cfe1f9c64de7130d928a45f7beffd2f377504e262048"
+  },
+  {
+    "name": "Commander Companion V3 Rebuild/MUTAGEN-mode-select.zip",
+    "bytes": 21361269,
+    "sha256": "dbdd7c904c41ebbeee532f3b9e6edb012060671ec8885ac259512b5d20841b4f"
+  },
+  {
+    "name": "Commander Companion V3 Rebuild/MUTAGEN-Native-Kit-Source-Checkpoint.zip",
+    "bytes": 5015765,
+    "sha256": "7e8191281a7366b28a10b7b5cb2401032000de3a2a63226bae4a5f909db64e2e"
+  },
+  {
+    "name": "Commander Companion V3 Rebuild/MUTAGEN-home.zip",
+    "bytes": 21932187,
+    "sha256": "763c04214b837d9f7877bd73bb6893f64b879701236c49b29636171b8713cc7a"
+  }
+]

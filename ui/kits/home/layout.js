@@ -688,9 +688,6 @@ export default {
           "diameter": 108
         }
       ],
-      "broken": [
-        "disabled"
-      ],
       "liquid": true
     },
     {
@@ -778,9 +775,6 @@ export default {
           ],
           "diameter": 108
         }
-      ],
-      "broken": [
-        "pressed"
       ],
       "liquid": true
     },

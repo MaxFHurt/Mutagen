@@ -1,0 +1,458 @@
+[
+  {
+    "source": "sources/MUTAGEN-Revision-02-Part-4-of-4.zip",
+    "path": "02-choose-game-mode/buttons/settings/pressed.png",
+    "bytes": 65577,
+    "sha256": "41fd12584e803b3a62d264fe8d847d5c08a1b1528baa6449c8109606dc6e19bf",
+    "size": [
+      698,
+      214
+    ],
+    "mode": "RGBA",
+    "valid": false,
+    "error": "broken PNG file (incomplete checksum in b'IDAT')"
+  },
+  {
+    "source": "sources/MUTAGEN-Revision-02-Part-4-of-4.zip",
+    "path": "02-choose-game-mode/lettering/freeplay-subline.png",
+    "bytes": 50977,
+    "sha256": "59d96156c402a4557264cf5d4eea3d92b6a07f0d6db5f7163a880fcba8faf303",
+    "size": [
+      570,
+      54
+    ],
+    "mode": "RGBA",
+    "valid": true,
+    "pixel_sha256": "90bf8312f2799704fcaf2bb27af08fd9c58472cf38e5d5faf09c4c9a0fdcce5d",
+    "alpha": [
+      0,
+      255
+    ],
+    "local": "audit/59d96156c402a4557264cf5d4eea3d92b6a07f0d6db5f7163a880fcba8faf303.png"
+  },
+  {
+    "source": "sources/MUTAGEN-Logo-v2-Liquid-Layers.zip",
+    "path": "04-logo-v2/logo-mutagen-v2-liquid-mask.png",
+    "bytes": 123494,
+    "sha256": "3d8a594d1d33c97c57e63b688ab6b5ad875c1f297bc3face7619ae617b697607",
+    "size": [
+      1254,
+      1254
+    ],
+    "mode": "RGB",
+    "valid": true,
+    "pixel_sha256": "7529f42ee101e5d485515aeee332bb7a21d0f1c7041fa82f63f77f9c3c03a3c5",
+    "alpha": null,
+    "local": "audit/3d8a594d1d33c97c57e63b688ab6b5ad875c1f297bc3face7619ae617b697607.png"
+  },
+  {
+    "source": "sources/MUTAGEN-Logo-v2-Liquid-Layers.zip",
+    "path": "04-logo-v2/logo-mutagen-v2-overlay.png",
+    "bytes": 2186821,
+    "sha256": "d50feaef007293c783add8adb980506abf88989a8cfebe6fe86c2152d5cc76e0",
+    "size": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "valid": true,
+    "pixel_sha256": "3c28856bc95c8e42a6b8840276b2f92e8b0cce3e44c24c69101f7dc1f0fa3ba2",
+    "alpha": [
+      0,
+      255
+    ],
+    "local": "audit/d50feaef007293c783add8adb980506abf88989a8cfebe6fe86c2152d5cc76e0.png"
+  },
+  {
+    "source": "sources/MUTAGEN-Logo-v2-Liquid-Layers.zip",
+    "path": "04-logo-v2/logo-mutagen-v2-source.png",
+    "bytes": 3117168,
+    "sha256": "cc3fd853db478dbf831282a8273028893c19fe71c79de09c6342b8273874ae9a",
+    "size": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "valid": true,
+    "pixel_sha256": "a773879ccf9cfe6aa0718629217ebe8e6bd14867727b2d4dc48e7cfdce7b9e1f",
+    "alpha": [
+      0,
+      255
+    ],
+    "local": "audit/cc3fd853db478dbf831282a8273028893c19fe71c79de09c6342b8273874ae9a.png"
+  },
+  {
+    "source": "sources/MUTAGEN-Revision-02-Part-3-of-4.zip",
+    "path": "02-choose-game-mode/buttons/freeplay/assembled.png",
+    "bytes": 393317,
+    "sha256": "9caff68144800db7041911bc38d5be8dc02bd0bd0607f014cba8d27e72d3f539",
+    "size": [
+      1424,
+      254
+    ],
+    "mode": "RGBA",
+    "valid": false,
+    "error": "broken PNG file (incomplete checksum in b'IDAT')"
+  },
+  {
+    "source": "sources/MUTAGEN-Revision-02-Part-2-of-4.zip",
+    "path": "01-home/buttons/deck-mutator/disabled.png",
+    "bytes": 65577,
+    "sha256": "9f70da17be170667ed5bd26cf34fe05a136181b7412b12889d5d3319a01357a3",
+    "size": [
+      1424,
+      232
+    ],
+    "mode": "RGBA",
+    "valid": false,
+    "error": "broken PNG file (incomplete checksum in b'IDAT')"
+  },
+  {
+    "source": "sources/MUTAGEN-Revision-02-Part-2-of-4.zip",
+    "path": "01-home/buttons/settings/pressed.png",
+    "bytes": 131125,
+    "sha256": "59c112d8dc9a0691fc1b2c255dba5a7a29ba7433373ed049e9c629bc11211c78",
+    "size": [
+      780,
+      228
+    ],
+    "mode": "RGBA",
+    "valid": false,
+    "error": "broken PNG file (incomplete checksum in b'IDAT')"
+  },
+  {
+    "source": "sources/MUTAGEN-Revision-02-Part-1-of-4.zip",
+    "path": "00-branding/logo-mutagen-v2-liquid-mask.png",
+    "bytes": 655509,
+    "sha256": "a879c28723eba041d9ad3264cad650a2f6914d38a3a4fc844c26f27fe2e177d4",
+    "size": [
+      2508,
+      2508
+    ],
+    "mode": "RGB",
+    "valid": false,
+    "error": "broken PNG file (incomplete checksum in b'IDAT')"
+  },
+  {
+    "source": "sources/MUTAGEN-Revision-02-Part-1-of-4.zip",
+    "path": "00-branding/logo-mutagen-v2-overlay.png",
+    "bytes": 5654840,
+    "sha256": "3169ea31a88f5e45a56ce0e8be6137b2a0d717aa77395716995947120acd05fc",
+    "size": [
+      2508,
+      2508
+    ],
+    "mode": "RGBA",
+    "valid": true,
+    "pixel_sha256": "189af3d2860602ca6f91a31ccec21a781cd5e0e5cca4da3aaeba21bf67c6bbe6",
+    "alpha": [
+      0,
+      255
+    ],
+    "local": "audit/3169ea31a88f5e45a56ce0e8be6137b2a0d717aa77395716995947120acd05fc.png"
+  },
+  {
+    "source": "sources/MUTAGEN-Revision-02-Part-1-of-4.zip",
+    "path": "00-branding/logo-mutagen-v2.png",
+    "bytes": 5112773,
+    "sha256": "847053a63b8bb37292b6ee915385487a75bcaebd87b7b23052d68a1b239a0cf1",
+    "size": [
+      2508,
+      2508
+    ],
+    "mode": "RGBA",
+    "valid": false,
+    "error": "broken PNG file (incomplete checksum in b'IDAT')"
+  },
+  {
+    "source": "sources/MUTAGEN-Piping-Backgrounds-and-Logo-v2.zip",
+    "path": "04-logo-v2/logo-mutagen-v2-liquid-mask.png",
+    "bytes": 123494,
+    "sha256": "3d8a594d1d33c97c57e63b688ab6b5ad875c1f297bc3face7619ae617b697607",
+    "size": [
+      1254,
+      1254
+    ],
+    "mode": "RGB",
+    "valid": true,
+    "pixel_sha256": "7529f42ee101e5d485515aeee332bb7a21d0f1c7041fa82f63f77f9c3c03a3c5",
+    "alpha": null,
+    "local": "audit/3d8a594d1d33c97c57e63b688ab6b5ad875c1f297bc3face7619ae617b697607.png"
+  },
+  {
+    "source": "sources/MUTAGEN-Piping-Backgrounds-and-Logo-v2.zip",
+    "path": "04-logo-v2/logo-mutagen-v2-overlay.png",
+    "bytes": 2186821,
+    "sha256": "d50feaef007293c783add8adb980506abf88989a8cfebe6fe86c2152d5cc76e0",
+    "size": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "valid": true,
+    "pixel_sha256": "3c28856bc95c8e42a6b8840276b2f92e8b0cce3e44c24c69101f7dc1f0fa3ba2",
+    "alpha": [
+      0,
+      255
+    ],
+    "local": "audit/d50feaef007293c783add8adb980506abf88989a8cfebe6fe86c2152d5cc76e0.png"
+  },
+  {
+    "source": "sources/MUTAGEN-Piping-Backgrounds-and-Logo-v2.zip",
+    "path": "04-logo-v2/logo-mutagen-v2-source.png",
+    "bytes": 3117168,
+    "sha256": "cc3fd853db478dbf831282a8273028893c19fe71c79de09c6342b8273874ae9a",
+    "size": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "valid": true,
+    "pixel_sha256": "a773879ccf9cfe6aa0718629217ebe8e6bd14867727b2d4dc48e7cfdce7b9e1f",
+    "alpha": [
+      0,
+      255
+    ],
+    "local": "audit/cc3fd853db478dbf831282a8273028893c19fe71c79de09c6342b8273874ae9a.png"
+  },
+  {
+    "source": "sources/MUTAGEN-Handoff-and-Assets-Revision-02.zip",
+    "path": "00-branding/logo-mutagen-v2-liquid-mask.png",
+    "bytes": 655509,
+    "sha256": "a879c28723eba041d9ad3264cad650a2f6914d38a3a4fc844c26f27fe2e177d4",
+    "size": [
+      2508,
+      2508
+    ],
+    "mode": "RGB",
+    "valid": false,
+    "error": "broken PNG file (incomplete checksum in b'IDAT')"
+  },
+  {
+    "source": "sources/MUTAGEN-Handoff-and-Assets-Revision-02.zip",
+    "path": "00-branding/logo-mutagen-v2-overlay.png",
+    "bytes": 5654840,
+    "sha256": "3169ea31a88f5e45a56ce0e8be6137b2a0d717aa77395716995947120acd05fc",
+    "size": [
+      2508,
+      2508
+    ],
+    "mode": "RGBA",
+    "valid": true,
+    "pixel_sha256": "189af3d2860602ca6f91a31ccec21a781cd5e0e5cca4da3aaeba21bf67c6bbe6",
+    "alpha": [
+      0,
+      255
+    ],
+    "local": "audit/3169ea31a88f5e45a56ce0e8be6137b2a0d717aa77395716995947120acd05fc.png"
+  },
+  {
+    "source": "sources/MUTAGEN-Handoff-and-Assets-Revision-02.zip",
+    "path": "00-branding/logo-mutagen-v2.png",
+    "bytes": 5112773,
+    "sha256": "847053a63b8bb37292b6ee915385487a75bcaebd87b7b23052d68a1b239a0cf1",
+    "size": [
+      2508,
+      2508
+    ],
+    "mode": "RGBA",
+    "valid": false,
+    "error": "broken PNG file (incomplete checksum in b'IDAT')"
+  },
+  {
+    "source": "sources/MUTAGEN-Handoff-and-Assets-Revision-02.zip",
+    "path": "01-home/buttons/deck-mutator/disabled.png",
+    "bytes": 65577,
+    "sha256": "9f70da17be170667ed5bd26cf34fe05a136181b7412b12889d5d3319a01357a3",
+    "size": [
+      1424,
+      232
+    ],
+    "mode": "RGBA",
+    "valid": false,
+    "error": "broken PNG file (incomplete checksum in b'IDAT')"
+  },
+  {
+    "source": "sources/MUTAGEN-Handoff-and-Assets-Revision-02.zip",
+    "path": "01-home/buttons/settings/pressed.png",
+    "bytes": 131125,
+    "sha256": "59c112d8dc9a0691fc1b2c255dba5a7a29ba7433373ed049e9c629bc11211c78",
+    "size": [
+      780,
+      228
+    ],
+    "mode": "RGBA",
+    "valid": false,
+    "error": "broken PNG file (incomplete checksum in b'IDAT')"
+  },
+  {
+    "source": "sources/MUTAGEN-Handoff-and-Assets-Revision-02.zip",
+    "path": "02-choose-game-mode/buttons/freeplay/assembled.png",
+    "bytes": 393317,
+    "sha256": "9caff68144800db7041911bc38d5be8dc02bd0bd0607f014cba8d27e72d3f539",
+    "size": [
+      1424,
+      254
+    ],
+    "mode": "RGBA",
+    "valid": false,
+    "error": "broken PNG file (incomplete checksum in b'IDAT')"
+  },
+  {
+    "source": "sources/MUTAGEN-Handoff-and-Assets-Revision-02.zip",
+    "path": "02-choose-game-mode/buttons/settings/pressed.png",
+    "bytes": 65577,
+    "sha256": "41fd12584e803b3a62d264fe8d847d5c08a1b1528baa6449c8109606dc6e19bf",
+    "size": [
+      698,
+      214
+    ],
+    "mode": "RGBA",
+    "valid": false,
+    "error": "broken PNG file (incomplete checksum in b'IDAT')"
+  },
+  {
+    "source": "sources/MUTAGEN-Handoff-and-Assets-Revision-02.zip",
+    "path": "02-choose-game-mode/lettering/freeplay-subline.png",
+    "bytes": 50977,
+    "sha256": "59d96156c402a4557264cf5d4eea3d92b6a07f0d6db5f7163a880fcba8faf303",
+    "size": [
+      570,
+      54
+    ],
+    "mode": "RGBA",
+    "valid": true,
+    "pixel_sha256": "90bf8312f2799704fcaf2bb27af08fd9c58472cf38e5d5faf09c4c9a0fdcce5d",
+    "alpha": [
+      0,
+      255
+    ],
+    "local": "audit/59d96156c402a4557264cf5d4eea3d92b6a07f0d6db5f7163a880fcba8faf303.png"
+  },
+  {
+    "source": "sources/MUTAGEN-rebuild-sources-part3.zip",
+    "path": "piping-separated/04-logo-v2/logo-mutagen-v2-source.png",
+    "bytes": 3117168,
+    "sha256": "cc3fd853db478dbf831282a8273028893c19fe71c79de09c6342b8273874ae9a",
+    "size": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "valid": true,
+    "pixel_sha256": "a773879ccf9cfe6aa0718629217ebe8e6bd14867727b2d4dc48e7cfdce7b9e1f",
+    "alpha": [
+      0,
+      255
+    ],
+    "local": "audit/cc3fd853db478dbf831282a8273028893c19fe71c79de09c6342b8273874ae9a.png"
+  },
+  {
+    "source": "sources/Commander Companion V3 Rebuild/MUTAGEN-mode-select.zip",
+    "path": "ui/kits/mode-select/branding/logo-mutagen-v2.png",
+    "bytes": 299860,
+    "sha256": "c2fbeea015fea08f1e319f99fa7f16051ca1af870c322acda1dba89938054675",
+    "size": [
+      420,
+      420
+    ],
+    "mode": "RGBA",
+    "valid": true,
+    "pixel_sha256": "17e26bb92e08723e3248cc5abab7a2dc01c83009767cbc33f252f6b5468d0a46",
+    "alpha": [
+      0,
+      255
+    ],
+    "local": "audit/c2fbeea015fea08f1e319f99fa7f16051ca1af870c322acda1dba89938054675.png"
+  },
+  {
+    "source": "sources/Commander Companion V3 Rebuild/MUTAGEN-mode-select.zip",
+    "path": "ui/kits/mode-select/pieces/freeplay/assembled.png",
+    "bytes": 500538,
+    "sha256": "26df5a0123349b39ec87bca4e41a09b4d9bbfd0edfe6fcc1a0d11fe935d17589",
+    "size": [
+      1424,
+      234
+    ],
+    "mode": "RGBA",
+    "valid": true,
+    "pixel_sha256": "05c50a5c5e61c58b187ac11369d213c971ececdfdf162245adccdd781ff62990",
+    "alpha": [
+      0,
+      255
+    ],
+    "local": "audit/26df5a0123349b39ec87bca4e41a09b4d9bbfd0edfe6fcc1a0d11fe935d17589.png"
+  },
+  {
+    "source": "sources/Commander Companion V3 Rebuild/MUTAGEN-mode-select.zip",
+    "path": "ui/kits/mode-select/pieces/settings/pressed.png",
+    "bytes": 187771,
+    "sha256": "185a28604c07e934e0beffc95c6bf0e8bd8578e603eecc06c97a1666c9199e5d",
+    "size": [
+      690,
+      167
+    ],
+    "mode": "RGBA",
+    "valid": true,
+    "pixel_sha256": "b3ca6d766683e8e61804004b2fcfae3b32f027a102e4e4ed80098ee71d5953ba",
+    "alpha": [
+      0,
+      255
+    ],
+    "local": "audit/185a28604c07e934e0beffc95c6bf0e8bd8578e603eecc06c97a1666c9199e5d.png"
+  },
+  {
+    "source": "sources/Commander Companion V3 Rebuild/MUTAGEN-home.zip",
+    "path": "ui/kits/home/branding/logo-mutagen-v2.png",
+    "bytes": 559769,
+    "sha256": "2db942a3318e797ff187eb2289c1cd8bba0446d9b3791b1c88ff6a12e4d9e810",
+    "size": [
+      590,
+      590
+    ],
+    "mode": "RGBA",
+    "valid": true,
+    "pixel_sha256": "defdb7142520e6aa9844e97057678a37618d8a3c0f506a0f0ebe593f046a8caa",
+    "alpha": [
+      0,
+      255
+    ],
+    "local": "audit/2db942a3318e797ff187eb2289c1cd8bba0446d9b3791b1c88ff6a12e4d9e810.png"
+  },
+  {
+    "source": "sources/Commander Companion V3 Rebuild/MUTAGEN-home.zip",
+    "path": "ui/kits/home/pieces/deck-mutator/disabled.png",
+    "bytes": 355758,
+    "sha256": "b493bcb4ad9b8ab57bc18d14f56ffea451e4cce7472dafb9c037346184575f7a",
+    "size": [
+      1424,
+      234
+    ],
+    "mode": "RGBA",
+    "valid": true,
+    "pixel_sha256": "89e2d931edc640f6802c870a890068050dfbb7ed8c88f767224930e16e3382bf",
+    "alpha": [
+      0,
+      255
+    ],
+    "local": "audit/b493bcb4ad9b8ab57bc18d14f56ffea451e4cce7472dafb9c037346184575f7a.png"
+  },
+  {
+    "source": "sources/Commander Companion V3 Rebuild/MUTAGEN-home.zip",
+    "path": "ui/kits/home/pieces/settings/pressed.png",
+    "bytes": 307593,
+    "sha256": "8b84cb460c8ca7533e1f1fc30b6a9bd806d28262ee502a399618f0f107582c45",
+    "size": [
+      900,
+      218
+    ],
+    "mode": "RGBA",
+    "valid": true,
+    "pixel_sha256": "95f38882d3b2d2b68c7373f3b159dc3d58b43d98f87aac624c0db6ec6a39d6ba",
+    "alpha": [
+      0,
+      255
+    ],
+    "local": "audit/8b84cb460c8ca7533e1f1fc30b6a9bd806d28262ee502a399618f0f107582c45.png"
+  }
+]
