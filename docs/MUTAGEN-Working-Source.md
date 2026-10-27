@@ -1,5 +1,10 @@
 # MUTAGEN — rolling situation report and visual inventory
 
+## CURRENT REVISION 068 — Backdrop black and very dark purple, 2026-10-27
+
+Owner: turn the blue background black and very dark purple, like "a dark alley in a comic". A display-only recolour of the supplied background in `kit.css` (darkened, shifted from blue to purple, less saturated, more contrast, plus a dark vignette at the edges); the image file is unchanged. It applies to every kit screen. A true comic dark-alley background is new art, requested from ChatGPT, along with removing the blue fringes painted into the edges of the button and pipe cut-outs. mutagen_flow 39/39.
+
+
 ## CURRENT REVISION 067 — Lighter, brighter, glowing ooze, 2026-10-27
 
 Owner: the ooze should be lighter and brighter in colour, and glow. Code only, no image changes.
