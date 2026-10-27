@@ -99,6 +99,11 @@ void main(){
   // lighter and darker shading, then the moving bubbles, composited over transparent.
   float f = clamp((n - 0.5) * 2.4, -1.0, 1.0);
   vec4 P = f > 0.0 ? vec4(vec3(0.62, 1.0, 0.38) * f * 0.26, f * 0.26) : vec4(0.0, 0.03, 0.0, -f * 0.3);
+  // Owner: the ooze lighter and brighter, glowing. A light lime glow mixed into the liquid, strongest in the body of
+  // each tube and lighter where the flow thins it; Softer green keeps it gentler.
+  // It fades out at the edge of the liquid, where the lettering's dark outlines and the glass rim are.
+  float lift = 0.5 * smoothstep(0.04, 0.3, depth) * mix(0.55, 1.0, uGreen) * (1.0 + 0.25 * max(f, 0.0));
+  P = vec4(vec3(0.6, 1.0, 0.32) * lift, lift) + P * (1.0 - lift);
   float minDim = min(uRes.x, uRes.y);
   vec2 px = st * uRes;
   for (int i = 0; i < 18; i++) {

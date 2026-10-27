@@ -1,5 +1,13 @@
 # MUTAGEN V3 — Visual Change Roadmap — Revision 007 (2026-10-12)
 
+## CURRENT REVISION 067 — Lighter, brighter, glowing ooze, 2026-10-27
+
+Owner: the ooze should be lighter and brighter in colour, and glow. Code only, no image changes.
+- Brighter: the live layer over the painted ooze adds a light lime glow, strongest in the body of each tube and fading at the liquid's edge so the lettering's dark outlines stay sharp. Measured liquid on NEW GAME: painted (34, 115, 24) to (80, 161, 48); letters within about 3% of before.
+- Glow: a halo behind each piece and logo, shaped by its liquid mask (`.kit-glow`), plus the light spilling over the glass edge and steel (`.kit-glow--spill`, screen blend, so white lettering stays white). Colour dodge was tried and dropped (it produced dark streaks).
+- Softer green dims both; inactive buttons (no ooze) have no glow. Mask URLs in CSS variables are now full addresses (relative ones resolved against the style sheet). Tests: mutagen_flow 39/39, liquid 8/8.
+
+
 ## CURRENT REVISION 066 — Home screen matches the approved preview; 6 damaged files in revision 02, 2026-10-27
 
 Owner: the landing page is close but not close enough. Two causes, both fixed:
