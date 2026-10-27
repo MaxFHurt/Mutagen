@@ -1,0 +1,1691 @@
+{
+  "date": "2026-10-27",
+  "backdrop": {
+    "quality": 87,
+    "bytes": 591276,
+    "dimensions": [
+      3344,
+      1882
+    ],
+    "native_source_dimensions": [
+      1672,
+      941
+    ],
+    "method": "2x Lanczos export, not native extra detail"
+  },
+  "background_targets": [
+    "home",
+    "mode-select",
+    "player-setup",
+    "lobby",
+    "join",
+    "battlefield",
+    "table-tracker",
+    "tracker-setup",
+    "tracker-join",
+    "profile",
+    "settings",
+    "help",
+    "deck-mutator"
+  ],
+  "generated_source": "1672x941 built-in image generation; 2x Lanczos export; not native 3344px detail",
+  "files": 137,
+  "pieces": 37,
+  "piece_checks": [
+    {
+      "path": "ui/kits/home/pipes/top-header-with-elbows/assembled.png",
+      "dimensions": [
+        3192,
+        230
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": 0,
+      "sha256": "87832116eb2c4798a898dd718530a40fe9c38fbc89eb79d1db43efd6980a81cd"
+    },
+    {
+      "path": "ui/kits/home/pipes/top-header-with-elbows/clear-glass-overlay.png",
+      "dimensions": [
+        3192,
+        230
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "87832116eb2c4798a898dd718530a40fe9c38fbc89eb79d1db43efd6980a81cd"
+    },
+    {
+      "path": "ui/kits/home/pipes/top-header-with-elbows/liquid-mask.png",
+      "dimensions": [
+        3192,
+        230
+      ],
+      "mode": "RGB",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": false,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "2fdad78ecbb3352af410c7637000ac2cabc5cce7f0b79b800374544c8826aa55"
+    },
+    {
+      "path": "ui/kits/home/pipes/left-sight-column/assembled.png",
+      "dimensions": [
+        244,
+        1390
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": 0,
+      "sha256": "3780ac66755383226d1ab2ec9153f83f8000b29251811c5e13b72c5ea00faeb0"
+    },
+    {
+      "path": "ui/kits/home/pipes/left-sight-column/clear-glass-overlay.png",
+      "dimensions": [
+        244,
+        1390
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "043f59e943d8a00991ae50aee3dcdf5921657e2c15b6654bb57c1dfa4fb1877b"
+    },
+    {
+      "path": "ui/kits/home/pipes/left-sight-column/liquid-mask.png",
+      "dimensions": [
+        244,
+        1390
+      ],
+      "mode": "RGB",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": false,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "8bcd1206b60f6fe63ea8f77f8bae814685e99640a555543d6367d96c01da540e"
+    },
+    {
+      "path": "ui/kits/home/pipes/right-sight-column/assembled.png",
+      "dimensions": [
+        238,
+        1386
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": 0,
+      "sha256": "25ff0946b6f269316cf848200d784b023224d55b6f203562b41f31cc330926e0"
+    },
+    {
+      "path": "ui/kits/home/pipes/right-sight-column/clear-glass-overlay.png",
+      "dimensions": [
+        238,
+        1386
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "ffd1ad5bc06d36fa900319b8f65cc27ada32e9025c4a4d742d50c88a2ad7b7d4"
+    },
+    {
+      "path": "ui/kits/home/pipes/right-sight-column/liquid-mask.png",
+      "dimensions": [
+        238,
+        1386
+      ],
+      "mode": "RGB",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": false,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "9b59d40a5a9a0a2de4205e118e8ae2eb981c1a9bec26b598ffe1209127417e80"
+    },
+    {
+      "path": "ui/kits/home/pipes/branch-1-left/assembled.png",
+      "dimensions": [
+        688,
+        136
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": 0,
+      "sha256": "48e0075c8e8704712f2e5bd7717a9663b193049f5a71c20d0a9eb98bc5a4be9b"
+    },
+    {
+      "path": "ui/kits/home/pipes/branch-1-left/clear-glass-overlay.png",
+      "dimensions": [
+        688,
+        136
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "712c37a128bc9860f43199181ce741b923fa939df9d85e428b1b9dc781a9e1df"
+    },
+    {
+      "path": "ui/kits/home/pipes/branch-1-left/liquid-mask.png",
+      "dimensions": [
+        688,
+        136
+      ],
+      "mode": "RGB",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": false,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "8f1a38a4ba1c56cd2f46b3880dee15d7bbcf18c6d976f906e639835dacf403dc"
+    },
+    {
+      "path": "ui/kits/home/pipes/branch-1-right/assembled.png",
+      "dimensions": [
+        702,
+        136
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": 0,
+      "sha256": "9995dea327f250606f4b52e68ebb78d486e3f9e27d5355ce5a2cf2cd70ee295c"
+    },
+    {
+      "path": "ui/kits/home/pipes/branch-1-right/clear-glass-overlay.png",
+      "dimensions": [
+        702,
+        136
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "4f2ab78974a969516fa22f642cb82a66feb14b179fad67a4f89476e360890efc"
+    },
+    {
+      "path": "ui/kits/home/pipes/branch-1-right/liquid-mask.png",
+      "dimensions": [
+        702,
+        136
+      ],
+      "mode": "RGB",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": false,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "3f9edb27c81a2beabbe56c4f32cacd297212a52b0a71239b1ff3145be21848f2"
+    },
+    {
+      "path": "ui/kits/home/pipes/branch-2-left/assembled.png",
+      "dimensions": [
+        688,
+        134
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": 0,
+      "sha256": "9d2567d665d86f897a9c88bb1a80f89e96e1cb3b6552ee3ded2718c23a1a6d0f"
+    },
+    {
+      "path": "ui/kits/home/pipes/branch-2-left/clear-glass-overlay.png",
+      "dimensions": [
+        688,
+        134
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "935aec06b2d0804371f8c8c3b57945451ebc31a83e58a5d8bbbde4e74a5bed9d"
+    },
+    {
+      "path": "ui/kits/home/pipes/branch-2-left/liquid-mask.png",
+      "dimensions": [
+        688,
+        134
+      ],
+      "mode": "RGB",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": false,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "ae5b3f27115b7e27cb4e119e75092260b3ad0f5c7b2acb801d383b591060ad0b"
+    },
+    {
+      "path": "ui/kits/home/pipes/branch-2-right/assembled.png",
+      "dimensions": [
+        702,
+        134
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": 0,
+      "sha256": "e4b8622e96656836c563f499184f597dcddd3cb7af4461a75949ccda3906ca6d"
+    },
+    {
+      "path": "ui/kits/home/pipes/branch-2-right/clear-glass-overlay.png",
+      "dimensions": [
+        702,
+        134
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "1ac526765855793c140a8dcfce36f2dd0deedceaaca7d9e9f2dd1f82385c3780"
+    },
+    {
+      "path": "ui/kits/home/pipes/branch-2-right/liquid-mask.png",
+      "dimensions": [
+        702,
+        134
+      ],
+      "mode": "RGB",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": false,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "5c69008788d22cdfc596754a74ad399adc3f2f55b64e4f298b0db2b522d654ae"
+    },
+    {
+      "path": "ui/kits/home/pipes/branch-3-left/assembled.png",
+      "dimensions": [
+        688,
+        130
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": 0,
+      "sha256": "191e2d2bacea094bd2a19361e051ef0bef02993100176ce9b4b95d1a623261da"
+    },
+    {
+      "path": "ui/kits/home/pipes/branch-3-left/clear-glass-overlay.png",
+      "dimensions": [
+        688,
+        130
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "651827180855c58e335d57d4fb577fc7cc6d56eb581824dc23d0cad25d909aec"
+    },
+    {
+      "path": "ui/kits/home/pipes/branch-3-left/liquid-mask.png",
+      "dimensions": [
+        688,
+        130
+      ],
+      "mode": "RGB",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": false,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "ee1dfb9ff486d6fcc1c6ab5acf56b3a88765706e55c882c516ea28540b0f2c32"
+    },
+    {
+      "path": "ui/kits/home/pipes/branch-3-right/assembled.png",
+      "dimensions": [
+        702,
+        130
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": 0,
+      "sha256": "b45f9a948c7bfd1fba22b4e9a13be590c83e0ae2d25bc50c10a0a87701c37788"
+    },
+    {
+      "path": "ui/kits/home/pipes/branch-3-right/clear-glass-overlay.png",
+      "dimensions": [
+        702,
+        130
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "21f9932c9e3ba53fb4ca2ba6b2c3d4066c47306b0d21fc7db6c6f6e8dd9dfef4"
+    },
+    {
+      "path": "ui/kits/home/pipes/branch-3-right/liquid-mask.png",
+      "dimensions": [
+        702,
+        130
+      ],
+      "mode": "RGB",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": false,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "543cb327b677e0af7093ebef7f55e64b4ad5aec5ecfca525769521d7cd380874"
+    },
+    {
+      "path": "ui/kits/home/pipes/bottom-left-elbow/assembled.png",
+      "dimensions": [
+        212,
+        132
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": 0,
+      "sha256": "990741b5b969a40e28a88a5d957fb15d667317a2fb24ab5a96158c2677a45149"
+    },
+    {
+      "path": "ui/kits/home/pipes/bottom-left-elbow/clear-glass-overlay.png",
+      "dimensions": [
+        212,
+        132
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "990741b5b969a40e28a88a5d957fb15d667317a2fb24ab5a96158c2677a45149"
+    },
+    {
+      "path": "ui/kits/home/pipes/bottom-left-elbow/liquid-mask.png",
+      "dimensions": [
+        212,
+        132
+      ],
+      "mode": "RGB",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": false,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "8e2da29f24d062b65a90ee5bcf09586a2dd9aef95724e9ae1adf0f8cfc66c9e8"
+    },
+    {
+      "path": "ui/kits/home/pipes/bottom-joint-profile-settings/assembled.png",
+      "dimensions": [
+        94,
+        120
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": 0,
+      "sha256": "09f67ac176ca6e290abe7b8934d12d9d412175e722f31824e4999e59859ae24e"
+    },
+    {
+      "path": "ui/kits/home/pipes/bottom-joint-profile-settings/clear-glass-overlay.png",
+      "dimensions": [
+        94,
+        120
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "09f67ac176ca6e290abe7b8934d12d9d412175e722f31824e4999e59859ae24e"
+    },
+    {
+      "path": "ui/kits/home/pipes/bottom-joint-profile-settings/liquid-mask.png",
+      "dimensions": [
+        94,
+        120
+      ],
+      "mode": "RGB",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": false,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "bb98f372a2930ddab4f1d6282da432fb3f9a9344f2aaf27b025042a9f6c93ade"
+    },
+    {
+      "path": "ui/kits/home/pipes/bottom-joint-settings-help/assembled.png",
+      "dimensions": [
+        90,
+        118
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": 0,
+      "sha256": "b0c9a8e97818a3e73df80c0fa8c82744439d549ab7d71ebdbdd75387878620e3"
+    },
+    {
+      "path": "ui/kits/home/pipes/bottom-joint-settings-help/clear-glass-overlay.png",
+      "dimensions": [
+        90,
+        118
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "b0c9a8e97818a3e73df80c0fa8c82744439d549ab7d71ebdbdd75387878620e3"
+    },
+    {
+      "path": "ui/kits/home/pipes/bottom-joint-settings-help/liquid-mask.png",
+      "dimensions": [
+        90,
+        118
+      ],
+      "mode": "RGB",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": false,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "4762e29cd33898dba5b21a9644ec731dba2523c65cdc648dc2d5956bcfbd66d3"
+    },
+    {
+      "path": "ui/kits/home/pipes/bottom-right-elbow/assembled.png",
+      "dimensions": [
+        208,
+        138
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": 0,
+      "sha256": "86b9853710e3b18580b99c56a665e1d33d333d8b65930633f9cd883fcbefda7a"
+    },
+    {
+      "path": "ui/kits/home/pipes/bottom-right-elbow/clear-glass-overlay.png",
+      "dimensions": [
+        208,
+        138
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "86b9853710e3b18580b99c56a665e1d33d333d8b65930633f9cd883fcbefda7a"
+    },
+    {
+      "path": "ui/kits/home/pipes/bottom-right-elbow/liquid-mask.png",
+      "dimensions": [
+        208,
+        138
+      ],
+      "mode": "RGB",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": false,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "936155cafab7a5196145f6105c019e884a77a977efd8723a3028edc66a86218a"
+    },
+    {
+      "path": "ui/kits/home/buttons/new-game/assembled.png",
+      "dimensions": [
+        1424,
+        234
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": 0,
+      "sha256": "97a73525150fb3705d4a4844fa940cac6323cf428dc3c9916163e2f747e98bb0"
+    },
+    {
+      "path": "ui/kits/home/buttons/new-game/clear-glass-overlay.png",
+      "dimensions": [
+        1424,
+        234
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "e2d2935ab8112a041c6a299fee614c895c6417637e8822dd38d79cc0a58d1f50"
+    },
+    {
+      "path": "ui/kits/home/buttons/new-game/liquid-mask.png",
+      "dimensions": [
+        1424,
+        234
+      ],
+      "mode": "RGB",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": false,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "9f71d366e111025086240d2b35c78dd0f8dd91dd731784e6fce2b875e6cb4268"
+    },
+    {
+      "path": "ui/kits/home/buttons/new-game/disabled.png",
+      "dimensions": [
+        1424,
+        234
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "5469f976f3107316a2c665972f8624f3213ca9321089c178454106345c88fbdf"
+    },
+    {
+      "path": "ui/kits/home/buttons/new-game/pressed.png",
+      "dimensions": [
+        1424,
+        234
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "9de830da1f4ab41d5dcb97a42b04b19dc5d5e7360faaae8f31cecb88e5f4ebf1"
+    },
+    {
+      "path": "ui/kits/home/buttons/continue/assembled.png",
+      "dimensions": [
+        1424,
+        228
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": 0,
+      "sha256": "acbd3b7b33bc75a817fdfe7021157afdc06a7b1f28f4d6b89eaa2efa1e2cec26"
+    },
+    {
+      "path": "ui/kits/home/buttons/continue/clear-glass-overlay.png",
+      "dimensions": [
+        1424,
+        228
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "ae559c0177337a25f416c760c408e3e57faefa21e95869c639556e04e68f45de"
+    },
+    {
+      "path": "ui/kits/home/buttons/continue/liquid-mask.png",
+      "dimensions": [
+        1424,
+        228
+      ],
+      "mode": "RGB",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": false,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "9a71b7d7de996b5ccfe146d57407a1f0af847e71df49db07bf97c46bacdf2efc"
+    },
+    {
+      "path": "ui/kits/home/buttons/continue/disabled.png",
+      "dimensions": [
+        1424,
+        228
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "c58a001e930fdeaf76bfbe37fd88d7f7e73017a61bfbc203b230c2ea3027746f"
+    },
+    {
+      "path": "ui/kits/home/buttons/continue/pressed.png",
+      "dimensions": [
+        1424,
+        228
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "44942a3b242160520f55301c27fcefacb7e7c4dde90969ec132c567dd27e1d94"
+    },
+    {
+      "path": "ui/kits/home/buttons/deck-mutator/assembled.png",
+      "dimensions": [
+        1424,
+        232
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": 0,
+      "sha256": "187cc4e8c332d4773c692e330444d1fe3cd0c8a61b866c1db0b598fa18011105"
+    },
+    {
+      "path": "ui/kits/home/buttons/deck-mutator/clear-glass-overlay.png",
+      "dimensions": [
+        1424,
+        232
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "73ab1f1d534f9773aa909c82339c78cdf0e3fd4f37e62660634ad2841192e0f6"
+    },
+    {
+      "path": "ui/kits/home/buttons/deck-mutator/liquid-mask.png",
+      "dimensions": [
+        1424,
+        232
+      ],
+      "mode": "RGB",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": false,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "d7e5a14937a828c578d845854f6291e9318780bcd39535ee46fa48391f24fb47"
+    },
+    {
+      "path": "ui/kits/home/buttons/deck-mutator/disabled.png",
+      "dimensions": [
+        1424,
+        232
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "5416ac96ca622b93b70661546e926bedfb1d86585052ba5bed532982d626985b"
+    },
+    {
+      "path": "ui/kits/home/buttons/deck-mutator/pressed.png",
+      "dimensions": [
+        1424,
+        232
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "37e255205ee12255c4ff2f5ac26ffa80f657a3ba5fcf466a3180b995ce6c7f0d"
+    },
+    {
+      "path": "ui/kits/home/buttons/profile/assembled.png",
+      "dimensions": [
+        904,
+        228
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": 0,
+      "sha256": "4406b5ba7d794f2a582a91156ecb02a298f3a066f96f599f00e6bba60b11c756"
+    },
+    {
+      "path": "ui/kits/home/buttons/profile/clear-glass-overlay.png",
+      "dimensions": [
+        904,
+        228
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "b22c4d138aca45f06d9649e7f6c932f18b4dfb19ea32eb632248da78b246e77e"
+    },
+    {
+      "path": "ui/kits/home/buttons/profile/liquid-mask.png",
+      "dimensions": [
+        904,
+        228
+      ],
+      "mode": "RGB",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": false,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "b363bf238b9e391e0d03aea583f6c98c372d8809e19a32b7c481fb1b115a9368"
+    },
+    {
+      "path": "ui/kits/home/buttons/profile/disabled.png",
+      "dimensions": [
+        904,
+        228
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "5b87cdc7c947a2c60c1dbb09cb6f18451948ec775d1659d2e5b4387169542e0b"
+    },
+    {
+      "path": "ui/kits/home/buttons/profile/pressed.png",
+      "dimensions": [
+        904,
+        228
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "15670ee9edf6af7d8b01405d69ef6a15b8a90f2159ad15636e7bc2a46201ea76"
+    },
+    {
+      "path": "ui/kits/home/buttons/settings/assembled.png",
+      "dimensions": [
+        780,
+        228
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": 0,
+      "sha256": "16cc499bcd92bcf8bf9e827098c64515785f8552a79852d004213e71abcbd6a2"
+    },
+    {
+      "path": "ui/kits/home/buttons/settings/clear-glass-overlay.png",
+      "dimensions": [
+        780,
+        228
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "98c93ce965fcbfb3d8757b17fd0627372da8fceb4fdaab0a2eead67b76f2ed02"
+    },
+    {
+      "path": "ui/kits/home/buttons/settings/liquid-mask.png",
+      "dimensions": [
+        780,
+        228
+      ],
+      "mode": "RGB",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": false,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "264ef5bd87e3aec93c1898440e1ff599da844c85afa789b6fd6267b2ceb99d6f"
+    },
+    {
+      "path": "ui/kits/home/buttons/settings/disabled.png",
+      "dimensions": [
+        780,
+        228
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "61c157ea424fc544f302b8e2b90e155177005d747ba148d66eb31dab7ec6ca7b"
+    },
+    {
+      "path": "ui/kits/home/buttons/settings/pressed.png",
+      "dimensions": [
+        780,
+        228
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "3642563c7617b9f065a36253ef096db1958a63e316f41acbd6a4862c1f46027a"
+    },
+    {
+      "path": "ui/kits/home/buttons/help/assembled.png",
+      "dimensions": [
+        912,
+        228
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": 0,
+      "sha256": "161d95cf4f77103620f67ab0ce341e3586e52e751ce21cfb30d5e31220fcf23a"
+    },
+    {
+      "path": "ui/kits/home/buttons/help/clear-glass-overlay.png",
+      "dimensions": [
+        912,
+        228
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "613eef197bbc025e05be32e9df7de853ae5776f93b109e556e6a5852721bed5d"
+    },
+    {
+      "path": "ui/kits/home/buttons/help/liquid-mask.png",
+      "dimensions": [
+        912,
+        228
+      ],
+      "mode": "RGB",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": false,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "46a8fae6e492314598487dc08cb108d1120e20a4db5d18581a01e18201cf3ac9"
+    },
+    {
+      "path": "ui/kits/home/buttons/help/disabled.png",
+      "dimensions": [
+        912,
+        228
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "c2fefb9607fc28544f46f1e2594411912ac3f9e2800426305e54bb8cb05b1594"
+    },
+    {
+      "path": "ui/kits/home/buttons/help/pressed.png",
+      "dimensions": [
+        912,
+        228
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "3d075426123015166d940fe4fa81321dad8e7f306aa8b30bc8d7f8f2ab51f1de"
+    },
+    {
+      "path": "ui/kits/mode-select/pipes/top-header-with-elbows/assembled.png",
+      "dimensions": [
+        3192,
+        230
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": 0,
+      "sha256": "9b7efbe1d1fb74417073f9e52003b630059ed1ba6015f959f77e323faec5da60"
+    },
+    {
+      "path": "ui/kits/mode-select/pipes/top-header-with-elbows/clear-glass-overlay.png",
+      "dimensions": [
+        3192,
+        230
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "9b7efbe1d1fb74417073f9e52003b630059ed1ba6015f959f77e323faec5da60"
+    },
+    {
+      "path": "ui/kits/mode-select/pipes/top-header-with-elbows/liquid-mask.png",
+      "dimensions": [
+        3192,
+        230
+      ],
+      "mode": "RGB",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": false,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "2fdad78ecbb3352af410c7637000ac2cabc5cce7f0b79b800374544c8826aa55"
+    },
+    {
+      "path": "ui/kits/mode-select/pipes/left-sight-column/assembled.png",
+      "dimensions": [
+        244,
+        1390
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": 0,
+      "sha256": "265639be2708e5ea5f33764fbc19f67f3c3de0266628d4411a174fa01050e7e2"
+    },
+    {
+      "path": "ui/kits/mode-select/pipes/left-sight-column/clear-glass-overlay.png",
+      "dimensions": [
+        244,
+        1390
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "533611cd2c571282d49457686d1e49f0e3f809083a02d2af223422bfad2accb7"
+    },
+    {
+      "path": "ui/kits/mode-select/pipes/left-sight-column/liquid-mask.png",
+      "dimensions": [
+        244,
+        1390
+      ],
+      "mode": "RGB",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": false,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "85693de09a99d7c3667385893878c6be21efd0d0965f3f86b76f839e9663b4c5"
+    },
+    {
+      "path": "ui/kits/mode-select/pipes/right-sight-column/assembled.png",
+      "dimensions": [
+        238,
+        1386
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": 0,
+      "sha256": "0682ec1897a1defd54d726dc55b0cc2dc0b616ae12a6c93633ca1fc7e0857943"
+    },
+    {
+      "path": "ui/kits/mode-select/pipes/right-sight-column/clear-glass-overlay.png",
+      "dimensions": [
+        238,
+        1386
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "b4acf21ef51d38991f91ada8b78d935dbff116908fdc96b69c87179672449f46"
+    },
+    {
+      "path": "ui/kits/mode-select/pipes/right-sight-column/liquid-mask.png",
+      "dimensions": [
+        238,
+        1386
+      ],
+      "mode": "RGB",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": false,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "a8d405a3571cd76f8cfe9aa3d93e12caf348f70ca0c23c12e14c161159fd1b33"
+    },
+    {
+      "path": "ui/kits/mode-select/pipes/branch-1-left/assembled.png",
+      "dimensions": [
+        688,
+        136
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": 0,
+      "sha256": "b6fe72cd21fdc6e006b9b95ecdbb27eb05e7ce444af35ce758da39d0d6f5bd7c"
+    },
+    {
+      "path": "ui/kits/mode-select/pipes/branch-1-left/clear-glass-overlay.png",
+      "dimensions": [
+        688,
+        136
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "e8bb82b2d585bd3c306589a0bff615438d54ac5c3652ce6befcd746d5cf3fa9b"
+    },
+    {
+      "path": "ui/kits/mode-select/pipes/branch-1-left/liquid-mask.png",
+      "dimensions": [
+        688,
+        136
+      ],
+      "mode": "RGB",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": false,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "2f41515e181a69dea602ded9cc593b4c39e4f3e7a3977803249d0e931c07ab25"
+    },
+    {
+      "path": "ui/kits/mode-select/pipes/branch-1-right/assembled.png",
+      "dimensions": [
+        702,
+        136
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": 0,
+      "sha256": "233526ebd44850646928b071aa16b0bb156935cd2434a6e94ed23a19073c46af"
+    },
+    {
+      "path": "ui/kits/mode-select/pipes/branch-1-right/clear-glass-overlay.png",
+      "dimensions": [
+        702,
+        136
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "cb6e54681be0bfc43dad15c11c7da3825e02349b38481e344de92360963eb0ad"
+    },
+    {
+      "path": "ui/kits/mode-select/pipes/branch-1-right/liquid-mask.png",
+      "dimensions": [
+        702,
+        136
+      ],
+      "mode": "RGB",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": false,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "e7da393c8e16c673ff7be6a4ee6ec7a419b43a2c68c79e96959ddbc5b65443a8"
+    },
+    {
+      "path": "ui/kits/mode-select/pipes/branch-2-left/assembled.png",
+      "dimensions": [
+        688,
+        134
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": 0,
+      "sha256": "6a973f48c03b731ae211b020a2f802e0596d6a06a12e15e6bcfce23c9489e589"
+    },
+    {
+      "path": "ui/kits/mode-select/pipes/branch-2-left/clear-glass-overlay.png",
+      "dimensions": [
+        688,
+        134
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "1abd30ad164c233bdf7018362fc99c97d8540a0b4445d982d1d3de539a025124"
+    },
+    {
+      "path": "ui/kits/mode-select/pipes/branch-2-left/liquid-mask.png",
+      "dimensions": [
+        688,
+        134
+      ],
+      "mode": "RGB",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": false,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "2735b7608e9998387e5d0b037a22f5aa0cc80a2013231d4df45e5e4378837eed"
+    },
+    {
+      "path": "ui/kits/mode-select/pipes/branch-2-right/assembled.png",
+      "dimensions": [
+        702,
+        134
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": 0,
+      "sha256": "d58f1db11bf5e19f7afa0ca58de9f0bba53bcac0a7f38744e9d21c27932fd000"
+    },
+    {
+      "path": "ui/kits/mode-select/pipes/branch-2-right/clear-glass-overlay.png",
+      "dimensions": [
+        702,
+        134
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "2616d454ce0b21bd67456126c412e2ed837b519936de04ff8072c3283a62f5e0"
+    },
+    {
+      "path": "ui/kits/mode-select/pipes/branch-2-right/liquid-mask.png",
+      "dimensions": [
+        702,
+        134
+      ],
+      "mode": "RGB",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": false,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "73a475e764c9a36b0f92c25185acdc3f2358bfcab0a0d778c33aa861fe285c2a"
+    },
+    {
+      "path": "ui/kits/mode-select/pipes/branch-3-left/assembled.png",
+      "dimensions": [
+        688,
+        130
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": 0,
+      "sha256": "b33c582055493239fe2a3240853a2f0b463c6870b42675028c5e35bd4cda41cd"
+    },
+    {
+      "path": "ui/kits/mode-select/pipes/branch-3-left/clear-glass-overlay.png",
+      "dimensions": [
+        688,
+        130
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "cebada6d75cec25f1886c7a8f7c6c9ed62aaa156b8f5ca9125aabdb85a075288"
+    },
+    {
+      "path": "ui/kits/mode-select/pipes/branch-3-left/liquid-mask.png",
+      "dimensions": [
+        688,
+        130
+      ],
+      "mode": "RGB",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": false,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "4143fb50d752d7b206a33e6b078e8e566481d940f3a549d446372dd7574136f7"
+    },
+    {
+      "path": "ui/kits/mode-select/pipes/branch-3-right/assembled.png",
+      "dimensions": [
+        702,
+        130
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": 0,
+      "sha256": "e819489ed2ac461dcf597c8ac757572270d66ce767a789d3ade1888b5046cc10"
+    },
+    {
+      "path": "ui/kits/mode-select/pipes/branch-3-right/clear-glass-overlay.png",
+      "dimensions": [
+        702,
+        130
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "7eac7fd452a90a10c064339f0ac3d6a195170a864b52ecf359776f74a9eababb"
+    },
+    {
+      "path": "ui/kits/mode-select/pipes/branch-3-right/liquid-mask.png",
+      "dimensions": [
+        702,
+        130
+      ],
+      "mode": "RGB",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": false,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "5455e61433bf1c003668c80a032781d972dc52857010b2cbd49d16f70cbb43d2"
+    },
+    {
+      "path": "ui/kits/mode-select/pipes/bottom-left-elbow/assembled.png",
+      "dimensions": [
+        174,
+        132
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": 0,
+      "sha256": "ba6629c4c209a4ab3d439fcc5783fa19adbccfba16c47da31a874605d2c8bf35"
+    },
+    {
+      "path": "ui/kits/mode-select/pipes/bottom-left-elbow/clear-glass-overlay.png",
+      "dimensions": [
+        174,
+        132
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "ba6629c4c209a4ab3d439fcc5783fa19adbccfba16c47da31a874605d2c8bf35"
+    },
+    {
+      "path": "ui/kits/mode-select/pipes/bottom-left-elbow/liquid-mask.png",
+      "dimensions": [
+        174,
+        132
+      ],
+      "mode": "RGB",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": false,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "84f0e7636fd3728148271dead2c359a3788b4d1741e1a172cfdcfa63121509aa"
+    },
+    {
+      "path": "ui/kits/mode-select/pipes/bottom-right-elbow/assembled.png",
+      "dimensions": [
+        174,
+        138
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": 0,
+      "sha256": "9376a5d8c7d5574d8d56a6b4c2bd1f1c941cfc822bbc6a2aadf5ddd255950ab3"
+    },
+    {
+      "path": "ui/kits/mode-select/pipes/bottom-right-elbow/clear-glass-overlay.png",
+      "dimensions": [
+        174,
+        138
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "9376a5d8c7d5574d8d56a6b4c2bd1f1c941cfc822bbc6a2aadf5ddd255950ab3"
+    },
+    {
+      "path": "ui/kits/mode-select/pipes/bottom-right-elbow/liquid-mask.png",
+      "dimensions": [
+        174,
+        138
+      ],
+      "mode": "RGB",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": false,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "4abcddd13571c61ff86b9af71d59f51f9a9fd2541aa5209b5e23b86df2b44fe0"
+    },
+    {
+      "path": "ui/kits/mode-select/buttons/fully-guided/assembled.png",
+      "dimensions": [
+        1424,
+        254
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": 0,
+      "sha256": "616688b6d01d2360f91ad145c11f5cb4e8023b7a468d7990e73313f996106ab0"
+    },
+    {
+      "path": "ui/kits/mode-select/buttons/fully-guided/clear-glass-overlay.png",
+      "dimensions": [
+        1424,
+        254
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "cd6a4610dcc060066ef8e70c0b0794abe7ffa6467a8380e92a9453994346814d"
+    },
+    {
+      "path": "ui/kits/mode-select/buttons/fully-guided/liquid-mask.png",
+      "dimensions": [
+        1424,
+        254
+      ],
+      "mode": "RGB",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": false,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "442c9a46fa827c7dca7a692bbcf6f6167320505b1436e4952bf1c6dea672b833"
+    },
+    {
+      "path": "ui/kits/mode-select/buttons/fully-guided/disabled.png",
+      "dimensions": [
+        1424,
+        254
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "68e7deb54ba0619e1645f24ccbdb229eef9718e07a03994cbad3c93fbd76ed48"
+    },
+    {
+      "path": "ui/kits/mode-select/buttons/fully-guided/pressed.png",
+      "dimensions": [
+        1424,
+        254
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "5996f3cf02b4058145c84060afb7fd1824906d5ed5f1cdb6280dc8809bfbd6ee"
+    },
+    {
+      "path": "ui/kits/mode-select/buttons/freeplay/assembled.png",
+      "dimensions": [
+        1424,
+        254
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": 0,
+      "sha256": "b7ea5ae58bae8a4672b387a17d796bdd9ed19fab802d3e40f9e2c0698a4b5f5d"
+    },
+    {
+      "path": "ui/kits/mode-select/buttons/freeplay/clear-glass-overlay.png",
+      "dimensions": [
+        1424,
+        254
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "3b26f642e3407d2cba6113ca20d33433374471be7f475b6facc27f2bf3b61bd6"
+    },
+    {
+      "path": "ui/kits/mode-select/buttons/freeplay/liquid-mask.png",
+      "dimensions": [
+        1424,
+        254
+      ],
+      "mode": "RGB",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": false,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "853e0eafb515568cb557e347689db7266efb40867e050f33a2f59c9c8c7f478c"
+    },
+    {
+      "path": "ui/kits/mode-select/buttons/freeplay/disabled.png",
+      "dimensions": [
+        1424,
+        254
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "9f6afd5c1cc21920b82cf3283071d939e8fc535f11f4c1929e8c3dd75d09975c"
+    },
+    {
+      "path": "ui/kits/mode-select/buttons/freeplay/pressed.png",
+      "dimensions": [
+        1424,
+        254
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "70a64278606f3bf2b0d988a406e0bc96639cb72c4983818a2b8881f8f80fcd08"
+    },
+    {
+      "path": "ui/kits/mode-select/buttons/table-tracker/assembled.png",
+      "dimensions": [
+        1424,
+        254
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": 0,
+      "sha256": "8dcf9d98fdb357eeefe0c48c2ee570e668fc3e695249afb228707c36cebd01f3"
+    },
+    {
+      "path": "ui/kits/mode-select/buttons/table-tracker/clear-glass-overlay.png",
+      "dimensions": [
+        1424,
+        254
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "3f41edc9fa034924f7301ed8fce88c3b6194fb324e3cb9b42dc794c4797f0279"
+    },
+    {
+      "path": "ui/kits/mode-select/buttons/table-tracker/liquid-mask.png",
+      "dimensions": [
+        1424,
+        254
+      ],
+      "mode": "RGB",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": false,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "278063ba2ed29c0298068cbfd1b63faea7ca2477187527c9549ad4a46d5d3223"
+    },
+    {
+      "path": "ui/kits/mode-select/buttons/table-tracker/disabled.png",
+      "dimensions": [
+        1424,
+        254
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "b566ac5d4f425766eaea13992cd1969cb5e7d3303d550f3efcfa0cb92e1cbf06"
+    },
+    {
+      "path": "ui/kits/mode-select/buttons/table-tracker/pressed.png",
+      "dimensions": [
+        1424,
+        254
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "a8c88bb0a354ab4665024114433e94b26d5e7dea9469dd728a787340a3b811b6"
+    },
+    {
+      "path": "ui/kits/mode-select/buttons/back/assembled.png",
+      "dimensions": [
+        728,
+        214
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": 0,
+      "sha256": "521d19d4a2630d159cecaf99041a46c30e1d37d7c73d471cdb8d93aa47bbfb6b"
+    },
+    {
+      "path": "ui/kits/mode-select/buttons/back/clear-glass-overlay.png",
+      "dimensions": [
+        728,
+        214
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "1c06da710298d70434e457f18e183d0f238f915041a9050c65af4e08012e9f92"
+    },
+    {
+      "path": "ui/kits/mode-select/buttons/back/liquid-mask.png",
+      "dimensions": [
+        728,
+        214
+      ],
+      "mode": "RGB",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": false,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "9688ff61a01f5030a56bbf1ffc9d70ec9b442017a45dc18aa99913ec3f19bea9"
+    },
+    {
+      "path": "ui/kits/mode-select/buttons/back/disabled.png",
+      "dimensions": [
+        728,
+        214
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "685a2513f4f3bba946b3fc69ef72c826eec6b81e135eaab4cc15bbd76e3c20fb"
+    },
+    {
+      "path": "ui/kits/mode-select/buttons/back/pressed.png",
+      "dimensions": [
+        728,
+        214
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "d61d11de7c4bf2d19b938b7de9f98155064b9faab828953ed012e5f53853f8eb"
+    },
+    {
+      "path": "ui/kits/mode-select/buttons/profile/assembled.png",
+      "dimensions": [
+        704,
+        214
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": 0,
+      "sha256": "5f3ed56ab860443fe6499729aa16deea2696c31e2d762bf748dfc0c0954d2441"
+    },
+    {
+      "path": "ui/kits/mode-select/buttons/profile/clear-glass-overlay.png",
+      "dimensions": [
+        704,
+        214
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "3da16c5187151f96a434822e0784534a58e696048a0c12d4810d7a79bd52ec4d"
+    },
+    {
+      "path": "ui/kits/mode-select/buttons/profile/liquid-mask.png",
+      "dimensions": [
+        704,
+        214
+      ],
+      "mode": "RGB",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": false,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "5537453e5c1d14de373ea137ef13c6c8acd18e3721edad5d154ab6feae57c4dc"
+    },
+    {
+      "path": "ui/kits/mode-select/buttons/profile/disabled.png",
+      "dimensions": [
+        704,
+        214
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "af635a3f808ba4c1b0701cf30b174b955390247fc38d2e07b1c8a773753533e4"
+    },
+    {
+      "path": "ui/kits/mode-select/buttons/profile/pressed.png",
+      "dimensions": [
+        704,
+        214
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "ec4360c88c5c3eba88b7799721cdc8c899cef7fa51436bc7c8c412278f9b68c2"
+    },
+    {
+      "path": "ui/kits/mode-select/buttons/settings/assembled.png",
+      "dimensions": [
+        698,
+        214
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": 0,
+      "sha256": "1deb6bd647890bc4f3ac95c62850694ca62c64bb18cc9243114b2928f079e7c1"
+    },
+    {
+      "path": "ui/kits/mode-select/buttons/settings/clear-glass-overlay.png",
+      "dimensions": [
+        698,
+        214
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "8af746838556a5acf3bce3a1568c1b53c1685a101bdedfc82862b97002c04d14"
+    },
+    {
+      "path": "ui/kits/mode-select/buttons/settings/liquid-mask.png",
+      "dimensions": [
+        698,
+        214
+      ],
+      "mode": "RGB",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": false,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "65684614aad24eab2cc74a995b0adca54f9f92fc672c49f6441209a9be4a36cf"
+    },
+    {
+      "path": "ui/kits/mode-select/buttons/settings/disabled.png",
+      "dimensions": [
+        698,
+        214
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "c8fbf608984c4039771687203c63125411dc3ffe5bfc85b81bca096fe9eaf593"
+    },
+    {
+      "path": "ui/kits/mode-select/buttons/settings/pressed.png",
+      "dimensions": [
+        698,
+        214
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "3d782ad13c60a962982cab57e1de79b65a85a168370b55f1f6fefbf39a481e25"
+    },
+    {
+      "path": "ui/kits/mode-select/buttons/help/assembled.png",
+      "dimensions": [
+        710,
+        214
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": 0,
+      "sha256": "e5b586495761607cbcabbdcc6e4d01a3ed7ef4ce74847026669f54aedbb43e22"
+    },
+    {
+      "path": "ui/kits/mode-select/buttons/help/clear-glass-overlay.png",
+      "dimensions": [
+        710,
+        214
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "09b2c050463dfe5387f21fd7b1daeec6243123af87d99456926fc5471f073d35"
+    },
+    {
+      "path": "ui/kits/mode-select/buttons/help/liquid-mask.png",
+      "dimensions": [
+        710,
+        214
+      ],
+      "mode": "RGB",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": false,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "16f89ade656c9550c43ecf7ebc181c91c5c1787dd22ce7801b965ed898c1b475"
+    },
+    {
+      "path": "ui/kits/mode-select/buttons/help/disabled.png",
+      "dimensions": [
+        710,
+        214
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "c41852e57ea97166c599d18e96e866712f7a034f4dfa0de1ed5a4ddd1a04327b"
+    },
+    {
+      "path": "ui/kits/mode-select/buttons/help/pressed.png",
+      "dimensions": [
+        710,
+        214
+      ],
+      "mode": "RGBA",
+      "fully_decoded": true,
+      "retained_RGB_exact_outside_documented_patch": true,
+      "exterior_blue_violet_detector_pixels": null,
+      "sha256": "1fa3267cf0b177f6ce0f0cddc532c0b43ea9fcdac2b6a30448a1b6cbfe371ae1"
+    }
+  ],
+  "layouts": "all canvas/pieces/ports/rects unchanged; background filename only updated",
+  "background_brightness": {
+    "max_channel": 183,
+    "mean_max_channel": 25.425261479948542,
+    "pixels_above_128": 1221
+  },
+  "artwork_limits": [
+    "Historical disabled interiors retain their prior liquid/dimming defect; no empty-glass certification.",
+    "Existing logo/mask defects remain outside this edge/backdrop delta.",
+    "Assembly previews are offline asset composites, not browser or runtime tests."
+  ]
+}
