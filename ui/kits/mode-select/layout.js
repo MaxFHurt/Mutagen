@@ -560,6 +560,9 @@ export default {
           "diameter": 108
         }
       ],
+      "broken": [
+        "assembled"
+      ],
       "liquid": true
     },
     {
@@ -735,6 +738,9 @@ export default {
           ],
           "diameter": 108
         }
+      ],
+      "broken": [
+        "pressed"
       ],
       "liquid": true
     },

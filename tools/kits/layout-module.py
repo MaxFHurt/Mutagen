@@ -18,6 +18,16 @@ for kit in sys.argv[1:]:
     d = os.path.join(ROOT, 'ui/kits', kit)
     layout = json.load(open(os.path.join(d, 'LAYOUT.json')))
     for p in layout['pieces']:
+        # Files that do not decode (truncated in delivery) are listed so the app can fall back instead of showing them.
+        broken = []
+        for key, f in (p.get('files') or {}).items():
+            try:
+                Image.open(os.path.join(d, f)).load()
+            except Exception:
+                broken.append(key)
+        if broken:
+            p['broken'] = broken
+            print(f'  {kit}/{p["id"]}: broken {", ".join(broken)} - ask ChatGPT to re-send')
         mask = p.get('files', {}).get('mask')
         p['liquid'] = bool(mask) and bool((np.array(Image.open(os.path.join(d, mask)).convert('RGB'))[..., 0] > 127).any())
     with open(os.path.join(d, 'layout.js'), 'w') as f:

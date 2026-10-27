@@ -1,5 +1,13 @@
 # MUTAGEN — rolling situation report and visual inventory
 
+## CURRENT REVISION 066 — Home screen matches the approved preview; 6 damaged files in revision 02, 2026-10-27
+
+Owner: the landing page is close but not close enough. Two causes, both fixed:
+1. Damaged files: six revision 02 files are truncated, yet their hashes match, so they were packaged broken. They are the 2508 logo and its mask, home deck-mutator disabled, home settings pressed, mode-select freeplay assembled, and mode-select settings pressed. Browsers showed the logo cut off at the bottom. `tools/kits/layout-module.py` now test-decodes every kit file and lists broken ones in layout.js, and `kit-stage.js` falls back (no pressed look; overlay with live liquid for a broken painted image). The logo uses the verified 1254 v2 set (rev 051). ChatGPT is asked to re-send.
+2. Liquid look: the live liquid replaced ChatGPT's painted liquid, so its rich lime colour, glossy highlights and painted bubbles were lost. Kit pieces now show the painted art exactly as supplied, with the motion drawn over its liquid only. The new `<mutagen-chamber painted>` mode draws the drifting thickness as soft see-through light and shade, plus the moving bubbles. Measured against the kit art by depth band, colour and contrast now match within a few levels (before: the live core was 30 brighter and the glossy highlights were missing). The still setting shows the painted art alone.
+Remaining differences from ChatGPT's preview are its own: an inactive CONTINUE (owner rule, faint lettering pending from ChatGPT), and the logo slot is ChatGPT's LAYOUT rect. Tests: mutagen_flow 39/39, liquid 8/8.
+
+
 ## CURRENT REVISION 065 — Online play tested; page screens wired for their kits, 2026-10-26
 
 - Multi-device play, tested with the same-browser loopback transport (no outside service): rooms (net_ui) 26/26, Table Tracker hosting and joining (tracker_net_ui) 44/44, challenges (challenge_ui) 13/13, judge and host views on phone and iPad (shots_judge) with no errors.

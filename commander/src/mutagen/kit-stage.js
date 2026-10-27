@@ -1,9 +1,9 @@
 // MUTAGEN screen kits: places a supplied kit (ui/kits/<kit>/, made by ChatGPT) on a stage in the kit's own shape, as
 // large as the screen allows. Nothing is drawn or changed here: every piece is shown at its LAYOUT.json rectangle,
 // scaled uniformly with the stage.
-// - Pipes and buttons that hold liquid get live liquid (<mutagen-chamber>) behind their clear-glass overlay, on the
-//   shared stream (down the left column, right through branches and buttons, up the right column). Their assembled
-//   image is used instead when the liquid is still (Still liquid setting or the device's Reduce Motion).
+// - Pipes, buttons and the logo show the kit's painted art as supplied, with live motion over their liquid (flow
+//   shading and bubbles, <mutagen-chamber painted>) on the shared stream (down the left column, right through branches
+//   and buttons, up the right column). With the liquid still (Still liquid or Reduce Motion) the painted art alone shows.
 // - Solid steel pieces, lettering and the background are their supplied images.
 // - Buttons are real <button> elements with an accessible name; they show the kit's pressed art while pressed. An
 //   inactive button keeps its steel and loses only the ooze, with faint lettering (owner; see kitStage).
@@ -19,6 +19,8 @@ import '../../../ui/liquid/liquid.js';
 export const kitFor = name => KITS_INSTALLED[name] || null;
 
 const KITS = '../ui/kits/';
+// Logo v2, verified (rev 051). Revision 02's 2508 × 2508 copies arrived truncated, and were 2× enlargements anyway.
+const LOGO = '../ui/branding/';
 const FLOW = { 'left-sight-column': 'down', 'right-sight-column': 'up' };
 
 /**
@@ -31,8 +33,14 @@ const FLOW = { 'left-sight-column': 'down', 'right-sight-column': 'up' };
 export function kitStage(layout, kit, controls, panels = {}) {
   const { width: W, height: H } = layout.canvas, dir = `${KITS}${kit}/`;
   const at = ([x, y, w, h]) => `left:${(100 * x) / W}%;top:${(100 * y) / H}%;width:${(100 * w) / W}%;height:${(100 * h) / H}%`;
-  const live = (p, flow, bubbles) => html`<mutagen-chamber class="kit-live" mask="${dir}${p.files.mask}" size="${p.rect[2]} ${p.rect[3]}"
-      overlay="${dir}${p.files.overlay}" flow="${flow}" stream bubbles="${bubbles}" edge="dark"></mutagen-chamber><img class="kit-still" src="${dir}${p.files.assembled}" alt="" loading="lazy">`;
+  // Liquid pieces: the kit's painted art exactly as supplied, with the motion (flow shading, bubbles) drawn over its
+  // liquid only. With the liquid still, the painted art alone shows.
+  // A piece whose painted art arrived broken falls back to its clear-glass overlay over full live liquid.
+  const live = (p, flow, bubbles) => (p.broken || []).includes('assembled')
+    ? html`<mutagen-chamber class="kit-live kit-base" mask="${dir}${p.files.mask}" size="${p.rect[2]} ${p.rect[3]}" overlay="${dir}${p.files.overlay}"
+        flow="${flow}" stream bubbles="${bubbles}" edge="dark"></mutagen-chamber>`
+    : html`<img class="kit-base" src="${dir}${p.files.assembled}" alt=""><mutagen-chamber class="kit-live"
+      mask="${dir}${p.files.mask}" size="${p.rect[2]} ${p.rect[3]}" painted flow="${flow}" stream bubbles="${bubbles}"></mutagen-chamber>`;
   const piece = p => {
     if (p.type === 'buttons') {
       const c = controls[p.id];
@@ -40,16 +48,15 @@ export function kitStage(layout, kit, controls, panels = {}) {
       const data = Object.entries(c.data || {}).map(([k, v]) => html` data-${k}="${v}"`);
       // Inactive: the button with no ooze in its glass and faint lettering (owner). A kit marked disabled_empty_glass
       // supplies exactly that as its disabled art; otherwise the clear-glass overlay (empty glass, lettering as is).
-      const off = layout.disabled_empty_glass ? p.files.disabled : p.files.overlay;
+      const off = layout.disabled_empty_glass && !(p.broken || []).includes('disabled') ? p.files.disabled : p.files.overlay;
       return html`<button type="button" class="kit-piece kit-btn" style="${at(p.rect)}" aria-label="${c.name}" data-kit="${p.id}"
           ${c.act ? html`data-act="${c.act}"` : ''} ${c.mode ? html`data-mode="${c.mode}"` : ''}${data} ${c.disabled ? 'disabled' : ''}>
-          ${live(p, 'right', 0.8)}<img class="kit-pressed" src="${dir}${p.files.pressed}" alt="" loading="lazy"><img class="kit-empty" src="${dir}${off}" alt="" loading="lazy"></button>`;
+          ${live(p, 'right', 0.8)}${(p.broken || []).includes('pressed') ? '' : html`<img class="kit-pressed" src="${dir}${p.files.pressed}" alt="" loading="lazy">`}<img class="kit-empty" src="${dir}${off}" alt="" loading="lazy"></button>`;
     }
     if (p.type === 'branding') {
       return html`<div class="kit-piece kit-logo" style="${at(p.rect)}">
-          <mutagen-chamber class="kit-live" mask="${KITS}branding/logo-mutagen-v2-liquid-mask.png" size="2508 2508"
-            overlay="${KITS}branding/logo-mutagen-v2-overlay.png" flow="none" bubbles="0.4" edge="dark">MUTAGEN</mutagen-chamber>
-          <img class="kit-still" src="${KITS}branding/logo-mutagen-v2.png" alt="MUTAGEN" loading="lazy"></div>`;
+          <img class="kit-base" src="${LOGO}logo-mutagen-v2.png" alt="MUTAGEN">
+          <mutagen-chamber class="kit-live" mask="${LOGO}logo-mutagen-v2-liquid-mask.png" size="1254 1254" painted flow="none" bubbles="0.4"></mutagen-chamber></div>`;
     }
     if (p.type === 'panel') return html`<div class="kit-piece kit-panel" style="${at(p.rect)}" data-panel="${p.id}">${panels[p.id] ?? ''}</div>`;
     if (p.type === 'lettering') return controls[p.id]?.hidden ? '' : html`<img class="kit-piece" style="${at(p.rect)}" src="${dir}${p.file}" alt="">`;

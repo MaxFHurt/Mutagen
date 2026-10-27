@@ -40,6 +40,7 @@ uniform vec2 uFlow;           // flow direction through the pipe, in texture spa
 uniform float uBulb;          // 1 = a wide glass bulb fed by a narrow pipe on the left, drained by one on the right
 uniform float uStream;        // 1 = part of a stream of pipes: the liquid is laid out on the page, so it runs on from pipe to pipe
 uniform vec2 uPage;           // stream: the window's top-left on the page, in stream units
+uniform float uPaint;         // 1 = painted liquid underneath (a kit's own art): draw only the motion, see-through
 uniform float uEdge;          // 1 = darken toward the glass edge, as real glass does (kits: their masks reach the rim)
 uniform float uBubble;        // bubble size scale for the shell (1 = the buttons' approved sizes)
 uniform float uUnit;          // stream: canvas pixels per stream unit (one unit is about a main button's window height)
@@ -94,6 +95,10 @@ void main(){
   // Each has a thin lighter rim and a soft glow on its lower side where light focuses through it. Near ones are crisp,
   // deeper ones are smaller, fainter and out of focus. No highlight dot, no shadow, none stuck to the glass.
   gSeed = uSeed;
+  // Painted mode: the kit's painted liquid is underneath, so only the motion is drawn: the drifting thickness as soft
+  // lighter and darker shading, then the moving bubbles, composited over transparent.
+  float f = clamp((n - 0.5) * 2.4, -1.0, 1.0);
+  vec4 P = f > 0.0 ? vec4(vec3(0.62, 1.0, 0.38) * f * 0.26, f * 0.26) : vec4(0.0, 0.03, 0.0, -f * 0.3);
   float minDim = min(uRes.x, uRes.y);
   vec2 px = st * uRes;
   for (int i = 0; i < 18; i++) {
@@ -136,10 +141,18 @@ void main(){
     float rim = inside * smoothstep(0.62 - blur, 0.96, dist);
     float focus = inside * smoothstep(0.15, 0.85, d.y) * (1.0 - smoothstep(0.55, 0.95, dist));
     float vis = (1.0 - 0.6 * z) * smoothstep(0.03, 0.12, depth);
+    if (uPaint > 0.5) {
+      float a1 = inside * 0.2 * vis, a2 = focus * 0.45 * vis, a3 = rim * 0.7 * vis;
+      P = vec4(vec3(0.62, 0.98, 0.45) * a1, a1) + P * (1.0 - a1);
+      P = vec4(vec3(0.75, 1.0, 0.55) * a2, a2) + P * (1.0 - a2);
+      P = vec4(vec3(0.9, 1.0, 0.8) * a3, a3) + P * (1.0 - a3);
+      continue;
+    }
     col = mix(col, col * 1.2 + vec3(0.005, 0.02, 0.005), inside * 0.6 * vis);  // less green inside the air
     col = mix(col, col * 1.45 + vec3(0.03, 0.07, 0.025), focus * 0.5 * vis);   // light gathered on the lower side
     col = mix(col, col * 1.7 + vec3(0.05, 0.1, 0.045), rim * 0.6 * vis);      // thin lighter refractive rim
   }
+  if (uPaint > 0.5) { gl_FragColor = P * cover; return; }
   // Fixed glass sheen in front of the liquid: one broad, faint diagonal band near the top. Never moves.
   float band = smoothstep(0.30, 0.0, abs((st.y - 0.12) + (st.x - 0.5) * 0.18)) * 0.07;
   col += vec3(band * 0.8, band, band * 0.8);
@@ -165,7 +178,7 @@ function renderer() {
     gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 1, -1, -1, 1, 1, 1]), gl.STATIC_DRAW);
     const loc = gl.getAttribLocation(prog, 'p'); gl.enableVertexAttribArray(loc); gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
     const u = n => gl.getUniformLocation(prog, n);
-    shared = { canvas, gl, u: { mask: u('uMask'), res: u('uRes'), time: u('uTime'), seed: u('uSeed'), green: u('uGreen'), flow: u('uFlow'), bulb: u('uBulb'), stream: u('uStream'), page: u('uPage'), unit: u('uUnit'), bubble: u('uBubble'), edge: u('uEdge') } };
+    shared = { canvas, gl, u: { mask: u('uMask'), res: u('uRes'), time: u('uTime'), seed: u('uSeed'), green: u('uGreen'), flow: u('uFlow'), bulb: u('uBulb'), stream: u('uStream'), page: u('uPage'), unit: u('uUnit'), bubble: u('uBubble'), edge: u('uEdge'), paint: u('uPaint') } };
   } catch (error) {
     console.warn('Liquid: WebGL unavailable, showing still liquid', error);
     shared = false;
@@ -239,6 +252,7 @@ class MutagenChamber extends HTMLElement {
     this._bulb = this.getAttribute('flow') === 'bulb' ? 1 : 0;   // flow="bulb": a wide glass bulb on a narrow side pipe
     this._bubble = meta.bubbleScale || 1;
     this._edge = this.getAttribute('edge') === 'dark' ? 1 : 0;   // edge="dark": darker liquid at the glass rim
+    this._paint = this.hasAttribute('painted') ? 1 : 0;           // painted: a kit's painted liquid lies underneath
     this._stream = this.hasAttribute('stream') ? 1 : 0;          // stream: liquid continues from pipe to pipe (see STREAM_UNIT)
     this._still = this._seed % 13;   // reduced motion: a still frame, different per chamber
     const pct = (v, of) => `${(100 * v) / of}%`;
@@ -254,7 +268,9 @@ class MutagenChamber extends HTMLElement {
     frame.className = 'mutagen-chamber__frame'; frame.alt = ''; frame.decoding = 'async';
     // overlay="…png": a supplied finished button with its glass left clear (hardware + lettering), used as the frame as-is.
     const overlay = this.getAttribute('overlay');
-    frame.src = overlay ? new URL(overlay, document.baseURI).href : new URL(`${name}-frame.png`, BASE).href;
+    // painted: the kit's art underneath already shows the steel and lettering, so there is no frame to load.
+    if (this.hasAttribute('painted') && !overlay) frame.hidden = true;
+    else frame.src = overlay ? new URL(overlay, document.baseURI).href : new URL(`${name}-frame.png`, BASE).href;
     const text = document.createElement('span');
     text.className = 'mutagen-chamber__label';
     Object.assign(text.style, { left: pct(x0, W), top: pct(y0, H), width: pct(ww, W), height: pct(wh, H) });
@@ -303,7 +319,7 @@ class MutagenChamber extends HTMLElement {
     gl.uniform2f(u.res, canvas.width, canvas.height);
     gl.uniform1f(u.time, time); gl.uniform1f(u.seed, this._seed % 97); gl.uniform1f(u.green, greenLevel());
     gl.uniform2f(u.flow, this._flow[0], this._flow[1]); gl.uniform1f(u.bulb, this._bulb);
-    gl.uniform1f(u.stream, this._stream); gl.uniform1f(u.bubble, this._bubble); gl.uniform1f(u.edge, this._edge);
+    gl.uniform1f(u.stream, this._stream); gl.uniform1f(u.bubble, this._bubble); gl.uniform1f(u.edge, this._edge); gl.uniform1f(u.paint, this._paint);
     if (this._stream) {
       const box = canvas.getBoundingClientRect(), unit = STREAM_UNIT();
       gl.uniform2f(u.page, (box.left + scrollX) / unit, (box.top + scrollY) / unit);
