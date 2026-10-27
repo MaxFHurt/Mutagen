@@ -44,3 +44,18 @@ html[data-motion="reduced"] .kit-live { display: none; }
 .kit-applied { padding: 0; background: #05030a; }
 .kit-page { position: absolute; inset: 0; }
 .kit-panel > .page__body { height: 100%; overflow: auto; padding: 0.4rem; }
+
+/* Owner: the ooze glows. A soft green halo behind each piece, shaped by its liquid mask and blurred, so it shines out
+   around the glass onto the backdrop without covering the steel or lettering. Softer green dims it. */
+.kit-glow {
+  position: absolute; inset: 0; pointer-events: none; background: #8dff3a;
+  -webkit-mask: var(--glow-mask) center / 100% 100% no-repeat luminance; mask: var(--glow-mask) center / 100% 100% no-repeat luminance;
+  -webkit-mask-source-type: luminance; mask-mode: luminance;
+  filter: blur(1.2vmin); opacity: 1; transform: scale(1.04);
+}
+html[data-green="reduced"] .kit-glow { opacity: 0.4; }
+.kit-btn:disabled .kit-glow { display: none; }   /* no ooze, no glow */
+/* The glow's light spilling over the glass edge and steel around it, in front. Screen blending only adds light, so white
+   lettering stays white and nothing is hazed over. */
+.kit-glow--spill { mix-blend-mode: screen; opacity: 0.42; filter: blur(0.9vmin); transform: none; }
+html[data-green="reduced"] .kit-glow--spill { opacity: 0.18; }
