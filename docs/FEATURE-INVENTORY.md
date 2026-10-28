@@ -67,6 +67,18 @@ Guidance level (Coach / Assist / Rules only) · Learning tips · Still liquid ·
 Rules help and judge questions.
 
 ## Deck Mutator (its own app; features owned by Deck Companion)
-Decks · Builder · Card Search · Buy List · Library · Profile · the deck page and its tabs (Decklist, Build Stats,
-Mutations, Buy List, Library) and every control on them · Return to MUTAGEN. Its layout is changing in Deck Companion
-(see `sync/DECK-SYNC-PLAN.md`); its art is the skin kit.
+- Home: Builder, Decks (count), Card search tiles · Buy list · Library · Profile and backups · continue strip · guide.
+- Top navigation: Decks · Builder · Card search · Buy list · Library · Profile · Return to MUTAGEN.
+- Decks: saved deck tiles · New deck.
+- Builder: generate from a commander · load a precon · import a list · start empty.
+- Deck page:
+  - Build pane: name, player / folder / tags, format, commander (View, Change, Find a commander), theme chips,
+    mechanics in priority order, Best deck under $3 / $12, Regenerate upgrades, lock.
+  - Action bar: All decks · Undo · Duplicate · Share link · Compare · History · Delete deck.
+  - Tabs: Decklist · Build stats (stats only) · Mutations · Buy list · Library.
+  - Mutations tab: status bar · You / Budget / Mid / Apex bar · Path to Apex · game and upgrade plans · add a card ·
+    Fill open · Analyze this build · Lands helper · Best by job · Stick to the theme · View / Sort / Card type / Kind
+    filters · upgrade sheets with Previous / Next · Apply all Budget / Mid tier / Apex mutations with the summary.
+- Card search and card details (price, printings, faces, rules text) · Buy list · Library (collection) · Profile and
+  backups.
+Its layout still changes in Deck Companion (see `sync/DECK-SYNC-PLAN.md`); its art is a skin plus a few masters.
