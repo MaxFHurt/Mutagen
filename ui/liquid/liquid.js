@@ -61,6 +61,24 @@ void main(){
   vec2 st = vec2(uv.x, 1.0 - uv.y);                       // texture space, y down
   vec4 m = texture2D(uMask, st);
   float cover = m.r, depth = m.g;
+  float gUp = 0.0, gDown = 0.0;   // kit: smoothed depth above and below, for the top light
+  if (uEdge > 0.5) {
+    // Kit masks are rough: holes where the art painted a bubble, dents in the depth around them and scraps along the
+    // edges. Smooth the depth over a small neighbourhood, and fill any hole with liquid on all four sides, so no still
+    // bubble shows through and the shading stays even.
+    float r = 0.06 * min(uRes.x, uRes.y);
+    vec2 dx = vec2(r / uRes.x, 0.0), dy = vec2(0.0, r / uRes.y);
+    vec4 a = texture2D(uMask, st - dx), b = texture2D(uMask, st + dx), c = texture2D(uMask, st - dy), e = texture2D(uMask, st + dy);
+    if (cover < 0.5 && min(min(a.r, b.r), min(c.r, e.r)) > 0.5) cover = 1.0;
+    if (cover > 0.5) {
+      vec2 dx2 = dx * 2.2, dy2 = dy * 2.2;
+      vec4 a2 = texture2D(uMask, st - dx2), b2 = texture2D(uMask, st + dx2), c2 = texture2D(uMask, st - dy2), e2 = texture2D(uMask, st + dy2);
+      float near = 0.2 * (depth + a.g + b.g + c.g + e.g) * step(0.5, min(min(a.r, b.r), min(c.r, e.r)));
+      float far = 0.25 * (a2.g + b2.g + c2.g + e2.g) * step(0.5, min(min(a2.r, b2.r), min(c2.r, e2.r)));
+      depth = max(depth, max(near, far));
+      gUp = 0.5 * (c.g + c2.g) * step(0.5, c2.r); gDown = 0.5 * (e.g + e2.g) * step(0.5, e2.r);
+    }
+  }
   if (cover < 0.004) { gl_FragColor = vec4(0.0); return; }
   float aspect = uRes.x / uRes.y;
   vec2 q = vec2(st.x * aspect, st.y);                     // square units, 1 = window height
@@ -88,6 +106,15 @@ void main(){
   vec3 col = vec3(0.95, 1.0, 0.85) * exp(-vec3(4.6, 0.42, 5.6) * path);
   // At the rim the glass bends light away, so the liquid there looks darker, not brighter (kit chambers).
   col *= mix(1.0 - 0.62 * uEdge, 1.0, smoothstep(0.0, 0.24, depth));
+  if (uEdge > 0.5) {
+    // Kit ooze (owner: lighter, brighter, glowing): a light lime body, lit from above with a glossy band just inside
+    // the upper rim of each tube.
+    col = mix(col, vec3(0.5, 1.0, 0.26), 0.55 * smoothstep(0.06, 0.5, depth) * mix(0.6, 1.0, uGreen));
+    float upper = clamp((gDown - gUp) * 3.5, -1.0, 1.0) * smoothstep(0.04, 0.12, depth);
+    col *= 1.0 + 0.18 * upper;
+    float lip = smoothstep(0.06, 0.16, depth) * (1.0 - smoothstep(0.2, 0.36, depth)) * max(upper, 0.0);
+    col = mix(col, vec3(0.85, 1.0, 0.7), lip * 0.5);
+  }
   // Light from above scatters inside the liquid: a soft lift toward the top, strongest near the glass.
   float top = 1.0 - st.y;
   col += vec3(0.015, 0.07, 0.012) * top * top * (1.0 - 0.5 * thick);
@@ -274,7 +301,7 @@ class MutagenChamber extends HTMLElement {
     // overlay="…png": a supplied finished button with its glass left clear (hardware + lettering), used as the frame as-is.
     const overlay = this.getAttribute('overlay');
     // painted: the kit's art underneath already shows the steel and lettering, so there is no frame to load.
-    if (this.hasAttribute('painted') && !overlay) frame.hidden = true;
+    if ((this.hasAttribute('painted') || this.hasAttribute('cover')) && !overlay) frame.hidden = true;
     else frame.src = overlay ? new URL(overlay, document.baseURI).href : new URL(`${name}-frame.png`, BASE).href;
     const text = document.createElement('span');
     text.className = 'mutagen-chamber__label';

@@ -1,5 +1,10 @@
 # MUTAGEN V3 — Visual Change Roadmap — Revision 007 (2026-10-12)
 
+## CURRENT REVISION 071 — No still bubbles: live ooze covers the painted liquid, 2026-10-28
+
+Owner: there should be no bubbles that are permanent and do not move; several sat on the ooze tanks on the main screen. They are painted into ChatGPT's art (both the assembled images and the overlays). Code only, no image changes: kit liquid pieces now draw the live ooze fully over the painted liquid (`<mutagen-chamber cover edge="dark">`), so the only bubbles are moving ones; steel and lettering stay the kit's own. The cover ooze keeps the lighter, brighter, glowing look (a lime body, light from above and a glossy band inside the upper rim) at about the previous brightness. Because the masks are rough, small holes surrounded by liquid are filled, and depth is smoothed over the neighbourhood (dents around old bubbles, edge scraps); a faint trace remains around one bubble on the left tank. ChatGPT is asked for clean masks and bubble-free art. mutagen_flow 39/39, liquid 8/8 (repeat runs).
+
+
 ## CURRENT REVISION 070 — Dark alley backdrop and clean edges (ChatGPT Dark Alley R01), 2026-10-27
 
 Installed ChatGPT's Dark Alley R01 delta. All 163 sums verified, all 155 images decode, every piece matches its LAYOUT rect, and the layouts are identical except for `background` (now `background-clean.webp`). The home and Choose Game Mode kits get the new comic dark-alley background (3344 × 1882 WebP, 591 KB; a 2× enlargement of a 1672 × 941 render, as ChatGPT discloses) and re-cut pieces with the old blue backdrop removed from their edges (141 installed files verified). The shared backdrop for every later screen is at `ui/kits/shared/background-clean.webp`. The code darkening stand-in (rev 068) is removed, so the art shows as supplied. Inactive buttons keep the empty-glass rule (ChatGPT: do not set `disabled_empty_glass`). The home screen now downloads 10.7 MB (was 18.9). Records are in `handoff/dark-alley-r01/`. mutagen_flow 39/39, liquid 8/8.
