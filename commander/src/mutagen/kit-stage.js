@@ -35,15 +35,14 @@ const abs = path => new URL(path, document.baseURI).href;
 export function kitStage(layout, kit, controls, panels = {}) {
   const { width: W, height: H } = layout.canvas, dir = `${KITS}${kit}/`;
   const at = ([x, y, w, h]) => `left:${(100 * x) / W}%;top:${(100 * y) / H}%;width:${(100 * w) / W}%;height:${(100 * h) / H}%`;
-  // Liquid pieces: the kit's painted art as supplied, with live ooze drawn over its liquid area ("cover"), so the
-  // only bubbles are moving ones (owner: no still bubbles; the art's painted ones are covered). Steel and lettering
-  // stay the kit's own. With the liquid still, the painted art alone shows.
+  // Liquid pieces: the kit's painted art exactly as supplied, with the motion (flow shading, bubbles) drawn over its
+  // liquid only. With the liquid still, the painted art alone shows.
   // A piece whose painted art arrived broken falls back to its clear-glass overlay over full live liquid.
   const live = (p, flow, bubbles) => (p.broken || []).includes('assembled')
     ? html`<mutagen-chamber class="kit-live kit-base" mask="${dir}${p.files.mask}" size="${p.rect[2]} ${p.rect[3]}" overlay="${dir}${p.files.overlay}"
         flow="${flow}" stream bubbles="${bubbles}" edge="dark"></mutagen-chamber>`
     : html`<span class="kit-glow" style="--glow-mask:url('${abs(dir + p.files.mask)}')"></span><img class="kit-base" src="${dir}${p.files.assembled}" alt=""><mutagen-chamber class="kit-live"
-      mask="${dir}${p.files.mask}" size="${p.rect[2]} ${p.rect[3]}" cover edge="dark" flow="${flow}" stream bubbles="${bubbles}"></mutagen-chamber><span class="kit-glow kit-glow--spill" style="--glow-mask:url('${abs(dir + p.files.mask)}')"></span>`;
+      mask="${dir}${p.files.mask}" size="${p.rect[2]} ${p.rect[3]}" painted flow="${flow}" stream bubbles="${bubbles}"></mutagen-chamber><span class="kit-glow kit-glow--spill" style="--glow-mask:url('${abs(dir + p.files.mask)}')"></span>`;
   const piece = p => {
     if (p.type === 'buttons') {
       const c = controls[p.id];
@@ -59,7 +58,7 @@ export function kitStage(layout, kit, controls, panels = {}) {
     if (p.type === 'branding') {
       return html`<div class="kit-piece kit-logo" style="${at(p.rect)}">
           <span class="kit-glow" style="--glow-mask:url('${abs(LOGO + 'logo-mutagen-v2-liquid-mask.png')}')"></span><img class="kit-base" src="${LOGO}logo-mutagen-v2.png" alt="MUTAGEN">
-          <mutagen-chamber class="kit-live" mask="${LOGO}logo-mutagen-v2-liquid-mask.png" size="1254 1254" cover edge="dark" flow="none" bubbles="0.4"></mutagen-chamber><span class="kit-glow kit-glow--spill" style="--glow-mask:url('${abs(LOGO + 'logo-mutagen-v2-liquid-mask.png')}')"></span></div>`;
+          <mutagen-chamber class="kit-live" mask="${LOGO}logo-mutagen-v2-liquid-mask.png" size="1254 1254" painted flow="none" bubbles="0.4"></mutagen-chamber><span class="kit-glow kit-glow--spill" style="--glow-mask:url('${abs(LOGO + 'logo-mutagen-v2-liquid-mask.png')}')"></span></div>`;
     }
     if (p.type === 'panel') return html`<div class="kit-piece kit-panel" style="${at(p.rect)}" data-panel="${p.id}">${panels[p.id] ?? ''}</div>`;
     if (p.type === 'lettering') return controls[p.id]?.hidden ? '' : html`<img class="kit-piece" style="${at(p.rect)}" src="${dir}${p.file}" alt="">`;
